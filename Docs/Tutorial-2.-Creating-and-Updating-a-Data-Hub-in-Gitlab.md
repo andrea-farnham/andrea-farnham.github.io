@@ -1,3 +1,5 @@
+# Tutorial 2
+
 The _static site_ generated in this repository shows an _interactive table_ with image thumbnails (clickable). By _static_ we mean that the user will just see whatever data is contained in the HTML of the site. Although it contains an interactive table, all users have access to the same data which they cannot modify (unlike in _dynamic websites_).
 
 The website hosted using [Gitlab pages](shttps://docs.gitlab.com/ee/user/project/pages/) is rendered with an \[R Markdown\] (https://rmarkdown.rstudio.com/) script, that uses the R [DT package](https://rstudio.github.io/DT/)). The script creates an interactive page in HTML. [Gitlab CI](https://docs.gitlab.com/ee/ci/) is used to run the R Markdown script automatically at each update (push) and render the site from the browser so that users do not need to install R or other programs to update the site. 

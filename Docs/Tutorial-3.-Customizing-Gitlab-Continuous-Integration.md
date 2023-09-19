@@ -1,3 +1,5 @@
+# Tutorial-3.-Customizing-Gitlab-Continuous-Integration
+
 Continuous integration (CI) refers to the process of automating the integration of changes made by different developers working in the code. In the context of this hub, it refers to integrating changes in the metadata table and/or images into the resulting HTML, that is, updating our page so that it shows the last version of our metadata. The advantage is that users do not require to install any software dependencies (like R) and changes can be implemented from the browser.
 
 In this case we used a [Continous Integration template](https://docs.gitlab.com/ee/user/project/pages/getting_started/pages_ci_cd_template.html). The current template is taken from [Rocker](https://rocker-project.org/), a project offering docker containers for R environment. Broadly speaking, we can think of a docker container as a light-weight virtual machine and of a docker image as a snapshot of a virtual machine.
@@ -13,7 +15,7 @@ This is the file that will define the pipeline which we can run from the browser
 
 > Note: below we show just an example. The actual file may have change and can be found in the repository.
 
-```{yml}
+```
 image: rocker/verse:4.0.0
 pages:
   stage: deploy

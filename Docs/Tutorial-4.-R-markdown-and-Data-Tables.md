@@ -1,0 +1,15 @@
+ 
+# Troubleshooting
+
+### Column width adjustment
+
+* AutoWidth needs to be TRUE for width adjust in ColumnDefs to work
+* Even if you adjust width, if the title of the column (i.e., header in the table) is long, the minimum width will be that of the column name unless: (solving this? )
+
+### Zero-based indexing in DT options
+
+* In the options of Data table you will use 0 to refer to the 1st column. E.g., `list(visible = FALSE, targets = c(5:ncol(metadata)-1)),` will hide columns from the 4th to the latst (you need to subtract -1 to ncols to find the last column index)
+
+### Extensions of DT (e.g., search panes)
+
+Refer to known issues on the different extensions
