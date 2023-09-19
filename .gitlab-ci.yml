@@ -12,7 +12,8 @@ pages:
 
   artifacts:    
     paths:
-    - public    
+    - public
+    - public/index.html
     
     
   only:
