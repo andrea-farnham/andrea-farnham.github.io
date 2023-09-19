@@ -7,7 +7,7 @@ pages:
   script:
   - cp Scripts/logo.png public/logo.png
   - cp Scripts/styles.css public/styles.css
-  - R -e "rmarkdown::render_site(Scripts/_site.yml)"
+  - R -e "rmarkdown::render_site(Scripts/index.Rmd)"
         
 
   artifacts:    
