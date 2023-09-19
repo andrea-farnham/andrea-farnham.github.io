@@ -1,9 +1,8 @@
-image: rocker/verse:4.0.0
+image: registry.gitlab.com/quarto-forge/docker/rstats
 
 pages:
   stage: deploy
-  before_script:
-  - R -e "install.packages('quarto')"
+  before_script: 
     
   script:
   - R -e "quarto::render_site('Docs')"
