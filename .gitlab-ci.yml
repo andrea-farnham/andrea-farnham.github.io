@@ -5,6 +5,10 @@ pages:
   before_script:
     
   script:
+  - apt-get update -qy
+  - apt-get install -y libgit2-dev libssl-dev
+  - R -e "install.packages(c('quarto', 'remotes'), dependencies=TRUE, repos='https://cloud.r-project.org')"
+  - R -e "remotes::install_github('timelyportfolio/quarto')"
   - R -e "baseDir <- getwd(); quarto::quarto_render('index.qmd', output_file = file.path(baseDir,'public','index.html'))"
         
 
