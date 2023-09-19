@@ -3,18 +3,16 @@ image: rocker/verse:4.0.0
 pages:
   stage: deploy
   before_script:
-  - mkdir -p public/Spring/Images
-  - cp _scripts/style.css public/
-  - cp _data/Spring/Images/* public/Spring/Images/  
+  - cp style.css public/  
   
   script:
-  - R -e "baseDir <- getwd(); rmarkdown::render('_scripts/R_interactive_table.Rmd', output_file = file.path(baseDir,'public','index.html'))"
+  - R -e "baseDir <- getwd(); rmarkdown::render('index.qmd', output_file = file.path(baseDir,'public','index.html'))"
         
 
   artifacts:    
     paths:
     - public    
-    - public/Spring/Images
+    
     
   only:
   - master
