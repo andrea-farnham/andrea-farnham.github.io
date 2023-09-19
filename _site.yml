@@ -1,0 +1,12 @@
+name: "AFFORD_Tutorials"
+navbar:
+  title: "AFFORD_Tutorials"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Welcome"
+      href: Welcome.html
+    - text: "Tutorials"
+      href: Tutorials.html
+      
+output_dir: "public"

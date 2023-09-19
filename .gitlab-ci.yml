@@ -3,13 +3,10 @@ image: rocker/verse:4.0.0
 pages:
   stage: deploy
   before_script:
-    
+  - cp style.css public/  
+  
   script:
-  - apt-get update -qy
-  - apt-get install -y libgit2-dev libssl-dev
-  - R -e "install.packages(c('quarto', 'remotes'), dependencies=TRUE, repos='https://cloud.r-project.org')"
-  - R -e "remotes::install_github('timelyportfolio/quarto')"
-  - R -e "baseDir <- getwd(); quarto::quarto_render('index.qmd', output_file = file.path(baseDir,'public','index.html'))"
+  - R -e "rmarkdown::render_site()"
         
 
   artifacts:    

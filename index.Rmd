@@ -1,0 +1,14 @@
+---
+title: "AFFORD Tutorials"
+output: html_document
+
+---
+
+::: floatting
+```{r out.width='50%', out.extra='style="float:center; padding:10px"',echo=FALSE}
+knitr::include_graphics("logo.png")
+```
+
+Welcome this is our tutorial site and IT IS WORKING
+
+:::
