@@ -1,19 +1,6 @@
-image: rocker/verse:4.0.0
-
-pages:
-  stage: deploy
-  before_script:
-  - cp style.css public/  
-  
-  script:
-  - R -e "baseDir <- getwd(); rmarkdown::render('index.qmd', output_file = file.path(baseDir,'public','index.html'))"
-        
-
-  artifacts:    
-    paths:
-    - public    
-    
-    
-  only:
-  - master
-  interruptible: true
+# The Docker image that will be used to build your app
+image: "image: rocker/verse:4.0.0  pages:   stage: deploy   before_script:   -
+  cp style.css public/        script:   - R -e \"baseDir <- getwd();
+  rmarkdown::render('index.qmd', output_file =
+  file.path(baseDir,'public','index.html'))\"             artifacts:         pa\
+  ths:     - public                 only:   - master   interruptible: true"
