@@ -1,0 +1,22 @@
+project:
+  type: website
+  output-dir: public
+
+
+website:
+  title: "AFFORD tutorials"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - Tutorials.md
+      - Welcome.md            
+
+format:
+  html:
+    theme: default
+    css: styles.css
+    toc: true
+
+editor: visual
+

@@ -1,0 +1,9 @@
+---
+title: "AFFORD tutorials"
+---
+
+Greetings  !
+
+This is the documentation site for the AFFORD project of CRS + UZH\
+
+I just followed this instructions: [https://quarto.org/docs/websites/]()
