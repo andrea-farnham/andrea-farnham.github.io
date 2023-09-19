@@ -3,12 +3,11 @@ image: rocker/verse:4.0.0
 pages:
   stage: deploy
   before_script:
+  - R -e "install.packages('quarto')"
     
   script:
-  - cp Scripts/affordLogo.png public/affordLogo.png
-  - cp Scripts/styles.css public/styles.css
-  - R -e "rmarkdown::render_site('Scripts/index.Rmd')"
-  - mv Scripts/* public
+  - R -e "quarto::render_site('Docs')"
+  - cp Docs/_site/* public
 
 
         
