@@ -13,7 +13,6 @@ pages:
   artifacts:    
     paths:
     - public
-    - public/index.html
     
     
   only:
