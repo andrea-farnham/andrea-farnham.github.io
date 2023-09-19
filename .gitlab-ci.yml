@@ -1,4 +1,4 @@
-image: rocker/r-ver_4.2.3
+image: rocker/rstudio
 
 pages:
   stage: deploy
