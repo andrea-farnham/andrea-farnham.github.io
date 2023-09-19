@@ -1,4 +1,4 @@
-image: registry.gitlab.com/quarto-forge/docker/rstats
+image: rocker/r-ver_4.2.3
 
 pages:
   stage: deploy
