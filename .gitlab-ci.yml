@@ -5,7 +5,7 @@ pages:
   before_script:
     
   script:
-  - R -e "baseDir <- getwd(); rmarkdown::render('index.qmd', output_file = file.path(baseDir,'public','index.html'))"
+  - R -e "baseDir <- getwd(); quarto::quarto_render('index.qmd', output_file = file.path(baseDir,'public','index.html'))"
         
 
   artifacts:    
