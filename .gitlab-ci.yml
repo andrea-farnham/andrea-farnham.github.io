@@ -8,6 +8,9 @@ pages:
   - cp Scripts/affordLogo.png public/affordLogo.png
   - cp Scripts/styles.css public/styles.css
   - R -e "rmarkdown::render_site('Scripts/index.Rmd')"
+  - mv -r Scripts/public public
+
+
         
 
   artifacts:    
