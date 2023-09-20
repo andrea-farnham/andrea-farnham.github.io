@@ -1,5 +1,7 @@
 project:
   type: website
+  output-dir: public
+
 
 website:
   title: "AFFORD tutorials"
@@ -37,7 +39,6 @@ website:
 
 format:
   html:
-    outputDir: public
     theme: cosmo
     toc: true
     code-copy: false
