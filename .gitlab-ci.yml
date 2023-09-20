@@ -9,7 +9,7 @@ pages:
 
   script: 
   - cd Docs
-  - R -e "quarto::render_site()"
+  - R -e "quarto::quarto_render()"
   - mv Docs/* public
 
 
