@@ -6,9 +6,7 @@ pages:
   - R -e "install.packages('quarto')"
 
   script:
-  - cd Docs
-  - R -e "dir()"
-  - R -e "rmarkdown::render_site()"
+  - R -e "rmarkdown::render_site(input = Docs)"
   - mv Docs/* public
 
 
