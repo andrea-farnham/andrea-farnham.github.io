@@ -3,7 +3,8 @@ image: rocker/verse:4.2
 pages:
   stage: deploy
   before_script:
-
+  - R -e "install.packages('quarto')"
+  
   script: 
   - R -e "quarto::quarto_render(input= 'Docs')"        
 
