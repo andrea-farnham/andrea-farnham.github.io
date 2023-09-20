@@ -1,13 +1,12 @@
-image: registry.gitlab.com/quarto-forge/docker/quarto
-
+image: rocker/verse:4.2
 
 pages:
   stage: deploy
-  before_script: 
-    
+  before_script:
+  - R -e "install.packages('quarto')"
   script:
-  - quarto render Docs --execute --to html --output-dir public  
-  - cp Docs/_site/* public
+  - R -e "rmarkdown::render_site('Docs')"
+  - mv Docs/* public
 
 
         
