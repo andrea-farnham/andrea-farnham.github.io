@@ -38,7 +38,7 @@ website:
 
 format:
   html:
-    theme: cosmos
+    theme: cosmo
     toc: true
     code-copy: false
 
