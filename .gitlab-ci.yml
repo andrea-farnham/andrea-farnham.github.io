@@ -1,4 +1,4 @@
-image: rocker/rstudio
+image: registry.gitlab.com/quarto-forge/docker/rstats
 
 pages:
   stage: deploy
