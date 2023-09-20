@@ -10,9 +10,9 @@ pages:
   - pwd
   - ls -R
   - R -e "quarto::quarto_render()"       
+  - ls -R  
+  - mv ./_site/* ../public/
   - ls -R
-  - cp -r ./_site/ public
-  
 
   artifacts:    
     paths:
