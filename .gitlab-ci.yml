@@ -4,8 +4,10 @@ pages:
   stage: deploy
   before_script:
   - R -e "install.packages('quarto')"
+
   script:
-  - R -e "rmarkdown::render_site('Docs')"
+  - cd Docs
+  - R -e "rmarkdown::render_site()"
   - mv Docs/* public
 
 
