@@ -1,4 +1,9 @@
-image: registry.gitlab.com/quarto-forge/docker/rstats
+version: "3.9"
+services:
+  rstudio:
+    image: registry.gitlab.com/quarto-forge/docker/rstudio
+    ports:
+      - "8787:8787"
 
 pages:
   stage: deploy
