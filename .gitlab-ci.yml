@@ -11,6 +11,7 @@ pages:
   artifacts:    
     paths:
     - public
+    - _site
     
     
   only:
