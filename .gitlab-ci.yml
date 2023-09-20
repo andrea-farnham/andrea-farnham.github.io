@@ -4,16 +4,13 @@ pages:
   stage: deploy
   before_script:
   - R -e "install.packages('quarto')"
-  - R -e "update.packages('quarto')"  
-  
+    
   script: 
   - cd Docs
-  - pwd
-  - ls -R
+  - R -e "quarto::quarto_version()"
   - R -e "quarto::quarto_render()"       
-  - ls -R  
   - mv ./_site/* ../public/
-  - ls -R
+  
 
   artifacts:    
     paths:
