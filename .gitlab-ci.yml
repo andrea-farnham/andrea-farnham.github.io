@@ -6,7 +6,7 @@ pages:
   before_script: 
     
   script:
-  - quarto render --execute --to html --output-dir public  
+  - quarto render Docs --execute --to html --output-dir public  
   - cp Docs/_site/* public
 
 
