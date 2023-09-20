@@ -8,9 +8,7 @@ pages:
   - R -e "install.packages('palmerpenguins')"
 
   script: 
-  - R -e "packageVersion('quarto')"
-  - R -e "R.version"
-  - R -e "rmarkdown::render_site(input = 'Docs')"
+  - R -e "rmarkdown::render_site()"
   - mv Docs/* public
 
 
