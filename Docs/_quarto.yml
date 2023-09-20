@@ -4,6 +4,8 @@ project:
 
 website:
   title: "AFFORD tutorials"
+  author:  Center for Reproducible Science
+
   navbar:
     background: primary
     search: true
@@ -20,7 +22,12 @@ website:
 
   sidebar:
     style: "docked"
-    background: light
+    background: light  
+    tools:
+      - icon: affordLogo.png
+        menu:
+          - text: CRS
+            url:  https://www.crs.uzh.ch/en.html
     search: true
     contents:
       - section: "Home"
