@@ -3,13 +3,9 @@ image: rocker/verse:4.2
 pages:
   stage: deploy
   before_script:
-  - R -e "install.packages('quarto')"
-  - R -e "install.packages('tidyverse')"
-  - R -e "install.packages('palmerpenguins')"
 
   script: 
-  - cd Docs
-  - R -e "quarto::quarto_render()"        
+  - R -e "quarto::quarto_render(input= 'Docs')"        
 
   artifacts:    
     paths:
