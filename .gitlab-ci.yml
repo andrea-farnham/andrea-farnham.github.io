@@ -4,6 +4,8 @@ pages:
   stage: deploy
   before_script:
   - R -e "install.packages('quarto')"
+  - R -e "install.packages('tidyverse')"
+  - R -e "install.packages('palmerpenguins')"
 
   script: 
   - R -e "packageVersion('quarto')"
