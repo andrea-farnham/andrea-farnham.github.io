@@ -9,11 +9,7 @@ pages:
 
   script: 
   - cd Docs
-  - R -e "quarto::quarto_render()"
-  - mv Docs/_site public
-
-
-        
+  - R -e "quarto::quarto_render()"        
 
   artifacts:    
     paths:
