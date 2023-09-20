@@ -7,12 +7,12 @@ pages:
   
   script: 
   - cd Docs
-  - R -e "quarto::quarto_render()"        
+  - R -e "quarto::quarto_render()"       
+  - cp public .public 
 
   artifacts:    
     paths:
     - public
-    - Docs/_site
     
     
   only:
