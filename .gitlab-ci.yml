@@ -11,6 +11,7 @@ pages:
   - ls -R
   - R -e "quarto::quarto_render()"       
   - ls -R
+  - cp -r ./_site/ public
   
 
   artifacts:    
