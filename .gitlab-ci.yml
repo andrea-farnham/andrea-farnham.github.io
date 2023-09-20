@@ -1,9 +1,10 @@
-image: rocker/verse:4.2
+image: rocker/verse:4.5
 
 pages:
   stage: deploy
   before_script:
   - R -e "install.packages('quarto')"
+  - R -e "update.packages('quarto')"  
   
   script: 
   - cd Docs
