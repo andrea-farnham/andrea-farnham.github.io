@@ -6,7 +6,7 @@ pages:
   - R -e "install.packages('quarto')"
   
   script: 
-  - R -e "quarto::quarto_render(input= 'Docs')"        
+  - R -e "quarto::quarto_render(input= 'Docs', output_dir = 'public')"        
 
   artifacts:    
     paths:
