@@ -8,7 +8,7 @@ pages:
   script: 
   - cd Docs
   - R -e "quarto::quarto_render()"       
-  - cp public .public 
+  - cp -r public .public 
 
   artifacts:    
     paths:
