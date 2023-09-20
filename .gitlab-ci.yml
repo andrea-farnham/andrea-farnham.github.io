@@ -6,7 +6,7 @@ pages:
   before_script: 
     
   script:
-  - R -e "quarto::render_site('Docs')"
+  - quarto render --execute --to html --output-dir public  
   - cp Docs/_site/* public
 
 
