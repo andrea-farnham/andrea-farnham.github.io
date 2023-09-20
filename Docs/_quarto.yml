@@ -4,8 +4,6 @@ project:
 
 website:
   title: "AFFORD tutorials"
-  author:  Center for Reproducible Science
-
   navbar:
     background: primary
     search: true
@@ -44,7 +42,8 @@ website:
     
 
 format:
-  html:
+  html:    
+    author:  Center for Reproducible Science
     theme: minty
     toc: true
     code-copy: false
