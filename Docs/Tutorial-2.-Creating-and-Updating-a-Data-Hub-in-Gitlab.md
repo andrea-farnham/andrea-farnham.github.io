@@ -1,4 +1,4 @@
-# Tutorial 2
+# Tutorial-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.md
 
 The _static site_ generated in this repository shows an _interactive table_ with image thumbnails (clickable). By _static_ we mean that the user will just see whatever data is contained in the HTML of the site. Although it contains an interactive table, all users have access to the same data which they cannot modify (unlike in _dynamic websites_).
 

@@ -1,4 +1,4 @@
-# Tutorial-0
+# Workflow
 
 ## A Gitlab workflow to data sharing
 
