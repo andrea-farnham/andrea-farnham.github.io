@@ -18,7 +18,7 @@ format:
     html:    
         author: Center for Reproducible Science 
         theme:
-            light: flatly
+            light: minty
             dark: solar
         toc: true
         code-copy: false
