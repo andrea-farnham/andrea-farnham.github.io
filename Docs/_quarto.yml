@@ -6,12 +6,12 @@ book:
     repo-url: "https://gitlab.uzh.ch/crsuzh/AFFORD_tutorials"
     chapters:
         - index.qmd                
-        - part: Tutorials.md        
+        - part: Tutorials.qmd        
           chapters:
-            - Tutorial-0.-Main-workflow.md
-            - Tutorial-1.-Using-Gitlab-for-Project-Owners-and-Collaborators.md
-            - Tutorial-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.md
-            - Tutorial-3.-Customizing-Gitlab-Continuous-Integration.md
+            - Tutorial-0.-Main-workflow.qmd
+            - Tutorial-1.-Using-Gitlab-for-Project-Owners-and-Collaborators.qmd
+            - Tutorial-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.qmd
+            - Tutorial-3.-Customizing-Gitlab-Continuous-Integration.qmd
     page-navigation: true
 
 format:

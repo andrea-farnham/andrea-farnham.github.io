@@ -1,5 +1,4 @@
- 
-# Troubleshooting
+ # Troubleshooting {.unnumbered}
 
 ### Column width adjustment
 
