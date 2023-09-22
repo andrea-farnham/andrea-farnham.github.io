@@ -1,4 +1,4 @@
-# Tutorial-1.-Using-Gitlab-for-Project-Owners-and-Collaborators.md {.unnumbered}
+# T1 Using Gitlab for Project Owners and Collaborators {.unnumbered}
 
 Step-by-step guide on Gitlab and a workflow to use Github Desktop to sync with local files. For more general info on repositories for code version control and why they are important, see the CRS primer on [digital collaboration](https://zenodo.org/record/7716291). The [Gitlab.uzh.ch](https://www.zi.uzh.ch/en/staff/software-elearning/webplatforms/gitlab.html) is hosted by the UZH on servers own by [SWITCH](https://www.switch.ch/de/edu-id/), a non-profit foundation that has been established by the Swiss Federal Government. Note that Git = the version control system; Gitlab = hosting service and software to store code in repositories and manage it with git version control; Github = a service similar to Gitlab
 
