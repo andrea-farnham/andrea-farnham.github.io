@@ -16,7 +16,9 @@ book:
 
 format:
     html:    
-        author: Center for Reproducible Science
-        theme: minty
+        author: Center for Reproducible Science 
+        theme:
+            light: flatly
+            dark: solar
         toc: true
         code-copy: false
