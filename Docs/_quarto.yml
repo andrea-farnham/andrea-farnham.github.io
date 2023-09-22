@@ -11,7 +11,7 @@ book:
             - Tutorial-0.-Main-workflow.qmd
             - Tutorial-1.-Using-Gitlab-for-Project-Owners-and-Collaborators.qmd
             - Tutorial-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.qmd
-            - Tutorial-3.-Customizing-Gitlab-Continuous-Integration.qmd
+            - Tutorial-3.-Customizing-Gitlab-Continuous-Integration.qmd            
     page-navigation: true
 
 format:
