@@ -4,7 +4,6 @@ The _static site_ generated in this repository shows an _interactive table_ with
 
 The website hosted using [Gitlab pages](shttps://docs.gitlab.com/ee/user/project/pages/) is rendered with an \[R Markdown\] (https://rmarkdown.rstudio.com/) script, that uses the R [DT package](https://rstudio.github.io/DT/)). The script creates an interactive page in HTML. [Gitlab CI](https://docs.gitlab.com/ee/ci/) is used to run the R Markdown script automatically at each update (push) and render the site from the browser so that users do not need to install R or other programs to update the site. 
 
-[[_TOC_]]
 
 # Workflow for data owners
 
