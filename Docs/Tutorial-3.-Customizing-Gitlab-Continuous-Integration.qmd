@@ -1,4 +1,4 @@
-# Tutorial-3.-Customizing-Gitlab-Continuous-Integration {.unnumbered}
+# T3. Customizing Gitlab Continuous Integration {.unnumbered}
 
 Continuous integration (CI) refers to the process of automating the integration of changes made by different developers working in the code. In the context of this hub, it refers to integrating changes in the metadata table and/or images into the resulting HTML, that is, updating our page so that it shows the last version of our metadata. The advantage is that users do not require to install any software dependencies (like R) and changes can be implemented from the browser.
 
