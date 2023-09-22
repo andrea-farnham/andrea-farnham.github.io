@@ -5,8 +5,7 @@ book:
     title: "AFFORD tutorials"
     repo-url: "https://gitlab.uzh.ch/crsuzh/AFFORD_tutorials"
     chapters:
-        - index.md        
-        - Home.md        
+        - index.qmd                
         - part: Tutorials.md        
           chapters:
             - Tutorial-0.-Main-workflow.md
