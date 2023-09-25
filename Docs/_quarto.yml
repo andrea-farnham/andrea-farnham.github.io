@@ -37,7 +37,7 @@ format:
         theme:
             light:
                 - cosmo
-                - r4ds.scss
+                - styles.scss
             dark: solar
         code-link: true
         toc: true
