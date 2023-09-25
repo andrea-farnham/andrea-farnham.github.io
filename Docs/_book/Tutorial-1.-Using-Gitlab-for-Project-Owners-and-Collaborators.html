@@ -33,6 +33,7 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="./">
 <link href="./Tutorial-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.html" rel="next">
 <link href="./Tutorial-0.-Main-workflow.html" rel="prev">
+<link href="./Logo_CRS_col.svg" rel="icon" type="image/svg+xml">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -92,9 +93,14 @@ ul.task-list li input[type="checkbox"] {
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">AFFORD tutorials</a> 
-        <div class="sidebar-tools-main">
+        <div class="sidebar-tools-main tools-wide">
     <a href="https://gitlab.uzh.ch/crsuzh/AFFORD_tutorials" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-git"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
 </div>
     </div>
       </div>
@@ -135,13 +141,13 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Tutorial-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">T2 Creating and Updating a Data Hub in Gitlab</span></a>
+ <span class="menu-text">Tutorial 2 Creating and Updating a Data Hub in Gitlab</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Tutorial-3.-Customizing-Gitlab-Continuous-Integration.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">T3 Customizing Gitlab Continuous Integration</span></a>
+ <span class="menu-text">Tutorial 3 Customizing Gitlab Continuous Integration</span></a>
   </div>
 </li>
       </ul>
@@ -173,7 +179,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
   </ul></li>
   </ul>
-</nav>
+<div class="toc-actions"><div><i class="bi bi-git"></i></div><div class="action-links"><p><a href="https://gitlab.uzh.ch/crsuzh/AFFORD_tutorials/edit/main/Tutorial-1.-Using-Gitlab-for-Project-Owners-and-Collaborators.qmd" class="toc-action">Edit this page</a></p><p><a href="https://gitlab.uzh.ch/crsuzh/AFFORD_tutorials/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -205,7 +211,6 @@ ul.task-list li input[type="checkbox"] {
 <p><a href="https://en.wikipedia.org/wiki/Git">Git</a> is a system to track changes in files, it is most often used to coordinate the work among several persons who access the files online on a server or sync them to their computer. The online use does not require any installation, local use is only possible after installing <a href="https://git-scm.com/downloads">Git</a>.</p>
 <p><a href="https://about.gitlab.com/">Gitlab.com</a> and <a href="https://github.com/">Github.com</a> are commercial hosting services for version control with Git. The UZH instance of the open source Gitlab at <a href="https://gitlab.uzh.ch">Gitlab.uzh.ch</a> is hosted by the UZH on servers owned by <a href="https://www.switch.ch/de/edu-id/">SWITCH</a>, a non-profit foundation that has been established by the Swiss Federal Government. See https://www.zi.uzh.ch/en/staff/software-elearning/webplatforms/gitlab.html for more information.</p>
 <p>A Git repository is a set of folders and files with complete history and full version-tracking abilities, locally or on a server.</p>
-<p>[[<em>TOC</em>]]</p>
 <section id="create-and-use-a-repository-in-browser" class="level1">
 <h1>1. Create and use a repository (in browser)</h1>
 <section id="for-project-owners" class="level3">
@@ -254,7 +259,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p>In your Gitlab project, get your personal access token (see above) and save it somewhere</p></li>
 <li><p>On Github desktop go to File/Clone repository. Then enter the URL of your Gitlab repository (see the clone button) and a local directory name. For example:</p>
 <img src="uploads/7a0a2bd44e724b5c59f4c4e0ac983573/image.png" width="551" height="277" alt="image.png"></li>
-<li><p>Then you will be asked for <strong>username</strong> and <strong>password. </strong> Your username is your Gitlab username (e.g., the name in your email address) and the password is the <strong>Token</strong> that you just created.</p></li>
+<li><p>Then you will be asked for <strong>username</strong> and <strong>password.</strong> Your username is your Gitlab username (e.g., the name in your email address) and the password is the <strong>Token</strong> that you just created.</p></li>
 </ol>
 <p>Now your Local folder is linked to your Gitlab remote repository. You can check below how to pull, commit and push changes.</p>
 </section>
@@ -586,11 +591,20 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
   <div class="nav-page nav-page-next">
       <a href="./Tutorial-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.html" class="pagination-link">
-        <span class="nav-page-text">T2 Creating and Updating a Data Hub in Gitlab</span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text">Tutorial 2 Creating and Updating a Data Hub in Gitlab</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">Tutorials of the <a href="https://www.crs.uzh.ch/en.html">Center for Reproducible Science</a> from the University of Zurich.</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">This website is and will always be free, licensed under the <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/us/">CC BY-NC-ND 3.0</a> License.</div>
+  </div>
+</footer>
 
 
 

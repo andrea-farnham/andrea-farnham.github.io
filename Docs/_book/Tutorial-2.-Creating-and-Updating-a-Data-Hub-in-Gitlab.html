@@ -8,7 +8,7 @@
 
 <meta name="author" content="Center for Reproducible Science">
 
-<title>AFFORD tutorials - T2 Creating and Updating a Data Hub in Gitlab</title>
+<title>AFFORD tutorials - Tutorial 2 Creating and Updating a Data Hub in Gitlab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,6 +33,7 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="./">
 <link href="./Tutorial-3.-Customizing-Gitlab-Continuous-Integration.html" rel="next">
 <link href="./Tutorial-1.-Using-Gitlab-for-Project-Owners-and-Collaborators.html" rel="prev">
+<link href="./Logo_CRS_col.svg" rel="icon" type="image/svg+xml">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -76,7 +77,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Tutorials.html">Tutorials</a></li><li class="breadcrumb-item"><a href="./Tutorial-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.html">T2 Creating and Updating a Data Hub in Gitlab</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Tutorials.html">Tutorials</a></li><li class="breadcrumb-item"><a href="./Tutorial-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.html">Tutorial 2 Creating and Updating a Data Hub in Gitlab</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -92,9 +93,14 @@ ul.task-list li input[type="checkbox"] {
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">AFFORD tutorials</a> 
-        <div class="sidebar-tools-main">
+        <div class="sidebar-tools-main tools-wide">
     <a href="https://gitlab.uzh.ch/crsuzh/AFFORD_tutorials" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-git"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
 </div>
     </div>
       </div>
@@ -135,13 +141,13 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Tutorial-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">T2 Creating and Updating a Data Hub in Gitlab</span></a>
+ <span class="menu-text">Tutorial 2 Creating and Updating a Data Hub in Gitlab</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Tutorial-3.-Customizing-Gitlab-Continuous-Integration.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">T3 Customizing Gitlab Continuous Integration</span></a>
+ <span class="menu-text">Tutorial 3 Customizing Gitlab Continuous Integration</span></a>
   </div>
 </li>
       </ul>
@@ -166,14 +172,14 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#files" id="toc-files" class="nav-link" data-scroll-target="#files">Files</a></li>
   <li><a href="#privacy" id="toc-privacy" class="nav-link" data-scroll-target="#privacy">Privacy</a></li>
   </ul>
-</nav>
+<div class="toc-actions"><div><i class="bi bi-git"></i></div><div class="action-links"><p><a href="https://gitlab.uzh.ch/crsuzh/AFFORD_tutorials/edit/main/Tutorial-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.qmd" class="toc-action">Edit this page</a></p><p><a href="https://gitlab.uzh.ch/crsuzh/AFFORD_tutorials/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">T2 Creating and Updating a Data Hub in Gitlab</h1>
+<h1 class="title">Tutorial 2 Creating and Updating a Data Hub in Gitlab</h1>
 </div>
 
 
@@ -558,11 +564,20 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
   <div class="nav-page nav-page-next">
       <a href="./Tutorial-3.-Customizing-Gitlab-Continuous-Integration.html" class="pagination-link">
-        <span class="nav-page-text">T3 Customizing Gitlab Continuous Integration</span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text">Tutorial 3 Customizing Gitlab Continuous Integration</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">Tutorials of the <a href="https://www.crs.uzh.ch/en.html">Center for Reproducible Science</a> from the University of Zurich.</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">This website is and will always be free, licensed under the <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/us/">CC BY-NC-ND 3.0</a> License.</div>
+  </div>
+</footer>
 
 
 
