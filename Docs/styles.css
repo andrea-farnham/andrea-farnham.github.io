@@ -17,15 +17,18 @@ div.sidebar-item-container .active {
   font-weight: bold;
 }
 
+/* Center the cover image */
 img.quarto-cover-image {
   box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+  display: block;
+  margin: 0 auto; /* This will center the image */
 }
 
 /* Headings ------------------------------------------------------ */
-
 #title-block-header.quarto-title-block.default .quarto-title h1.title {
   margin-bottom: 0.5rem;
-}
+  background-color: #f0f0f0; /* Light gray background color */
+} 
 
 h2 {
   margin-top: 2rem;
