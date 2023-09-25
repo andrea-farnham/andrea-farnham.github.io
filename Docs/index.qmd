@@ -1,4 +1,9 @@
-# Welcome!  {.unnumbered}
+# Welcome! {.unnumbered}
 
-This is the collection of CRS tutorials for the project AFFORD
- 
+This is the collection of CRS tutorials for the project:
+
+A Framework for Avoiding the Open Research Data Dump (AFFORD)
+
+![](images/Logo_AFFORD_col.svg)
+
+![](Logo_CRS_col.svg){width="134"}

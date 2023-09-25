@@ -12,9 +12,7 @@ book:
         right: |
            This website is and will always be free, licensed under the [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/us/) License.
            
-    cover-image:  Logo_CRS_col.svg
-    cover-image-alt: | 
-    Tutorials
+    
     favicon:  Logo_CRS_col.svg
     
     site-url: https://crsuzh.pages.uzh.ch/AFFORD_tutorials/
