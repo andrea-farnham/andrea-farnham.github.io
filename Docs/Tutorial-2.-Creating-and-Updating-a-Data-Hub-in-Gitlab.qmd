@@ -6,7 +6,8 @@ The website hosted using [Gitlab pages](shttps://docs.gitlab.com/ee/user/project
 
 # Workflow for data owners
 
-![image.png](uploads/6e6e99d42e8bb7d128fbbc6ee131ab12/image.png){width="542" height="295"}
+![]](uploads/6e6e99d42e8bb7d128fbbc6ee131ab12/image.png){width="542" height="295"}
+
 
 ### 1. ACTION: Owner edits **metadata**
 
