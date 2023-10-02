@@ -13,6 +13,6 @@ The materials will have three url locations, which can all be accessed through t
 2.  The **main repository** to access the source metadata tables and data files
 3.  The **Wiki** to access all related documentation such as protocols and SOPs. The Wiki is alsa accessible through the main repository.
 
-Any `collaborator` is given the landing page address and access credentials to it. From there they can access the three urls
+Any `collaborator` is given the landing page address and access credentials to it. From there they can access the three urls.
 
 ![Gitlab_basic](uploads/d861221e7e6f9a7592023f31288d901a/Gitlab_basic.png){width="718" height="1058"}
