@@ -1,20 +1,21 @@
 /*-- scss:defaults --*/
 
-$primary: #637238 !default;
-$font-size-root: 18px !default;
+/*$primary: #637238 !default;*/
+$primary: #096b38 !default;
+$font-size-root: 20px !default;
 
 /*-- scss:rules --*/
 
-.sidebar-title {
-  color: #637238;
-}
+
+
 
 div.sidebar-item-container .active {
   font-weight: bold;
 }
 
+
 .sidebar nav[role=doc-toc] ul>li>a.active, .sidebar nav[role=doc-toc] ul>li>ul>li>a.active{
-  font-weight: bold;
+  font-weight: bold;  
 }
 
 /* Center the cover image */
@@ -23,12 +24,51 @@ img.quarto-cover-image {
   display: block;
   margin: 0 auto; /* This will center the image */
 }
-
+ 
 /* Headings ------------------------------------------------------ */
-#title-block-header.quarto-title-block.default .quarto-title h1.title {
-  margin-bottom: 0.5rem;
-  background-color: #f0f0f0; /* Light gray background color */
+
+
+.navbar-title {
+  font-size: 0.75em;
+  font-weight: 500;
+  color: rgba(34, 36, 100, 1);
+  text-transform: uppercase;
+  letter-spacing: .1em;
+
+  &:hover {
+    border-bottom: 1px solid $primary !important;
+  }
+}
+
+ #title-block-header.default .quarto-title  h1.title 
+ {
+  #font-weight: 200;
+  #font-size: 250%;
+  color: rgba(34, 36, 100, 1);
+  margin: 0;
+  background: rgba(27, 183, 117, 0.5);
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  padding: 2px;
 } 
+
+#title-block-header.default .quarto-title  p.subtitle,
+ {
+# font-weight: 200;  
+  color: rgba(34, 36, 100, 1);
+  margin: 0;
+  background:  rgba(27, 183, 117, 0.1);  
+  padding: 2px ; 
+} 
+ #title-block-header.default .quarto-title-meta,
+ {  
+  color: rgba(34, 36, 100, 1);
+  margin: 0;
+  background:  rgba(27, 183, 117, 0.1);  
+  padding: 2px ;
+} 
+ 
 
 h2 {
   margin-top: 2rem;
@@ -41,7 +81,7 @@ h4 { margin-top: 1.5em; font-size: 1.1rem; }
 h5 { margin-top: 1.5em; font-size: 1rem; }
 
 .quarto-section-identifier {
-  color: #6C6C6C;
+  color: #096b38;
   font-weight: normal;
 }
 
@@ -57,5 +97,5 @@ code a:any-link {
 }
 
 pre {
-  background-image: linear-gradient(160deg,#f8f8f8 0,#f1f1f1 100%);
+  #background-image: linear-gradient(160deg,#f8f8f8 0,#f1f1f1 100%);
 }

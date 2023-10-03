@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Center for Reproducible Science">
 
-<title>AFFORD tutorials - Tutorials</title>
+<title>AFFORD tutorials - Tutorial 3 Customizing Gitlab Continuous Integration</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,27 +23,26 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./Tutorial-0.-Main-workflow.html" rel="next">
-<link href="./index.html" rel="prev">
-<link href="./Logo_CRS_col.svg" rel="icon" type="image/svg+xml">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../tutorials/Tutorial-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.html" rel="prev">
+<link href="../logos/Logo_CRS_col.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -77,7 +75,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Tutorials.html">Tutorials</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tutorials/Tutorials.html">Tutorials</a></li><li class="breadcrumb-item"><a href="../tutorials/Tutorial-3.-Customizing-Gitlab-Continuous-Integration.html">Tutorial 3 Customizing Gitlab Continuous Integration</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -92,7 +90,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">AFFORD tutorials</a> 
+      <a href="../">AFFORD tutorials</a> 
         <div class="sidebar-tools-main tools-wide">
     <a href="https://gitlab.uzh.ch/crsuzh/AFFORD_tutorials" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-git"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
@@ -113,13 +111,13 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Welcome!</span></a>
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Welcome</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./Tutorials.html" class="sidebar-item-text sidebar-link active">
+            <a href="../tutorials/Tutorials.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Tutorials</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -128,25 +126,25 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Tutorial-0.-Main-workflow.html" class="sidebar-item-text sidebar-link">
+  <a href="../tutorials/Tutorial-0.-Main-workflow.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">A Gitlab workflow to data sharing</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Tutorial-1.-Using-Gitlab-for-Project-Owners-and-Collaborators.html" class="sidebar-item-text sidebar-link">
+  <a href="../tutorials/Tutorial-1.-Using-Gitlab-for-Project-Owners-and-Collaborators.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Tutorial 1: Using Gitlab for Project Owners and Collaborators</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Tutorial-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.html" class="sidebar-item-text sidebar-link">
+  <a href="../tutorials/Tutorial-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Tutorial 2 Creating and Updating a Data Hub in Gitlab</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Tutorial-3.-Customizing-Gitlab-Continuous-Integration.html" class="sidebar-item-text sidebar-link">
+  <a href="../tutorials/Tutorial-3.-Customizing-Gitlab-Continuous-Integration.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Tutorial 3 Customizing Gitlab Continuous Integration</span></a>
   </div>
 </li>
@@ -158,26 +156,26 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#the-.gitlab-ci.yml-file" id="toc-the-.gitlab-ci.yml-file" class="nav-link active" data-scroll-target="#the-.gitlab-ci.yml-file">The <code>.gitlab-ci.yml</code> file</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-git"></i></div><div class="action-links"><p><a href="https://gitlab.uzh.ch/crsuzh/AFFORD_tutorials/edit/main/tutorials/Tutorial-3.-Customizing-Gitlab-Continuous-Integration.qmd" class="toc-action">Edit this page</a></p><p><a href="https://gitlab.uzh.ch/crsuzh/AFFORD_tutorials/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Tutorials</h1>
+<h1 class="title">Tutorial 3 Customizing Gitlab Continuous Integration</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Center for Reproducible Science </p>
-          </div>
-  </div>
     
   
     
@@ -186,9 +184,38 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Practical tutorials for setting a Gitlab repository for data (and metadata) sharing</p>
+<p>Continuous integration (CI) refers to the process of automating the integration of changes made by different developers working in the code. In the context of this hub, it refers to integrating changes in the metadata table and/or images into the resulting HTML, that is, updating our page so that it shows the last version of our metadata. The advantage is that users do not require to install any software dependencies (like R) and changes can be implemented from the browser.</p>
+<p>In this case we used a <a href="https://docs.gitlab.com/ee/user/project/pages/getting_started/pages_ci_cd_template.html">Continous Integration template</a>. The current template is taken from <a href="https://rocker-project.org/">Rocker</a>, a project offering docker containers for R environment. Broadly speaking, we can think of a docker container as a light-weight virtual machine and of a docker image as a snapshot of a virtual machine.</p>
+<section id="the-.gitlab-ci.yml-file" class="level2">
+<h2 class="anchored" data-anchor-id="the-.gitlab-ci.yml-file">The <code>.gitlab-ci.yml</code> file</h2>
+<p>This is the file that will define the pipeline which we can run from the browser.</p>
+<ul>
+<li>The first part loads a <code>docker image</code> (similar to a snapshot of a virtual machine).</li>
+<li>Then it defines different <code>stages</code> (<em>deploy</em> is the main, but some <em>tests</em> stages are usually included as well). Sometimes there is a <code>before the script</code> section with some installations (not present in this example).</li>
+<li>Then the main <code>script</code> in this example runs some R code, using the R markdown package, to render the R markdown script named ‘R_interactive_table.Rmd’. In this case the render command outputs the html directly in the public folder. <strong>Note</strong> the index.html will only be visible if you go to <em>Pipelines/</em></li>
+<li>Gitlab pages expects the output HTML to be saved in a server named <code>public</code>.</li>
+</ul>
+<blockquote class="blockquote">
+<p>Note: below we show just an example. The actual file may have change and can be found in the repository.</p>
+</blockquote>
+<pre><code>image: rocker/verse:4.0.0
+pages:
+  stage: deploy
+  script:
+  - R -e "baseDir &lt;- getwd(); rmarkdown::render('_scripts/R_interactive_table.Rmd', output_file = file.path(baseDir,'public','index.html'))"
+        
+
+  artifacts:    
+    paths:
+    - public    
+    - public/Images
+    
+  only:
+  - master
+  interruptible: true</code></pre>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -489,14 +516,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Welcome!</span>
+      <a href="../tutorials/Tutorial-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Tutorial 2 Creating and Updating a Data Hub in Gitlab</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./Tutorial-0.-Main-workflow.html" class="pagination-link">
-        <span class="nav-page-text">A Gitlab workflow to data sharing</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
@@ -505,7 +529,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-left">Tutorials of the <a href="https://www.crs.uzh.ch/en.html">Center for Reproducible Science</a> from the University of Zurich.</div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><div><i class="bi bi-git"></i></div><div class="action-links"><p><a href="https://gitlab.uzh.ch/crsuzh/AFFORD_tutorials/edit/main/Tutorials.qmd" class="toc-action">Edit this page</a></p><p><a href="https://gitlab.uzh.ch/crsuzh/AFFORD_tutorials/issues/new" class="toc-action">Report an issue</a></p></div></div></div>
+    </div>
     <div class="nav-footer-right">This website is and will always be free, licensed under the <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/us/">CC BY-NC-ND 3.0</a> License.</div>
   </div>
 </footer>

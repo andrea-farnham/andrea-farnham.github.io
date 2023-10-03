@@ -1,4 +1,6 @@
-# Welcome! {.unnumbered}
+ 
+
+# Welcome {.unnumbered}
 
 This is the collection of CRS tutorials for the project:
 
@@ -6,4 +8,4 @@ This is the collection of CRS tutorials for the project:
 
 ![](images/Logo_AFFORD_col.svg){fig-align="left"}
 
-![](Logo_CRS_col.svg){fig-align="left" width="162"}
+![](logos/Logo_CRS_col.svg){fig-align="left" width="134"}

@@ -2,26 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://crsuzh.pages.uzh.ch/AFFORD_tutorials/index.html</loc>
-    <lastmod>2023-09-25T12:55:30.962Z</lastmod>
+    <lastmod>2023-10-03T12:56:18.999Z</lastmod>
   </url>
   <url>
-    <loc>https://crsuzh.pages.uzh.ch/AFFORD_tutorials/Tutorials.html</loc>
-    <lastmod>2023-09-25T12:55:30.964Z</lastmod>
+    <loc>https://crsuzh.pages.uzh.ch/AFFORD_tutorials/tutorials/Tutorials.html</loc>
+    <lastmod>2023-10-03T12:56:19.002Z</lastmod>
   </url>
   <url>
-    <loc>https://crsuzh.pages.uzh.ch/AFFORD_tutorials/Tutorial-0.-Main-workflow.html</loc>
-    <lastmod>2023-09-25T12:55:30.967Z</lastmod>
+    <loc>https://crsuzh.pages.uzh.ch/AFFORD_tutorials/tutorials/Tutorial-0.-Main-workflow.html</loc>
+    <lastmod>2023-10-03T12:56:19.005Z</lastmod>
   </url>
   <url>
-    <loc>https://crsuzh.pages.uzh.ch/AFFORD_tutorials/Tutorial-1.-Using-Gitlab-for-Project-Owners-and-Collaborators.html</loc>
-    <lastmod>2023-09-25T12:55:30.973Z</lastmod>
+    <loc>https://crsuzh.pages.uzh.ch/AFFORD_tutorials/tutorials/Tutorial-1.-Using-Gitlab-for-Project-Owners-and-Collaborators.html</loc>
+    <lastmod>2023-10-03T12:56:19.011Z</lastmod>
   </url>
   <url>
-    <loc>https://crsuzh.pages.uzh.ch/AFFORD_tutorials/Tutorial-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.html</loc>
-    <lastmod>2023-09-25T12:55:30.976Z</lastmod>
+    <loc>https://crsuzh.pages.uzh.ch/AFFORD_tutorials/tutorials/Tutorial-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.html</loc>
+    <lastmod>2023-10-03T12:56:19.014Z</lastmod>
   </url>
   <url>
-    <loc>https://crsuzh.pages.uzh.ch/AFFORD_tutorials/Tutorial-3.-Customizing-Gitlab-Continuous-Integration.html</loc>
-    <lastmod>2023-09-25T12:55:30.980Z</lastmod>
+    <loc>https://crsuzh.pages.uzh.ch/AFFORD_tutorials/tutorials/Tutorial-3.-Customizing-Gitlab-Continuous-Integration.html</loc>
+    <lastmod>2023-10-03T12:56:19.018Z</lastmod>
   </url>
 </urlset>

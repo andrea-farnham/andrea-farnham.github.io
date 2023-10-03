@@ -2,8 +2,11 @@ project:
   type: book
             
 book:
-    title: "AFFORD tutorials"
-    reader-mode: true
+    title: AFFORD tutorials
+    subtitle: A Framework for Avoiding the Open Research Data Dump 
+    author: Center for Reproducible Science
+    date: last-modified
+    reader-mode: true    
    
     page-footer:
         left: |
@@ -13,7 +16,7 @@ book:
            This website is and will always be free, licensed under the [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/us/) License.
            
     
-    favicon:  Logo_CRS_col.svg
+    favicon:  logos/Logo_CRS_col.svg
     
     site-url: https://crsuzh.pages.uzh.ch/AFFORD_tutorials/
     repo-url: https://gitlab.uzh.ch/crsuzh/AFFORD_tutorials
@@ -21,23 +24,23 @@ book:
     repo-actions: [edit, issue]
     
     chapters:
-        - index.qmd                
-        - part: Tutorials.qmd        
+        - index.qmd                               
+        - part: tutorials/Tutorials.qmd        
           chapters:
-            - Tutorial-0.-Main-workflow.qmd
-            - Tutorial-1.-Using-Gitlab-for-Project-Owners-and-Collaborators.qmd
-            - Tutorial-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.qmd
-            - Tutorial-3.-Customizing-Gitlab-Continuous-Integration.qmd            
+            - tutorials/Tutorial-0.-Main-workflow.qmd
+            - tutorials/Tutorial-1.-Using-Gitlab-for-Project-Owners-and-Collaborators.qmd
+            - tutorials/Tutorial-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.qmd
+            - tutorials/Tutorial-3.-Customizing-Gitlab-Continuous-Integration.qmd            
     page-navigation: true
 
     
 format:
     html:    
-        author: Center for Reproducible Science 
+        #author: Center for Reproducible Science 
         theme:
             light:
                 - cosmo
-                - styles.scss
+                - styles.css
             dark: solar
         code-link: true
         toc: true
