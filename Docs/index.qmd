@@ -24,6 +24,7 @@ resources:
 
 ---
 
+
 ::: {#hero-heading}
 This site compiles a series of tutorials on Open Research Data management. The Center of Reproducible Science gathered and developed these tools and workflows for the project AFFORD: A Framework for Avoiding Open Research Data Dump 
 
