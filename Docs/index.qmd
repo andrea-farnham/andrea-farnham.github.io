@@ -6,6 +6,6 @@ This is the collection of CRS tutorials for the project:
 
 **A Framework for Avoiding the Open Research Data Dump (AFFORD)**
 
-![](images/Logo_AFFORD_col.svg){fig-align="left"}
+![](logos/Logo_AFFORD_col.svg){fig-align="left"}
 
 ![](logos/Logo_CRS_col.svg){fig-align="left" width="134"}
