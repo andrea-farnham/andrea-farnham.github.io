@@ -21,8 +21,7 @@ book:
     repo-url: https://gitlab.uzh.ch/crsuzh/AFFORD_tutorials 
     
     chapters:
-        - index.qmd                               
-          
+        - index.qmd 
         - part: tutorials/Tutorials.qmd        
           chapters:
             - tutorials/Tutorial-0.-Main-workflow.qmd

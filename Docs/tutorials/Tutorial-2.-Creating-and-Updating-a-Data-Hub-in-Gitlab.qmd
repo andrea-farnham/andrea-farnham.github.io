@@ -1,4 +1,9 @@
-# Tutorial 2 Creating and Updating a Data Hub in Gitlab {.unnumbered}
+---
+author: G.Fraga Gonzalez & E. Furrer
+date: last-modified
+---
+
+# Tutorial 2: Creating and Updating a Data Hub in Gitlab {.unnumbered}
 
 The *static site* generated in this repository shows an *interactive table* with image thumbnails (clickable). By *static* we mean that the user will just see whatever data is contained in the HTML of the site. Although it contains an interactive table, all users have access to the same data which they cannot modify (unlike in *dynamic websites*).
 

@@ -10,7 +10,7 @@ $font-size-root: 18px !default;
 .sidebar.collapse.collapse-horizontal.sidebar-navigation.floating.overflow-auto {
   #width: 100%;
   left: 0;
-  background-color: rgba(27, 183, 117, 0.6);
+  background-color: rgba(27, 183, 117, 0.2);
 }
 
 div.sidebar-item-container .active {

@@ -1,11 +1,10 @@
 ---
-image: logos/Logo_CRS_col.svg
-image-alt: CRS logo
+#image: logos/Logo_AFFORD_col.svg
 
 about:
   template: solana
-  image-width: 18em
-  id: hero-heading
+  image-width: 10em
+  id: EpicHeader
   links:
     - text: CRS site
       href: "https://www.crs.uzh.ch/en.html"
@@ -21,16 +20,22 @@ header-includes: >
   <link rel="stylesheet" href="assets/index.css">
 resources:
   - assets/index.css
-
 ---
 
+::: {#EpicHeader}
+<div style="text-align: justify; max-width: 500px; margin: auto;">
 
-::: {#hero-heading}
-This site compiles a series of tutorials on Open Research Data management. The Center of Reproducible Science gathered and developed these tools and workflows for the project AFFORD: A Framework for Avoiding Open Research Data Dump 
+This site compiles a series of tutorials on Open Research Data management. The Center of Reproducible Science gathered and developed these tools and workflows for the SwissUniversities project *AFFORD: A Framework for Avoiding Open Research Data Dump*
+</div>
+
+\
+<div style="text-align: center; text-justify: distribute;">
+![](logos/Logo_CRS_col.svg){fig-align="left" width="100" style="opacity: 0.8"} ![](logos/Logo_AFFORD_col.svg){fig-align="left" width="100" style="opacity: 0.8"}
+
+</div>
 
 :::
 
-  
 <!-- # Welcome {.unnumbered} -->
 
 <!-- This is the collection of CRS tutorials for the project: -->
@@ -39,4 +44,4 @@ This site compiles a series of tutorials on Open Research Data management. The C
 
 <!-- ![](logos/Logo_AFFORD_col.svg){fig-align="left"} -->
 
-<!-- ![](logos/Logo_CRS_col.svg){fig-align="left" width="134"} --> 
+<!-- ![](logos/Logo_CRS_col.svg){fig-align="left" width="134"} -->

@@ -1,9 +1,4 @@
  
-body{
-  background-color:rgba(237, 212, 117, 0.1); 
-  #background-color: rgba(27, 183, 117, 0.05);
-}
-
 
 /* title */
 .title {
@@ -59,9 +54,9 @@ body{
 
 /* image */
 .about-image {
-  margin-top: 0em;
-  height: 80%;
-  padding: 10px;
+  margin-right: 20em;
+  #height: 10%;
+  padding: 20px;
 }
 
 /* // Home
