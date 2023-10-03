@@ -3,11 +3,10 @@ project:
             
 book:
     title: AFFORD tutorials
-    subtitle: A Framework for Avoiding the Open Research Data Dump 
-    author: Center for Reproducible Science
-    date: last-modified
-    reader-mode: true    
-   
+    subtitle: Tools and workflows for Open Research Data 
+    author: CRS, UZH
+    date: last-modified    
+    reader-mode: true       
     page-footer:
         left: |
           Tutorials of the [Center for Reproducible Science](https://www.crs.uzh.ch/en.html) from the University of Zurich.
@@ -19,12 +18,11 @@ book:
     favicon:  logos/Logo_CRS_col.svg
     
     site-url: https://crsuzh.pages.uzh.ch/AFFORD_tutorials/
-    repo-url: https://gitlab.uzh.ch/crsuzh/AFFORD_tutorials
-    repo-branch: main
-    repo-actions: [edit, issue]
+    repo-url: https://gitlab.uzh.ch/crsuzh/AFFORD_tutorials 
     
     chapters:
         - index.qmd                               
+          
         - part: tutorials/Tutorials.qmd        
           chapters:
             - tutorials/Tutorial-0.-Main-workflow.qmd
@@ -40,7 +38,7 @@ format:
         theme:
             light:
                 - cosmo
-                - styles.css
+                - assets/styles.css
             dark: solar
         code-link: true
         toc: true

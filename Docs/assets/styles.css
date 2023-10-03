@@ -2,15 +2,19 @@
 
 /*$primary: #637238 !default;*/
 $primary: #096b38 !default;
-$font-size-root: 20px !default;
+$font-size-root: 18px !default;
 
 /*-- scss:rules --*/
 
-
-
+ 
+.sidebar.collapse.collapse-horizontal.sidebar-navigation.floating.overflow-auto {
+  #width: 100%;
+  left: 0;
+  background-color: rgba(27, 183, 117, 0.6);
+}
 
 div.sidebar-item-container .active {
-  font-weight: bold;
+  font-weight: bold;  
 }
 
 
@@ -40,7 +44,8 @@ img.quarto-cover-image {
   }
 }
 
- #title-block-header.default .quarto-title  h1.title 
+/* Title ------------------------------------------------------ */
+ /*#title-block-header.default .quarto-title  h1.title 
  {
   #font-weight: 200;
   #font-size: 250%;
@@ -68,7 +73,7 @@ img.quarto-cover-image {
   background:  rgba(27, 183, 117, 0.1);  
   padding: 2px ;
 } 
- 
+ */
 
 h2 {
   margin-top: 2rem;

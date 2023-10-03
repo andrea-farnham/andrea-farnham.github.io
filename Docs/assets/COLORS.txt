@@ -1,0 +1,4 @@
+
+# Adjust last value for opacity
+rgba(237, 212, 117, 1)  # yellowish
+rgba(27, 183, 117, 1) # the CRS green

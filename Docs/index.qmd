@@ -1,11 +1,41 @@
- 
+---
+image: logos/Logo_CRS_col.svg
+image-alt: CRS logo
 
-# Welcome {.unnumbered}
+about:
+  template: solana
+  image-width: 18em
+  id: hero-heading
+  links:
+    - text: CRS site
+      href: "https://www.crs.uzh.ch/en.html"
+    - text: CRS Gitlab
+      href: "https://gitlab.uzh.ch/crsuzh"
+    - icon: linkedin
+      aria-label: "LinkedIn"
+      href: "https://www.linkedin.com/company/center-for-reproducible-science/"  
+    
+page-layout: full
 
-This is the collection of CRS tutorials for the project:
+header-includes: >
+  <link rel="stylesheet" href="assets/index.css">
+resources:
+  - assets/index.css
 
-**A Framework for Avoiding the Open Research Data Dump (AFFORD)**
+---
 
-![](images/Logo_AFFORD_col.svg){fig-align="left"}
+::: {#hero-heading}
+This site compiles a series of tutorials on Open Research Data management. The Center of Reproducible Science gathered and developed these tools and workflows for the project AFFORD: A Framework for Avoiding Open Research Data Dump 
 
-![](logos/Logo_CRS_col.svg){fig-align="left" width="134"}
+:::
+
+  
+<!-- # Welcome {.unnumbered} -->
+
+<!-- This is the collection of CRS tutorials for the project: -->
+
+<!-- **A Framework for Avoiding the Open Research Data Dump (AFFORD)** -->
+
+<!-- ![](logos/Logo_AFFORD_col.svg){fig-align="left"} -->
+
+<!-- ![](logos/Logo_CRS_col.svg){fig-align="left" width="134"} --> 
