@@ -2,7 +2,7 @@
 #image: logos/Logo_AFFORD_col.svg
 
 about:
-  template: solana
+  template: jolla
   image-width: 10em
   id: EpicHeader
   links:
