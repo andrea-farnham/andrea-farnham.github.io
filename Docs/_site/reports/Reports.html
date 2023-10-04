@@ -73,9 +73,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
+      searchColumns: ["listing-date","listing-title","listing-author"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -109,7 +109,7 @@ ul.task-list li input[type="checkbox"] {
     <img src="../logos/Logo_AFFORD_col.svg" alt="" class="navbar-logo">
     </a>
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">AFFORD Home</span>
+    <span class="navbar-title">Home</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -129,6 +129,10 @@ ul.task-list li input[type="checkbox"] {
   <li class="nav-item">
     <a class="nav-link active" href="../reports/Reports.html" rel="" target="" aria-current="page">
  <span class="menu-text">Reports</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about/About.html" rel="" target="">
+ <span class="menu-text">About</span></a>
   </li>  
 </ul>
             <div class="quarto-navbar-tools">
@@ -164,37 +168,73 @@ ul.task-list li input[type="checkbox"] {
 
 </section>
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1696420858000" data-listing-file-modified-sort="1696420858473" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="../reports/Reports_1.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-date-sort" data-direction="asc">
+          Date - Oldest
+        </option>
+         <option value="listing-date-sort" data-direction="desc">
+          Date - Newest
+        </option>
+         <option value="listing-title-sort" data-direction="asc">
+          Title
+        </option>
+         <option value="listing-author" data-direction="asc">
+          Author
+        </option>
+     </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
 </div>
-<div class="body">
-<a href="../reports/Reports_1.html">
-<h3 class="no-anchor listing-title">
-Report 1 Data Archiving
-</h3>
-<div class="listing-subtitle">
 
-</div>
-<div class="listing-description">
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+<th>
+<a class="sort" data-sort="listing-date-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Date</a>
+</th>
+<th>
+<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
+</th>
+<th>
+<a class="sort" data-sort="listing-author" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Author</a>
+</th>
+</tr>
+</thead>
+<tbody class="list">
+<tr data-index="0" data-listing-date-sort="1696420907000" data-listing-file-modified-sort="1696420907034" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-title-sort="Report 1 Data Archiving" data-listing-filename-sort="Reports_1.qmd">
+<td>
+<span class="listing-date">Oct 4, 2023</span>
+</td>
+<td>
+<a href="../reports/Reports_1.html" class="title listing-title">Report 1 Data Archiving</a>
+</td>
+<td>
+<span class="listing-author">G.Fraga Gonzalez &amp; E. Furrer</span>
+</td>
+</tr>
+<tr data-index="1" data-listing-date-sort="1696424349000" data-listing-file-modified-sort="1696424349442" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-title-sort="Report 2 Another test pdf" data-listing-filename-sort="Reports_2.qmd">
+<td>
+<span class="listing-date">Oct 4, 2023</span>
+</td>
+<td>
+<a href="../reports/Reports_2.html" class="title listing-title">Report 2 Another test pdf</a>
+</td>
+<td>
+<span class="listing-author">G.Fraga Gonzalez &amp; E. Furrer</span>
+</td>
+</tr>
+</tbody>
 
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../reports/Reports_1.html">
-<div class="listing-date">
-Oct 4, 2023
-</div>
-<div class="listing-author">
-G.Fraga Gonzalez &amp; E. Furrer
-</div>
-</a>
-</div>
-</div>
-</div>
+</table>
 <div class="listing-no-matching d-none">
 No matching items
 </div>

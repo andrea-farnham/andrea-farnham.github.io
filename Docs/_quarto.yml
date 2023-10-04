@@ -6,7 +6,7 @@ website:
     back-to-top-navigation: true
     page-footer:
         left: |
-          Tutorials of the [Center for Reproducible Science](https://www.crs.uzh.ch/en.html) from the University of Zurich.
+          Created by the [Center for Reproducible Science](https://www.crs.uzh.ch/en.html) from the [University of Zurich](https://www.uzh.ch/de.html).
           
         right: |
            This website is and will always be free, licensed under the [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/us/) License.
@@ -18,7 +18,7 @@ website:
     repo-url: https://gitlab.uzh.ch/crsuzh/AFFORD_tutorials 
     
     navbar:
-        title: AFFORD Home
+        title: Home
         logo:  logos/Logo_AFFORD_col.svg
         right:                  
           - text: Tutorials  
@@ -27,6 +27,8 @@ website:
             href: presentations/Presentations.qmd                
           - text: Reports
             href: reports/Reports.qmd                
+          - text: About
+            href: about/About.qmd                
             
 format:
     html:    

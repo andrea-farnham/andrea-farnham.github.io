@@ -73,9 +73,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -109,7 +109,7 @@ ul.task-list li input[type="checkbox"] {
     <img src="../logos/Logo_AFFORD_col.svg" alt="" class="navbar-logo">
     </a>
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">AFFORD Home</span>
+    <span class="navbar-title">Home</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -150,7 +150,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#tutorials" id="toc-tutorials" class="nav-link active" data-scroll-target="#tutorials">Tutorials</a></li>
   </ul>
 </nav>
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Code">Code <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Gitlab">Gitlab <span class="quarto-category-count">(4)</span></div><div class="category" data-category="code">code <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Code">Code <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Gitlab">Gitlab <span class="quarto-category-count">(4)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -164,21 +164,21 @@ ul.task-list li input[type="checkbox"] {
 
 </section>
 
-<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="listing-actions-group">
    <div class="input-group input-group-sm quarto-listing-sort">
      <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
      <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
        <option value="" disabled="" selected="" hidden="">Order By</option>
        <option value="index" data-direction="asc">Default</option>
+         <option value="listing-title" data-direction="asc">
+          Title
+        </option>
          <option value="listing-date-sort" data-direction="asc">
           Date - Oldest
         </option>
          <option value="listing-date-sort" data-direction="desc">
           Date - Newest
-        </option>
-         <option value="listing-title-sort" data-direction="asc">
-          Title
         </option>
          <option value="listing-author" data-direction="asc">
           Author
@@ -190,69 +190,151 @@ ul.task-list li input[type="checkbox"] {
       <input type="text" class="search form-control" placeholder="Filter">
     </div>
 </div>
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="Gitlab" data-listing-date-sort="1696417808000" data-listing-file-modified-sort="1696417808745" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="thumbnail">
+<p><a href="../tutorials/Tutorial-0.-Main-workflow.html"> <p class="card-img-top"><img src="uploads\d861221e7e6f9a7592023f31288d901a\Gitlab_basic.png"  class="thumbnail-image card-img"/></p> </a></p>
+</div>
+<div class="body">
+<a href="../tutorials/Tutorial-0.-Main-workflow.html">
+<h3 class="no-anchor listing-title">
+A Gitlab workflow to data sharing
+</h3>
+<div class="listing-subtitle">
 
-<table class="quarto-listing-table table">
-<thead>
-<tr>
-<th>
-<a class="sort" data-sort="listing-date-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Date</a>
-</th>
-<th>
-<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
-</th>
-<th>
-<a class="sort" data-sort="listing-author" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Author</a>
-</th>
-</tr>
-</thead>
-<tbody class="list">
-<tr data-index="0" data-categories="Gitlab" data-listing-date-sort="1696417808000" data-listing-file-modified-sort="1696417808745" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-title-sort="A Gitlab workflow to data sharing" data-listing-filename-sort="Tutorial-0.-Main-workflow.qmd">
-<td>
-<span class="listing-date">Oct 4, 2023</span>
-</td>
-<td>
-<a href="../tutorials/Tutorial-0.-Main-workflow.html" class="title listing-title">A Gitlab workflow to data sharing</a>
-</td>
-<td>
-<span class="listing-author">G.Fraga Gonzalez &amp; E. Furrer</span>
-</td>
-</tr>
-<tr data-index="1" data-categories="Gitlab" data-listing-date-sort="1696417635000" data-listing-file-modified-sort="1696417635924" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-title-sort="Tutorial 1: Using Gitlab for Project Owners and Collaborators" data-listing-filename-sort="Tutorial-1.-Using-Gitlab-for-Project-Owners-and-Collaborators.qmd">
-<td>
-<span class="listing-date">Oct 4, 2023</span>
-</td>
-<td>
-<a href="../tutorials/Tutorial-1.-Using-Gitlab-for-Project-Owners-and-Collaborators.html" class="title listing-title">Tutorial 1: Using Gitlab for Project Owners and Collaborators</a>
-</td>
-<td>
-<span class="listing-author">G.Fraga Gonzalez &amp; E. Furrer</span>
-</td>
-</tr>
-<tr data-index="2" data-categories="code,Gitlab" data-listing-date-sort="1696417584000" data-listing-file-modified-sort="1696417584451" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-title-sort="Tutorial 2: Creating and Updating a Data Hub in Gitlab" data-listing-filename-sort="Tutorial-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.qmd">
-<td>
-<span class="listing-date">Oct 4, 2023</span>
-</td>
-<td>
-<a href="../tutorials/Tutorial-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.html" class="title listing-title">Tutorial 2: Creating and Updating a Data Hub in Gitlab</a>
-</td>
-<td>
-<span class="listing-author">G.Fraga Gonzalez &amp; E. Furrer</span>
-</td>
-</tr>
-<tr data-index="3" data-categories="Code,Gitlab" data-listing-date-sort="1696417750000" data-listing-file-modified-sort="1696417750543" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-title-sort="Tutorial 3: Customizing Gitlab Continuous Integration" data-listing-filename-sort="Tutorial-3.-Customizing-Gitlab-Continuous-Integration.qmd">
-<td>
-<span class="listing-date">Oct 4, 2023</span>
-</td>
-<td>
-<a href="../tutorials/Tutorial-3.-Customizing-Gitlab-Continuous-Integration.html" class="title listing-title">Tutorial 3: Customizing Gitlab Continuous Integration</a>
-</td>
-<td>
-<span class="listing-author">G.Fraga Gonzalez &amp; E. Furrer</span>
-</td>
-</tr>
-</tbody>
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Gitlab'); return false;">
+Gitlab
+</div>
+</div>
+<a href="../tutorials/Tutorial-0.-Main-workflow.html">
+<div class="listing-description">
+The <code>owner</code> of the data (e.g., a lab or a researcher) creates and maintains a <strong>main Gitlab repository</strong> containing:
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="../tutorials/Tutorial-0.-Main-workflow.html">
+<div class="listing-date">
+Oct 4, 2023
+</div>
+<div class="listing-author">
+G.Fraga Gonzalez &amp; E. Furrer
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="Gitlab" data-listing-date-sort="1696418833000" data-listing-file-modified-sort="1696418833752" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6">
+<div class="thumbnail">
+<p><a href="../tutorials/Tutorial-1.-Using-Gitlab-for-Project-Owners-and-Collaborators.html"> <p class="card-img-top"><img src="uploads\aeef5aff4db2c295384c7ab1f1912c03\image.png"  class="thumbnail-image card-img"/></p> </a></p>
+</div>
+<div class="body">
+<a href="../tutorials/Tutorial-1.-Using-Gitlab-for-Project-Owners-and-Collaborators.html">
+<h3 class="no-anchor listing-title">
+Tutorial 1: Using Gitlab for Project Owners and Collaborators
+</h3>
+<div class="listing-subtitle">
 
-</table>
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Gitlab'); return false;">
+Gitlab
+</div>
+</div>
+<a href="../tutorials/Tutorial-1.-Using-Gitlab-for-Project-Owners-and-Collaborators.html">
+<div class="listing-description">
+This…
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="../tutorials/Tutorial-1.-Using-Gitlab-for-Project-Owners-and-Collaborators.html">
+<div class="listing-date">
+Oct 4, 2023
+</div>
+<div class="listing-author">
+G.Fraga Gonzalez &amp; E. Furrer
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-categories="Gitlab" data-listing-date-sort="1696418834000" data-listing-file-modified-sort="1696418834953" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="thumbnail">
+<p><a href="../tutorials/Tutorial-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.html"> <p class="card-img-top"><img src="uploads\6e6e99d42e8bb7d128fbbc6ee131ab12\image.png"  class="thumbnail-image card-img"/></p> </a></p>
+</div>
+<div class="body">
+<a href="../tutorials/Tutorial-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.html">
+<h3 class="no-anchor listing-title">
+Tutorial 2: Creating and Updating a Data Hub in Gitlab
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Gitlab'); return false;">
+Gitlab
+</div>
+</div>
+<a href="../tutorials/Tutorial-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.html">
+<div class="listing-description">
+The <em>static site</em> generated in this repository shows an <em>interactive table</em> with image thumbnails (clickable). By <em>static</em> we mean that the user will just see whatever data is contained in the HTML of the site. Although it contains an interactive table, all users have…<em></em>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="../tutorials/Tutorial-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.html">
+<div class="listing-date">
+Oct 4, 2023
+</div>
+<div class="listing-author">
+G.Fraga Gonzalez &amp; E. Furrer
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-categories="Code,Gitlab" data-listing-date-sort="1696417750000" data-listing-file-modified-sort="1696417750543" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="thumbnail">
+<p><a href="../tutorials/Tutorial-3.-Customizing-Gitlab-Continuous-Integration.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+</div>
+<div class="body">
+<a href="../tutorials/Tutorial-3.-Customizing-Gitlab-Continuous-Integration.html">
+<h3 class="no-anchor listing-title">
+Tutorial 3: Customizing Gitlab Continuous Integration
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Code'); return false;">
+Code
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Gitlab'); return false;">
+Gitlab
+</div>
+</div>
+<a href="../tutorials/Tutorial-3.-Customizing-Gitlab-Continuous-Integration.html">
+<div class="listing-description">
+Continuous integration (CI) refers to the process of automating the integration of changes made by different developers working in the code. In the context of this hub, it…
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="../tutorials/Tutorial-3.-Customizing-Gitlab-Continuous-Integration.html">
+<div class="listing-date">
+Oct 4, 2023
+</div>
+<div class="listing-author">
+G.Fraga Gonzalez &amp; E. Furrer
+</div>
+</a>
+</div>
+</div>
+</div>
 <div class="listing-no-matching d-none">
 No matching items
 </div>

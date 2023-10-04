@@ -1,5 +1,5 @@
 ---
-listing: default
+listing: table
 ---
 
 # Reports {.unnumbered}

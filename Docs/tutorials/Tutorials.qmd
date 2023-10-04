@@ -1,7 +1,7 @@
 ---
 listing:
   categories: true
-  type: table
+  type: default
   sort-ui: true
   filter-ui: true
   
