@@ -7,5 +7,11 @@
       "/tutorials/Tutorial-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.html",
       "/tutorials/Tutorial-3.-Customizing-Gitlab-Continuous-Integration.html"
     ]
+  },
+  {
+    "listing": "/reports/Reports.html",
+    "items": [
+      "/reports/Reports_1.html"
+    ]
   }
 ]

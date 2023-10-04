@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "AFFORD",
     "section": "",
-    "text": "This site compiles resources for Open Research Data management curated and developed by the Center of Reproducible Science of the University of Zurich for the SwissUniversities project AFFORD: A Framework for Avoiding Open Research Data Dump.\n\n\n   \n                    \n\n\n\n\n\nLast edited: Wed Oct 04 13:14:49 2023\n\n \n  \n   \n  \n     CRS site\n  \n  \n     CRS Gitlab\n  \n  \n    \n     \n  \n\n\n\n\n\n\n\n\n\n\n\n\n Back to top"
+    "text": "This site compiles resources for Open Research Data management curated and developed by the Center of Reproducible Science of the University of Zurich for the SwissUniversities project AFFORD: A Framework for Avoiding Open Research Data Dump.\n\n\n   \n                    \n\n\n\n\n\nLast edited: Wed Oct 04 13:23:34 2023\n\n \n  \n   \n  \n     CRS site\n  \n  \n     CRS Gitlab\n  \n  \n    \n     \n  \n\n\n\n\n\n\n\n\n\n\n\n\n Back to top"
   },
   {
     "objectID": "presentations/Presentations.html",
@@ -18,7 +18,7 @@
     "href": "reports/Reports.html",
     "title": "Reports",
     "section": "",
-    "text": "Reports\nCollection of reports from the AFFORD project\n\n\n\n\n Back to top"
+    "text": "Reports\nCollection of reports from the AFFORD project\n\n\n\n\n\n\n\n\n\n  \n\n\n\n\nReport 1 Data Archiving\n\n\n\n\n\n\n\n\n\n\n\n\nOct 4, 2023\n\n\nG.Fraga Gonzalez & E. Furrer\n\n\n\n\n\n\nNo matching items\n\n Back to top"
   },
   {
     "objectID": "tutorials/Tutorial-0.-Main-workflow.html",
@@ -82,5 +82,12 @@
     "title": "Tutorials",
     "section": "",
     "text": "Tutorials\nPractical tutorials for setting a Gitlab repository for data (and metadata) sharing\n\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nOct 4, 2023\n\n\nA Gitlab workflow to data sharing\n\n\nG.Fraga Gonzalez & E. Furrer\n\n\n\n\nOct 4, 2023\n\n\nTutorial 1: Using Gitlab for Project Owners and Collaborators\n\n\nG.Fraga Gonzalez & E. Furrer\n\n\n\n\nOct 4, 2023\n\n\nTutorial 2: Creating and Updating a Data Hub in Gitlab\n\n\nG.Fraga Gonzalez & E. Furrer\n\n\n\n\nOct 4, 2023\n\n\nTutorial 3: Customizing Gitlab Continuous Integration\n\n\nG.Fraga Gonzalez & E. Furrer\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+  },
+  {
+    "objectID": "reports/Reports_1.html",
+    "href": "reports/Reports_1.html",
+    "title": "Report 1 Data Archiving",
+    "section": "",
+    "text": "Report 1 Data Archiving\n\n\n\n\n\n Back to top"
   }
 ]

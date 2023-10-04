@@ -2,7 +2,6 @@
 author: G.Fraga Gonzalez & E. Furrer
 date: last-modified
 categories:
-  - code
   - Gitlab
 ---
 

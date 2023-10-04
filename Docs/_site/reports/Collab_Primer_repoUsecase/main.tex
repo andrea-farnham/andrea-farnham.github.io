@@ -1,0 +1,181 @@
+
+% template for CRS Primer articles
+% inspired by looks of UKRN Primers https://www.ukrn.org/primers/
+\documentclass[a4paper,11pt]{report}
+\usepackage[default]{sourcesanspro} % nice sans serif font
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel} 
+\usepackage{graphicx} % figures
+\usepackage{amsmath, amssymb} % math
+\usepackage{doi} % automatic doi-links
+\usepackage[round]{natbib} % bibliography
+\usepackage{booktabs} % nicer tables
+\usepackage[dvipsnames]{xcolor}
+\usepackage{pdflscape}
+\usepackage[most]{tcolorbox} % color text box
+\usepackage{todonotes}
+\definecolor{swissRNblue}{RGB}{34,36,100}
+\definecolor{linkblue}{RGB}{19,168,158}
+\definecolor{linkgreen}{RGB}{27,183,117}
+
+\usepackage{hyperref}
+\usepackage{href-ul}
+\renewcommand\url[1]{{\href{#1}{#1}}}
+\hypersetup{
+    colorlinks,
+    citecolor=linkgreen,
+    filecolor=black,
+    linkcolor=linkgreen,
+    urlcolor=linkgreen,
+    urlbreak=true,
+}
+ 
+\usepackage{geometry}
+\geometry{
+  a4paper,
+  total={170mm,257mm},
+  left=25mm,
+  right=25mm,
+  top=25mm,
+  bottom=25mm
+}
+
+\usepackage{sectsty}
+\usepackage{titlesec}
+\titlespacing*{\section}
+{0pt}{3ex plus 1ex minus .2ex}{1ex plus .2ex}
+\titlespacing*{\subsection}
+{0pt}{3ex plus 1ex minus .2ex}{1ex plus .2ex}
+\setlength\parindent{0pt}
+\sectionfont{\color{swissRNblue}}
+\subsectionfont{\color{swissRNblue}}
+\renewcommand{\bibsection}{\section*{References}}
+\begin{document}
+
+% title and authors here
+% -----------------------------------------------------------------------------
+\begin{minipage}{\textwidth}
+    % title
+    {\Huge \textcolor{swissRNblue}{Archiving Data: A Cognitive Neuroscience use-case}} \\[0.5ex]
+    % authors with ORCID
+    \href{https://orcid.org/0000-0002-1857-8607}{Gorka Fraga González}\\
+    \href{https://orcid.org/xxxx}{Andrew Clark}\\
+    \href{https://orcid.org/xxxx}{Alexis Hervais-Adelman }\\    
+    \href{https://orcid.org/xxxx}{Susanne Weber?}\\
+    \href{https://orcid.org/xxxx}{Melanie Röthlisberger?}\\    
+    \href{https://orcid.org/xxxx}{Leonard Held}\\
+    \url{https://doi.org/10.5281/zenodo.XXXXXXX}
+\end{minipage}%
+\begin{minipage}{0.02\textwidth}
+    \centering
+    \includegraphics[height=2cm]{CRS.jpg}
+\end{minipage}%
+
+
+\section*{What is data archiving?}
+Brief definition of what we understand as data archiving. See UZH ZB resources 
+
+\section*{What is an Open Research Data repository?}
+Here shortly specify what an Open Research Data repository is. Ref to web for searching in repositories database 
+
+\section*{Why use an ORD repository?}
+Explain the obvious. Highlight that the information is not necessarily public access but researchers may enquire /send an application to access the data (restricted access)
+
+\section*{How do you archive data?}
+ First see how much your data follows the FAIR principles -- Short recap and link to ZB resources on "How fair is your data' . 
+ Find a suitable repository and see if there are particular requirements
+ 
+ Proceed
+
+This is better illustrated with an example of a project with a relatively complex data. 
+
+--------
+
+\section*{Use case: a neurolinguistics project} 
+This primer describes a use case for the upload of a neurolinguistics project into an Open Research Data (ORD) repository. The reference project involves and Speech-in-noise comprehension task in which participants have to (...). The project's data involves electroencephalography and behavioral data, as well as auditory stimuli presented in the experiment. The repository is xxxx 
+
+\subsection*{Think of a data structure system}
+
+First search for any exising standards in the field. Here we follow BIDS (insert short descript), why ? (xxx)
+Best to struct the project like this from start
+
+\subsection*{Organize your data}
+This is best done at the start of a project.
+
+[Insert Folder tree of the project here]
+
+
+\subsection*{Decide what needs to be archive}
+Not everything must or should be archived. 
+
+Schematic of minimum project elements
+\begin{itemize}
+    \item  Data
+    \begin {itemize} 
+        \item Raw
+        \item Preview/thumbnails
+        \item Derivatives
+    \end{itemize}
+    \item  Metadata    
+    \begin {itemize} 
+        \item .JSON 
+        \item Tables         
+    \end{itemize}
+    \item  Code    
+    \item  Documentation
+    \begin {itemize} 
+        \item Filenaming convention
+        \item Metadata/data specifications
+        \item Procedures       
+        \item READMEs 
+    \end{itemize}
+\end{itemize} 
+
+\subsection*{Selecting a repository}
+What makes a good repository for my data ? In this case (...)
+
+Workflow chart: File naming, organisation, metadata.
+
+\section*{Archiving} 
+Here Andre fills in  some details about how in this particular repo we need to proceed or additional files/struct required by it
+
+
+\section*{Common Issues and Troubleshooting} 
+Here I would describe issues with this project. e.g. in this case we don't have a problem of too large data set, the main problems can come from manipulations into the raw data (from source to 'raw', which is not really raw). (see knownIssues.txt file)
+
+
+\section*{Take home message} 
+
+
+
+\begin{tcolorbox}[enhanced,fit to height=10cm,
+  colback=linkgreen!85!black!10!white,colframe=linkgreen!75!black,title= \Large Technical Box 1 - Archiving scripts for stimuli presentation ,
+  drop fuzzy shadow,watermark color=white,watermark text=CRS]
+  
+Here issues with version control and scripts to run experiments (e.g., what files where presented, etc)   
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced,fit to height=10cm,
+  colback=linkgreen!85!black!10!white,colframe=linkgreen!75!black,title= \Large Technical Box 2 - Challenges of EEG experiments ,
+  drop fuzzy shadow,watermark color=white,watermark text=CRS]
+
+  Here Andrew inserts common operations done to raw EEG data 
+\end{tcolorbox}
+
+
+\section*{More information}
+
+\bibliographystyle{apalikedoiurl}
+\bibliography{bibliography}
+
+% date and license
+\vfill
+\scriptsize
+Version from \today. \\
+This work is published under a Creative Commons Attribution 4.0 International license
+(\href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}). \\
+Edited by xxx (\href{https://orcid.org/0000-0003-2779-320X}{xxxxORCID}) and 
+xxx). \\
+
+\end{document}
