@@ -2,21 +2,22 @@
 
 /* title */
 .title {
-  font-size: 3rem;
-  font-weight: 700;
-  text-align: left;
+  font-size: 3.5rem;
+  font-weight: 800;
+  text-align: center;
   line-height: 1.1em !important;
 }
 
 /* subtitle + Learn More About Me */
 .subtitle {
- #font-family: "Petrona";
-  font-size: 1rem;
-  font-weight: 700;
-  text-align: left;
+ #font-family: "Petrona";  
+  font-size: 1.15rem;
+  font-weight: 600;
+  text-align: center;
 # text-transform: uppercase;
   letter-spacing: 0.1em;
 }
+
 
 /* heading, subtitle, and blurb */
 /*.entity-contents {
@@ -46,6 +47,12 @@
 }
 
 /* Learn More About Me */
+/* LINKS */
+
+.about-link-text {
+  color:black ;
+}
+
 .about-links.subtitle {
   font-size: 1em !important;
   font-family: "Red Hat Text";
@@ -60,7 +67,6 @@
 }
 
 /* // Home
-
 // social links
 .about-entity {
   // block of links
@@ -74,11 +80,18 @@
     border: none !important;
   }
 } */
+.about-link {		
+    padding: 0.25em 0.25em !important;
+    #border: none !important;
+	border: 1em;
+    #background-color:rgba(27, 183, 117, .1) ;		
+}
+ 
 
 /* mobile query up for screens up to ~992px wide */
 @media screen and (max-width: 991.98px) {
     /* move text up & center */
-    .entity-contents {
+    .entity-contents {	  
       order: 2 !important;
       margin: -4em 0 0 0 !important;
       padding: 0 0 0 0em !important;

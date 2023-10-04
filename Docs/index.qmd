@@ -1,8 +1,9 @@
 ---
-#image: logos/Logo_AFFORD_col.svg
+title: AFFORD
+subtitle: Tools and workflows for Open Research Data 
 
 about:
-  template: solana
+  template: jolla
   image-width: 10em
   id: EpicHeader
   links:
@@ -13,7 +14,8 @@ about:
     - icon: linkedin
       aria-label: "LinkedIn"
       href: "https://www.linkedin.com/company/center-for-reproducible-science/"  
-    
+        
+toc: false
 page-layout: full
 
 header-includes: >
@@ -23,17 +25,28 @@ resources:
 ---
 
 ::: {#EpicHeader}
-<div style="text-align: justify; max-width: 500px; margin: auto;">
+::: {style="text-align: justify; max-width: 500px; margin: auto;"}
+This site compiles resources for Open Research Data management curated and developed by the Center of Reproducible Science of the University of Zurich for the SwissUniversities project *AFFORD: A Framework for Avoiding Open Research Data Dump*. 
 
-This site compiles a series of tutorials on Open Research Data management. The Center of Reproducible Science gathered and developed these tools and workflows for the SwissUniversities project *AFFORD: A Framework for Avoiding Open Research Data Dump*
-</div>
+:::
 
+::: {style="text-align: center; text-justify: distribute;"}
+ 
+ 
+
+![](logos/Logo_CRS_col.svg){fig-align="left" width="100" style="opacity: 0.9"}                     ![](logos/Logo_AFFORD_col.svg){fig-align="left" width="100" style="opacity: 0.9"}
+:::
+
+```{r, echo=FALSE}
+lastEdit <- format(Sys.time(), "%a %b %d %X %Y")
+```
 \
-<div style="text-align: center; text-justify: distribute;">
-![](logos/Logo_CRS_col.svg){fig-align="left" width="100" style="opacity: 0.8"} ![](logos/Logo_AFFORD_col.svg){fig-align="left" width="100" style="opacity: 0.8"}
+\
 
-</div>
+::: {style="text-align: right; text-justify: distribute;color: gray; font-weight: 1; font-size: 0.9em"}
 
+Last edited: `r lastEdit`
+:::
 :::
 
 <!-- # Welcome {.unnumbered} -->

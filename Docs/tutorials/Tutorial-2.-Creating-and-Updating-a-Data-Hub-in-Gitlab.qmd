@@ -1,6 +1,9 @@
 ---
 author: G.Fraga Gonzalez & E. Furrer
 date: last-modified
+categories:
+  - code
+  - Gitlab
 ---
 
 # Tutorial 2: Creating and Updating a Data Hub in Gitlab {.unnumbered}

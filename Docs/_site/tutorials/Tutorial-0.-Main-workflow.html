@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="G.Fraga Gonzalez &amp; E. Furrer">
-<meta name="dcterms.date" content="2023-10-03">
+<meta name="dcterms.date" content="2023-10-04">
 
-<title>AFFORD tutorials - Tutorial 2: Creating and Updating a Data Hub in Gitlab</title>
+<title>tutorial-0.-main-workflow</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,8 +32,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../tutorials/Tutorial-3.-Customizing-Gitlab-Continuous-Integration.html" rel="next">
-<link href="../tutorials/Tutorial-1.-Using-Gitlab-for-Project-Owners-and-Collaborators.html" rel="prev">
 <link href="../logos/Logo_CRS_col.svg" rel="icon" type="image/svg+xml">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -47,11 +45,11 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 20,
   "language": {
     "search-no-results-text": "No results",
@@ -69,199 +67,91 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tutorials/Tutorials.html">Tutorials</a></li><li class="breadcrumb-item"><a href="../tutorials/Tutorial-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.html">Tutorial 2: Creating and Updating a Data Hub in Gitlab</a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
-    </div>
-  </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../logos/Logo_AFFORD_col.svg" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">AFFORD Home</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../tutorials/Tutorials.html" rel="" target="">
+ <span class="menu-text">Tutorials</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../presentations/Presentations.html" rel="" target="">
+ <span class="menu-text">Presentations</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../reports/Reports.html" rel="" target="">
+ <span class="menu-text">Reports</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="../">AFFORD tutorials</a> 
-        <div class="sidebar-tools-main tools-wide">
-    <a href="https://gitlab.uzh.ch/crsuzh/AFFORD_tutorials" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-git"></i></a>
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
-  <div class="quarto-reader-toggle-btn">
-  <i class="bi"></i>
-  </div>
-</a>
-</div>
-    </div>
-      </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">index.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../tutorials/Tutorials.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Tutorials</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../tutorials/Tutorial-0.-Main-workflow.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">A Gitlab workflow to data sharing</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../tutorials/Tutorial-1.-Using-Gitlab-for-Project-Owners-and-Collaborators.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Tutorial 1: Using Gitlab for Project Owners and Collaborators</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../tutorials/Tutorial-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Tutorial 2: Creating and Updating a Data Hub in Gitlab</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../tutorials/Tutorial-3.-Customizing-Gitlab-Continuous-Integration.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Tutorial 3 Customizing Gitlab Continuous Integration</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+    <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#workflow-for-data-owners" id="toc-workflow-for-data-owners" class="nav-link active" data-scroll-target="#workflow-for-data-owners">Workflow for data owners</a>
-  <ul class="collapse">
-  <li><a href="#action-owner-edits-metadata" id="toc-action-owner-edits-metadata" class="nav-link" data-scroll-target="#action-owner-edits-metadata">1. ACTION: Owner edits <strong>metadata</strong></a></li>
-  <li><a href="#auto-changes-in-the-repository-trigger-the-continuous-integration-pipeline" id="toc-auto-changes-in-the-repository-trigger-the-continuous-integration-pipeline" class="nav-link" data-scroll-target="#auto-changes-in-the-repository-trigger-the-continuous-integration-pipeline">2. AUTO: changes in the repository <strong>trigger the Continuous Integration pipeline</strong></a></li>
-  <li><a href="#auto-the-continuous-integration-pipeline-runs-the-script" id="toc-auto-the-continuous-integration-pipeline-runs-the-script" class="nav-link" data-scroll-target="#auto-the-continuous-integration-pipeline-runs-the-script">3. AUTO: the continuous integration pipeline <strong>runs the script</strong></a></li>
-  <li><a href="#auto-the-html-is-updated-and-collaborators-can-navigate-through-the-updated-data" id="toc-auto-the-html-is-updated-and-collaborators-can-navigate-through-the-updated-data" class="nav-link" data-scroll-target="#auto-the-html-is-updated-and-collaborators-can-navigate-through-the-updated-data">4. AUTO: The HTML is updated and collaborators can navigate through the updated data</a></li>
-  </ul></li>
-  <li><a href="#files" id="toc-files" class="nav-link" data-scroll-target="#files">Files</a></li>
-  <li><a href="#privacy" id="toc-privacy" class="nav-link" data-scroll-target="#privacy">Privacy</a></li>
+  <li><a href="#a-gitlab-workflow-to-data-sharing" id="toc-a-gitlab-workflow-to-data-sharing" class="nav-link active" data-scroll-target="#a-gitlab-workflow-to-data-sharing">A Gitlab workflow to data sharing</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Tutorial 2: Creating and Updating a Data Hub in Gitlab</h1>
+
+
+<section id="a-gitlab-workflow-to-data-sharing" class="level1 unnumbered">
+<h1 class="unnumbered">A Gitlab workflow to data sharing</h1>
+<p>The <code>owner</code> of the data (e.g., a lab or a researcher) creates and maintains a <strong>main Gitlab repository</strong> containing:</p>
+<ol type="1">
+<li><strong>Metadata</strong></li>
+<li><strong>Data</strong>, if applicable, e.g., thumbnail images</li>
+<li><strong>Scripts to render</strong> an HTML landing site, i.e.&nbsp;the Data Hub, which provides access for collaborators.</li>
+<li><strong>Documentation</strong> associated with those data is collected in the <strong>Wiki</strong> of the main repository. The markdown files composing the Wiki can be downloaded (they are stored is a separate repository) or they can be directly edited in the browser through the main repository.</li>
+</ol>
+<p>The materials will have three url locations, which can all be accessed through the Data Hub page:</p>
+<ol type="1">
+<li>The <strong>Landing page</strong> provides the interactive hub and links to the source metadata locations and the documentation.</li>
+<li>The <strong>main repository</strong> to access the source metadata tables and data files</li>
+<li>The <strong>Wiki</strong> to access all related documentation such as protocols and SOPs. The Wiki is alsa accessible through the main repository.</li>
+</ol>
+<p>Any <code>collaborator</code> is given the landing page address and access credentials to it. From there they can access the three urls.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="uploads/d861221e7e6f9a7592023f31288d901a/Gitlab_basic.png" width="718" height="1058" class="figure-img"></p>
+<figcaption class="figure-caption">Gitlab_basic</figcaption>
+</figure>
 </div>
 
 
-
-<div class="quarto-title-meta">
-
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>G.Fraga Gonzalez &amp; E. Furrer </p>
-          </div>
-  </div>
-    
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">October 3, 2023</p>
-    </div>
-  </div>
-  
-    
-  </div>
-  
-
-</header>
-
-<p>The <em>static site</em> generated in this repository shows an <em>interactive table</em> with image thumbnails (clickable). By <em>static</em> we mean that the user will just see whatever data is contained in the HTML of the site. Although it contains an interactive table, all users have access to the same data which they cannot modify (unlike in <em>dynamic websites</em>).</p>
-<p>The website hosted using <a href="shttps://docs.gitlab.com/ee/user/project/pages/">Gitlab pages</a> is rendered with an [R Markdown] (https://rmarkdown.rstudio.com/) script, that uses the R <a href="https://rstudio.github.io/DT/">DT package</a>). The script creates an interactive page in HTML. <a href="https://docs.gitlab.com/ee/ci/">Gitlab CI</a> is used to run the R Markdown script automatically at each update (push) and render the site from the browser so that users do not need to install R or other programs to update the site.</p>
-<section id="workflow-for-data-owners" class="level1">
-<h1>Workflow for data owners</h1>
-<p><img src="uploads/6e6e99d42e8bb7d128fbbc6ee131ab12/image.png" class="img-fluid" width="613"></p>
-<section id="action-owner-edits-metadata" class="level3">
-<h3 class="anchored" data-anchor-id="action-owner-edits-metadata">1. ACTION: Owner edits <strong>metadata</strong></h3>
-<p>The <em>owner</em> can do this through:</p>
-<ol type="1">
-<li><em>Browser</em> (<em>RECOMMENDED FOR MINOR CHANGES</em>) Making changes from Gitlab in the browser (upload or edit file)</li>
-<li><em>Clone repository</em> (<em>RECOMMENDED FOR MAJOR UPDATES</em>) Cloning this repo, working locally and <em>committing</em> and <em>pushing</em> the changes to Gitlab (e.g., using <a href="https://desktop.github.com/">Github desktop</a>). The local metadata file should be always in Sync with that one in the remote repository.</li>
-</ol>
-<p>NOTE: The files in the Gitlab repository should be considered as the <em>main source</em> for retrieving your projects’ metadata.</p>
-</section>
-<section id="auto-changes-in-the-repository-trigger-the-continuous-integration-pipeline" class="level3">
-<h3 class="anchored" data-anchor-id="auto-changes-in-the-repository-trigger-the-continuous-integration-pipeline">2. AUTO: changes in the repository <strong>trigger the Continuous Integration pipeline</strong></h3>
-<p>It may take around 5 minutes to update the page html. The member with at least <code>maintainer</code> status can click on Build/Pipelines or Jobs (sidebar in Gitlab) to see what pipeline or job (within pipeline) is running, and if there are any errors.</p>
-</section>
-<section id="auto-the-continuous-integration-pipeline-runs-the-script" class="level3">
-<h3 class="anchored" data-anchor-id="auto-the-continuous-integration-pipeline-runs-the-script">3. AUTO: the continuous integration pipeline <strong>runs the script</strong></h3>
-<p>The <em>.gitlab-ci.yml</em> file defines this pipeline. It uses a Docker image with R, Gitlab pages to produce the website, and Gitlab runner to run the Docker where we have our Rmarkdown script (rendering the html from the table). The owner can edit the yml and the Rmarkdown to make if changes in this flow are to be done. No edit of Docker image is needed.</p>
-<p>See our tutorial on customizing Gitlab Continuous Integration for more advanced details.</p>
-</section>
-<section id="auto-the-html-is-updated-and-collaborators-can-navigate-through-the-updated-data" class="level3">
-<h3 class="anchored" data-anchor-id="auto-the-html-is-updated-and-collaborators-can-navigate-through-the-updated-data">4. AUTO: The HTML is updated and collaborators can navigate through the updated data</h3>
-</section>
-</section>
-<section id="files" class="level1">
-<h1>Files</h1>
-<p>The main <strong>input files</strong> are:</p>
-<ul>
-<li><code>metadata table</code> (preferrably in .csv format for interoperability). It should contain just the filename of the pictures that will be displayed</li>
-<li><code>images</code> files (<strong>Note</strong>: Gitlab is not meant for data storage. Images should be compressed to avoid exceeding volume allowed per repo ( usually 5 Gb in free versions, <a href="https://about.gitlab.com/pricing/faq-paid-storage-transfer/">details here</a>)</li>
-<li><code>R markdown</code> script that has the code to render the table with DT package</li>
-<li>A <code>.gitlab-ci.yml</code> file is the Continuous integration file that makes it possible to run the Rmd file and render the html again from Gitlab</li>
-</ul>
-<p>The <strong>outputs</strong> for the website</p>
-<ul>
-<li><code>index.html</code> file within the public folder</li>
-<li>An ’ <em>files</em>’ folder will be saved if the table is rendered as self-contained</li>
-</ul>
-<p><strong>Note</strong>: <em>index.html</em> and <em>images folder</em> ARE EXPECTED to be saved in the <code>public</code> folder. This does not mean they are publicly accessible (you need login to access this site)</p>
-</section>
-<section id="privacy" class="level1">
-<h1>Privacy</h1>
-<p>This is a <code>private</code> repository and a private site</p>
-<ul>
-<li><strong>Accounts</strong>. A <code>SWITCH</code> account is required to access the static website and the repository with the code to generate it</li>
-<li><strong>Members</strong>. A <code>maintainer</code> member in this repository can add new members (Go to Manage/Members). They must be also maintainer to be able to access the images after clicking on the table thumbnail. <code>Guests</code> can only see the thumbnails</li>
-</ul>
-
-
 </section>
 
-</main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -558,18 +448,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../tutorials/Tutorial-1.-Using-Gitlab-for-Project-Owners-and-Collaborators.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Tutorial 1: Using Gitlab for Project Owners and Collaborators</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../tutorials/Tutorial-3.-Customizing-Gitlab-Continuous-Integration.html" class="pagination-link">
-        <span class="nav-page-text">Tutorial 3 Customizing Gitlab Continuous Integration</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

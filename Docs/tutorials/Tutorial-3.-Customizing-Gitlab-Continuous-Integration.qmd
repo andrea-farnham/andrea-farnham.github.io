@@ -1,6 +1,9 @@
 ---
 author: G.Fraga Gonzalez & E. Furrer
 date: last-modified
+categories:
+  - Code
+  - Gitlab
 ---
 
 # Tutorial 3: Customizing Gitlab Continuous Integration {.unnumbered}

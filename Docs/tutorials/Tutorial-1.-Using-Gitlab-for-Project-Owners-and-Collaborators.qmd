@@ -1,6 +1,8 @@
 ---
 author: G.Fraga Gonzalez & E. Furrer
 date: last-modified
+categories:
+  - Gitlab
 ---
 
 # Tutorial 1: Using Gitlab for Project Owners and Collaborators {.unnumbered}

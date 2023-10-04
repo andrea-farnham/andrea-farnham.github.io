@@ -1,0 +1,11 @@
+[
+  {
+    "listing": "/tutorials/Tutorials.html",
+    "items": [
+      "/tutorials/Tutorial-0.-Main-workflow.html",
+      "/tutorials/Tutorial-1.-Using-Gitlab-for-Project-Owners-and-Collaborators.html",
+      "/tutorials/Tutorial-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.html",
+      "/tutorials/Tutorial-3.-Customizing-Gitlab-Continuous-Integration.html"
+    ]
+  }
+]

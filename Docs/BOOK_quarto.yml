@@ -1,9 +1,10 @@
 project:
-  type: website
+  type: book
             
-website:
-    page-navigation: true
-    back-to-top-navigation: true
+book:
+    title: AFFORD tutorials
+    subtitle: Tools and workflows for Open Research Data 
+    reader-mode: true       
     page-footer:
         left: |
           Tutorials of the [Center for Reproducible Science](https://www.crs.uzh.ch/en.html) from the University of Zurich.
@@ -17,17 +18,17 @@ website:
     site-url: https://crsuzh.pages.uzh.ch/AFFORD_tutorials/
     repo-url: https://gitlab.uzh.ch/crsuzh/AFFORD_tutorials 
     
-    navbar:
-        title: AFFORD Home
-        logo:  logos/Logo_AFFORD_col.svg
-        right:                  
-          - text: Tutorials  
-            href: tutorials/Tutorials.qmd                
-          - text: Presentations
-            href: presentations/Presentations.qmd                
-          - text: Reports
-            href: reports/Reports.qmd                
-            
+    chapters:
+        - index.qmd 
+        - part: tutorials/Tutorials.qmd        
+          chapters:
+            - tutorials/Tutorial-0.-Main-workflow.qmd
+            - tutorials/Tutorial-1.-Using-Gitlab-for-Project-Owners-and-Collaborators.qmd
+            - tutorials/Tutorial-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.qmd
+            - tutorials/Tutorial-3.-Customizing-Gitlab-Continuous-Integration.qmd            
+    page-navigation: true
+
+    
 format:
     html:    
         #author: Center for Reproducible Science 

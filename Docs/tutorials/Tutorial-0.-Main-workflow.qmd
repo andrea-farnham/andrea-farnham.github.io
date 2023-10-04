@@ -1,8 +1,9 @@
 ---
 author: G.Fraga Gonzalez & E. Furrer
 date: last-modified
+categories:
+  - Gitlab
 ---
-
 
 # A Gitlab workflow to data sharing {.unnumbered}
 

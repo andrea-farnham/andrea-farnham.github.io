@@ -1,5 +1,10 @@
 ---
-listing: table
+listing:
+  categories: true
+  type: table
+  sort-ui: true
+  filter-ui: true
+  
 ---
 
 
