@@ -1,2 +1,4 @@
 # AFFORD Tutorials
-This is a collection of tutorials for the project AFFORD
+This repository generates the following website: 
+
+https://crsuzh.pages.uzh.ch/AFFORD_tutorials/
