@@ -1,4 +1,4 @@
 These tutorials are available in the website:
 
 
-https://crsuzh.pages.uzh.ch/AFFORD_tutorials/
+https://crsuzh.pages.uzh.ch/AFFORD_website/
