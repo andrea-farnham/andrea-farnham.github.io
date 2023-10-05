@@ -35,7 +35,7 @@ resources:
 ::: {style="text-align: justify; max-width: 500px; margin: auto;"}
 This site compiles resources for Open Research Data management curated and developed by the [Center of Reproducible Science](https://www.crs.uzh.ch/en.html) of the University of Zurich for the SwissUniversities project *AFFORD: A Framework for Avoiding Open Research Data Dump*. 
 
-![](logos/Logo_CRS_col.svg){fig-align="right" width="70" style="opacity: 0.6"}
+![](logos/190204_UZH_CRS_RGB_rund.svg){fig-align="right" width="70" style="opacity: 0.6"}
 :::
 
 
