@@ -27,6 +27,8 @@ website:
             href: presentations/Presentations.qmd                
           - text: Reports
             href: reports/Reports.qmd                
+          - text: Tools
+            href: tools/Tools.qmd                
           - text: About
             href: about/About.qmd                
             

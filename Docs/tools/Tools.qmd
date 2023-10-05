@@ -1,0 +1,16 @@
+---
+listing:
+  categories: true
+  type: default
+  fields: [title, categories, author,date, image, description]
+  sort-ui: true
+  filter-ui: true
+  image-height: "150px"
+  image-align: right
+---
+
+
+# Tool {.unnumbered}
+
+This is a collection of open source tools
+
