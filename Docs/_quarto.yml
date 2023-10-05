@@ -14,8 +14,8 @@ website:
     
     favicon:  logos/Logo_CRS_col.svg
     
-    site-url: https://crsuzh.pages.uzh.ch/AFFORD_tutorials/
-    repo-url: https://gitlab.uzh.ch/crsuzh/AFFORD_tutorials 
+    site-url: https://crsuzh.pages.uzh.ch/AFFORD_website/
+    repo-url: https://gitlab.uzh.ch/crsuzh/AFFORD_website 
     
     navbar:
         title: Home
