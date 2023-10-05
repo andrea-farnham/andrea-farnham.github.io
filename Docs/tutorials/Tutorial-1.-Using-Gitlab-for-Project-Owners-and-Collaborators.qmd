@@ -81,6 +81,6 @@ Pull,commit and Push changes in the content of the repository. The workflow can 
 
 ## 2.2 Cloning with Git
 
-Git refers to this version control system used in Gitlab, but you can also manage the repositories locally downloading the program [Git CSM](https://git-scm.com/download/win), a free and open source distributed version control system. It is light and works across operating systems, and also has a very basic graphical interface. But it is mostly designed for working through a terminal. As in Github-desktop you use this to do the main Git actions of *pulling*, *committing* and *pushing* changes between local and remote repositories.
+Git refers to this version control system used in Gitlab, but you can also manage the repositories locally downloading the program [Git SCM](https://git-scm.com/download/win), a free and open source distributed version control system. It is light and works across operating systems, and also has a very basic graphical interface. But it is mostly designed for working through a terminal. As in Github-desktop you use this to do the main Git actions of *pulling*, *committing* and *pushing* changes between local and remote repositories.
 
 ## 
