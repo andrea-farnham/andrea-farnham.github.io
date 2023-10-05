@@ -12,7 +12,7 @@ about:
     #  href: "https://www.crs.uzh.ch/en.html"
     - icon:  git
       aria-label: CRS Gitlab
-      href: "https://gitlab.uzh.ch/crsuzh"
+      href: "https://gitlab.uzh.ch/crsuzh/AFFORD_tutorials"
     - icon: linkedin
       aria-label: "LinkedIn"
       href: "https://www.linkedin.com/company/center-for-reproducible-science/"  
