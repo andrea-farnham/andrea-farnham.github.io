@@ -1,6 +1,7 @@
 ---
 author: G.Fraga Gonzalez & E. Furrer
 date: last-modified
+description: short step-by-step guide on using Git and Gitlab
 categories:
   - Gitlab
 ---

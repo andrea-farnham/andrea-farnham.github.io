@@ -4,14 +4,14 @@
     "href": "index.html",
     "title": "AFFORD",
     "section": "",
-    "text": "This site compiles resources for Open Research Data management curated and developed by the Center of Reproducible Science of the University of Zurich for the SwissUniversities project AFFORD: A Framework for Avoiding Open Research Data Dump.\n\n\n\n\n\n\n\nLast edited: Wed Oct 04 16:29:44 2023\n\n\n\n\n\n\n\n\n Back to top"
+    "text": "This site compiles resources for Open Research Data management curated and developed by the Center of Reproducible Science of the University of Zurich for the SwissUniversities project AFFORD: A Framework for Avoiding Open Research Data Dump.\n\n\n\n\n\n\n\nLast edited: Thu Oct 05 08:49:42 2023\n\n\n\n\n\n\n\n\n Back to top"
   },
   {
     "objectID": "presentations/Presentations.html",
     "href": "presentations/Presentations.html",
     "title": "Presentations",
     "section": "",
-    "text": "Presentations\nCollection of presentations related to AFFORD project\n\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nOct 4, 2023\n\n\nAFFORD deliverables - ORD Hub\n\n\nG.Fraga Gonzalez\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+    "text": "Presentations\nCollection of presentations related to AFFORD project\n\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nOct 5, 2023\n\n\nAFFORD deliverables - ORD Hub\n\n\nG.Fraga Gonzalez\n\n\n\n\n\n\nNo matching items\n\n Back to top"
   },
   {
     "objectID": "reports/Reports.html",
@@ -53,7 +53,7 @@
     "href": "tutorials/Tutorial-1.-Using-Gitlab-for-Project-Owners-and-Collaborators.html#cloning-with-git",
     "title": "Tutorial 1: Using Gitlab for Project Owners and Collaborators",
     "section": "2.2 Cloning with Git",
-    "text": "2.2 Cloning with Git\nGit refers to this version control system used in Gitlab, but you can also manage the repositories locally downloading the program Git CSM, a free and open source distributed version control system. It is light and works across operating systems, and also has a very basic graphical interface. But it is mostly designed for working through a terminal. As in Github-desktop you use this to do the main Git actions of pulling, committing and pushing changes between local and remote repositories."
+    "text": "2.2 Cloning with Git\nGit refers to this version control system used in Gitlab, but you can also manage the repositories locally downloading the program Git SCM, a free and open source distributed version control system. It is light and works across operating systems, and also has a very basic graphical interface. But it is mostly designed for working through a terminal. As in Github-desktop you use this to do the main Git actions of pulling, committing and pushing changes between local and remote repositories."
   },
   {
     "objectID": "tutorials/Tutorial-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.html",
@@ -81,7 +81,7 @@
     "href": "tutorials/Tutorials.html",
     "title": "Tutorials",
     "section": "",
-    "text": "Tutorials\nPractical tutorials for setting a Gitlab repository for data (and metadata) sharing\n\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nA Gitlab workflow to data sharing\n\n\n\n\n\n\n\nGitlab\n\n\n\n\n\n\n\n\n\n\n\nOct 4, 2023\n\n\nG.Fraga Gonzalez & E. Furrer\n\n\n\n\n\n\n  \n\n\n\n\nTutorial 1: Using Gitlab for Project Owners and Collaborators\n\n\n\n\n\n\n\nGitlab\n\n\n\n\n\n\n\n\n\n\n\nOct 4, 2023\n\n\nG.Fraga Gonzalez & E. Furrer\n\n\n\n\n\n\n  \n\n\n\n\nTutorial 2: Creating and Updating a Data Hub in Gitlab\n\n\n\n\n\n\n\nGitlab\n\n\n\n\n\n\n\n\n\n\n\nOct 4, 2023\n\n\nG.Fraga Gonzalez & E. Furrer\n\n\n\n\n\n\n  \n\n\n\n\nTutorial 3: Customizing Gitlab Continuous Integration\n\n\n\n\n\n\n\nCode\n\n\nGitlab\n\n\n\n\n\n\n\n\n\n\n\nOct 4, 2023\n\n\nG.Fraga Gonzalez & E. Furrer\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+    "text": "Tutorials\nPractical tutorials for setting a Gitlab repository for data (and metadata) sharing\n\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nA Gitlab workflow to data sharing\n\n\n\n\n\n\n\nGitlab\n\n\n\n\nA workflow for using Gitlab as a data, metadata, code and documentation sharing platform\n\n\n\n\n\n\nOct 5, 2023\n\n\nG.Fraga Gonzalez & E. Furrer\n\n\n\n\n\n\n  \n\n\n\n\nTutorial 1: Using Gitlab for Project Owners and Collaborators\n\n\n\n\n\n\n\nGitlab\n\n\n\n\nshort step-by-step guide on using Git and Gitlab\n\n\n\n\n\n\nOct 5, 2023\n\n\nG.Fraga Gonzalez & E. Furrer\n\n\n\n\n\n\n  \n\n\n\n\nTutorial 2: Creating and Updating a Data Hub in Gitlab\n\n\n\n\n\n\n\nGitlab\n\n\n\n\nQuick explanation on using Gitlab pages as an open data hub\n\n\n\n\n\n\nOct 5, 2023\n\n\nG.Fraga Gonzalez & E. Furrer\n\n\n\n\n\n\n  \n\n\n\n\nTutorial 3: Customizing Gitlab Continuous Integration\n\n\n\n\n\n\n\nCode\n\n\nGitlab\n\n\n\n\nHere we explain a few more details on the Gitlab continuous integration\n\n\n\n\n\n\nOct 5, 2023\n\n\nG.Fraga Gonzalez & E. Furrer\n\n\n\n\n\n\nNo matching items\n\n Back to top"
   },
   {
     "objectID": "reports/Reports_1.html",

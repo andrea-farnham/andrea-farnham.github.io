@@ -1,6 +1,7 @@
 ---
 author: G.Fraga Gonzalez & E. Furrer
 date: last-modified
+description: Quick explanation on using Gitlab pages as an open data hub
 categories:
   - Gitlab
 ---

@@ -1,6 +1,7 @@
 ---
 author: G.Fraga Gonzalez & E. Furrer
 date: last-modified
+description: A workflow for using Gitlab as a data, metadata, code and documentation sharing platform
 categories:
   - Gitlab
 ---

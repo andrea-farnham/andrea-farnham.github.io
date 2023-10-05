@@ -1,6 +1,7 @@
 ---
 author: G.Fraga Gonzalez & E. Furrer
 date: last-modified
+description: Here we explain a few more details on the Gitlab continuous integration
 categories:
   - Code
   - Gitlab
