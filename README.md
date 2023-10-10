@@ -1,4 +1,7 @@
-See the website : https://crsuzh.pages.uzh.ch/AFFORD_website/
+
+**AFFORD: A Framework for Avoiding the Open Research Data Dump**
+
+This is the main website of the project. The site can be accessed here: https://crsuzh.pages.uzh.ch/AFFORD_website/
 
 Check the WIKI for a collection of interesting links and notes:
 https://gitlab.uzh.ch/crsuzh/afford/-/wikis/Notes
