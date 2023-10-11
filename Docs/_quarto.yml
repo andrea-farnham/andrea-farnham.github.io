@@ -12,25 +12,25 @@ website:
            This website is and will always be free, licensed under the [CC BY internationa license 4.0 ](https://creativecommons.org/licenses/by/4.0/) License.
            
     
-    favicon:  logos/Logo_CRS_col.svg
+    favicon:  assets/logos/Logo_CRS_col.svg
     
     site-url: https://crsuzh.pages.uzh.ch/AFFORD_website/
     repo-url: https://gitlab.uzh.ch/crsuzh/AFFORD_website 
     
     navbar:
         title: Home
-        logo:  logos/Logo_AFFORD_col.svg
+        logo:  assets/logos/Logo_AFFORD_col.svg
         right:                  
           - text: Tutorials  
-            href: tutorials/Tutorials.qmd                
+            href: contents/tutorials/Tutorials.qmd                
           - text: Presentations
-            href: presentations/Presentations.qmd                
+            href: contents/presentations/Presentations.qmd                
           - text: Reports
-            href: reports/Reports.qmd                
+            href: contents/reports/Reports.qmd                
           - text: Tools
-            href: tools/Tools.qmd                
+            href: contents/tools/Tools.qmd                
           - text: About
-            href: about/About.qmd                
+            href: contents/about/About.qmd                
             
 format:
     html:    

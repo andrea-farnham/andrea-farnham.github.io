@@ -4,7 +4,7 @@ subtitle: Tools and workflows for Open Research Data
 
 about:
   template: jolla
-  image: "logos/Logo_AFFORD_col.svg"
+  image: "assets/logos/Logo_AFFORD_col.svg"
   image-width: 12em
   image-shape: rectangle
   links:
@@ -27,17 +27,17 @@ resources:
 ---
 
 
-<!-- ::: {style="text-align: center; text-justify: distribute;"} -->
-<!-- ![](logos/Logo_CRS_col.svg){fig-align="left" width="100" style="opacity: 0.9"}  -->
-<!-- ![](logos/Logo_AFFORD_col.svg){fig-align="center" width="100" style="opacity: 0.9"}  -->
-<!-- ::: -->
 
 ::: {style="text-align: justify; max-width: 500px; margin: auto;"}
 This site compiles resources for Open Research Data management curated and developed by the [Center of Reproducible Science](https://www.crs.uzh.ch/en.html) of the University of Zurich for the SwissUniversities project *AFFORD: A Framework for Avoiding Open Research Data Dump*. 
-
-![](logos/190204_UZH_CRS_RGB_rund.svg){fig-align="right" width="70" style="opacity: 0.6"}
 :::
 
+::: {layout="[[1, -2, 0.6], [1]]"}
+![](assets/logos/uzh_logo_d_pos_web_main.jpg){width=10em  style="opacity: 0.9"}
+
+![](assets/logos/Logo_CRS.jpg){ width=6em   style="opacity: 0.9 "}
+:::
+ 
 
 ```{r, echo=FALSE}
 lastEdit <- format(Sys.time(), "%a %b %d %X %Y")
@@ -47,14 +47,3 @@ lastEdit <- format(Sys.time(), "%a %b %d %X %Y")
 
 Last edited: `r lastEdit`
 :::
- 
-
-<!-- # Welcome {.unnumbered} -->
-
-<!-- This is the collection of CRS tutorials for the project: -->
-
-<!-- **A Framework for Avoiding the Open Research Data Dump (AFFORD)** -->
-
-<!-- ![](logos/Logo_AFFORD_col.svg){fig-align="left"} -->
-
-<!-- ![](logos/Logo_CRS_col.svg){fig-align="left" width="134"} -->

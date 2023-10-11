@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Open science guidelines are often broad and researchers may find it difficult to adapt them to their specific project. Moreover, the required file organization and content for uploading ORD into a repository are not always clear, which can make this process appear exceedingly effortful and time-consuming. This may discourage some users from archiving or result in data dumps that populate repositories with non-reusable and poorly documented datasets. In this primer we illustrate the archiving process of an actual reference project with relatively complex data. Many of the requirements and issues encounter can easily generalize to other studies despite variations in the specific experimental setting and modalities of data recorded. We argue for well-timed data organization and schemes that are as complex as necessary and as simple as possible. This way ORD archiving can be a cost-effective process that will benefit both researcher and the broader scientific community.</title>
+<style type="text/css">
+body {
+  font-family: sans-serif;
+  max-width: 800px;
+  margin: auto;
+  padding: 1em;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+body, .footnotes, code { font-size: .9em; }
+li li { font-size: .95em; }
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+pre, img { max-width: 100%; }
+pre, pre:hover {
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+pre code {
+  display: block;
+  overflow-x: auto;
+}
+code { font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace; }
+:not(pre) > code, code[class] { background-color: #F8F8F8; }
+code.language-undefined, pre > code:not([class]) {
+  background-color: inherit;
+  border: 1px solid #eee;
+}
+table {
+  margin: auto;
+  border-top: 1px solid #666;
+}
+table thead th { border-bottom: 1px solid #ddd; }
+th, td { padding: 5px; }
+thead, tfoot, tr:nth-child(even) { background: #eee; }
+blockquote {
+  color: #666;
+  margin: 0;
+  padding-left: 1em;
+  border-left: 0.5em solid #eee;
+}
+hr, .footnotes::before { border: 1px dashed #ddd; }
+.frontmatter { text-align: center; }
+#TOC .numbered li { list-style: none; }
+#TOC .numbered { padding-left: 0; }
+#TOC .numbered ul { padding-left: 1em; }
+table, .body h2 { border-bottom: 1px solid #666; }
+.body .appendix, .appendix ~ h2 { border-bottom-style: dashed; }
+.footnote-ref a::before { content: "["; }
+.footnote-ref a::after { content: "]"; }
+.footnotes::before {
+  content: "";
+  display: block;
+  max-width: 20em;
+}
+
+@media print {
+  body {
+    font-size: 12pt;
+    max-width: 100%;
+  }
+  tr, img { page-break-inside: avoid; }
+}
+@media only screen and (min-width: 992px) {
+  pre { white-space: pre; }
+}
+</style>
+</head>
+<body>
+<div class="include-before">
+</div>
+<div class="frontmatter">
+<div class="title"><h1>Open science guidelines are often broad and researchers may find it difficult to adapt them to their specific project. Moreover, the required file organization and content for uploading ORD into a repository are not always clear, which can make this process appear exceedingly effortful and time-consuming. This may discourage some users from archiving or result in data dumps that populate repositories with non-reusable and poorly documented datasets. In this primer we illustrate the archiving process of an actual reference project with relatively complex data. Many of the requirements and issues encounter can easily generalize to other studies despite variations in the specific experimental setting and modalities of data recorded. We argue for well-timed data organization and schemes that are as complex as necessary and as simple as possible. This way ORD archiving can be a cost-effective process that will benefit both researcher and the broader scientific community.</h1></div>
+<div class="author"><h2></h2></div>
+<div class="date"><h3></h3></div>
+</div>
+<div class="body">
+<p>% template for CRS Primer articles
+% inspired by looks of UKRN Primers <a href="https://www.ukrn.org/primers/">https://www.ukrn.org/primers/</a>
+\documentclass[a4paper,11pt]{report}\usepackage[]{graphicx}\usepackage[dvipsnames]{xcolor}
+% maxwidth is the original width if it is less than linewidth
+% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+\ifdim\Gin@nat@width&gt;\linewidth
+\linewidth
+\else
+\Gin@nat@width
+\fi
+}
+\makeatother</p>
+<p>\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+\let\hlipl\hlkwb</p>
+<p>\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+\def\at@end@of@kframe{}%
+\ifinner\ifhmode%
+\def\at@end@of@kframe{\end{minipage}}%
+\begin{minipage}{\columnwidth}%
+\fi\fi%
+\def\FrameCommand##1{\hskip@totalleftmargin \hskip-\fboxsep
+\colorbox{shadecolor}{##1}\hskip-\fboxsep
+% There is no \@totalrightmargin, so:
+\hskip-\linewidth \hskip-@totalleftmargin \hskip\columnwidth}%
+\MakeFramed {\advance\hsize-\width
+@totalleftmargin\z@ \linewidth\hsize
+@setminipage}}%
+{\par\unskip\endMakeFramed%
+\at@end@of@kframe}
+\makeatother</p>
+<p>\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX</p>
+<p>\usepackage{alltt}
+\usepackage[default]{sourcesanspro} % nice sans serif font
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{pmboxdraw} % provides some of the symbols for the folder tree
+\usepackage[english]{babel}
+\usepackage{graphicx} % figures
+\usepackage{amsmath, amssymb} % math
+\usepackage{doi} % automatic doi-links
+\usepackage[round]{natbib} % bibliography
+\usepackage{booktabs} % nicer tables
+\usepackage[dvipsnames]{xcolor}
+\usepackage{pdflscape}
+\usepackage[most]{tcolorbox} % color text box
+\usepackage{todonotes}
+\usepackage{markdown} % markdown</p>
+<p>\definecolor{swissRNblue}{RGB}{34,36,100}
+\definecolor{linkblue}{RGB}{19,168,158}
+\definecolor{linkgreen}{RGB}{27,183,117}</p>
+<p>\usepackage{hyperref}
+\usepackage{href-ul}
+\renewcommand\url[1]{{\href{#1}{#1}}}
+\hypersetup{
+colorlinks,
+citecolor=linkgreen,
+filecolor=black,
+linkcolor=linkgreen,
+urlcolor=linkgreen,
+urlbreak=true,
+}</p>
+<p>\usepackage{geometry}
+\geometry{
+a4paper,
+total={170mm,257mm},
+left=25mm,
+right=25mm,
+top=25mm,
+bottom=25mm
+}</p>
+<p>\usepackage{sectsty}
+\usepackage{titlesec}
+\titlespacing*{\section}
+{0pt}{3ex plus 1ex minus .2ex}{1ex plus .2ex}
+\titlespacing*{\subsection}
+{0pt}{3ex plus 1ex minus .2ex}{1ex plus .2ex}
+\setlength\parindent{0pt}
+\sectionfont{\color{swissRNblue}}
+\subsectionfont{\color{swissRNblue}}
+\renewcommand{\bibsection}{\section*{References}}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}</p>
+<p>% title and authors here
+% —————————————————————————–
+\begin{minipage}{\textwidth}
+% title
+{\Huge \textcolor{swissRNblue}{Archiving Data: A Cognitive Neuroscience use-case}} \[0.5ex]
+% authors with ORCID
+\href{<a href="https://orcid.org/0000-0002-1857-8607%7D%7BGorka">https://orcid.org/0000-0002-1857-8607}{Gorka</a> Fraga González}\
+\href{<a href="https://orcid.org/xxxx%7D%7BAndrew">https://orcid.org/xxxx}{Andrew</a> Clark}\
+\href{<a href="https://orcid.org/xxxx%7D%7BAlexis">https://orcid.org/xxxx}{Alexis</a> Hervais-Adelman }\<br />
+\href{<a href="https://orcid.org/xxxx%7D%7BHester">https://orcid.org/xxxx}{Hester</a> van de Wiel}\<br />
+\href{<a href="https://orcid.org/xxxx%7D%7BSusanne">https://orcid.org/xxxx}{Susanne</a> Weber?}\
+\href{<a href="https://orcid.org/xxxx%7D%7BMelanie">https://orcid.org/xxxx}{Melanie</a> Röthlisberger?}\<br />
+\href{<a href="https://orcid.org/xxxx%7D%7BEva">https://orcid.org/xxxx}{Eva</a> Furrer}\<br />
+\href{<a href="https://orcid.org/xxxx%7D%7BLeonard">https://orcid.org/xxxx}{Leonard</a> Held}\
+\url{<a href="https://doi.org/10.5281/zenodo.XXXXXXX%7D">https://doi.org/10.5281/zenodo.XXXXXXX}</a>
+\end{minipage}%
+\begin{minipage}{0.02\textwidth}
+\centering
+\includegraphics[height=2cm]{CRS.jpg}
+\end{minipage}%</p>
+<p>\section*{}</p>
+<h2 id="open-science-guidelines-are-often-broad-and-researchers-may-find-it-difficult-to-adapt-them-to-their-specific-project-moreover-the-required-file-organization-and-content-for-uploading-ord-into-a-repository-are-not-always-clear-which-can-make-this-process-appear-exceedingly-effortful-and-time-consuming-this-may-discourage-some-users-from-archiving-or-result-in-data-dumps-that-populate-repositories-with-non-reusable-and-poorly-documented-datasets-in-this-primer-we-illustrate-the-archiving-process-of-an-actual-reference-project-with-relatively-complex-data-many-of-the-requirements-and-issues-encounter-can-easily-generalize-to-other-studies-despite-variations-in-the-specific-experimental-setting-and-modalities-of-data-recorded-we-argue-for-well-timed-data-organization-and-schemes-that-are-as-complex-as-necessary-and-as-simple-as-possible-this-way-ord-archiving-can-be-a-cost-effective-process-that-will-benefit-both-researcher-and-the-broader-scientific-community">Open science guidelines are often broad and researchers may find it difficult to adapt them to their specific project. Moreover, the required file organization and content for uploading ORD into a repository are not always clear, which can make this process appear exceedingly effortful and time-consuming. This may discourage some users from archiving or result in data dumps that populate repositories with non-reusable and poorly documented datasets. In this primer we illustrate the archiving process of an actual reference project with relatively complex data. Many of the requirements and issues encounter can easily generalize to other studies despite variations in the specific experimental setting and modalities of data recorded. We argue for well-timed data organization and schemes that are as complex as necessary and as simple as possible. This way ORD archiving can be a cost-effective process that will benefit both researcher and the broader scientific community.</h2>
+<p>\section*{What is data archiving?}
+Brief definition of what we understand as data archiving. See UZH ZB resources</p>
+<p>.ps.—————</p>
+<p>\section*{What is an Open Research Data repository?}
+Here shortly specify what an Open Research Data (ORD) repository is. Ref to web for searching in repositories database</p>
+<p>\section*{Why use an ORD repository?}
+Explain the obvious. Highlight that the information is not necessarily public access but researchers may enquire /send an application to access the data (restricted access)</p>
+<ul>
+<li>
+<p>Benefits to researcher – here try to emphasize the non-altruistic reasons. I.e., data owners will be</p>
+</li>
+<li>
+<p>Benefit to the community
+\section*{How do you archive data?}
+First see how much your data follows the FAIR principles – Short recap and link to ZB resources on “How fair is your data’ .
+Find a suitable repository and see if there are particular requirements</p>
+</li>
+</ul>
+<p>\section*{Use case: a neurolinguistics project}</p>
+<p>\subsection*{Project data overview}
+Before archiving we should have a brief summary of the project goals and scope, with some details of data types, volume and formats, and where to find more information. Some of this may have been provided as part of a Data Management Plan in the project proposal (e.g., see \href{<a href="https://www.snf.ch/en/FAiWVH4WvpKvohw9/topic/research-policies%7D%7Bguidelines%7D">https://www.snf.ch/en/FAiWVH4WvpKvohw9/topic/research-policies}{guidelines}</a> from the Swiss National Science Foundation).</p>
+<p>Here we describe a use-case of data archiving based on a reference project from Neurolinguistics.  The reference project investigates brain activity in healthy adults associated with comprehension of speech in acoustically challenging circumstances. The current study comprises 15 adults and it is considered a pilot and proof concept study for future neurofeedback experiments. The main data types in this study are the following:</p>
+<p>\begin{itemize}
+\item \textit{Tabular data.}
+\begin{itemize}
+\item A  brief demographic questionnaire containing specific language and hearing related items, as well as a free text with notes during the recording in the lab. These data are stored in Redcap (REFXXX) web app where identifying information (only date of birth)  is stored and can be masked when downloading the data. A file with the questionnaire data for all subjects is ~16 KiB.</p>
+<pre><code>\item Log files with behavioral performance data from the  experimental task. Their size is &lt; 10 MiB per subject. 
+\end{itemize}
+
+\item \textit{Multi-channel electrophysiological time series. }Electroencephalography (EEG) data recorded both 'at rest' and while subjects perform the task. The size of the recorded files is around 1.6-2.00 GiB per participant. However, they require some minimal preprocessing so that they can be used (see later in this primer), resulting additional 2.10-2.5 GiB per participant. 
+
+\item \textit{Audio files}. During the experimental the task, participants had to listen to sentences and identify several targets within them after each trial. The audio was manipulated to have different levels of degradation and background noise. The stimuli used in the task and the scripts to generate it and to present it to the participants are also part of the core data to be archived. The folder containing the manipulated audio files that were presented in the experiment has a volume of ~680 MiB, but the folder containing also the original raw audio and several variations of audio manipulations is ~ 3.86 GiB.  
+
+\item \textit{Metadata in text (.txt, .md and .json) and tabular (.csv, .tsv) formats } 
+\begin{itemize}
+\item These are small files 
+\end{itemize}
+</code></pre>
+<p>\end{itemize}</p>
+<p>\subsection*{Think of a data structure system}</p>
+<p>First search for any exising standards in the field. Here we follow BIDS (insert short descript), why ? (xxx)
+Best to struct the project like this from start</p>
+<p>\subsection*{Organize your data}
+This is best done at the start of a project.</p>
+<p>%
+\begin{tcolorbox}[enhanced,fit to height=10cm,
+colback=linkgreen!85!black!10!white,colframe=linkgreen!75!black,title= \small Folder organization ]</p>
+<p>\verbatiminput{folder_tree.txt}</p>
+<p>\end{tcolorbox}</p>
+<p>\subsection*{Decide what needs to be archive}
+Not everything must or should be archived.</p>
+<p>Schematic of minimum project elements
+\begin{itemize}
+\item  Data
+\begin {itemize}
+\item Raw
+\item Preview/thumbnails
+\item Derivatives
+\end{itemize}
+\item  Metadata<br />
+\begin {itemize}
+\item .JSON
+\item Tables<br />
+\end{itemize}
+\item  Code<br />
+\item  Documentation
+\begin {itemize}
+\item Filenaming convention
+\item Metadata/data specifications
+\item Procedures<br />
+\item READMEs
+\end{itemize}
+\end{itemize}</p>
+<p>\subsection*{Selecting a repository}
+What makes a good repository for my data ? In this case (…)</p>
+<p>Workflow chart: File naming, organisation, metadata.</p>
+<p>\section*{Archiving}
+Here Andre fills in  some details about how in this particular repo we need to proceed or additional files/struct required by it</p>
+<p>\section*{Common Issues and Troubleshooting}
+Here I would describe issues with this project. e.g. in this case we don’t have a problem of too large data set, the main problems can come from manipulations into the raw data (from source to ‘raw’, which is not really raw). (see knownIssues.txt file)</p>
+<p>\section*{Take home message}</p>
+<p>\begin{tcolorbox}[enhanced,fit to height=10cm,
+colback=linkgreen!85!black!10!white,colframe=linkgreen!75!black,title= \Large Technical Box 1 - Archiving scripts for stimuli presentation ,
+drop fuzzy shadow,watermark color=white,watermark text=CRS]</p>
+<p>Here issues with version control and scripts to run experiments (e.g., what files where presented, etc)<br />
+\end{tcolorbox}</p>
+<p>\begin{tcolorbox}[enhanced,fit to height=10cm,
+colback=linkgreen!85!black!10!white,colframe=linkgreen!75!black,title= \Large Technical Box 2 - Challenges of EEG experiments ,
+drop fuzzy shadow,watermark color=white,watermark text=CRS]</p>
+<p>Here Andrew inserts common operations done to raw EEG data
+\end{tcolorbox}</p>
+<p>\section*{More information}</p>
+<p>\bibliographystyle{apalikedoiurl}
+\bibliography{bibliography}</p>
+<p>% date and license
+\vfill
+\scriptsize
+Version from \today. \
+This work is published under a Creative Commons Attribution 4.0 International license
+(\href{<a href="https://creativecommons.org/licenses/by/4.0/%7D%7BCC-BY">https://creativecommons.org/licenses/by/4.0/}{CC-BY</a> 4.0}). \
+Edited by xxx (\href{<a href="https://orcid.org/0000-0003-2779-320X%7D%7BxxxxORCID%7D">https://orcid.org/0000-0003-2779-320X}{xxxxORCID}</a>) and
+xxx). \</p>
+<p>\end{document}</p>
+</div>
+<div class="include-after">
+</div>
+</body>
+</html>
