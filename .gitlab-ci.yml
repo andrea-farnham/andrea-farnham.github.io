@@ -4,8 +4,7 @@ pages:
   stage: deploy
   before_script:
   - R -e "install.packages('quarto')" 
-  - quarto add quarto-ext/shinylive
-
+ 
     
   script: 
   - cd Docs
