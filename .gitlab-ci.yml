@@ -4,9 +4,8 @@ pages:
   stage: deploy
   before_script:
   - R -e "install.packages('quarto')" 
-  - R -e "devtools::install_github('posit-dev/r-shinylive')"
-
-  
+  - R -e "install.packages('pak')" 
+  - R -e "pak::pak('posit-dev/r-shinylive')"   
  
     
   script: 
