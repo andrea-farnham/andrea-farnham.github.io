@@ -38,7 +38,7 @@ format:
         theme:
             light:
                 - cosmo
-                - assets/styles.css
+                #- assets/styles.css
             dark: solar
         highlight-style: a11y
         code-link: true
