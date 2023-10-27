@@ -76,9 +76,9 @@ Now your Local folder is linked to your Gitlab remote repository. You can check 
 
 The basic and cross-platform implementation of Git is distributed through [Git SCM](https://git-scm.com/download/win) It is mostly designed for working through a command line interface. See the [Git book](https://git-scm.com/book) mentioned above. Note that [Rstudio](https://posit.co/download/rstudio-desktop/) interfaces directly with Git and provides a graphical user interface for Git as well.
 
-# 3. Editing and synchronizing repository with GitHub Desktop
+# 3. Editing and synchronizing a repository with GitHub Desktop
 
-The pull, commit and push commands are necessary when you or a collaborator change the content of the repository:
+The pull, commit and push commands are necessary when you or a team member change the content of the repository:
 
 1.  Work on your **local** repository, for example, create or edit code, update your metadata table, add new files \[\^1\]
 2.  Open **GitHub Desktop.** If you have several repositories, make sure you select the one you are currently working on or the one you want to update. GitHub Desktop should detect local changes. If there are remote changes in the repository, but not locally, GitHub Desktop will prompt you to `pull` those changes. Attention: there may be conflicts between the local and the remote changes, which you should be able to solve with GitHub Desktop.
