@@ -10,40 +10,43 @@ categories:
 
 # Tutorial 1: Using Gitlab for Project Owners and Collaborators {.unnumbered}
 
-This Tutorial is a short step-by-step guide on using Git and Gitlab and provides a workflow to use Github Desktop to sync with local files. For complete beginners we recommend the [Git book](https://git-scm.com/book), which is very accessible but also very detailed. It is available in several languages and as pdf. Another option for beginners are the [Gitlab tutorials](https://docs.gitlab.com/ee/tutorials/) by [Gitlab.com](https://about.gitlab.com/) (commercial).
+This Tutorial is a short step-by-step guide on using Git and Gitlab and provides a workflow to use [GitHub Desktop](https://desktop.github.com/) to sync with local files. For complete beginners we recommend [Try Git](http://try.github.com/) or, more thoroughly, the accessible but detailed [Git book](https://git-scm.com/book). The Git book is available in several languages and as pdf. Another option for beginners are the [Gitlab tutorials](https://docs.gitlab.com/ee/tutorials/) by [Gitlab.com](https://about.gitlab.com/).
 
-[Git](https://en.wikipedia.org/wiki/Git) is a system to track changes in files, it is most often used to coordinate the work among several persons who access the files online on a server or sync them to their computer. The online use does not require any installation, local use is only possible after installing [Git](https://git-scm.com/downloads).
+[Git](https://en.wikipedia.org/wiki/Git) is a system to track changes in files, it is most often used to coordinate the work among several persons who access the files online on a server or sync them to their computer. The online use does not require any installation, local use is only possible after installing [Git](https://git-scm.com/downloads) in some form, e.g. through[GitHub Desktop](https://desktop.github.com/).
 
-[Gitlab.com](https://about.gitlab.com/) and [Github.com](https://github.com/) are commercial hosting services for version control with Git. The UZH instance of the open source Gitlab at [Gitlab.uzh.ch](https://gitlab.uzh.ch) is hosted by the UZH on servers owned by [SWITCH](https://www.switch.ch/de/edu-id/), a non-profit foundation that has been established by the Swiss Federal Government. See https://www.zi.uzh.ch/en/staff/software-elearning/webplatforms/gitlab.html for more information.
+[Gitlab.com](https://about.gitlab.com/) and [Github.com](https://github.com/) are commercial hosting services for version control with Git. The UZH instance of the open source Gitlab at [Gitlab.uzh.ch](https://gitlab.uzh.ch) is hosted by the UZH on servers owned by [SWITCH](https://www.switch.ch/de/edu-id/), a non-profit foundation that has been established by the Swiss Federal Government. See the [ZI page](https://www.zi.uzh.ch/en/staff/software-elearning/webplatforms/gitlab.html) for more information.
 
-A Git repository is a set of folders and files with complete history and full version-tracking abilities, locally or on a server.
+The open source tool [GitHub Desktop](https://desktop.github.com/) provides a graphical user interface and will simplify pull, commit, push operations for both advanced as well as new users. !Note: official support for Github Desktop seems to be only for Windows and Mac. See further documentation on [integration with Gitlab](https://github.com/desktop/desktop/blob/development/docs/integrations/gitlab.md)
+
+
+Terminology: A **Git repository** is a set of folders and files with complete history and full version-tracking abilities, locally or on a server.
 
 # 1. Create and use a repository (in browser)
 
-### for *project owner(s)*
+### *Project owner(s)*
 
-For someone that wants to share data or metadata (e.g., a data hub)
+For someone who wants to share data or metadata (e.g., a Data Hub)
 
 1.  **Login** to [Gitlab.uzh.ch](https://gitlab.uzh.ch) with your [SWITCH edu-ID](https://www.switch.ch/edu-id/).
-2.  Create a **new project repository**, give it an informative, easy name (e.g., \_pages, or ???)
+2.  Create a **new project repository**, give it an informative, easy name (e.g., \<Projectname\>\_pages)
 3.  In Settings/General/**Visibility** mark it as private
 4.  In Manage/Members/**Invite members** add new members to the team, with different levels of permissions
-5.  Add your files and code (works through the browser but is easier with the Gitlab workflow below)
+5.  Add your data and meta data files and code (works through the browser but is easier with the Gitlab workflow below)
 
-### for *collaborator(s)*
+### *Collaborator(s)*
 
-e.g., someone who wants to navigate through the data of other lab
+For someone who wants to navigate through the data of a project partner
 
 1.  Ask the owner of the data to be invited as a member of the project repository
 2.  Go to the project repository on [Gitlab.uzh.ch](https://gitlab.uzh.ch) or Pages URL (ADD AN EXAMPLE) and login with your SWITCH edu-ID.
 
 # 2. Cloning a repository to local computer (for owners)
 
-Our remote Gitlab repository, which we access via the browser is now our main location of metadata, code and (some) data. But sometimes it is convenient to make our edits locally. Specially if we are data **owners** and want to edit and share a large number of files or code, we cannot do this easily in the browser. Recall that you need to install [Git](https://git-scm.com/downloads) for this.
+The remote Gitlab repository, which is accessed via the browser is the main location of metadata, code and (some) data. But sometimes it is convenient to make edits locally. Especially the data **owners** will want to edit and share a large number of files or code which cannot be done easily in the browser. Recall that you need to install [GitHub Desktop](https://desktop.github.com/) or [Git](https://git-scm.com/downloads) for this.
 
-In Git, you can `clone a repository` to create a copy on your computer, that will be synchronized with your remote repository. Once cloned we can `pull` changes done in the remote repository (in the browser). If we have local changes and want to 'send' them to the remote we do: 1) `commit` and 2) `push` the local changes to remote. (??? what about add?)
+In Git, you can `clone a repository` to create a copy on your computer, that you will synchronize with the remote repository. 
 
-NOTE: if we *fork* a repository instead of cloning it, this will create a completely independent copy of the Git repository. Here, we need *cloning* so that our local changes can be synchronized and we don't create duplicates of the repository.
+NOTE: if we `fork a repository` instead of cloning it, a completely independent copy of the Git repository is created. For the purpose of a Data Hub, we need to use cloning so that local changes can be synchronized and we don't create duplicates of the repository.
 
 ## Personal access token
 
@@ -51,39 +54,41 @@ To clone a repository to your machine you will most likely need a personal acces
 
 ![image](uploads/aeef5aff4db2c295384c7ab1f1912c03/image.png){width="610" height="439"}
 
-After this you will see a long alphanumeric string, the token, that you should save somewhere so you can use it as your `password` later on when using Github-desktop, Git or any other platform to manage local copies of the repositories.
+After clicking on the button to create hthe access token you will see a long alphanumeric string, the token. Copy this string and save it somewhere so you can use it as your `password` later on when using Github-desktop, Git or any other platform to manage local copies of the repository.
 
-## 2.1 Cloning with Github-desktop (user-friendly)
+## 2.1 Cloning with GitHub Desktop (with graphical user interface)
 
-The open source tool Github-desktop with a graphical user interface will simplify pull, commit, push operations for both advanced as well as new users. !Note: official support seems to be only for Windows and Mac. See further documentation on [integration with Gitlab](https://github.com/desktop/desktop/blob/development/docs/integrations/gitlab.md)
+### Setup of GitHub Desktop for Gitlab
 
-### Setup of Github-desktop for Gitlab
-
-1.  Download and install [Github desktop](https://desktop.github.com/)
+1.  Download and install [GitHub desktop](https://desktop.github.com/)
 
 2.  In your Gitlab project, get your personal access token (see above) and save it somewhere
 
-3.  On Github desktop go to File/Clone repository. Then enter the URL of your Gitlab repository (see the clone button) and a local directory name. For example:
+3.  In GitHub Desktop go to File/Clone repository. Then enter the URL of your Gitlab repository (see the clone button) and a local directory name. For example:
 
     ![image.png](uploads/7a0a2bd44e724b5c59f4c4e0ac983573/image.png){width="551" height="277"}
 
-4.  Then you will be asked for **username** and **password.** Your username is your Gitlab username (e.g., the name in your email address) and the password is the **Token** that you just created.
+4.  Next you will be asked for **username** and **password.** Your username is your Gitlab username (e.g., the name in your email address) and the password is the **token** that you just created.
 
 Now your Local folder is linked to your Gitlab remote repository. You can check below how to pull, commit and push changes.
 
-### Editing repository
+## 2.2 Cloning with Git (using command line)
 
-Pull,commit and Push changes in the content of the repository. The workflow can get quite complex. Here we will ignore elements like *branches* to oversimplify it into the main steps:
+The basic and cross-platform implementation of Git is distributed through [Git SCM](https://git-scm.com/download/win) It is mostly designed for working through a command line interface. See the [Git book](https://git-scm.com/book) mentioned above. Note that [Rstudio](https://posit.co/download/rstudio-desktop/) interfaces directly with Git and provides a graphical user interface for Git as well.
+
+# 3. Editing and synchronizing repository with GitHub Desktop
+
+The pull, commit and push commands are necessary when you or a collaborator change the content of the repository:
 
 1.  Work on your **local** repository, for example, create or edit code, update your metadata table, add new files \[\^1\]
-2.  Open **Github desktop.** If you have several repositories, make sure you select the one you are currently working on or the one you want to update. It should detect the local changes done. If there are changes done remotely, but not locally, it willl prompt you to `pull` those changes (but here, beware there may be conflicts, which you shold be able to solve with Github but may complicate things).
-3.  Click `Commit` ( you will need to write a brief description, e.g., 'updated figures'). This will prepare your changes to be sent to the remote repository ('origin'). If you edited multiple scripts, you can commit all changes at once or select specific scripts
+2.  Open **GitHub Desktop.** If you have several repositories, make sure you select the one you are currently working on or the one you want to update. GitHub Desktop should detect local changes. If there are remote changes in the repository, but not locally, GitHub Desktop will prompt you to `pull` those changes. Attention: there may be conflicts between the local and the remote changes, which you should be able to solve with GitHub Desktop.
+3.  Click `commit` and add a brief description of the changes, e.g., 'updated figures'. This will prepare your changes to be sent to the remote repository ('origin'). If you edited multiple scripts, you can commit all changes at once or select specific scripts
 4.  Click `push` to origin so that the changes are uploaded.
 
-\[\^1\]: Gitlab is not intended as a large data storage. For the pages in this example we need to have the pictures we want to render in the repository. But sometimes we have many files in our local repository that we do not want to push to the online repository. For that we can use a plain text file in that directory and call it `.gitignore` . In that file we can have statements like '\*.jpg'. Then Git will ignore all jpg files in the folder when pushing.
+\[\^1\]: Gitlab is not intended as a large data storage. For the pages in this example we need to have the pictures we want to render on the Data Hub page. But sometimes we have many files in our local repository that we do not want to push to the online repository. For that we can use a plain text file in the directory and call it `.gitignore` containing information on which files to ignore. For example '\*.log' will lead to all log files being excluded from synchronization with the remote repository.
 
-## 2.2 Cloning with Git
+The workflow can get quite complex, here, we ignore elements like *branches*.
 
-Git refers to this version control system used in Gitlab, but you can also manage the repositories locally downloading the program [Git SCM](https://git-scm.com/download/win), a free and open source distributed version control system. It is light and works across operating systems, and also has a very basic graphical interface. But it is mostly designed for working through a terminal. As in Github-desktop you use this to do the main Git actions of *pulling*, *committing* and *pushing* changes between local and remote repositories.
+
 
 ## 
