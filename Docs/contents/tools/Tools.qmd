@@ -12,5 +12,5 @@ listing:
 
 # Tool {.unnumbered}
 
-This is a collection of open source tools
+This collection of interactive tools is work in progress...
 

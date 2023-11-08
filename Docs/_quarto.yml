@@ -22,7 +22,7 @@ website:
         logo:  assets/logos/Logo_AFFORD_col.svg
         right:                  
           - text: Tutorials  
-            href: contents/tutorials/Tutorials.qmd                
+            href: contents/tutorials/index.qmd                
           - text: Presentations
             href: contents/presentations/Presentations.qmd                
           - text: Reports

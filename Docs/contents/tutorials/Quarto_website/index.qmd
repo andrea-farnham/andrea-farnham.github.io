@@ -1,0 +1,92 @@
+---
+title: Sharing dynamic reports in a website with R and Quarto 
+author: "G.Fraga Gonzalez"
+affiliation: "Center for Reproducible Science, UZH"
+date: last-modified
+description: A very easy set up of a free website where you can share your dynamic reports or other research outputs 
+
+---
+
+# Why is this relevant?
+
+Sharing documents, code, data and outputs with collaborators or to a broader audience is an essential step towards a good scientific practice. A website that can be managed by researchers themselves seems the ideal platform for efficient sharing. If this depends on IT support for maintenance it will not be practical for routine use, but learning web-development imposes an unnecessary and unacceptable burden to a scientist's already heavy workload.
+
+Here we describe an approach that uses free, open-source tools which are also widely-used for analytic purposes (e.g., data handling, statistics and visualizations). Thus, the requirements for learning web-specific tools is minimal. Importantly, this approach can be integrated in a research group's routines to compile dynamic reports with documentation, code, analysis and outputs in a single-document. This makes each step easier to understand, facilitates troubleshooting and improves computational reproducibility [see CRS primer](https://zenodo.org/records/8354360)
+
+# Software required
+
+All these tools are free and open source
+
+-   [R](https://www.r-project.org/): a widely-used software environment for statistical computing and graphics
+
+-   [Rstudio](https://posit.co/download/rstudio-desktop/): an interactive development environment to use for working with R. It includes a visual editor and essential features to facilitate code editing.Importantly it supports Quarto (see below)
+
+-   [Quarto](https://quarto.org/): it is multi-language tool to facilitate technical and scientific publishing. It is supported by Rstudio. In the quarto documents we will have text chunks (plain text with markdown syntax, see note below) and code chunks (written in R, but it can also be other languages). This is an evolution of [Rmarkdown](https://rmarkdown.rstudio.com/) with more functions, output options and more **better interoperability** between languages and environments. For the user, working with Quarto and Rmarkdown is quite similar, with some minor differences in syntax
+
+::: {.callout-note appearance="default"}
+## Dictionary
+
+Some terms that often pop up if you search for documentation on the tools above:
+
+-   *IDE*: interactive development environment, this is an application that help us develop code more efficiently. They have features like syntax highlighting, intelligent code completion, debugging tools, etc.
+
+-   *Markdown*: it is a markup language, that is, a set of symbols inserted in a text document to control structure, formatting and how its parts relate to each other. Markdown syntax is very simple and easy for humans to read. It allows us to write stuff in plain-text in a way that can be transformed into formatted text by other tools.
+
+-   *Pandoc*: this is a program integrated in R studio that renders markdown text into other output formats like pdf, html word , etc)
+
+-   *Knitr*: this is the engine that executes the code chunks in a Quarto or Rmarkdown document. It can be installed as a package in R
+
+-   *yaml* or *yml*: YAML is a human-readable language used for configuration files. Here we use a .yml file to configure our site and a yml header to add settings and metadata on top of each quarto file
+
+:::
+
+# Files needed
+
+At least you will need the following:
+
+-   A **\_quarto.yml** configuration file (required filename & extension)
+
+-   An **index.qmd** quarto markdown (suggested filename)
+
+# Step-by-step shorts 
+Assuming you have installed RStudio and quarto
+
+### 1. Make a website from scratch in 5 minutes 
+This 5 minutes video shows how easy it is to create the basic skeleton of the website. 
+
+#### Step 1. Make a new folder for your website
+#### Step 2. Create a _quarto.yml file and write some settings on it like:
+
+```{}
+project:
+    type: website
+    
+website:
+    navbar:
+        title: Home
+        
+format: 
+    html:
+        author: Center for Reproducible Science
+``` 
+
+#### Step 3. Create a quarto .qmd file and open it in R studio
+We recommend creating an *R project file* in Rstudio to point at your web's folder and open your quarto files with that project open in Rstudio to avoid having future problems finding the path to your files.
+
+You can write plain text with markdown syntax on it and use a *yml* header delimited by `---` symbols to add metadata or settings 
+
+#### Step 4. Click render 
+That's it. A new subfolder named `_site` will be created with a file index.html which is your website
+
+ 
+
+```{=html}
+<iframe src="https://drive.google.com/file/d/1hw2ZIf7RuMHZ0xghZBfcnhe1sqvckiYr/preview" width="440" height="380" allow="autoplay"></iframe>
+```
+
+
+### 2. Add pages and lists of pages within your website
+
+
+
+### 3. Host it for free using Gitlab pages

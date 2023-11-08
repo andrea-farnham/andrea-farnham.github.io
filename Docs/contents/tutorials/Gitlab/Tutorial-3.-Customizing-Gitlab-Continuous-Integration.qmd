@@ -1,0 +1,45 @@
+---
+author: G.Fraga Gonzalez & E. Furrer
+date: last-modified
+description: Here we explain a few more details on the Gitlab continuous integration
+categories:
+  - Code
+  - Gitlab
+---
+
+[Back](index.qmd)
+
+# Gitlab Tutorial 3: Customizing Continuous Integration {.unnumbered}
+
+Continuous integration (CI) refers to the process of automating the integration of changes made by different developers working in the code. In the context of this hub, it refers to integrating changes in the metadata table and/or images into the resulting HTML, that is, updating our page so that it shows the last version of our metadata. The advantage is that users do not require to install any software dependencies (like R) and changes can be implemented from the browser.
+
+In this case we used a [Continous Integration template](https://docs.gitlab.com/ee/user/project/pages/getting_started/pages_ci_cd_template.html). The current template is taken from [Rocker](https://rocker-project.org/), a project offering docker containers for R environment. Broadly speaking, we can think of a docker container as a light-weight virtual machine and of a docker image as a snapshot of a virtual machine.
+
+## The `.gitlab-ci.yml` file
+
+This is the file that will define the pipeline which we can run from the browser.
+
+-   The first part loads a `docker image` (similar to a snapshot of a virtual machine).
+-   Then it defines different `stages` (*deploy* is the main, but some *tests* stages are usually included as well). Sometimes there is a `before the script` section with some installations (not present in this example).
+-   Then the main `script` in this example runs some R code, using the R markdown package, to render the R markdown script named 'R_interactive_table.Rmd'. In this case the render command outputs the html directly in the public folder. **Note** the index.html will only be visible if you go to *Pipelines/*
+-   Gitlab pages expects the output HTML to be saved in a server named `public`.
+
+> Note: below we show just an example. The actual file may have change and can be found in the repository.
+
+```         
+image: rocker/verse:4.0.0
+pages:
+  stage: deploy
+  script:
+  - R -e "baseDir <- getwd(); rmarkdown::render('_scripts/R_interactive_table.Rmd', output_file = file.path(baseDir,'public','index.html'))"
+        
+
+  artifacts:    
+    paths:
+    - public    
+    - public/Images
+    
+  only:
+  - master
+  interruptible: true
+```

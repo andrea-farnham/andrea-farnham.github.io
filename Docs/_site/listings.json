@@ -19,12 +19,23 @@
     ]
   },
   {
-    "listing": "/contents/tutorials/Tutorials.html",
+    "listing": "/contents/tutorials/Gitlab/index.html",
     "items": [
-      "/contents/tutorials/Tutorial-0.-Main-workflow.html",
-      "/contents/tutorials/Tutorial-1.-Using-Gitlab-for-Project-Owners-and-Collaborators.html",
-      "/contents/tutorials/Tutorial-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.html",
-      "/contents/tutorials/Tutorial-3.-Customizing-Gitlab-Continuous-Integration.html"
+      "/contents/tutorials/Gitlab/Tutorial-0.-Main-workflow.html",
+      "/contents/tutorials/Gitlab/Tutorial-1.-Using-Gitlab-for-Project-Owners-and-Collaborators.html",
+      "/contents/tutorials/Gitlab/Tutorial-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.html",
+      "/contents/tutorials/Gitlab/Tutorial-3.-Customizing-Gitlab-Continuous-Integration.html"
     ]
+  },
+  {
+    "listing": "/contents/tutorials/index.html",
+    "items": [
+      "/contents/tutorials/Gitlab/index.html",
+      "/contents/tutorials/Quarto_website/index.html"
+    ]
+  },
+  {
+    "listing": "/contents/tutorials/Quarto_website/index.html",
+    "items": []
   }
 ]

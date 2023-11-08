@@ -1,0 +1,15 @@
+---
+listing:
+  categories: true
+  type: table
+  contents: "index.qmd"
+  fields: [title,author,date, description]
+  sort-ui: true
+  filter-ui: true
+---
+
+
+# Tutorials {.unnumbered}
+
+A series of practical tutorials for managing Open Research Data 
+

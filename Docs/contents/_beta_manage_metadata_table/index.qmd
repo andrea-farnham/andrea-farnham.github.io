@@ -1,0 +1,26 @@
+---
+title: "Metadata tables"
+subtitle: "Frequent table operations to manage metadata" 
+author: "G.Fraga Gonzalez"
+date: last-modified	
+affiliation: "Center for Reproducible Science, UZH"
+listing: table
+format:
+    html: 
+      self-contained: true
+      #page-layout: full
+      grid:
+        sidebar-width: 200px
+        margin-width: 2px
+      toc: true
+      toc-location: left
+      number-sections: true
+      mermaid:
+        theme: default
+---
+
+Any research project requires **tabular data** with essential information about subjects or objects, recording parameters and outputs. These tables often involve manual entries which require *validation* *checks* for errors and inconsistencies. Also we often need to combine separate tables according to common *key* variables, for example one table may describe subject demographics and another table list a record of files or scores per subject. Such *join* operations should be done programmatically rather than manually, for the sake of reproducibility.
+This is facilitated by **dynamic reports** in which a report is generated with a script containing explanations, code and output. 
+
+The following dynamic examples are generated with R Quarto. A very basic knowledge of R is recommended to better understand the code chunk and adapt them to own data. 
+

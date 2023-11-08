@@ -1,0 +1,35 @@
+project:
+  type: website
+            
+website:
+    page-navigation: true
+    back-to-top-navigation: true
+    page-footer:
+        left: |
+          Created by the [Center for Reproducible Science](https://www.crs.uzh.ch/en.html) of the [University of Zurich](https://www.uzh.ch/de.html).
+          
+        right: |
+           This website is and will always be free, licensed under the [CC BY internationa license 4.0 ](https://creativecommons.org/licenses/by/4.0/) License.     
+           
+    site-url: https://crsuzh.pages.uzh.ch/AFFORD_website/
+    repo-url: https://gitlab.uzh.ch/crsuzh/AFFORD_website 
+    
+    navbar:
+        title: Home
+        right:                  
+          - text: Dynamic Examples
+            href: index.qmd                
+                
+            
+format:
+    html:        
+        theme:
+            light:
+                - cosmo
+            dark: solar
+        highlight-style: a11y
+        code-link: true
+        toc: true
+        code-copy: false
+        callout-appearance: simple
+

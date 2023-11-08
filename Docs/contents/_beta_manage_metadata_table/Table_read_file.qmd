@@ -1,0 +1,189 @@
+---
+title: "Read tables from file"
+subtitle: "Reading a table from file and troubleshooting read errors" 
+date: last-modified	
+author: "G.Fraga Gonzalez"
+
+format:
+    html: 
+      self-contained: true
+      page-layout: full
+      toc: true
+      code-fold: false
+      code-copy: true
+      code-overflow: scroll
+      code-tools: true
+      number-sections: false
+      title-block-style: default
+---
+
+We describe a frequent first step of reading tabular data, with emphasis in the necessary troubleshooting that should help us maintaining source tables machine-readable and ready for further processing, analysis, visualizations and sharing. In this example we read a table from a *real-project* that was filled in by the researchers during the data collection. The information in this table is required to interpret the data collected for each subject.
+
+# Why is this relevant?
+
+Research almost always involves manipulating tabular data, merging tables from different sources, transposing or reshaping table formats and passing data to analysis software. 
+
+**Reproducible** research requires these operations to be performed programmatically and not manually, to reduce errors and to allow others to reproduce them.
+
+**Interoperability** of data means that we should maximize the possibility of using the data with different software and operating systems without losing information. 
+
+# Read input file
+
+First we need to load some libraries. The packages containing these libraries should have been installed before using `install.packages()`.
+
+```{r load packages}
+#| warning: false
+library(readxl)     # for reading excel (another package is openxlsx) 
+library(dplyr)      # data manipulation grammar like the pipe %>%, join operations, 
+library(kableExtra) # to render simple and pretty static tables 
+
+```
+
+Then we specify the fullpath of the excel file. For this we use the path relative to this R Quarto project. The location of the *R quarto project file* is defined by `getwd()`. By using `file.path()` to specify the path we avoid hardcoding the folder separators increasing interoperability across operating systems.
+
+```{r}
+#| warning: FALSE
+fileinput <- file.path(getwd(),'example_data','Example_subject_info.xlsx')
+```
+
+Then we read the content of a specific sheet in the file using `read_excel()` of the package readxl. There are several R packages to read excel to do this, we chose this package as it seems to be good at interacting with series of packages (interoperability).
+
+```{r readTableFile}
+#| warning: FALSE
+tbl_subj <- readxl::read_excel(fileinput, sheet='Control_room_sheet')
+```
+
+# Check if the table was read correctly
+
+When reading a table with code you should **always** check for unexpected behavior like omission of rows or column, or incorrect formatting. There are several ways of doing this.
+
+::: callout-warning
+## Warning
+
+It is not enough to just check that the dimensions of your table in R are the same as in excel!
+
+See below
+:::
+
+## Inspect properties and structure
+
+Check *dimensions, object type, variable names and data types*. You can use `str()` to display the internal structure of the object created when reading the file. The first line of the output specifies \[n rows x n columns\], type of object (e.g., data frame). The list also show data type (e.g., num = numeric, chr = characters) , dimensions and a few cases for each variable. If you have a large data set you can limit the number of output characters.
+
+```{r}
+#| warning: FALSE
+#| results: markup 
+str(tbl_subj, nchar.max = 35)
+
+```
+
+## Inspect the table
+
+To inspect the table, we usually work with an Integrated Development Environment like (e.g., Rstudio) where we can click on a variable and a window will allow to navigate the table. But to render the table in documents like this, recommended good for sharing, you can use `kable()` to render the table. In this example we also add a scroll box to make it compact.
+
+```{r}
+knitr::kable(
+  tbl_subj
+) %>%
+  kable_paper(bootstrap_options = c("basic","hover")) %>%
+  scroll_box(height= "400px")
+
+```
+
+# Troubleshooting
+
+## Find the errors
+
+Here we can already observe some unexpected errors. The errors in this example are not uncommon when we are given a table:
+
+-   The variable 'Cannula length (mm)' would be expected to be numeric but it is read as character (*chr)* and the number format seems odd , with too many decimals
+-   The variables 'Injection 1 JP time (HH:MM)' and 'Injection 2 JP time (HH:MM)' do not fullfill the format indicated in the variable name, of two groups of 2 digits separated by colon.
+-   We note that there are missing values (NA), those are the blank cells in the excel file.
+-   Note: str() make give output like `__truncated__` to indicate that not all the cases are displayed on the screen. This is just for display and it doesn't mean that text is in the table or that the full column was not read.
+
+## Identify the source of the problem
+
+### Is the source table correct?
+
+If we open this table in excel we see the correct values (e.g.,the column 'cannula length (mm)' contains values like 2.2 or 2.3, and 'Injection JP time (HH:MM)' values like 18:45). So we know this is a problem when reading the table in R (likely to happen in other software as well).
+
+### One or multiple errors ?
+
+Several columns were not correctly read but it seems the problem is the same. They are all read as characters when should have been read in a different format. Do they have something in common?
+
+### Inspect columns with the wrong formats
+
+Let us print the unique values of these columns. The function `unique()` outputs the values that do not repeat in the column:
+
+```{r}
+#| warning: FALSE
+#| results: markup 
+unique(tbl_subj$`Cannula length (mm)`)
+unique(tbl_subj$`Injection 1 JP time (HH:MM)`)
+unique(tbl_subj$`Injection 2 JP time (HH:MM)`)
+
+```
+
+The three columns contained some cells with missing values that the researchers coded with the string "N/A" . Note that some contain also the value *NA*, which is the symbol that R uses to represent missing values (means *not available*), they are not surrounded by double quotes because they are not a character type cells, unlike "N/A". Cells with NA are blank in excel.
+
+Here, because researchers wrote a character string "N/A" in some cells, the entire column was read as having character type data, which prevented from reading numbers and date/time cells correctly.
+
+## Identify solutions
+
+So we have a problem when reading a table in R that we don't have if we use excel. What can we do?
+
+### Code fix: specify column types when reading
+
+Most packages allow to specify your column types. Below we specify that the read_excel function should guess the format for all columns except the columns we had troubles with (the package allows to specify *text*, *numeric*, *guess* or *date*)
+
+-   PRO: if we specify all formats then it is clear from reading the code what are the formats of each variable
+-   CON: this may not always be a convenient solution for large tables with many columns.\
+
+
+
+
+SPECIFY NA STRINGS 
+
+```{r}
+#| warning: FALSE
+#| results: markup
+tbl <- readxl::read_excel(fileinput, sheet='Control_room_sheet',col_types = c("guess","guess","guess","numeric","guess","guess","guess","guess","guess","guess","date","guess","guess","date","guess"))
+
+```
+
+```{r}
+#| warning: FALSE
+#| results: markup
+tbl <- readxl::read_excel(fileinput, sheet='Control_room_sheet',na = c("","N/A"))
+
+
+knitr::kable(
+  tbl
+) %>%
+  kable_paper(bootstrap_options = c("basic","hover")) %>%
+  scroll_box(height= "400px")
+
+
+str(tbl)
+```
+### Source fix: correct the source table in excel
+
+In this example it would just be easier to go to the source table and delete those "N/A" entries, the cells will be then blank and read as NA by R without affecting the column format. This modification can be done with a script if the table is large
+
+-   PRO: the source will be read correctly in any new script.
+-   CON: if the table is too complex it will add a new step ( a 'correcting' script) from original data, if the it is simple and it is done manually there is a small chance for human error
+
+## Choose the most practical and safe solution
+
+In this example, the source table required manual entries and inspections by researchers because they had to fill some on-site information from the lab. Thus, the most practical solution seems to delete 'N/A' entries and instruct researchers to leave empty those cells instead. This does not compromise safety as the table would have required manual inspection and entries anyway. Note that this would have been needed for consistency in the table, even if this format-read issue (some cells had been left empty while some others had 'N/A', this is inconsistent formatting unless it is required to convey different information).
+
+# Preventing future issues
+Consider the following points to favor interoperability and minimize reading errors: 
+
+-   *Keep formats consistent*. If tables are filled in by several users, have explicit instructions (e.g., how to represent missing values). Whenever possible avoid mix formats within a variable
+
+-   *Avoid encoding information in formatting*, for example, using colors or conditional formatting). No information should be loss if only the plain content (without formatting) of the cells is read.
+
+-    *Use consistent variables names*, use informative and descriptive names while avoid whenever possible special characters and exceedingly long names. It is also recommended to have additional sheets with a *codebook* describing each variable name and what it means
+
+
+# Appendix: date format adjustment

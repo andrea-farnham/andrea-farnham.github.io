@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="G.Fraga Gonzalez &amp; E. Furrer">
-<meta name="dcterms.date" content="2023-10-05">
+<meta name="dcterms.date" content="2023-11-07">
 <meta name="description" content="Quick explanation on using Gitlab pages as an open data hub">
 
 <title>tutorial-2.-creating-and-updating-a-data-hub-in-gitlab</title>
@@ -89,7 +89,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../contents/tutorials/Tutorials.html" rel="" target="">
+    <a class="nav-link" href="../../contents/tutorials/index.html" rel="" target="">
  <span class="menu-text">Tutorials</span></a>
   </li>  
   <li class="nav-item">
@@ -128,13 +128,18 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#tutorial-2-creating-and-updating-a-data-hub-in-gitlab" id="toc-tutorial-2-creating-and-updating-a-data-hub-in-gitlab" class="nav-link active" data-scroll-target="#tutorial-2-creating-and-updating-a-data-hub-in-gitlab">Tutorial 2: Creating and Updating a Data Hub in Gitlab</a></li>
   <li><a href="#workflow-for-data-owners" id="toc-workflow-for-data-owners" class="nav-link" data-scroll-target="#workflow-for-data-owners">Workflow for data owners</a>
   <ul class="collapse">
-  <li><a href="#action-owner-edits-metadata" id="toc-action-owner-edits-metadata" class="nav-link" data-scroll-target="#action-owner-edits-metadata">1. ACTION: Owner edits <strong>metadata</strong></a></li>
-  <li><a href="#auto-changes-in-the-repository-trigger-the-continuous-integration-pipeline" id="toc-auto-changes-in-the-repository-trigger-the-continuous-integration-pipeline" class="nav-link" data-scroll-target="#auto-changes-in-the-repository-trigger-the-continuous-integration-pipeline">2. AUTO: changes in the repository <strong>trigger the Continuous Integration pipeline</strong></a></li>
-  <li><a href="#auto-the-continuous-integration-pipeline-runs-the-script" id="toc-auto-the-continuous-integration-pipeline-runs-the-script" class="nav-link" data-scroll-target="#auto-the-continuous-integration-pipeline-runs-the-script">3. AUTO: the continuous integration pipeline <strong>runs the script</strong></a></li>
-  <li><a href="#auto-the-html-is-updated-and-collaborators-can-navigate-through-the-updated-data" id="toc-auto-the-html-is-updated-and-collaborators-can-navigate-through-the-updated-data" class="nav-link" data-scroll-target="#auto-the-html-is-updated-and-collaborators-can-navigate-through-the-updated-data">4. AUTO: The HTML is updated and collaborators can navigate through the updated data</a></li>
+  <li><a href="#action-data-owner-creates-data-hub-repository" id="toc-action-data-owner-creates-data-hub-repository" class="nav-link" data-scroll-target="#action-data-owner-creates-data-hub-repository">1. ACTION: Data owner creates Data Hub repository</a>
+  <ul class="collapse">
+  <li><a href="#necessary-files" id="toc-necessary-files" class="nav-link" data-scroll-target="#necessary-files">Necessary files</a></li>
   </ul></li>
-  <li><a href="#files" id="toc-files" class="nav-link" data-scroll-target="#files">Files</a></li>
-  <li><a href="#privacy" id="toc-privacy" class="nav-link" data-scroll-target="#privacy">Privacy</a></li>
+  </ul></li>
+  <li><a href="#privacy" id="toc-privacy" class="nav-link" data-scroll-target="#privacy">Privacy</a>
+  <ul class="collapse">
+  <li><a href="#action-owner-edits-metadata" id="toc-action-owner-edits-metadata" class="nav-link" data-scroll-target="#action-owner-edits-metadata">2. ACTION: Owner edits <strong>metadata</strong></a></li>
+  <li><a href="#auto-changes-in-the-repository-trigger-the-continuous-integration-pipeline" id="toc-auto-changes-in-the-repository-trigger-the-continuous-integration-pipeline" class="nav-link" data-scroll-target="#auto-changes-in-the-repository-trigger-the-continuous-integration-pipeline">3. AUTO: changes in the repository <strong>trigger the Continuous Integration pipeline</strong></a></li>
+  <li><a href="#auto-the-continuous-integration-pipeline-runs-the-script" id="toc-auto-the-continuous-integration-pipeline-runs-the-script" class="nav-link" data-scroll-target="#auto-the-continuous-integration-pipeline-runs-the-script">4. AUTO: the Continuous Integration pipeline <strong>runs the script</strong></a></li>
+  <li><a href="#auto-the-data-hub-website-is-updated-and-collaborators-can-navigate-through-the-updated-data" id="toc-auto-the-data-hub-website-is-updated-and-collaborators-can-navigate-through-the-updated-data" class="nav-link" data-scroll-target="#auto-the-data-hub-website-is-updated-and-collaborators-can-navigate-through-the-updated-data">5. AUTO: The Data Hub website is updated and collaborators can navigate through the updated data</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -143,61 +148,65 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<p><a href="Tutorials.qmd">Back</a></p>
 <section id="tutorial-2-creating-and-updating-a-data-hub-in-gitlab" class="level1 unnumbered">
 <h1 class="unnumbered">Tutorial 2: Creating and Updating a Data Hub in Gitlab</h1>
-<p>The <em>static site</em> generated in this repository shows an <em>interactive table</em> with image thumbnails (clickable). By <em>static</em> we mean that the user will just see whatever data is contained in the HTML of the site. Although it contains an interactive table, all users have access to the same data which they cannot modify (unlike in <em>dynamic websites</em>).</p>
-<p>The website hosted using <a href="shttps://docs.gitlab.com/ee/user/project/pages/">Gitlab pages</a> is rendered with an [R Markdown] (https://rmarkdown.rstudio.com/) script, that uses the R <a href="https://rstudio.github.io/DT/">DT package</a>). The script creates an interactive page in HTML. <a href="https://docs.gitlab.com/ee/ci/">Gitlab CI</a> is used to run the R Markdown script automatically at each update (push) and render the site from the browser so that users do not need to install R or other programs to update the site.</p>
+<p>The <em>static web site</em> generated through the Data Hub repository contains an <em>interactive table</em> with clickable image thumbnails. The web site is <em>static</em> because the user will just see whatever data is contained in the HTML of the site. Although it contains an interactive table, all users have access to the same data which they cannot modify (unlike in <em>dynamic websites</em>).</p>
+<p>The website is hosted directly from the repository through <a href="shttps://docs.gitlab.com/ee/user/project/pages/">Gitlab pages</a>. It is rendered based on an <a href="https://rmarkdown.rstudio.com/">R Markdown</a> script, that uses the <a href="https://cran.r-project.org/web/packages/DT/index.html">Data Tables package</a>. The script creates an interactive page in HTML. <a href="https://docs.gitlab.com/ee/ci/">Gitlab CI</a> is used to run the R Markdown script automatically at each update (push) and renders the site automatically so that users do not need to install R or other programs to update the site.</p>
 </section>
 <section id="workflow-for-data-owners" class="level1">
 <h1>Workflow for data owners</h1>
-<p><img src="uploads/6e6e99d42e8bb7d128fbbc6ee131ab12/image.png" class="img-fluid" width="613"></p>
-<section id="action-owner-edits-metadata" class="level3">
-<h3 class="anchored" data-anchor-id="action-owner-edits-metadata">1. ACTION: Owner edits <strong>metadata</strong></h3>
-<p>The <em>owner</em> can do this through:</p>
-<ol type="1">
-<li><em>Browser</em> (<em>RECOMMENDED FOR MINOR CHANGES</em>) Making changes from Gitlab in the browser (upload or edit file)</li>
-<li><em>Clone repository</em> (<em>RECOMMENDED FOR MAJOR UPDATES</em>) Cloning this repo, working locally and <em>committing</em> and <em>pushing</em> the changes to Gitlab (e.g., using <a href="https://desktop.github.com/">Github desktop</a>). The local metadata file should be always in Sync with that one in the remote repository.</li>
-</ol>
-<p>NOTE: The files in the Gitlab repository should be considered as the <em>main source</em> for retrieving your projects’ metadata.</p>
-</section>
-<section id="auto-changes-in-the-repository-trigger-the-continuous-integration-pipeline" class="level3">
-<h3 class="anchored" data-anchor-id="auto-changes-in-the-repository-trigger-the-continuous-integration-pipeline">2. AUTO: changes in the repository <strong>trigger the Continuous Integration pipeline</strong></h3>
-<p>It may take around 5 minutes to update the page html. The member with at least <code>maintainer</code> status can click on Build/Pipelines or Jobs (sidebar in Gitlab) to see what pipeline or job (within pipeline) is running, and if there are any errors.</p>
-</section>
-<section id="auto-the-continuous-integration-pipeline-runs-the-script" class="level3">
-<h3 class="anchored" data-anchor-id="auto-the-continuous-integration-pipeline-runs-the-script">3. AUTO: the continuous integration pipeline <strong>runs the script</strong></h3>
-<p>The <em>.gitlab-ci.yml</em> file defines this pipeline. It uses a Docker image with R, Gitlab pages to produce the website, and Gitlab runner to run the Docker where we have our Rmarkdown script (rendering the html from the table). The owner can edit the yml and the Rmarkdown to make if changes in this flow are to be done. No edit of Docker image is needed.</p>
-<p>See our tutorial on customizing Gitlab Continuous Integration for more advanced details.</p>
-</section>
-<section id="auto-the-html-is-updated-and-collaborators-can-navigate-through-the-updated-data" class="level3">
-<h3 class="anchored" data-anchor-id="auto-the-html-is-updated-and-collaborators-can-navigate-through-the-updated-data">4. AUTO: The HTML is updated and collaborators can navigate through the updated data</h3>
-</section>
-</section>
-<section id="files" class="level1">
-<h1>Files</h1>
-<p>The main <strong>input files</strong> are:</p>
+<section id="action-data-owner-creates-data-hub-repository" class="level2">
+<h2 class="anchored" data-anchor-id="action-data-owner-creates-data-hub-repository">1. ACTION: Data owner creates Data Hub repository</h2>
+<p>–&gt; NOTE EF, THIS STEP IS MISSING: see the title of this tutorial! Refer to Tutorial 1? I take the sections that were at the bottom here</p>
+<section id="necessary-files" class="level3">
+<h3 class="anchored" data-anchor-id="necessary-files">Necessary files</h3>
+<p>The main <strong>input files</strong> for the Data Hub repository are:</p>
 <ul>
-<li><code>metadata table</code> (preferrably in .csv format for interoperability). It should contain just the filename of the pictures that will be displayed</li>
-<li><code>images</code> files (<strong>Note</strong>: Gitlab is not meant for data storage. Images should be compressed to avoid exceeding volume allowed per repo ( usually 5 Gb in free versions, <a href="https://about.gitlab.com/pricing/faq-paid-storage-transfer/">details here</a>)</li>
-<li><code>R markdown</code> script that has the code to render the table with DT package</li>
-<li>A <code>.gitlab-ci.yml</code> file is the Continuous integration file that makes it possible to run the Rmd file and render the html again from Gitlab</li>
+<li><code>metadata table</code> (preferably in .csv format for interoperability). It should contain just the filenames and meta data of the pictures that will be displayed on the Data Hub.</li>
+<li><code>image</code> files. <strong>Note</strong>: Gitlab is not meant for data storage. Images should be compressed to avoid exceeding the volume allowed per repository ( usually 5 Gb in free versions, <a href="https://about.gitlab.com/pricing/faq-paid-storage-transfer/">details here</a>)</li>
+<li><code>R markdown</code> script containing the code to render the interactive table</li>
+<li><code>.gitlab-ci.yml</code> file specifying the Continuous Integration pipeline, see below.</li>
 </ul>
-<p>The <strong>outputs</strong> for the website</p>
+<p>The <strong>outputs</strong> of the Continuous Integration pipeline are</p>
 <ul>
-<li><code>index.html</code> file within the public folder</li>
-<li>An ’ <em>files</em>’ folder will be saved if the table is rendered as self-contained</li>
+<li><code>index.html</code> file within the folder <code>public</code>. This is the landing page of the Data Hub.</li>
+<li>A folder <code>files</code> will be created if the table is rendered as self-contained –&gt; NOTE EF: do we need this?</li>
 </ul>
-<p><strong>Note</strong>: <em>index.html</em> and <em>images folder</em> ARE EXPECTED to be saved in the <code>public</code> folder. This does not mean they are publicly accessible (you need login to access this site)</p>
+<p>–&gt; NOTE EF we need to discuss this <strong>Note</strong>: <em>index.html</em> and <em>images folder</em> ARE EXPECTED to be saved in the <code>public</code> folder. This does not mean they are publicly accessible (you need login to access this site)</p>
+</section>
+</section>
 </section>
 <section id="privacy" class="level1">
 <h1>Privacy</h1>
 <p>This is a <code>private</code> repository and a private site</p>
 <ul>
 <li><strong>Accounts</strong>. A <code>SWITCH</code> account is required to access the static website and the repository with the code to generate it</li>
-<li><strong>Members</strong>. A <code>maintainer</code> member in this repository can add new members (Go to Manage/Members). They must be also maintainer to be able to access the images after clicking on the table thumbnail. <code>Guests</code> can only see the thumbnails</li>
+<li><strong>Members</strong>. A <code>maintainer</code> member in this repository can add new members (Go to Manage/Members). They must be also maintainer to be able to access the images after clicking on the table thumbnail. <code>Guests</code> can only see the thumbnails –&gt; NOTE EF end discuss</li>
 </ul>
+<p>NOTE FOR PICTURE: the arrows are not consistent with the legend. <img src="uploads/6e6e99d42e8bb7d128fbbc6ee131ab12/image.png" class="img-fluid" width="613"></p>
+<section id="action-owner-edits-metadata" class="level2">
+<h2 class="anchored" data-anchor-id="action-owner-edits-metadata">2. ACTION: Owner edits <strong>metadata</strong></h2>
+<p>The <em>owner</em> can do this through:</p>
+<ol type="1">
+<li><em>Browser</em>: Making changes in the repository in the browser (upload or edit file). This approach is <em>recommended for minor changes</em>.</li>
+<li><em>Clone repository</em>: Cloning the Data Hub repository, making changes locally and <em>committing</em> and <em>pushing</em> the changes to Gitlab (e.g., using <a href="https://desktop.github.com/">Github desktop</a>). The local meta data file should always be synchronized with the master copy in the remote repository. This approach is <em>recommended for major changes</em>.</li>
+</ol>
+</section>
+<section id="auto-changes-in-the-repository-trigger-the-continuous-integration-pipeline" class="level2">
+<h2 class="anchored" data-anchor-id="auto-changes-in-the-repository-trigger-the-continuous-integration-pipeline">3. AUTO: changes in the repository <strong>trigger the Continuous Integration pipeline</strong></h2>
+<p>After pushing changes to the Data Hub repository the Continuous Integration pipeline is triggered automatically. It may take around 5 minutes to update the web site. A team member with at least <code>maintainer</code> status can click on Build/Pipelines or Jobs (sidebar in Gitlab) to see what pipeline or job (within pipeline) is running, and if there are any errors.</p>
+</section>
+<section id="auto-the-continuous-integration-pipeline-runs-the-script" class="level2">
+<h2 class="anchored" data-anchor-id="auto-the-continuous-integration-pipeline-runs-the-script">4. AUTO: the Continuous Integration pipeline <strong>runs the script</strong></h2>
+<p>The <em>.gitlab-ci.yml</em> file defines the pipeline. It uses a Docker image containing R and a shared runner on the Gitlab server to run the Rmarkdown script on the Docker image. Gitlab pages is then used to host the website. The repository owner can edit the yml file and the Rmarkdown file to make changes to this workflow. Editing of the of the Docker image is not needed.</p>
+<p>See our tutorial on customizing Gitlab Continuous Integration for more advanced details.</p>
+</section>
+<section id="auto-the-data-hub-website-is-updated-and-collaborators-can-navigate-through-the-updated-data" class="level2">
+<h2 class="anchored" data-anchor-id="auto-the-data-hub-website-is-updated-and-collaborators-can-navigate-through-the-updated-data">5. AUTO: The Data Hub website is updated and collaborators can navigate through the updated data</h2>
 
 
+</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
