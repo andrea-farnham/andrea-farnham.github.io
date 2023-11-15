@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="G.Fraga Gonzalez">
-<meta name="dcterms.date" content="2023-11-08">
+<meta name="dcterms.date" content="2023-11-09">
 <meta name="description" content="A very easy set up of a free website where you can share your dynamic reports or other research outputs">
 
 <title>Sharing dynamic reports in a website with R and Quarto</title>
@@ -127,10 +127,7 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#why-is-this-relevant" id="toc-why-is-this-relevant" class="nav-link active" data-scroll-target="#why-is-this-relevant">Why is this relevant?</a></li>
   <li><a href="#software-required" id="toc-software-required" class="nav-link" data-scroll-target="#software-required">Software required</a></li>
-  <li><a href="#files-needed" id="toc-files-needed" class="nav-link" data-scroll-target="#files-needed">Files needed</a>
-  <ul class="collapse">
-  <li><a href="#minimal-example" id="toc-minimal-example" class="nav-link" data-scroll-target="#minimal-example">Minimal example</a></li>
-  </ul></li>
+  <li><a href="#files-needed" id="toc-files-needed" class="nav-link" data-scroll-target="#files-needed">Files needed</a></li>
   <li><a href="#step-by-step-shorts" id="toc-step-by-step-shorts" class="nav-link" data-scroll-target="#step-by-step-shorts">Step-by-step shorts</a>
   <ul class="collapse">
   <li><a href="#make-a-website-from-scratch-in-5-minutes" id="toc-make-a-website-from-scratch-in-5-minutes" class="nav-link" data-scroll-target="#make-a-website-from-scratch-in-5-minutes">1. Make a website from scratch in 5 minutes</a></li>
@@ -167,7 +164,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 8, 2023</p>
+      <p class="date">November 9, 2023</p>
     </div>
   </div>
   
@@ -213,14 +210,11 @@ Dictionary
 </section>
 <section id="files-needed" class="level1">
 <h1>Files needed</h1>
-<section id="minimal-example" class="level2">
-<h2 class="anchored" data-anchor-id="minimal-example">Minimal example</h2>
 <p>At least you will need the following:</p>
 <ul>
 <li><p>A <strong>_quarto.yml</strong> configuration file (required filename &amp; extension)</p></li>
 <li><p>An <strong>index.qmd</strong> quarto markdown (suggested filename)</p></li>
 </ul>
-</section>
 </section>
 <section id="step-by-step-shorts" class="level1">
 <h1>Step-by-step shorts</h1>
@@ -230,10 +224,12 @@ Dictionary
 <p>This 5 minutes video shows how easy it is to create the basic skeleton of the website.</p>
 <section id="step-1.-make-a-new-folder-for-your-website" class="level4">
 <h4 class="anchored" data-anchor-id="step-1.-make-a-new-folder-for-your-website">Step 1. Make a new folder for your website</h4>
+<p>Inside the folder you will have the _quarto.yml file at the top level, then you can organize the quarto markdown files with the content in subfolders if you want.</p>
 </section>
-<section id="step-2.-create-a-_quarto.yml-file-and-write-some-settings-on-it-like" class="level4">
-<h4 class="anchored" data-anchor-id="step-2.-create-a-_quarto.yml-file-and-write-some-settings-on-it-like">Step 2. Create a _quarto.yml file and write some settings on it like:</h4>
-<pre><code>project:
+<section id="step-2.-create-a-_quarto.yml-file-with-some-settings" class="level4">
+<h4 class="anchored" data-anchor-id="step-2.-create-a-_quarto.yml-file-with-some-settings">Step 2. Create a _quarto.yml file with some settings</h4>
+<p>They are given in plain text. Indentation counts. There are many examples online which would require minimal adjustments. A very simple example:</p>
+<pre style="background-color: WhiteSmoke"><code>project:
     type: website
     
 website:
@@ -243,16 +239,17 @@ website:
 format: 
     html:
         author: Center for Reproducible Science</code></pre>
+<p>“navbar” indicates a navigation bar on top of the website, but you can also define a “sidebar”. In there you can refer to the different pages that will make up your site. In this example we just make an skeleton with the home page.</p>
 </section>
 <section id="step-3.-create-a-quarto-.qmd-file-and-open-it-in-r-studio" class="level4">
-<h4 class="anchored" data-anchor-id="step-3.-create-a-quarto-.qmd-file-and-open-it-in-r-studio">Step 3. Create a quarto .qmd file and open it in R studio</h4>
+<h4 class="anchored" data-anchor-id="step-3.-create-a-quarto-.qmd-file-and-open-it-in-r-studio">Step 3. Create a quarto (.qmd) file and open it in R studio</h4>
 <p>We recommend creating an <em>R project file</em> in Rstudio to point at your web’s folder and open your quarto files with that project open in Rstudio to avoid having future problems finding the path to your files.</p>
 <p>You can write plain text with markdown syntax on it and use a <em>yml</em> header delimited by <code>---</code> symbols to add metadata or settings</p>
 </section>
 <section id="step-4.-click-render" class="level4">
 <h4 class="anchored" data-anchor-id="step-4.-click-render">Step 4. Click render</h4>
 <p>That’s it. A new subfolder named <code>_site</code> will be created with a file index.html which is your website</p>
-<iframe src="https://drive.google.com/file/d/1hw2ZIf7RuMHZ0xghZBfcnhe1sqvckiYr/preview" width="440" height="380" allow="autoplay"></iframe>
+<iframe src="https://drive.google.com/file/d/1hw2ZIf7RuMHZ0xghZBfcnhe1sqvckiYr/preview" width="600" height="400" allow="autoplay"></iframe>
 </section>
 </section>
 <section id="add-pages-and-lists-of-pages-within-your-website" class="level3">

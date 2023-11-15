@@ -2,7 +2,6 @@
 listing:
   categories: true
   type: table
-  contents: "index.qmd"
   fields: [title,author,date, description]
   sort-ui: true
   filter-ui: true

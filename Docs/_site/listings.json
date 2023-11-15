@@ -30,8 +30,11 @@
   {
     "listing": "/contents/tutorials/index.html",
     "items": [
-      "/contents/tutorials/Gitlab/index.html",
-      "/contents/tutorials/Quarto_website/index.html"
+      "/contents/tutorials/Tutorial_Web.html",
+      "/contents/tutorials/Tutorial_Gitlab-0.-Main-workflow.html",
+      "/contents/tutorials/Tutorial_Gitlab-1.-Using-Gitlab-for-Project-Owners-and-Collaborators.html",
+      "/contents/tutorials/Tutorial_Gitlab-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.html",
+      "/contents/tutorials/Tutorial_Gitlab-3.-Customizing-Gitlab-Continuous-Integration.html"
     ]
   },
   {

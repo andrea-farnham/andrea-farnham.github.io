@@ -9,8 +9,6 @@ listing:
   image-align: right
 ---
 
-
-# Tool {.unnumbered}
+# Tools {.unnumbered}
 
 This collection of interactive tools is work in progress...
-
