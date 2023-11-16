@@ -1,11 +1,15 @@
 # About {.unnumbered}
 
 ## The AFFORD project
-A Framework for Avoiding the Open Research Data Dump. 
+
+A Framework for Avoiding the Open Research Data Dump.
 
 The project AFFORD aims at designing a sustainable support framework to lower the barriers to publishing data and other research outputs in an accessible form by bundling know-how, workflows, and tools under the umbrella of one organizational entity. It is a collaboration between the [InterfaceGroup](https://interfacegroup.ch/) and the [Center for Reproducible Science](https://www.crs.uzh.ch/en.html) of the University of Zurich. It uses the Sinergia project [Fluid Dynamics of the central nervous system](https://interfacegroup.ch/project/fluid-dynamics-of-the-central-nervous-system/) as a reference project and accompanies this project in the full cycle of Open Research Data (ORD) generation from experiment planning to publishing. This project-based, data-driven approach will help the framework reach a sufficient level of maturity before it is made available to all university researchers.
 
+![](images/CRS AFFORD INTRO.gif)
+
 ## The CRS
+
 The reproducibility of scientific findings is crucial for the credibility of empirical research. The objective of the [Center for Reproducible Science](https://www.crs.uzh.ch/en.html) is to train the next generation of researchers in good research practices, to develop novel methodology related to reproducibility and replicability, and to improve the quality of scientific investigation using meta-science.
 
 The CRS is a competence center supported by the Vice President Research and by the Faculties of Medicine (MeF, leading house), Science (MNF), Business, Economics and Informatics (WWF), Arts and Social Sciences (PhF), Law (RWF), and Vetsuisse Faculty (VSF).
