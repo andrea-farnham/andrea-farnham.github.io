@@ -1,20 +1,24 @@
 ---
+title: Gitlab Tutorial 0 - Workflow
 author: G.Fraga Gonzalez & E. Furrer
 date: last-modified
-description: A workflow for using Gitlab as a platform for sharing research documentation, metadata and data 
+subtitle: A workflow for Gitlab as a platform for sharing research documentation, metadata and data 
 categories:
   - Gitlab
+
 format:
   html:
     mermaid: 
       theme: default
 ---
 
+
+
 [Back](index.qmd)
 
-# Gitlab Tutorial 0: A Workflow for Data Sharing with Gitlab pages {.unnumbered}
+<!-- # Using Gitlab as an Open Research Data Hub {.unnumbered} -->
 
-Here we propose to use Gitlab pages to host an easy-to-build website where we can share documentation, metadata and some data (e.g., preview images) of our projects. The website can be either public or private, requiring users to log in. We propose that this approach can be useful to improve the research workflow in many labs and projects, irrespective of whether they have a strong programming focus.
+Here we propose to use [Gitlab pages](https://docs.gitlab.com/ee/user/project/pages/) to host an easy-to-build website where we can share documentation, metadata and some data (e.g., preview images) of our projects. The website can be either public or private, requiring users to log in. We propose that this approach can be useful to improve the research workflow in many labs and projects, irrespective of whether they have a strong programming focus.
 
 The series of tutorials in this website explain the different processes required for this workflow. They include step-by-step guides, templates, video demos and links intended for non-coders, as well as other tutorials for more advanced users.
 
@@ -24,14 +28,14 @@ The main requirements for this workflow are:
 -   (Required) A way of creating HTML pages: we propose R markdown templates
 -   (Recommended) A Gitlab continuous integration script to allow updating the directly from the browser. We provide examples and templates.
 
-## Simplified workflow
+ 
+The basic workflow:
 
 ```{mermaid}
-%%{init: {'theme':'base'}}%%
 
-flowchart LR
+flowchart TD
     A1[data, metadata, code] <.-> |sync| B[Gitlab Repository]
-    B0[Repository Wiki] <.->|edit in browser| B
+    B0[Documentation] <.->|edit Wiki| B
     B --> | Render| C[GitlabPage]
 
 ```

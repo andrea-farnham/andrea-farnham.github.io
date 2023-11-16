@@ -2,7 +2,7 @@
 listing:
   categories: true
   type: default
-  fields: [title, categories, author,date, image, description]
+  fields: [title, description, categories, author,date, image]
   sort-ui: true
   filter-ui: true
   image-height: "150px"

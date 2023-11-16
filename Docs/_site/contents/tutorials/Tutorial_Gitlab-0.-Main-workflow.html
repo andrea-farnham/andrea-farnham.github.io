@@ -7,10 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="G.Fraga Gonzalez &amp; E. Furrer">
-<meta name="dcterms.date" content="2023-11-15">
-<meta name="description" content="A workflow for using Gitlab as a platform for sharing research documentation, metadata and data">
+<meta name="dcterms.date" content="2023-11-16">
 
-<title>tutorial_gitlab-0.-main-workflow</title>
+<title>Gitlab Tutorial 0 - Workflow</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -129,23 +128,49 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#gitlab-tutorial-0-a-workflow-for-data-sharing-with-gitlab-pages" id="toc-gitlab-tutorial-0-a-workflow-for-data-sharing-with-gitlab-pages" class="nav-link active" data-scroll-target="#gitlab-tutorial-0-a-workflow-for-data-sharing-with-gitlab-pages">Gitlab Tutorial 0: A Workflow for Data Sharing with Gitlab pages</a>
-  <ul class="collapse">
-  <li><a href="#simplified-workflow" id="toc-simplified-workflow" class="nav-link" data-scroll-target="#simplified-workflow">Simplified workflow</a></li>
-  <li><a href="#detailed-workflow" id="toc-detailed-workflow" class="nav-link" data-scroll-target="#detailed-workflow">Detailed workflow</a></li>
-  </ul></li>
+  <li><a href="#detailed-workflow" id="toc-detailed-workflow" class="nav-link active" data-scroll-target="#detailed-workflow">Detailed workflow</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Gitlab Tutorial 0 - Workflow</h1>
+<p class="subtitle lead">A workflow for Gitlab as a platform for sharing research documentation, metadata and data</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">Gitlab</div>
+  </div>
+  </div>
 
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>G.Fraga Gonzalez &amp; E. Furrer </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 16, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
 
 <p><a href="../../contents/tutorials/index.html">Back</a></p>
-<section id="gitlab-tutorial-0-a-workflow-for-data-sharing-with-gitlab-pages" class="level1 unnumbered">
-<h1 class="unnumbered">Gitlab Tutorial 0: A Workflow for Data Sharing with Gitlab pages</h1>
-<p>Here we propose to use Gitlab pages to host an easy-to-build website where we can share documentation, metadata and some data (e.g., preview images) of our projects. The website can be either public or private, requiring users to log in. We propose that this approach can be useful to improve the research workflow in many labs and projects, irrespective of whether they have a strong programming focus.</p>
+<!-- # Using Gitlab as an Open Research Data Hub {.unnumbered} -->
+<p>Here we propose to use <a href="https://docs.gitlab.com/ee/user/project/pages/">Gitlab pages</a> to host an easy-to-build website where we can share documentation, metadata and some data (e.g., preview images) of our projects. The website can be either public or private, requiring users to log in. We propose that this approach can be useful to improve the research workflow in many labs and projects, irrespective of whether they have a strong programming focus.</p>
 <p>The series of tutorials in this website explain the different processes required for this workflow. They include step-by-step guides, templates, video demos and links intended for non-coders, as well as other tutorials for more advanced users.</p>
 <p>The main requirements for this workflow are:</p>
 <ul>
@@ -154,17 +179,14 @@ ul.task-list li input[type="checkbox"] {
 <li>(Required) A way of creating HTML pages: we propose R markdown templates</li>
 <li>(Recommended) A Gitlab continuous integration script to allow updating the directly from the browser. We provide examples and templates.</li>
 </ul>
-<section id="simplified-workflow" class="level2">
-<h2 class="anchored" data-anchor-id="simplified-workflow">Simplified workflow</h2>
+<p>The basic workflow:</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <div>
-<pre class="mermaid mermaid-js">%%{init: {'theme':'base'}}%%
-
-flowchart LR
+<pre class="mermaid mermaid-js">flowchart TD
     A1[data, metadata, code] &lt;.-&gt; |sync| B[Gitlab Repository]
-    B0[Repository Wiki] &lt;.-&gt;|edit in browser| B
+    B0[Documentation] &lt;.-&gt;|edit Wiki| B
     B --&gt; | Render| C[GitlabPage]
 
 </pre>
@@ -172,7 +194,6 @@ flowchart LR
 </div>
 </div>
 </div>
-</section>
 <section id="detailed-workflow" class="level2">
 <h2 class="anchored" data-anchor-id="detailed-workflow">Detailed workflow</h2>
 <p>The <code>owner</code> of the data (e.g., a lab or a researcher) creates and maintains a <strong>main Gitlab repository</strong> containing:</p>
@@ -192,7 +213,6 @@ flowchart LR
 <p><img src="uploads/d861221e7e6f9a7592023f31288d901a/Gitlab_basic.png" width="718" height="1058"></p>
 
 
-</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->

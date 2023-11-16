@@ -7,10 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="G.Fraga Gonzalez &amp; E. Furrer">
-<meta name="dcterms.date" content="2023-11-15">
-<meta name="description" content="short step-by-step guide on using Git and Gitlab">
+<meta name="dcterms.date" content="2023-11-16">
 
-<title>tutorial_gitlab-1.-using-gitlab-for-project-owners-and-collaborators</title>
+<title>Gitlab Tutorial 1 - short step-by-step guide to Git and Gitlab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -125,14 +124,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#gitlab-tutorial-1-using-a-uzh-gitlab-repository-for-project-owners-and-collaborators" id="toc-gitlab-tutorial-1-using-a-uzh-gitlab-repository-for-project-owners-and-collaborators" class="nav-link active" data-scroll-target="#gitlab-tutorial-1-using-a-uzh-gitlab-repository-for-project-owners-and-collaborators">Gitlab Tutorial 1: Using a UZH Gitlab repository for Project Owners and Collaborators</a></li>
-  <li><a href="#create-and-use-a-repository-in-browser" id="toc-create-and-use-a-repository-in-browser" class="nav-link" data-scroll-target="#create-and-use-a-repository-in-browser">1. Create and use a repository (in browser)</a>
+  <li><a href="#create-and-use-a-repository-in-browser" id="toc-create-and-use-a-repository-in-browser" class="nav-link active" data-scroll-target="#create-and-use-a-repository-in-browser">1. Create and use a repository (in browser)</a>
   <ul class="collapse">
-  <li><a href="#for-project-owners" id="toc-for-project-owners" class="nav-link" data-scroll-target="#for-project-owners">for <em>project owner(s)</em></a></li>
-  <li><a href="#for-collaborators" id="toc-for-collaborators" class="nav-link" data-scroll-target="#for-collaborators">for <em>collaborator(s)</em></a></li>
+  <li><a href="#for-project-owners" id="toc-for-project-owners" class="nav-link" data-scroll-target="#for-project-owners">For <em>project owners</em></a></li>
+  <li><a href="#for-collaborators" id="toc-for-collaborators" class="nav-link" data-scroll-target="#for-collaborators">For <em>collaborators</em></a></li>
   </ul></li>
-  <li><a href="#cloning-a-repository-to-local-computer-for-project-owners" id="toc-cloning-a-repository-to-local-computer-for-project-owners" class="nav-link" data-scroll-target="#cloning-a-repository-to-local-computer-for-project-owners">2. Cloning a repository to local computer (for project owners)</a>
+  <li><a href="#cloning-a-repository-to-local-computer" id="toc-cloning-a-repository-to-local-computer" class="nav-link" data-scroll-target="#cloning-a-repository-to-local-computer">2. Cloning a repository to local computer</a>
   <ul class="collapse">
+  <li><a href="#for-project-owners-1" id="toc-for-project-owners-1" class="nav-link" data-scroll-target="#for-project-owners-1">For project owners</a></li>
   <li><a href="#personal-access-token" id="toc-personal-access-token" class="nav-link" data-scroll-target="#personal-access-token">Personal access token</a></li>
   <li><a href="#cloning-with-github-desktop-user-friendly" id="toc-cloning-with-github-desktop-user-friendly" class="nav-link" data-scroll-target="#cloning-with-github-desktop-user-friendly">2.1 Cloning with Github-desktop (user-friendly)</a>
   <ul class="collapse">
@@ -148,20 +147,48 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Gitlab Tutorial 1 - short step-by-step guide to Git and Gitlab</h1>
+<p class="subtitle lead">Using a UZH Gitlab repository for Project Owners and Collaborators</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">Gitlab</div>
+  </div>
+  </div>
 
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>G.Fraga Gonzalez &amp; E. Furrer </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 16, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
 
 <p><a href="../../contents/tutorials/index.html">Back</a></p>
-<section id="gitlab-tutorial-1-using-a-uzh-gitlab-repository-for-project-owners-and-collaborators" class="level1 unnumbered">
-<h1 class="unnumbered">Gitlab Tutorial 1: Using a UZH Gitlab repository for Project Owners and Collaborators</h1>
 <p>This Tutorial is a short step-by-step guide on using Git and Gitlab and provides a workflow to use Github Desktop to sync with local files. For complete beginners we recommend the <a href="https://git-scm.com/book">Git book</a>, which is very accessible but also very detailed. It is available in several languages and as pdf. Another option for beginners are the <a href="https://docs.gitlab.com/ee/tutorials/">Gitlab tutorials</a> by <a href="https://about.gitlab.com/">Gitlab.com</a> (commercial).</p>
 <p><a href="https://en.wikipedia.org/wiki/Git">Git</a> is a system to track changes in files, it is most often used to coordinate the work among several persons who access the files online on a server or sync them to their computer. The online use does not require any installation, local use is only possible after installing <a href="https://git-scm.com/downloads">Git</a>.</p>
 <p><a href="https://about.gitlab.com/">Gitlab.com</a> and <a href="https://github.com/">Github.com</a> are commercial hosting services for version control with Git. The UZH instance of the open source Gitlab at <a href="https://gitlab.uzh.ch">Gitlab.uzh.ch</a> is hosted by the UZH on servers owned by <a href="https://www.switch.ch/de/edu-id/">SWITCH</a>, a non-profit foundation that has been established by the Swiss Federal Government. See <a href="">https://www.zi.uzh.ch/en/staff/software-elearning/webplatforms/gitlab.html</a> for more information.</p>
 <p>A Git repository is a set of folders and files with complete history and full version-tracking abilities, locally or on a server.</p>
-</section>
 <section id="create-and-use-a-repository-in-browser" class="level1">
 <h1>1. Create and use a repository (in browser)</h1>
 <section id="for-project-owners" class="level3">
-<h3 class="anchored" data-anchor-id="for-project-owners">for <em>project owner(s)</em></h3>
+<h3 class="anchored" data-anchor-id="for-project-owners">For <em>project owners</em></h3>
 <p>For someone that wants to share data or metadata (e.g., a data hub)</p>
 <ol type="1">
 <li><strong>Login</strong> to <a href="https://gitlab.uzh.ch">Gitlab.uzh.ch</a> with your <a href="https://www.switch.ch/edu-id/">SWITCH edu-ID</a>.</li>
@@ -172,7 +199,7 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 </section>
 <section id="for-collaborators" class="level3">
-<h3 class="anchored" data-anchor-id="for-collaborators">for <em>collaborator(s)</em></h3>
+<h3 class="anchored" data-anchor-id="for-collaborators">For <em>collaborators</em></h3>
 <p>For someone who just wants to navigate through the data of a lab, when this is not made fully public:</p>
 <ol type="1">
 <li>Ask the owner of the data to be invited as a member of the project repository</li>
@@ -180,11 +207,14 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 </section>
 </section>
-<section id="cloning-a-repository-to-local-computer-for-project-owners" class="level1">
-<h1>2. Cloning a repository to local computer (for project owners)</h1>
+<section id="cloning-a-repository-to-local-computer" class="level1">
+<h1>2. Cloning a repository to local computer</h1>
+<section id="for-project-owners-1" class="level2">
+<h2 class="anchored" data-anchor-id="for-project-owners-1">For project owners</h2>
 <p>Our remote Gitlab repository, which we access via the browser is now our main location of metadata, code and (some) data. But sometimes it is convenient to make our edits locally. Specially if we are data <strong>owners</strong> and want to edit and share a large number of files or code, we cannot do this easily in the browser. Recall that you need to install <a href="https://git-scm.com/downloads">Git</a> for this.</p>
 <p>In Git, you can <code>clone a repository</code> to create a copy on your computer, that will be synchronized with your remote repository. Once cloned we can <code>pull</code> changes done in the remote repository (in the browser). If we have local changes and want to ‘send’ them to the remote we do: 1) <code>commit</code> and 2) <code>push</code> the local changes to remote. (??? what about add?)</p>
 <p>NOTE: if we <em>fork</em> a repository instead of cloning it, this will create a completely independent copy of the Git repository. Here, we need <em>cloning</em> so that our local changes can be synchronized and we don’t create duplicates of the repository.</p>
+</section>
 <section id="personal-access-token" class="level2">
 <h2 class="anchored" data-anchor-id="personal-access-token">Personal access token</h2>
 <p>To clone a repository to your machine you will most likely need a personal access token (due to the security of SWITCH login). In your project repository on <a href="https://gitlab.uzh.ch">Gitlab.uzh.ch</a> go to <code>Settings/Access tokens</code>. In the Access Tokens menu you will be able to give the token a <code>name</code>, choose an <code>expiration date</code> (or leave it blank), choose <code>permissions</code> (choose at least developer for making edits) and <code>scope</code> (select API). See also the picture below.</p>

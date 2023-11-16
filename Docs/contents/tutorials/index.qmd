@@ -2,7 +2,7 @@
 listing:
   categories: true
   type: table
-  fields: [title,author,date, description]
+  fields: [title, subtitle, date]
   sort-ui: true
   filter-ui: true
 ---

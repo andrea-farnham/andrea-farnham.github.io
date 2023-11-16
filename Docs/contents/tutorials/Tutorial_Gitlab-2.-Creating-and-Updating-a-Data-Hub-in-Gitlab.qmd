@@ -1,18 +1,18 @@
 ---
+title: Gitlab Tutorial 2 - Creating and Updating a Data Hub
+subtitle: Quick explanation on using Gitlab pages as an open data hub
 author: G.Fraga Gonzalez & E. Furrer
 date: last-modified
-description: Quick explanation on using Gitlab pages as an open data hub
 categories:
   - Gitlab
 ---
 
 [Back](index.qmd)
 
-# Gitlab Tutorial 2: Creating and Updating a Data Hub {.unnumbered}
 
-The *static site* generated in this repository shows an *interactive table* with image thumbnails (clickable). By *static* we mean that the user will just see whatever data is contained in the HTML of the site. Although it contains an interactive table, all users have access to the same data which they cannot modify (unlike in *dynamic websites*).
+A *static site* like the one you are seeing this tutorial can include interactive elements. In this example we propose an *interactive table* that can be used to navigate through metadata and even some data (e.g., displaying clickable image thumbnails). By *static* we mean that the user will just see whatever data is contained in the HTML of the site. Although it contains an interactive table, all users have access to the same data which they cannot modify (unlike in *dynamic websites*).
 
-The website hosted using [Gitlab pages](shttps://docs.gitlab.com/ee/user/project/pages/) is rendered with an \[R Markdown\] (https://rmarkdown.rstudio.com/) script, that uses the R [DT package](https://rstudio.github.io/DT/)). The script creates an interactive page in HTML. [Gitlab CI](https://docs.gitlab.com/ee/ci/) is used to run the R Markdown script automatically at each update (push) and render the site from the browser so that users do not need to install R or other programs to update the site.
+The website hosted using [Gitlab pages](https://docs.gitlab.com/ee/user/project/pages/) is rendered with an \[R Markdown\] (https://rmarkdown.rstudio.com/) script, that uses the R [DT package](https://rstudio.github.io/DT/)). The script creates an interactive page in HTML. [Gitlab CI](https://docs.gitlab.com/ee/ci/) is used to run the R Markdown script automatically at each update (push) and render the site from the browser so that users do not need to install R or other programs to update the site.
 
 # Workflow for data owners
 

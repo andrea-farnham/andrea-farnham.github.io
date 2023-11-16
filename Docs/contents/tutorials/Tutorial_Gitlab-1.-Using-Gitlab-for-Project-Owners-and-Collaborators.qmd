@@ -1,14 +1,14 @@
 ---
+title: Gitlab Tutorial 1 - short step-by-step guide to Git and Gitlab
+subtitle: Using a UZH Gitlab repository for Project Owners and Collaborators
 author: G.Fraga Gonzalez & E. Furrer
 date: last-modified
-description: short step-by-step guide on using Git and Gitlab
 categories:
   - Gitlab
 ---
 
 [Back](index.qmd)
 
-# Gitlab Tutorial 1: Using a UZH Gitlab repository for Project Owners and Collaborators {.unnumbered}
 
 This Tutorial is a short step-by-step guide on using Git and Gitlab and provides a workflow to use Github Desktop to sync with local files. For complete beginners we recommend the [Git book](https://git-scm.com/book), which is very accessible but also very detailed. It is available in several languages and as pdf. Another option for beginners are the [Gitlab tutorials](https://docs.gitlab.com/ee/tutorials/) by [Gitlab.com](https://about.gitlab.com/) (commercial).
 
@@ -20,7 +20,7 @@ A Git repository is a set of folders and files with complete history and full ve
 
 # 1. Create and use a repository (in browser)
 
-### for *project owner(s)*
+### For *project owners*
 
 For someone that wants to share data or metadata (e.g., a data hub)
 
@@ -30,14 +30,15 @@ For someone that wants to share data or metadata (e.g., a data hub)
 4.  In Manage/Members/**Invite members** add new members to the team, with different levels of permissions
 5.  Add your files and code (works through the browser but is easier with the Gitlab workflow below)
 
-### for *collaborator(s)*
+### For *collaborators*
 
 For someone who just wants to navigate through the data of a lab, when this is not made fully public:
 
 1.  Ask the owner of the data to be invited as a member of the project repository
 2.  Go to the project repository on [Gitlab.uzh.ch](https://gitlab.uzh.ch) or Pages URL [e.g., https://crsuzh.pages.uzh.ch/afford_website/](https://crsuzh.pages.uzh.ch/afford_website/) and login with your SWITCH edu-ID (if required).
 
-# 2. Cloning a repository to local computer (for project owners)
+# 2. Cloning a repository to local computer 
+## For project owners
 
 Our remote Gitlab repository, which we access via the browser is now our main location of metadata, code and (some) data. But sometimes it is convenient to make our edits locally. Specially if we are data **owners** and want to edit and share a large number of files or code, we cannot do this easily in the browser. Recall that you need to install [Git](https://git-scm.com/downloads) for this.
 

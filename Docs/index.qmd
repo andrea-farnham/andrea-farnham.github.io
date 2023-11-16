@@ -33,9 +33,9 @@ This site compiles resources for Open Research Data management curated and devel
 :::
 
 ::: {layout="[[1, -2, 0.6], [1]]"}
-![](assets/logos/uzh_logo_d_pos_web_main.jpg){width=10em  style="opacity: 0.9"}
+![](assets/logos/uzh_logo_d_pos_web_main.jpg){width=140px  style="opacity: 0.9"}
 
-![](assets/logos/Logo_CRS.jpg){ width=6em   style="opacity: 0.9 "}
+![](assets/logos/Logo_CRS.png){ width=60px   style="opacity: 0.9 "}
 :::
  
 

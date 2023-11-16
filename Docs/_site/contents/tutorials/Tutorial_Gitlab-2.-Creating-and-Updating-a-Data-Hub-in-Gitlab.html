@@ -7,10 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="G.Fraga Gonzalez &amp; E. Furrer">
-<meta name="dcterms.date" content="2023-11-07">
-<meta name="description" content="Quick explanation on using Gitlab pages as an open data hub">
+<meta name="dcterms.date" content="2023-11-16">
 
-<title>tutorial_gitlab-2.-creating-and-updating-a-data-hub-in-gitlab</title>
+<title>Gitlab Tutorial 2 - Creating and Updating a Data Hub</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -125,8 +124,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#gitlab-tutorial-2-creating-and-updating-a-data-hub" id="toc-gitlab-tutorial-2-creating-and-updating-a-data-hub" class="nav-link active" data-scroll-target="#gitlab-tutorial-2-creating-and-updating-a-data-hub">Gitlab Tutorial 2: Creating and Updating a Data Hub</a></li>
-  <li><a href="#workflow-for-data-owners" id="toc-workflow-for-data-owners" class="nav-link" data-scroll-target="#workflow-for-data-owners">Workflow for data owners</a>
+  <li><a href="#workflow-for-data-owners" id="toc-workflow-for-data-owners" class="nav-link active" data-scroll-target="#workflow-for-data-owners">Workflow for data owners</a>
   <ul class="collapse">
   <li><a href="#action-owner-edits-metadata" id="toc-action-owner-edits-metadata" class="nav-link" data-scroll-target="#action-owner-edits-metadata">1. ACTION: Owner edits <strong>metadata</strong></a></li>
   <li><a href="#auto-changes-in-the-repository-trigger-the-continuous-integration-pipeline" id="toc-auto-changes-in-the-repository-trigger-the-continuous-integration-pipeline" class="nav-link" data-scroll-target="#auto-changes-in-the-repository-trigger-the-continuous-integration-pipeline">2. AUTO: changes in the repository <strong>trigger the Continuous Integration pipeline</strong></a></li>
@@ -141,14 +139,42 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Gitlab Tutorial 2 - Creating and Updating a Data Hub</h1>
+<p class="subtitle lead">Quick explanation on using Gitlab pages as an open data hub</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">Gitlab</div>
+  </div>
+  </div>
 
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>G.Fraga Gonzalez &amp; E. Furrer </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 16, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
 
 <p><a href="../../contents/tutorials/index.html">Back</a></p>
-<section id="gitlab-tutorial-2-creating-and-updating-a-data-hub" class="level1 unnumbered">
-<h1 class="unnumbered">Gitlab Tutorial 2: Creating and Updating a Data Hub</h1>
-<p>The <em>static site</em> generated in this repository shows an <em>interactive table</em> with image thumbnails (clickable). By <em>static</em> we mean that the user will just see whatever data is contained in the HTML of the site. Although it contains an interactive table, all users have access to the same data which they cannot modify (unlike in <em>dynamic websites</em>).</p>
-<p>The website hosted using <a href="shttps://docs.gitlab.com/ee/user/project/pages/">Gitlab pages</a> is rendered with an [R Markdown] (https://rmarkdown.rstudio.com/) script, that uses the R <a href="https://rstudio.github.io/DT/">DT package</a>). The script creates an interactive page in HTML. <a href="https://docs.gitlab.com/ee/ci/">Gitlab CI</a> is used to run the R Markdown script automatically at each update (push) and render the site from the browser so that users do not need to install R or other programs to update the site.</p>
-</section>
+<p>A <em>static site</em> like the one you are seeing this tutorial can include interactive elements. In this example we propose an <em>interactive table</em> that can be used to navigate through metadata and even some data (e.g., displaying clickable image thumbnails). By <em>static</em> we mean that the user will just see whatever data is contained in the HTML of the site. Although it contains an interactive table, all users have access to the same data which they cannot modify (unlike in <em>dynamic websites</em>).</p>
+<p>The website hosted using <a href="https://docs.gitlab.com/ee/user/project/pages/">Gitlab pages</a> is rendered with an [R Markdown] (https://rmarkdown.rstudio.com/) script, that uses the R <a href="https://rstudio.github.io/DT/">DT package</a>). The script creates an interactive page in HTML. <a href="https://docs.gitlab.com/ee/ci/">Gitlab CI</a> is used to run the R Markdown script automatically at each update (push) and render the site from the browser so that users do not need to install R or other programs to update the site.</p>
 <section id="workflow-for-data-owners" class="level1">
 <h1>Workflow for data owners</h1>
 <p><img src="uploads/6e6e99d42e8bb7d128fbbc6ee131ab12/image.png" class="img-fluid" width="613"></p>

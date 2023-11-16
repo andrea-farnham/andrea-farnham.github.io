@@ -73,7 +73,7 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-author','listing-date','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
+      valueNames: ['listing-title','listing-subtitle','listing-date',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
       searchColumns: ["listing-date","listing-title","listing-author"],
     };
@@ -188,9 +188,6 @@ ul.task-list li input[type="checkbox"] {
          <option value="listing-title-sort" data-direction="asc">
           Title
         </option>
-         <option value="listing-author" data-direction="asc">
-          Author
-        </option>
      </select>
   </div>
     <div class="input-group input-group-sm quarto-listing-filter">
@@ -206,13 +203,10 @@ ul.task-list li input[type="checkbox"] {
 <a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
 </th>
 <th>
-<a class="sort" data-sort="listing-author" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Author</a>
+Subtitle
 </th>
 <th>
 <a class="sort" data-sort="listing-date-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Date</a>
-</th>
-<th>
-Description
 </th>
 </tr>
 </thead>
@@ -222,69 +216,54 @@ Description
 <a href="../../contents/tutorials/Tutorial_Web.html" class="title listing-title">Easy-to-build website with R and Quarto</a>
 </td>
 <td>
-<span class="listing-author">G.Fraga Gonzalez</span>
+<span class="listing-subtitle">Make a platform to share data, code and outputs in dynamic reports</span>
 </td>
 <td>
 <span class="listing-date">Nov 15, 2023</span>
 </td>
+</tr>
+<tr data-index="1" data-categories="Gitlab" data-listing-date-sort="1700147436000" data-listing-file-modified-sort="1700147436682" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-title-sort="Gitlab Tutorial 0 - Workflow" data-listing-filename-sort="Tutorial_Gitlab-0.-Main-workflow.qmd">
 <td>
-<span class="listing-description">A very easy set up of a free website where you can share your dynamic reports or other research outputs</span>
+<a href="../../contents/tutorials/Tutorial_Gitlab-0.-Main-workflow.html" class="title listing-title">Gitlab Tutorial 0 - Workflow</a>
+</td>
+<td>
+<span class="listing-subtitle">A workflow for Gitlab as a platform for sharing research documentation, metadata and data</span>
+</td>
+<td>
+<span class="listing-date">Nov 16, 2023</span>
 </td>
 </tr>
-<tr data-index="1" data-categories="Gitlab" data-listing-date-sort="1700064047000" data-listing-file-modified-sort="1700064047186" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-title-sort="Gitlab Tutorial 0: A Workflow for Data Sharing with Gitlab pages" data-listing-filename-sort="Tutorial_Gitlab-0.-Main-workflow.qmd">
+<tr data-index="2" data-categories="Gitlab" data-listing-date-sort="1700144301000" data-listing-file-modified-sort="1700144301961" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-title-sort="Gitlab Tutorial 1 - short step-by-step guide to Git and Gitlab" data-listing-filename-sort="Tutorial_Gitlab-1.-Using-Gitlab-for-Project-Owners-and-Collaborators.qmd">
 <td>
-<a href="../../contents/tutorials/Tutorial_Gitlab-0.-Main-workflow.html" class="title listing-title">Gitlab Tutorial 0: A Workflow for Data Sharing with Gitlab pages</a>
+<a href="../../contents/tutorials/Tutorial_Gitlab-1.-Using-Gitlab-for-Project-Owners-and-Collaborators.html" class="title listing-title">Gitlab Tutorial 1 - short step-by-step guide to Git and Gitlab</a>
 </td>
 <td>
-<span class="listing-author">G.Fraga Gonzalez &amp; E. Furrer</span>
+<span class="listing-subtitle">Using a UZH Gitlab repository for Project Owners and Collaborators</span>
 </td>
 <td>
-<span class="listing-date">Nov 15, 2023</span>
-</td>
-<td>
-<span class="listing-description">A workflow for using Gitlab as a platform for sharing research documentation, metadata and data</span>
+<span class="listing-date">Nov 16, 2023</span>
 </td>
 </tr>
-<tr data-index="2" data-categories="Gitlab" data-listing-date-sort="1700062178000" data-listing-file-modified-sort="1700062178074" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-title-sort="Gitlab Tutorial 1: Using a UZH Gitlab repository for Project Owners and Collaborators" data-listing-filename-sort="Tutorial_Gitlab-1.-Using-Gitlab-for-Project-Owners-and-Collaborators.qmd">
+<tr data-index="3" data-categories="Gitlab" data-listing-date-sort="1700144682000" data-listing-file-modified-sort="1700144682560" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-title-sort="Gitlab Tutorial 2 - Creating and Updating a Data Hub" data-listing-filename-sort="Tutorial_Gitlab-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.qmd">
 <td>
-<a href="../../contents/tutorials/Tutorial_Gitlab-1.-Using-Gitlab-for-Project-Owners-and-Collaborators.html" class="title listing-title">Gitlab Tutorial 1: Using a UZH Gitlab repository for Project Owners and Collaborators</a>
+<a href="../../contents/tutorials/Tutorial_Gitlab-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.html" class="title listing-title">Gitlab Tutorial 2 - Creating and Updating a Data Hub</a>
 </td>
 <td>
-<span class="listing-author">G.Fraga Gonzalez &amp; E. Furrer</span>
+<span class="listing-subtitle">Quick explanation on using Gitlab pages as an open data hub</span>
 </td>
 <td>
-<span class="listing-date">Nov 15, 2023</span>
-</td>
-<td>
-<span class="listing-description">short step-by-step guide on using Git and Gitlab</span>
+<span class="listing-date">Nov 16, 2023</span>
 </td>
 </tr>
-<tr data-index="3" data-categories="Gitlab" data-listing-date-sort="1699371150000" data-listing-file-modified-sort="1699371150714" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-title-sort="Gitlab Tutorial 2: Creating and Updating a Data Hub" data-listing-filename-sort="Tutorial_Gitlab-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.qmd">
+<tr data-index="4" data-categories="Code,Gitlab" data-listing-date-sort="1700147559000" data-listing-file-modified-sort="1700147559241" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-title-sort="Gitlab Tutorial 3 - Continuous Integration (CI)" data-listing-filename-sort="Tutorial_Gitlab-3.-Customizing-Gitlab-Continuous-Integration.qmd">
 <td>
-<a href="../../contents/tutorials/Tutorial_Gitlab-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.html" class="title listing-title">Gitlab Tutorial 2: Creating and Updating a Data Hub</a>
+<a href="../../contents/tutorials/Tutorial_Gitlab-3.-Customizing-Gitlab-Continuous-Integration.html" class="title listing-title">Gitlab Tutorial 3 - Continuous Integration (CI)</a>
 </td>
 <td>
-<span class="listing-author">G.Fraga Gonzalez &amp; E. Furrer</span>
+<span class="listing-subtitle">Additional details on basic customization of CI pipelines</span>
 </td>
 <td>
-<span class="listing-date">Nov 7, 2023</span>
-</td>
-<td>
-<span class="listing-description">Quick explanation on using Gitlab pages as an open data hub</span>
-</td>
-</tr>
-<tr data-index="4" data-categories="Code,Gitlab" data-listing-date-sort="1700059423000" data-listing-file-modified-sort="1700059423124" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-title-sort="Gitlab Tutorial 3: Customizing Continuous Integration" data-listing-filename-sort="Tutorial_Gitlab-3.-Customizing-Gitlab-Continuous-Integration.qmd">
-<td>
-<a href="../../contents/tutorials/Tutorial_Gitlab-3.-Customizing-Gitlab-Continuous-Integration.html" class="title listing-title">Gitlab Tutorial 3: Customizing Continuous Integration</a>
-</td>
-<td>
-<span class="listing-author">G.Fraga Gonzalez &amp; E. Furrer</span>
-</td>
-<td>
-<span class="listing-date">Nov 15, 2023</span>
-</td>
-<td>
-<span class="listing-description">Additional details on Gitlab continuous integration</span>
+<span class="listing-date">Nov 16, 2023</span>
 </td>
 </tr>
 </tbody>
