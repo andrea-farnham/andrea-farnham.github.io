@@ -173,11 +173,11 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="gitlab-runner">1. Gitlab Runner</h3>
 <p>This is the service that will execute whatever operation you want to do in your CI pipeline. In this case we will use a <code>shared-runner</code> that is supported by the UZH. We only have this if we have our gitlab repository as part of the <a href="https://gitlab.uzh.ch/">UZH Gitlab</a>. We can also use our own runners but that is more complicated and beyond the scope of this tutorial (see <a href="https://docs.gitlab.com/runner/">Gitlab official documentation</a>)</p>
 <p>You can enable the shared-runner in your repository Settings&gt; CI/CD &gt; Runners. If you are using the UZH Gitlab there should be an available runner listed on the Shared runners section</p>
-<p><img src="images/GitlabRunner.gif" class="img-fluid"></p>
+<p><img src="images/GitlabRunner-01.gif" class="img-fluid"></p>
 </section>
 <section id="the-.gitlab-ci.yml-file" class="level3">
 <h3 class="anchored" data-anchor-id="the-.gitlab-ci.yml-file">2. The .gitlab-ci.yml file</h3>
-<p>This file will define a <em>pipeline</em> which will run every time we make a change in the repository. A pipeline can have one or multiple jobs defined by a script. In our case the pipeline will have one job: rendering a website.</p>
+<p>This file defines a <em>pipeline</em> which will run every time we make a change in the repository. A pipeline can have one or multiple jobs defined by a script (see complete documentation (here)[https://docs.gitlab.com/ee/ci/]. In the following example the pipeline has one job: rendering the website using R Quarto markdown files (see our tutorial on making a website with R quarto from scratch).</p>
 <p>There are examples and <a href="https://docs.gitlab.com/ee/user/project/pages/getting_started/pages_ci_cd_template.html">Continous Integration templates of this file</a> online. They all need an <strong>image</strong> of a software environment, some <strong>jobs</strong> defined by a script and some <strong>artifacts</strong> that are output files from the jobs. The example below uses an image from and it is nased on a template taken from <a href="https://rocker-project.org/">Rocker</a>, which is a project offering <a href="https://www.docker.com/resources/what-container/#:~:text=A%20Docker%20container%20image%20is,tools%2C%20system%20libraries%20and%20settings">docker containers</a> for R environments. Broadly speaking, we can think of a docker container as a light-weight virtual machine and of a <em>docker image</em> as a snapshot of a virtual machine, what defines its software contents.</p>
 <p>Below we show and describe the following example:</p>
 <pre style="background: whitesmoke"><code>image: rocker/verse:4.3
@@ -231,7 +231,7 @@ Note
 </div>
 </div>
 <ul>
-<li>The job <code>artifacts</code> are the outputs, which in this case it will be the copy of the image files and the website HTMLs rendered by quarto. We define the path where we want those outputs as the ‘public’ folder for it to work with Gitlab pages</li>
+<li>The job <code>artifacts</code> are the outputs of the job. In this example, the website HTMLs rendered by quarto. We define the path where we want those outputs as the ‘public’ folder for it to work with Gitlab pages</li>
 </ul>
 
 
