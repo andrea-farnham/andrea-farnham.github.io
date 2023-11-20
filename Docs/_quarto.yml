@@ -33,16 +33,14 @@ website:
             href: contents/about/About.qmd                
             
 format:
-    html:    
-        #author: Center for Reproducible Science 
+    html:            
         theme:
             light:
                 - cosmo
-                #- assets/styles.css
             dark: solar
         highlight-style: a11y
         code-link: true
         toc: true
-        code-copy: false
-        callout-appearance: simple
-
+        code-copy: false      
+        mermaid: 
+          theme: default

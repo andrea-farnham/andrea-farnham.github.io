@@ -1,63 +1,169 @@
 ---
 title: Gitlab Tutorial 2 - Creating and Updating a Data Hub
-subtitle: Quick explanation on using Gitlab pages as an open data hub
+subtitle: A workflow to use Gitlab pages as an open data hub
 author: G.Fraga Gonzalez & E. Furrer
 date: last-modified
 categories:
-  - Gitlab
+  - Gitlab 
+    
 ---
 
 [Back](index.qmd)
 
+# Workflow
 
-A *static site* like the one you are seeing this tutorial can include interactive elements. In this example we propose an *interactive table* that can be used to navigate through metadata and even some data (e.g., displaying clickable image thumbnails). By *static* we mean that the user will just see whatever data is contained in the HTML of the site. Although it contains an interactive table, all users have access to the same data which they cannot modify (unlike in *dynamic websites*).
+Here we propose to use [Gitlab pages](https://docs.gitlab.com/ee/user/project/pages/) to host an easy-to-build website where we can share documentation, metadata and some data (e.g., preview images) of our projects. The website can be either public or private, requiring users to log in. We propose that this approach can be useful to improve the research workflow in many labs and projects, irrespective of whether they have a strong programming focus.
 
-The website hosted using [Gitlab pages](https://docs.gitlab.com/ee/user/project/pages/) is rendered with an \[R Markdown\] (https://rmarkdown.rstudio.com/) script, that uses the R [DT package](https://rstudio.github.io/DT/)). The script creates an interactive page in HTML. [Gitlab CI](https://docs.gitlab.com/ee/ci/) is used to run the R Markdown script automatically at each update (push) and render the site from the browser so that users do not need to install R or other programs to update the site.
+The different processes required for this workflow are explained in the tutorials in this website. They include step-by-step guides, templates, video demos and links intended for non-coders, as well as other tutorials for more advanced users.
 
-# Workflow for data owners
+The main **requirements** for this workflow are:
 
-![](uploads/6e6e99d42e8bb7d128fbbc6ee131ab12/image.png){width="613"}
+-   (Required) A Gitlab repository and basic familiarity with it
+-   (Required) A way of creating HTML pages: we provide R Quarto markdown templates
+-   (Recommended) A Gitlab continuous integration script to allow updating the directly from the browser without having to clone the repo/push changes. We provide examples and templates.
 
-### 1. ACTION: Owner edits **metadata**
+The basic workflow:
 
-The *owner* can do this through:
+```{mermaid}
 
-1.  *Browser* (*RECOMMENDED FOR MINOR CHANGES*) Making changes from Gitlab in the browser (upload or edit file)
-2.  *Clone repository* (*RECOMMENDED FOR MAJOR UPDATES*) Cloning this repo, working locally and *committing* and *pushing* the changes to Gitlab (e.g., using [Github desktop](https://desktop.github.com/)). The local metadata file should be always in Sync with that one in the remote repository.
+flowchart TD
+    A1[data, metadata, code] <.-> |sync| B[Gitlab Repository]
+    B0[Documentation] <.->|edit Wiki| B
+    B --> | Render Gitlab Page| C[Hub]
 
-NOTE: The files in the Gitlab repository should be considered as the *main source* for retrieving your projects' metadata.
 
-### 2. AUTO: changes in the repository **trigger the Continuous Integration pipeline**
+```
 
-It may take around 5 minutes to update the page html. The member with at least `maintainer` status can click on Build/Pipelines or Jobs (sidebar in Gitlab) to see what pipeline or job (within pipeline) is running, and if there are any errors.
+## Hub content
+In this workflow we propose that the `owner` of the data (e.g., a lab or a researcher) creates and maintains a **main Gitlab repository** containing:
+ 
+1.  **Metadata tables** e.g., CSV or Excel tables 
+2.  **Data**, if applicable, e.g., thumbnail images
+3.  **Scripts to render** an HTML landing site, i.e. the Data Hub, which provides access for collaborators. This can be done without web development skill using in R markdown or R Quarto markdown.
+4.  **Documentation** associated with those data is collected in the **Wiki** of the main repository. The advantage of using the Wiki is that it can be directly edited in the browser by anyone with permissions. If needed, the markdown files with the wiki pages could be downloaded (they are stored is a separate repository).
 
-### 3. AUTO: the continuous integration pipeline **runs the script**
+::: callout-note
+## Note on metadata table formats
+Gitlab can display and allows editing of .csv tables from the browser. For excel tables, you will need to download it for editing or work locally and then push the changes to the repository. Note that this refers to editing source files in the repository and not to the website, where tables are visible (but not editable) irrespective of the source table format (R Quarto scripts will read any format and render them in html format for interoperability and interactivity)
+:::
 
-The *.gitlab-ci.yml* file defines this pipeline. It uses a Docker image with R, Gitlab pages to produce the website, and Gitlab runner to run the Docker where we have our Rmarkdown script (rendering the html from the table). The owner can edit the yml and the Rmarkdown to make if changes in this flow are to be done. No edit of Docker image is needed.
+The files will have three **URL locations**, which can all be accessed through the main landing site (Data Hub):
 
-See our tutorial on customizing Gitlab Continuous Integration for more advanced details.
+1.  The **Landing page** shows interactive tables to navigate data and metadata the documentation and has links to the main repository and the wiki.
+2.  The **main repository** to access the source metadata tables, data files and the code necessary to generate the Hub.
+3.  The **Wiki** to access all relevant documentation to understand how the data was collected and preprocessed, such as protocols and standard operating procedures (SOPs). It should also have information about filenames, folder structures and how metadata are organized. It is also accessible through the main repository.
 
-### 4. AUTO: The HTML is updated and collaborators can navigate through the updated data
-
-# Files
+## Required Files
 
 The main **input files** are:
 
 -   `metadata table` (preferrably in .csv format for interoperability). It should contain just the filename of the pictures that will be displayed
 -   `images` files (**Note**: Gitlab is not meant for data storage. Images should be compressed to avoid exceeding volume allowed per repo ( usually 5 Gb in free versions, [details here](https://about.gitlab.com/pricing/faq-paid-storage-transfer/))
--   `R markdown` script that has the code to render the table with DT package
+-   `R Quarto markdown` scripts that has the code to render the tables as well as some text with instructions 
 -   A `.gitlab-ci.yml` file is the Continuous integration file that makes it possible to run the Rmd file and render the html again from Gitlab
 
 The **outputs** for the website
 
--   `index.html` file within the public folder
--   An ' *files*' folder will be saved if the table is rendered as self-contained
+-   The `html` files that make up the website are 
+
 
 **Note**: *index.html* and *images folder* ARE EXPECTED to be saved in the `public` folder. This does not mean they are publicly accessible (you need login to access this site)
 
-# Privacy
+## Privacy
 
-This is a `private` repository and a private site
+This work flow can work in both a `private` or a `public` repository. If we want to keep access restricted we can set the repository as private. Then we need:
 
--   **Accounts**. A `SWITCH` account is required to access the static website and the repository with the code to generate it
--   **Members**. A `maintainer` member in this repository can add new members (Go to Manage/Members). They must be also maintainer to be able to access the images after clicking on the table thumbnail. `Guests` can only see the thumbnails
+-   **Accounts**. A [SWITCH edu ID](https://www.switch.ch/en/edu-id) account is required to access the hub website and the repository with the code to generate it
+-   **Members**. As owners of a repository we can set up different roles for the members that we allow access. Any member with the role of `maintainer` can add new members (Go to Manage/Members). They must also have maintainer role to be able to access the full-size images after clicking on the table thumbnail. Members enrolled as `guests` can only see the thumbnails but will not be able to access the full-size images.
+
+After having acquired permissions to access the repository, any `user/collaborator` can just go to the main website URL and access with the SWITCH-ID credentials
+
+::: callout-note
+## Note on accessibility
+
+The access to the website using SWITCH edu-id credentials works with Gitlab pages because it is supported by UZH ( [Gitlab.uzh](https://www.zi.uzh.ch/en/teaching-and-research/software-elearning/webplatforms/gitlab.html)). If are using repositories at Gitlab.com, your collaborators will need a Gitlab account. If you use Github (with a free acount) instead of Gitlab you will not be able to make a private website, Github pages will only work with public repositories.
+:::
+
+
+
+# Required actions (for data owners)
+Once the Continuous Integration (CI) file and R Quarto scripts are set, the only action required by the owner will be to edit the metadata tables and/or some of the content of the R Quarto files in the repository. Any change in the repository will trigger the CI pipeline and the website will be rendered again.  
+
+```{mermaid} 
+%%{
+  init: {'theme':' ',
+          'themeVariables': {
+          'titleColor':'#F54E90',
+          'mainBkg':'#4ef5b3',
+          'clusterBkg':'#f2fcf8',
+          'lineColor':'#F54E90',
+          'edgeLabelBackground':'#F54E90',
+          'nodeBorder': '',
+          'clusterBorder': ''
+          
+      }
+  }
+}%%
+
+flowchart LR
+    subgraph 1. ACTION: Edit metadata
+    Owner .-> |local edits| B[Cloned copy]
+    B .-> |push| C[Metadata Table]    
+    end
+    Owner .-> |edit in browser| C
+    subgraph 2. AUTO: Trigger CI Pipeline
+      direction TB
+      C --> |trigger| D[.gitlab-ci.yml]
+    end
+    subgraph 3. AUTO: run scripts
+    D --> |run| E[R Quarto script]
+    end
+    subgraph 4. AUTO:update website
+    E --> |render| F[Gitlab pages updated]
+    end
+
+    
+    
+    start1[ ] .->|manual|stop1[ ]
+    start2[ ] -->|automatic| stop2[ ]
+      style start1 height:0px;
+      style start2 height:0px;
+      style stop1 height:0px;
+      style stop2 height:0px;
+    
+ 
+ 
+```
+    
+    
+
+## 1. ACTION: edit **metadata**
+
+The `owner` can do this through:
+
+1.  **Browser** (*RECOMMENDED FOR MINOR CHANGES*) Making changes from Gitlab using the browser, e.g., upload or edit scripts.
+2.  **Clone repository** (*RECOMMENDED FOR MAJOR UPDATES*) Cloning this repo, working locally and *committing* and *pushing* the changes to Gitlab (e.g., using [Github desktop](https://desktop.github.com/)). The local metadata file should be always in Sync with that one in the remote repository.
+
+::: callout-note
+## Note on the source table
+This workflow considers the Gitlab repository as the *main source* for retrieving your projects' metadata. Thus, we recommend to edit and maintain the tables in this repository and to avoid creating copies of those tables to prevent losing control over their versions.
+::: 
+
+## 2. AUTO: changes in the repository **trigger the Continuous Integration pipeline**
+
+It may take around 5 minutes to update the page html. The member with at least `maintainer` status can click on Build/Pipelines or Jobs (sidebar in Gitlab) to see what pipeline or job (within pipeline) is running, and if there are any errors.
+
+## 3. AUTO: the continuous integration pipeline **runs the script**
+
+The *.gitlab-ci.yml* file defines this pipeline. It uses a Docker image with R, Gitlab pages to produce the website, and Gitlab runner to run the Docker where we have our Rmarkdown script (rendering the html from the table). The owner can edit the yml and the Rmarkdown to make if changes in this flow are to be done. No edit of Docker image is needed.
+
+See our tutorial on customizing Gitlab Continuous Integration for more advanced details.
+
+## 4. AUTO: The HTML is updated and collaborators can navigate through the updated data
+
+ 
+
+A *static site* like the one you are seeing this tutorial can include interactive elements. In this example we propose an *interactive table* that can be used to navigate through metadata and even some data (e.g., displaying clickable image thumbnails). By *static* we mean that the user will just see whatever data is contained in the HTML of the site. Although it contains an interactive table, all users have access to the same data which they cannot modify (unlike in *dynamic websites*).
+
+The website hosted using [Gitlab pages](https://docs.gitlab.com/ee/user/project/pages/) is rendered with an \[R Markdown\] (https://rmarkdown.rstudio.com/) script, that uses the R [DT package](https://rstudio.github.io/DT/)). The script creates an interactive page in HTML. [Gitlab CI](https://docs.gitlab.com/ee/ci/) is used to run the R Markdown script automatically at each update (push) and render the site from the browser so that users do not need to install R or other programs to update the site.
+ 

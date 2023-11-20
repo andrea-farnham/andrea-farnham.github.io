@@ -4,9 +4,19 @@ subtitle: Make a platform to share data, code and outputs in dynamic reports
 author: "G.Fraga Gonzalez"
 affiliation: "Center for Reproducible Science, UZH"
 date: last-modified
+categories:
+  - Quarto
+  - Video
+  - Code
+  - R
+  
 description: A very easy set up of a free website where you can share your dynamic reports or other research outputs 
 ---
 
+
+```{=html}
+<iframe src="https://drive.google.com/file/d/1hw2ZIf7RuMHZ0xghZBfcnhe1sqvckiYr/preview"allow="autoplay"></iframe>
+```
 # Why is this relevant?
 
 Sharing documents, code, data and outputs with collaborators or to a broader audience is an essential step towards a good scientific practice. A website that can be managed by researchers themselves seems the ideal platform for efficient sharing. If this depends on IT support for maintenance it will not be practical for routine use, but learning web-development imposes an unnecessary and unacceptable burden to a scientist's already heavy workload.
