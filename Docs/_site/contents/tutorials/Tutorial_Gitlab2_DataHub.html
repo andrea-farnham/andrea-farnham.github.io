@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="G.Fraga Gonzalez &amp; E. Furrer">
-<meta name="dcterms.date" content="2023-11-20">
+<meta name="dcterms.date" content="2023-11-21">
 
-<title>Home - Gitlab Tutorial 2 - Creating and Updating a Data Hub</title>
+<title>Home - Gitlab Tutorial 2. Create and Update a Data Hub</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,8 +32,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../contents/tutorials/Tutorial_Gitlab-3.-Customizing-Gitlab-Continuous-Integration.html" rel="next">
-<link href="../../contents/tutorials/Tutorial_Gitlab-1.-Using-Gitlab-for-Project-Owners-and-Collaborators.html" rel="prev">
+<link href="../../contents/tutorials/Tutorial_Gitlab3_CI.html" rel="next">
+<link href="../../contents/tutorials/Tutorial_Gitlab1_IntroGit.html" rel="prev">
 <link href="../../assets/logos/Logo_CRS_col.svg" rel="icon" type="image/svg+xml">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -97,43 +97,22 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link active" href="../../contents/tutorials/index.html" rel="" target="" aria-current="page">
  <span class="menu-text">Tutorials</span></a>
   </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-presentations" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
- <span class="menu-text">Presentations</span>
-    </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-presentations">    
-        <li>
-    <a class="dropdown-item" href="../../contents/presentations/Presentations_1.html" rel="" target="">
- <span class="dropdown-text">AFFORD deliverables - ORD Hub</span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="../../contents/templates/index.html" rel="" target="">
+ <span class="menu-text">Templates</span></a>
   </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-reports" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
- <span class="menu-text">Reports</span>
-    </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-reports">    
-        <li>
-    <a class="dropdown-item" href="../../contents/reports/Reports_1.html" rel="" target="">
- <span class="dropdown-text">Report 1 Data Archiving</span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="../../contents/presentations/index.html" rel="" target="">
+ <span class="menu-text">Presentations</span></a>
   </li>  
-        <li>
-    <a class="dropdown-item" href="../../contents/reports/Reports_2.html" rel="" target="">
- <span class="dropdown-text">Report 2 Another test pdf</span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="../../contents/reports/index.html" rel="" target="">
+ <span class="menu-text">Reports</span></a>
   </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-tools" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
- <span class="menu-text">Tools</span>
-    </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-tools">    
-        <li>
-    <a class="dropdown-item" href="../../contents/tools/Tools_1.html" rel="" target="">
- <span class="dropdown-text">Example 1 Shinylive in Quarto</span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="../../contents/tools/index.html" rel="" target="">
+ <span class="menu-text">Tools</span></a>
   </li>  
-    </ul>
-  </li>
   <li class="nav-item">
     <a class="nav-link" href="../../contents/about/about.html" rel="" target="">
  <span class="menu-text">About</span></a>
@@ -150,7 +129,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../contents/tutorials/Tutorial_Gitlab-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.html">Gitlab Tutorial 2 - Creating and Updating a Data Hub</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../contents/tutorials/Tutorial_Web.html">Data Sharing and Repositories</a></li><li class="breadcrumb-item"><a href="../../contents/tutorials/Tutorial_Gitlab2_DataHub.html">Gitlab Tutorial 2. Create and Update a Data Hub</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -168,30 +147,41 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Tutorials</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../contents/tutorials/Tutorial_Gitlab-1.-Using-Gitlab-for-Project-Owners-and-Collaborators.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Gitlab Tutorial 1 - short step-by-step guide to Git and Gitlab</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../contents/tutorials/Tutorial_Gitlab-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Gitlab Tutorial 2 - Creating and Updating a Data Hub</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../contents/tutorials/Tutorial_Gitlab-3.-Customizing-Gitlab-Continuous-Integration.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Gitlab Tutorial 3 - Continuous Integration (CI)</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Data Sharing and Repositories</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../contents/tutorials/Tutorial_Web.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Easy-to-build website with R and Quarto</span></a>
+ <span class="menu-text">Make a Simple Website with R and Quarto</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../contents/tutorials/Tutorial_Gitlab1_IntroGit.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gitlab Tutorial 1. Step-by-Step Guide to Git and Gitlab</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../contents/tutorials/Tutorial_Gitlab2_DataHub.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Gitlab Tutorial 2. Create and Update a Data Hub</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../contents/tutorials/Tutorial_Gitlab3_CI.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gitlab Tutorial 3. Continuous Integration (CI)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -202,8 +192,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#workflow" id="toc-workflow" class="nav-link active" data-scroll-target="#workflow">Workflow</a>
+  <li><a href="#why-is-this-useful" id="toc-why-is-this-useful" class="nav-link active" data-scroll-target="#why-is-this-useful">Why is this useful?</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a>
   <ul class="collapse">
+  <li><a href="#basic-workflow" id="toc-basic-workflow" class="nav-link" data-scroll-target="#basic-workflow">Basic workflow</a></li>
   <li><a href="#hub-content" id="toc-hub-content" class="nav-link" data-scroll-target="#hub-content">Hub content</a></li>
   <li><a href="#required-files" id="toc-required-files" class="nav-link" data-scroll-target="#required-files">Required Files</a></li>
   <li><a href="#privacy" id="toc-privacy" class="nav-link" data-scroll-target="#privacy">Privacy</a></li>
@@ -223,10 +215,11 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Gitlab Tutorial 2 - Creating and Updating a Data Hub</h1>
+<h1 class="title">Gitlab Tutorial 2. Create and Update a Data Hub</h1>
 <p class="subtitle lead">A workflow to use Gitlab pages as an open data hub</p>
   <div class="quarto-categories">
     <div class="quarto-category">Gitlab</div>
+    <div class="quarto-category">Basic</div>
   </div>
   </div>
 
@@ -244,7 +237,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 20, 2023</p>
+      <p class="date">November 21, 2023</p>
     </div>
   </div>
   
@@ -255,8 +248,13 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p><a href="../../contents/tutorials/index.html">Back</a></p>
-<section id="workflow" class="level1">
-<h1>Workflow</h1>
+<section id="why-is-this-useful" class="level1">
+<h1>Why is this useful?</h1>
+<p>Researchers need to be able to <strong>find</strong> and <strong>share</strong> their data and to <em>showcase</em> it to internal and external collaborations. Creating copies or transferring files can be cumbersome and lead to propagating errors or sharing of outdated file versions.</p>
+<p>With Gitlab and R Quarto we can easily integrate all metadata and documentation stored and maintained in our repository, and render it into a website. This website, which can have a <strong>private or public access</strong>, becomes a safe ‘data hub’ or central platform from which researchers and collaborators can <strong>navigate through research outputs</strong>, find the location of data files in specialized repositories or preview thumbnails of some of the data.</p>
+</section>
+<section id="overview" class="level1">
+<h1>Overview</h1>
 <p>Here we propose to use <a href="https://docs.gitlab.com/ee/user/project/pages/">Gitlab pages</a> to host an easy-to-build website where we can share documentation, metadata and some data (e.g., preview images) of our projects. The website can be either public or private, requiring users to log in. We propose that this approach can be useful to improve the research workflow in many labs and projects, irrespective of whether they have a strong programming focus.</p>
 <p>The different processes required for this workflow are explained in the tutorials in this website. They include step-by-step guides, templates, video demos and links intended for non-coders, as well as other tutorials for more advanced users.</p>
 <p>The main <strong>requirements</strong> for this workflow are:</p>
@@ -265,7 +263,9 @@ ul.task-list li input[type="checkbox"] {
 <li>(Required) A way of creating HTML pages: we provide R Quarto markdown templates</li>
 <li>(Recommended) A Gitlab continuous integration script to allow updating the directly from the browser without having to clone the repo/push changes. We provide examples and templates.</li>
 </ul>
-<p>The basic workflow:</p>
+<section id="basic-workflow" class="level3">
+<h3 class="anchored" data-anchor-id="basic-workflow">Basic workflow</h3>
+<p>(dashed line = manual or semi-manual; solid line = automatic process)</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -274,13 +274,14 @@ ul.task-list li input[type="checkbox"] {
     A1[data, metadata, code] &lt;.-&gt; |sync| B[Gitlab Repository]
     B0[Documentation] &lt;.-&gt;|edit Wiki| B
     B --&gt; | Render Gitlab Page| C[Hub]
-
-
+    
+ 
 </pre>
 </div>
 </div>
 </div>
 </div>
+</section>
 <section id="hub-content" class="level2">
 <h2 class="anchored" data-anchor-id="hub-content">Hub content</h2>
 <p>In this workflow we propose that the <code>owner</code> of the data (e.g., a lab or a researcher) creates and maintains a <strong>main Gitlab repository</strong> containing:</p>
@@ -305,7 +306,7 @@ Note on metadata table formats
 </div>
 <p>The files will have three <strong>URL locations</strong>, which can all be accessed through the main landing site (Data Hub):</p>
 <ol type="1">
-<li>The <strong>Landing page</strong> shows interactive tables to navigate data and metadata the documentation and has links to the main repository and the wiki.</li>
+<li>The <strong>landing page</strong> shows interactive tables to navigate data and metadata the documentation and has links to the main repository and the wiki.</li>
 <li>The <strong>main repository</strong> to access the source metadata tables, data files and the code necessary to generate the Hub.</li>
 <li>The <strong>Wiki</strong> to access all relevant documentation to understand how the data was collected and preprocessed, such as protocols and standard operating procedures (SOPs). It should also have information about filenames, folder structures and how metadata are organized. It is also accessible through the main repository.</li>
 </ol>
@@ -742,13 +743,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../contents/tutorials/Tutorial_Gitlab-1.-Using-Gitlab-for-Project-Owners-and-Collaborators.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Gitlab Tutorial 1 - short step-by-step guide to Git and Gitlab</span>
+      <a href="../../contents/tutorials/Tutorial_Gitlab1_IntroGit.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Gitlab Tutorial 1. Step-by-Step Guide to Git and Gitlab</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../contents/tutorials/Tutorial_Gitlab-3.-Customizing-Gitlab-Continuous-Integration.html" class="pagination-link">
-        <span class="nav-page-text">Gitlab Tutorial 3 - Continuous Integration (CI)</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../contents/tutorials/Tutorial_Gitlab3_CI.html" class="pagination-link">
+        <span class="nav-page-text">Gitlab Tutorial 3. Continuous Integration (CI)</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

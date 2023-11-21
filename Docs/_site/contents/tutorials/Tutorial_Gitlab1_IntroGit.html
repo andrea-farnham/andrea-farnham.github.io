@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="G.Fraga Gonzalez &amp; E. Furrer">
-<meta name="dcterms.date" content="2023-11-16">
+<meta name="dcterms.date" content="2023-11-21">
 
-<title>Home - Gitlab Tutorial 3 - Continuous Integration (CI)</title>
+<title>Home - Gitlab Tutorial 1. Step-by-Step Guide to Git and Gitlab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,8 +32,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../contents/tutorials/Tutorial_Web.html" rel="next">
-<link href="../../contents/tutorials/Tutorial_Gitlab-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.html" rel="prev">
+<link href="../../contents/tutorials/Tutorial_Gitlab2_DataHub.html" rel="next">
+<link href="../../contents/tutorials/Tutorial_Web.html" rel="prev">
 <link href="../../assets/logos/Logo_CRS_col.svg" rel="icon" type="image/svg+xml">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -93,43 +93,22 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link active" href="../../contents/tutorials/index.html" rel="" target="" aria-current="page">
  <span class="menu-text">Tutorials</span></a>
   </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-presentations" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
- <span class="menu-text">Presentations</span>
-    </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-presentations">    
-        <li>
-    <a class="dropdown-item" href="../../contents/presentations/Presentations_1.html" rel="" target="">
- <span class="dropdown-text">AFFORD deliverables - ORD Hub</span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="../../contents/templates/index.html" rel="" target="">
+ <span class="menu-text">Templates</span></a>
   </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-reports" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
- <span class="menu-text">Reports</span>
-    </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-reports">    
-        <li>
-    <a class="dropdown-item" href="../../contents/reports/Reports_1.html" rel="" target="">
- <span class="dropdown-text">Report 1 Data Archiving</span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="../../contents/presentations/index.html" rel="" target="">
+ <span class="menu-text">Presentations</span></a>
   </li>  
-        <li>
-    <a class="dropdown-item" href="../../contents/reports/Reports_2.html" rel="" target="">
- <span class="dropdown-text">Report 2 Another test pdf</span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="../../contents/reports/index.html" rel="" target="">
+ <span class="menu-text">Reports</span></a>
   </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-tools" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
- <span class="menu-text">Tools</span>
-    </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-tools">    
-        <li>
-    <a class="dropdown-item" href="../../contents/tools/Tools_1.html" rel="" target="">
- <span class="dropdown-text">Example 1 Shinylive in Quarto</span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="../../contents/tools/index.html" rel="" target="">
+ <span class="menu-text">Tools</span></a>
   </li>  
-    </ul>
-  </li>
   <li class="nav-item">
     <a class="nav-link" href="../../contents/about/about.html" rel="" target="">
  <span class="menu-text">About</span></a>
@@ -146,7 +125,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../contents/tutorials/Tutorial_Gitlab-3.-Customizing-Gitlab-Continuous-Integration.html">Gitlab Tutorial 3 - Continuous Integration (CI)</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../contents/tutorials/Tutorial_Web.html">Data Sharing and Repositories</a></li><li class="breadcrumb-item"><a href="../../contents/tutorials/Tutorial_Gitlab1_IntroGit.html">Gitlab Tutorial 1. Step-by-Step Guide to Git and Gitlab</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -164,30 +143,41 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Tutorials</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../contents/tutorials/Tutorial_Gitlab-1.-Using-Gitlab-for-Project-Owners-and-Collaborators.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Gitlab Tutorial 1 - short step-by-step guide to Git and Gitlab</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../contents/tutorials/Tutorial_Gitlab-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Gitlab Tutorial 2 - Creating and Updating a Data Hub</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../contents/tutorials/Tutorial_Gitlab-3.-Customizing-Gitlab-Continuous-Integration.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Gitlab Tutorial 3 - Continuous Integration (CI)</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Data Sharing and Repositories</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../contents/tutorials/Tutorial_Web.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Easy-to-build website with R and Quarto</span></a>
+ <span class="menu-text">Make a Simple Website with R and Quarto</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../contents/tutorials/Tutorial_Gitlab1_IntroGit.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Gitlab Tutorial 1. Step-by-Step Guide to Git and Gitlab</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../contents/tutorials/Tutorial_Gitlab2_DataHub.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gitlab Tutorial 2. Create and Update a Data Hub</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../contents/tutorials/Tutorial_Gitlab3_CI.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gitlab Tutorial 3. Continuous Integration (CI)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -198,8 +188,28 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#gitlab-runner" id="toc-gitlab-runner" class="nav-link active" data-scroll-target="#gitlab-runner">1. Gitlab Runner</a></li>
-  <li><a href="#the-.gitlab-ci.yml-file" id="toc-the-.gitlab-ci.yml-file" class="nav-link" data-scroll-target="#the-.gitlab-ci.yml-file">2. The .gitlab-ci.yml file</a></li>
+  <li><a href="#why-is-this-useful" id="toc-why-is-this-useful" class="nav-link active" data-scroll-target="#why-is-this-useful">Why is this useful?</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#workflow" id="toc-workflow" class="nav-link" data-scroll-target="#workflow">Workflow</a>
+  <ul class="collapse">
+  <li><a href="#create-and-use-a-repository-in-browser" id="toc-create-and-use-a-repository-in-browser" class="nav-link" data-scroll-target="#create-and-use-a-repository-in-browser">1. Create and use a repository (in browser)</a>
+  <ul class="collapse">
+  <li><a href="#for-project-owners" id="toc-for-project-owners" class="nav-link" data-scroll-target="#for-project-owners">For <em>project owners</em></a></li>
+  <li><a href="#for-collaborators" id="toc-for-collaborators" class="nav-link" data-scroll-target="#for-collaborators">For <em>collaborators</em></a></li>
+  </ul></li>
+  <li><a href="#cloning-a-repository-to-local-computer" id="toc-cloning-a-repository-to-local-computer" class="nav-link" data-scroll-target="#cloning-a-repository-to-local-computer">2. Cloning a repository to local computer</a>
+  <ul class="collapse">
+  <li><a href="#for-project-owners-1" id="toc-for-project-owners-1" class="nav-link" data-scroll-target="#for-project-owners-1">For project owners</a></li>
+  <li><a href="#personal-access-token" id="toc-personal-access-token" class="nav-link" data-scroll-target="#personal-access-token">Personal access token</a></li>
+  </ul></li>
+  <li><a href="#cloning-with-github-desktop-user-friendly" id="toc-cloning-with-github-desktop-user-friendly" class="nav-link" data-scroll-target="#cloning-with-github-desktop-user-friendly">2.1 Cloning with Github-desktop (user-friendly)</a>
+  <ul class="collapse">
+  <li><a href="#setup-of-github-desktop-for-gitlab" id="toc-setup-of-github-desktop-for-gitlab" class="nav-link" data-scroll-target="#setup-of-github-desktop-for-gitlab">Setup of Github-desktop for Gitlab</a></li>
+  <li><a href="#editing-repository" id="toc-editing-repository" class="nav-link" data-scroll-target="#editing-repository">Editing repository</a></li>
+  </ul></li>
+  <li><a href="#cloning-with-git-using-command-line" id="toc-cloning-with-git-using-command-line" class="nav-link" data-scroll-target="#cloning-with-git-using-command-line">2.2 Cloning with Git (using command line)</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -208,11 +218,11 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Gitlab Tutorial 3 - Continuous Integration (CI)</h1>
-<p class="subtitle lead">Additional details on basic customization of CI pipelines</p>
+<h1 class="title">Gitlab Tutorial 1. Step-by-Step Guide to Git and Gitlab</h1>
+<p class="subtitle lead">Using a UZH Gitlab repository for Project Owners and Collaborators</p>
   <div class="quarto-categories">
-    <div class="quarto-category">Code</div>
     <div class="quarto-category">Gitlab</div>
+    <div class="quarto-category">Basic</div>
   </div>
   </div>
 
@@ -230,7 +240,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 16, 2023</p>
+      <p class="date">November 21, 2023</p>
     </div>
   </div>
   
@@ -241,72 +251,98 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p><a href="../../contents/tutorials/index.html">Back</a></p>
-<p><strong>Continuous integration (CI)</strong> refers to the process of automating the integration of changes made by different developers working in the code. In the context of using Gitlab pages as a data hub, the CI will integrating changes in the metadata table and/or images into the resulting HTML. That is, it will update our website so that it shows the last version of our metadata and include any change we want in its content. The advantage is that users do not require to install any software dependencies (like R) and <strong>changes</strong> can be implemented <strong>using the browser</strong>, from any computer.</p>
-<p>Simplifying this There are 2 main elements we need to set up for Gitlab CI:</p>
-<section id="gitlab-runner" class="level3">
-<h3 class="anchored" data-anchor-id="gitlab-runner">1. Gitlab Runner</h3>
-<p>This is the service that will execute whatever operation you want to do in your CI pipeline. In this case we will use a <code>shared-runner</code> that is supported by the UZH. We only have this if we have our gitlab repository as part of the <a href="https://gitlab.uzh.ch/">UZH Gitlab</a>. We can also use our own runners but that is more complicated and beyond the scope of this tutorial (see <a href="https://docs.gitlab.com/runner/">Gitlab official documentation</a>)</p>
-<p>You can enable the shared-runner in your repository Settings&gt; CI/CD &gt; Runners. If you are using the UZH Gitlab there should be an available runner listed on the Shared runners section</p>
-<p><img src="images/GitlabRunner-01.gif" class="img-fluid"></p>
+<section id="why-is-this-useful" class="level1">
+<h1>Why is this useful?</h1>
+<p><strong>Collaborative research</strong> requires a <strong>version control</strong> system for multiple files as researchers need to be able to track changes, to revise change history and to share code, documentation and metadata. Our <a href="https://zenodo.org/records/8354375">CRS primer on Digital Collaboration</a> further describes available tools and their importance to good research practices.</p>
+<blockquote class="blockquote">
+<p>The <em>de facto</em> standard set of tools for source control is called <em>Git</em>. It is an open-source system created by Linus Torvalds in 2015.</p>
+</blockquote>
 </section>
-<section id="the-.gitlab-ci.yml-file" class="level3">
-<h3 class="anchored" data-anchor-id="the-.gitlab-ci.yml-file">2. The .gitlab-ci.yml file</h3>
-<p>This file defines a <em>pipeline</em> which will run every time we make a change in the repository. A pipeline can have one or multiple jobs defined by a script (see complete documentation (here)[https://docs.gitlab.com/ee/ci/]. In the following example the pipeline has one job: rendering the website using R Quarto markdown files (see our tutorial on making a website with R quarto from scratch).</p>
-<p>There are examples and <a href="https://docs.gitlab.com/ee/user/project/pages/getting_started/pages_ci_cd_template.html">Continous Integration templates of this file</a> online. They all need an <strong>image</strong> of a software environment, some <strong>jobs</strong> defined by a script and some <strong>artifacts</strong> that are output files from the jobs. The example below uses an image from and it is nased on a template taken from <a href="https://rocker-project.org/">Rocker</a>, which is a project offering <a href="https://www.docker.com/resources/what-container/#:~:text=A%20Docker%20container%20image%20is,tools%2C%20system%20libraries%20and%20settings">docker containers</a> for R environments. Broadly speaking, we can think of a docker container as a light-weight virtual machine and of a <em>docker image</em> as a snapshot of a virtual machine, what defines its software contents.</p>
-<p>Below we show and describe the following example:</p>
-<pre style="background: whitesmoke"><code>image: rocker/verse:4.3
-
-pages:
-  stage: deploy
-  before_script:
-   - R -e "install.packages('quarto')" 
-   - R -e "install.packages('kableExtra')" 
-   - R -e "install.packages('DT')"  
-   - mkdir -p public/SPring/Images
-   - cp _data/SPring/Images/* public/SPring/Images/   
-  
-  script:   
-   - cd _scripts
-   - R -e "baseDir &lt;- getwd(); quarto::quarto_render('*.qmd')"
-   - mv ./_site/* ../public/ 
-  
-  artifacts:    
-    paths:
-    - public    
-     
-  only:
-  - master
-  interruptible: true</code></pre>
-<section id="image" class="level4">
-<h4 class="anchored" data-anchor-id="image">Image</h4>
+<section id="overview" class="level1">
+<h1>Overview</h1>
+<p>This tutorial is a short step-by-step guide on using Git and Gitlab and provides a workflow to use Github Desktop to sync with local files. For complete beginners we recommend the <a href="https://git-scm.com/book">Git book</a>, which is very accessible but also very detailed. It is available in several languages and as pdf. Another option for beginners are the <a href="https://docs.gitlab.com/ee/tutorials/">Gitlab tutorials</a> by <a href="https://about.gitlab.com/">Gitlab.com</a> (commercial).</p>
 <ul>
-<li>The first part loads a <code>docker container image</code>, similar to a snapshot of a virtual machine, which will define a software environment.</li>
+<li><p><a href="https://en.wikipedia.org/wiki/Git">Git</a> is a system to track changes in files, it is most often used to coordinate the work among several persons who access the files online on a server or sync them to their computer. The online use does not require any installation, local use is only possible after installing <a href="https://git-scm.com/downloads">Git</a>.</p></li>
+<li><p><a href="https://about.gitlab.com/">Gitlab.com</a> and <a href="https://github.com/">Github.com</a> are commercial hosting services for version control with Git. The UZH instance of the open source Gitlab at <a href="https://gitlab.uzh.ch">Gitlab.uzh.ch</a> is hosted by the UZH on servers owned by <a href="https://www.switch.ch/de/edu-id/">SWITCH</a>, a non-profit foundation that has been established by the Swiss Federal Government. See <a href="">https://www.zi.uzh.ch/en/staff/software-elearning/webplatforms/gitlab.html</a> for more information.</p></li>
+<li><p>A <strong>Git repository</strong> is a set of folders and files with complete history and full version-tracking abilities, locally or on a server.</p></li>
 </ul>
 </section>
-<section id="pages" class="level4">
-<h4 class="anchored" data-anchor-id="pages">Pages</h4>
-<ul>
-<li><p>We define different <code>stages</code> (<em>deploy</em> is the main, but some <em>tests</em> stages are usually included as well).</p></li>
-<li><p>Because our image did not include some R packages that we need, we install them in the <code>before the script</code> section. The following lines after installing packages are to create a new folder with copies of the pictures that will be rendered in the website, in the ‘public’ folder (see below, this is the folder where the website html needs to be stored).</p></li>
-<li><p>Then the <code>script</code> to actually do the job. First for convenience here we set the _scripts folder as our current directory. Then we run the R code using the R quarto package to build a website by using the command quarto_render indicating all .qmd files in the folder. In our case the .qmd contain text and code to read tables with metadata (see our tutorial on how to make a website with Quarto). The <code>quarto_render()</code> command will automatically create a <code>_site</code> folder with the website. If we change a table or the text in one of those files, this will run again and generate the site again.</p></li>
-<li><p>We then move the content of the website to the <em>public folder</em>. This is necessary as Gitlab pages will only display the content of that folder</p></li>
-</ul>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<section id="workflow" class="level1">
+<h1>Workflow</h1>
+<section id="create-and-use-a-repository-in-browser" class="level2">
+<h2 class="anchored" data-anchor-id="create-and-use-a-repository-in-browser">1. Create and use a repository (in browser)</h2>
+<section id="for-project-owners" class="level3">
+<h3 class="anchored" data-anchor-id="for-project-owners">For <em>project owners</em></h3>
+<p>For someone that wants to share data or metadata (e.g., a data hub)</p>
+<ol type="1">
+<li><strong>Login</strong> to <a href="https://gitlab.uzh.ch">Gitlab.uzh.ch</a> with your <a href="https://www.switch.ch/edu-id/">SWITCH edu-ID</a>.</li>
+<li>Create a <strong>new project repository</strong>, give it an informative, easy name (e.g., _pages, project x)</li>
+<li>In Settings/General/<strong>Visibility</strong> mark it as private</li>
+<li>In Manage/Members/<strong>Invite members</strong> add new members to the team, with different levels of permissions</li>
+<li>Add your files and code (works through the browser but is easier with the Gitlab workflow below)</li>
+</ol>
+</section>
+<section id="for-collaborators" class="level3">
+<h3 class="anchored" data-anchor-id="for-collaborators">For <em>collaborators</em></h3>
+<p>For someone who just wants to navigate through the data of a lab, when this is not made fully public:</p>
+<ol type="1">
+<li>Ask the owner of the data to be invited as a member of the project repository</li>
+<li>Go to the project repository on <a href="https://gitlab.uzh.ch">Gitlab.uzh.ch</a> or Pages URL <a href="https://crsuzh.pages.uzh.ch/afford_website/">e.g., https://crsuzh.pages.uzh.ch/afford_website/</a> and login with your SWITCH edu-ID (if required).</li>
+</ol>
+</section>
+</section>
+<section id="cloning-a-repository-to-local-computer" class="level2">
+<h2 class="anchored" data-anchor-id="cloning-a-repository-to-local-computer">2. Cloning a repository to local computer</h2>
+<section id="for-project-owners-1" class="level3">
+<h3 class="anchored" data-anchor-id="for-project-owners-1">For project owners</h3>
+<p>Our remote Gitlab repository, which we access via the browser is now our main location of metadata, code and (some) data. But sometimes it is convenient to make our edits locally. Specially if we are data <strong>owners</strong> and want to edit and share a large number of files or code, we cannot do this easily in the browser. Recall that you need to install <a href="https://git-scm.com/downloads">Git</a> for this.</p>
+<p>In Git, you can <code>clone a repository</code> to create a copy on your computer, that will be synchronized with your remote repository. Once cloned we can <code>pull</code> changes done in the remote repository (in the browser). If we have local changes and want to ‘send’ them to the remote we do: 1) <code>commit</code> and 2) <code>push</code> the local changes to remote. (??? what about add?)</p>
+<p>NOTE: if we <em>fork</em> a repository instead of cloning it, this will create a completely independent copy of the Git repository. Here, we need <em>cloning</em> so that our local changes can be synchronized and we don’t create duplicates of the repository.</p>
+</section>
+<section id="personal-access-token" class="level3">
+<h3 class="anchored" data-anchor-id="personal-access-token">Personal access token</h3>
+<p>To clone a repository to your machine you will most likely need a personal access token (due to the security of SWITCH login). In your project repository on <a href="https://gitlab.uzh.ch">Gitlab.uzh.ch</a> go to <code>Settings/Access tokens</code>. In the Access Tokens menu you will be able to give the token a <code>name</code>, choose an <code>expiration date</code> (or leave it blank), choose <code>permissions</code> (choose at least developer for making edits) and <code>scope</code> (select API). See also the picture below.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="uploads/aeef5aff4db2c295384c7ab1f1912c03/image.png" width="610" height="439" class="figure-img"></p>
+<figcaption class="figure-caption">image</figcaption>
+</figure>
 </div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Although it is called ‘public’ it does not mean that the page will be publicly available. Gitlab allows pages in private repository so that only people with access can see the content.</p>
-</div>
-</div>
-<ul>
-<li>The job <code>artifacts</code> are the outputs of the job. In this example, the website HTMLs rendered by quarto. We define the path where we want those outputs as the ‘public’ folder for it to work with Gitlab pages</li>
-</ul>
+<p>After this you will see a long alphanumeric string, the token, that you should save somewhere so you can use it as your <code>password</code> later on when using Github-desktop, Git or any other platform to manage local copies of the repositories.</p>
+</section>
+</section>
+<section id="cloning-with-github-desktop-user-friendly" class="level2">
+<h2 class="anchored" data-anchor-id="cloning-with-github-desktop-user-friendly">2.1 Cloning with Github-desktop (user-friendly)</h2>
+<p>The open source tool Github-desktop with a graphical user interface will simplify pull, commit, push operations for both advanced as well as new users. !Note: official support seems to be only for Windows and Mac. See further documentation on <a href="https://github.com/desktop/desktop/blob/development/docs/integrations/gitlab.md">integration with Gitlab</a></p>
+<section id="setup-of-github-desktop-for-gitlab" class="level3">
+<h3 class="anchored" data-anchor-id="setup-of-github-desktop-for-gitlab">Setup of Github-desktop for Gitlab</h3>
+<ol type="1">
+<li><p>Download and install <a href="https://desktop.github.com/">Github desktop</a></p></li>
+<li><p>In your Gitlab project, get your personal access token (see above) and save it somewhere</p></li>
+<li><p>On Github desktop go to File/Clone repository. Then enter the URL of your Gitlab repository (see the clone button) and a local directory name. For example:</p>
+<img src="uploads/7a0a2bd44e724b5c59f4c4e0ac983573/image.png" width="551" height="277" alt="image.png"></li>
+<li><p>Then you will be asked for <strong>username</strong> and <strong>password.</strong> Your username is your Gitlab username (e.g., the name in your email address) and the password is the <strong>Token</strong> that you just created.</p></li>
+</ol>
+<p>Now your Local folder is linked to your Gitlab remote repository. You can check below how to pull, commit and push changes.</p>
+</section>
+<section id="editing-repository" class="level3">
+<h3 class="anchored" data-anchor-id="editing-repository">Editing repository</h3>
+<p>Pull,commit and Push changes in the content of the repository. The workflow can get quite complex. Here we will ignore elements like <em>branches</em> to oversimplify it into the main steps:</p>
+<ol type="1">
+<li>Work on your <strong>local</strong> repository, for example, create or edit code, update your metadata table, add new files [^1]</li>
+<li>Open <strong>Github desktop.</strong> If you have several repositories, make sure you select the one you are currently working on or the one you want to update. It should detect the local changes done. If there are changes done remotely, but not locally, it willl prompt you to <code>pull</code> those changes (but here, beware there may be conflicts, which you shold be able to solve with Github but may complicate things).</li>
+<li>Click <code>Commit</code> ( you will need to write a brief description, e.g., ‘updated figures’). This will prepare your changes to be sent to the remote repository (‘origin’). If you edited multiple scripts, you can commit all changes at once or select specific scripts</li>
+<li>Click <code>push</code> to origin so that the changes are uploaded.</li>
+</ol>
+<p>[^1]: Gitlab is not intended as a large data storage. For the pages in this example we need to have the pictures we want to render in the repository. But sometimes we have many files in our local repository that we do not want to push to the online repository. For that we can use a plain text file in that directory and call it <code>.gitignore</code>. In that file we can have statements like ‘*.jpg’. Then Git will ignore all jpg files in the folder when pushing.</p>
+</section>
+</section>
+<section id="cloning-with-git-using-command-line" class="level2">
+<h2 class="anchored" data-anchor-id="cloning-with-git-using-command-line">2.2 Cloning with Git (using command line)</h2>
+<p>Git refers to this version control system used in Gitlab, but you can also manage the repositories locally downloading the program <a href="https://git-scm.com/download/win">Git SCM</a>, a free and open source distributed version control system. It is light and works across operating systems, and also has a very basic graphical interface. But it is mostly designed for working through a terminal. As in Github-desktop you use this to do the main Git actions of <em>pulling</em>, <em>committing</em> and <em>pushing</em> changes between local and remote repositories.</p>
+</section>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"></h2>
 
 
 </section>
@@ -611,13 +647,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../contents/tutorials/Tutorial_Gitlab-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Gitlab Tutorial 2 - Creating and Updating a Data Hub</span>
+      <a href="../../contents/tutorials/Tutorial_Web.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Make a Simple Website with R and Quarto</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../contents/tutorials/Tutorial_Web.html" class="pagination-link">
-        <span class="nav-page-text">Easy-to-build website with R and Quarto</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../contents/tutorials/Tutorial_Gitlab2_DataHub.html" class="pagination-link">
+        <span class="nav-page-text">Gitlab Tutorial 2. Create and Update a Data Hub</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

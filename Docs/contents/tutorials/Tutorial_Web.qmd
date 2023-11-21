@@ -1,15 +1,15 @@
 ---
-title: Easy-to-build website with R and Quarto 
-subtitle: Make a platform to share data, code and outputs in dynamic reports
+title: Make a Simple Website with R and Quarto 
+subtitle: Share data, code and dynamic reports in an easy-to-build website
 author: "G.Fraga Gonzalez"
 affiliation: "Center for Reproducible Science, UZH"
 date: last-modified
 categories:
   - Quarto
+  - R
   - Video
   - Code
-  - R
-  
+  - Basic
 description: A very easy set up of a free website where you can share your dynamic reports or other research outputs 
 ---
 

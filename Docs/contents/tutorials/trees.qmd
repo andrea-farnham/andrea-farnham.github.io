@@ -1,0 +1,28 @@
+---
+title: "Untitled"
+editor: visual
+  
+---
+
+```{r}
+library(collapsibleTree)
+
+
+species <- read.csv("https://apps.fs.usda.gov/fia/datamart/CSV/REF_SPECIES_GROUP.csv")
+
+collapsibleTree(
+  species,
+  hierarchy = c("REGION", "CLASS", "NAME"),
+  fill = c(
+    # The root
+    "seashell",
+    # Unique regions
+    rep("brown", length(unique(species$REGION))),
+    # Unique classes per region
+    rep("khaki", length(unique(paste(species$REGION, species$CLASS)))),
+    # Unique names per region
+    rep("forestgreen", length(unique(paste(species$NAME, species$REGION))))
+  )
+)
+
+``` 

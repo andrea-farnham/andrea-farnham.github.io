@@ -1,7 +1,0 @@
----
-title: Tutorials compiled
-subtitle: A series of practical tutorials for afford
-author: "G.Fraga Gonzalez"
-affiliation: "Center for Reproducible Science, UZH"
-date: last-modified
----

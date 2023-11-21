@@ -2,6 +2,7 @@ project:
   type: website
             
 website:
+    title: Home
     page-navigation: true
     back-to-top-navigation: true
     page-footer:
@@ -16,8 +17,7 @@ website:
     
     site-url: https://crsuzh.pages.uzh.ch/AFFORD_website/
     repo-url: https://gitlab.uzh.ch/crsuzh/AFFORD_website 
-    
-    title: Home
+       
     
     navbar:        
         logo:  assets/logos/Logo_AFFORD_col.svg        
@@ -25,9 +25,14 @@ website:
         right:                  
           - text: "Tutorials"            
             href: contents/tutorials/index.qmd
-          - sidebar:Presentations
-          - sidebar:Reports
-          - sidebar:Tools                     
+          - text: "Templates"            
+            href: contents/templates/index.qmd
+          - text: "Presentations"            
+            href: contents/presentations/index.qmd
+          - text: "Reports"            
+            href: contents/reports/index.qmd
+          - text: "Tools"            
+            href: contents/tools/index.qmd
           - text: "About"
             href: contents/about/about.qmd                  
     
@@ -35,19 +40,22 @@ website:
         - id: Tutorials
           title: "Tutorials"                  
           background: light
-          style: "docked"          
-          contents: 
-            - href: contents/tutorials/index.qmd
-            - href: contents/tutorials/Tutorial_Gitlab-1.-Using-Gitlab-for-Project-Owners-and-Collaborators.qmd
-            - href: contents/tutorials/Tutorial_Gitlab-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.qmd
-            - href: contents/tutorials/Tutorial_Gitlab-3.-Customizing-Gitlab-Continuous-Integration.qmd
-            - href: contents/tutorials/Tutorial_Web.qmd
+          style: "docked"       
+          #href:  contents/tutorials/index.qmd      
+          contents:
+            - contents/tutorials/index.qmd
+            - section: "Data Sharing and Repositories"
+              contents: 
+                - contents/tutorials/Tutorial_Web.qmd
+                - contents/tutorials/Tutorial_Gitlab1_IntroGit.qmd
+                - contents/tutorials/Tutorial_Gitlab2_DataHub.qmd
+                - contents/tutorials/Tutorial_Gitlab3_CI.qmd
+                
           
         - id: Templates
           title: "Templates"
           contents: contents/templates/*.qmd 
-          
-        
+                  
         - id: Presentations
           title: "Presentations"
           style: "docked"          
@@ -70,7 +78,9 @@ website:
         
 
 format:
-    html:            
+    html:         
+        grid:
+          sidebar-width: 350px
         theme:
             light:
                 - cosmo

@@ -1,16 +1,22 @@
 ---
-title: Gitlab Tutorial 2 - Creating and Updating a Data Hub
+title: Gitlab Tutorial 2. Create and Update a Data Hub
 subtitle: A workflow to use Gitlab pages as an open data hub
 author: G.Fraga Gonzalez & E. Furrer
 date: last-modified
 categories:
   - Gitlab 
-    
+  - Basic
 ---
 
 [Back](index.qmd)
 
-# Workflow
+# Why is this useful? 
+Researchers need to be able to **find** and **share** their data and to *showcase* it to internal and external collaborations. Creating copies or transferring files can be cumbersome and lead to propagating errors or sharing of outdated file versions. 
+
+With Gitlab and R Quarto we can easily integrate all metadata and documentation stored and maintained in our repository, and render it into a website. This website, which can have a **private or public access**, becomes a safe 'data hub' or central platform from which researchers and collaborators can **navigate through research outputs**, find the location of data files in specialized repositories or preview thumbnails of some of the data. 
+
+
+# Overview
 
 Here we propose to use [Gitlab pages](https://docs.gitlab.com/ee/user/project/pages/) to host an easy-to-build website where we can share documentation, metadata and some data (e.g., preview images) of our projects. The website can be either public or private, requiring users to log in. We propose that this approach can be useful to improve the research workflow in many labs and projects, irrespective of whether they have a strong programming focus.
 
@@ -22,16 +28,17 @@ The main **requirements** for this workflow are:
 -   (Required) A way of creating HTML pages: we provide R Quarto markdown templates
 -   (Recommended) A Gitlab continuous integration script to allow updating the directly from the browser without having to clone the repo/push changes. We provide examples and templates.
 
-The basic workflow:
+### Basic workflow
 
+(dashed line = manual or semi-manual; solid line = automatic process)
 ```{mermaid}
 
 flowchart TD
     A1[data, metadata, code] <.-> |sync| B[Gitlab Repository]
     B0[Documentation] <.->|edit Wiki| B
     B --> | Render Gitlab Page| C[Hub]
-
-
+    
+ 
 ```
 
 ## Hub content
@@ -49,7 +56,7 @@ Gitlab can display and allows editing of .csv tables from the browser. For excel
 
 The files will have three **URL locations**, which can all be accessed through the main landing site (Data Hub):
 
-1.  The **Landing page** shows interactive tables to navigate data and metadata the documentation and has links to the main repository and the wiki.
+1.  The **landing page** shows interactive tables to navigate data and metadata the documentation and has links to the main repository and the wiki.
 2.  The **main repository** to access the source metadata tables, data files and the code necessary to generate the Hub.
 3.  The **Wiki** to access all relevant documentation to understand how the data was collected and preprocessed, such as protocols and standard operating procedures (SOPs). It should also have information about filenames, folder structures and how metadata are organized. It is also accessible through the main repository.
 

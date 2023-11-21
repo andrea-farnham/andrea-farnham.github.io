@@ -1,24 +1,34 @@
 ---
-title: Gitlab Tutorial 1 - short step-by-step guide to Git and Gitlab
+title: Gitlab Tutorial 1. Step-by-Step Guide to Git and Gitlab
 subtitle: Using a UZH Gitlab repository for Project Owners and Collaborators
 author: G.Fraga Gonzalez & E. Furrer
 date: last-modified
 categories:
   - Gitlab
+  - Basic
 ---
 
 [Back](index.qmd)
 
+# Why is this useful?
 
-This Tutorial is a short step-by-step guide on using Git and Gitlab and provides a workflow to use Github Desktop to sync with local files. For complete beginners we recommend the [Git book](https://git-scm.com/book), which is very accessible but also very detailed. It is available in several languages and as pdf. Another option for beginners are the [Gitlab tutorials](https://docs.gitlab.com/ee/tutorials/) by [Gitlab.com](https://about.gitlab.com/) (commercial).
+**Collaborative research** requires a **version control** system for multiple files as researchers need to be able to track changes, to revise change history and to share code, documentation and metadata. Our [CRS primer on Digital Collaboration ](https://zenodo.org/records/8354375) further describes available tools and their importance to good research practices.  
 
-[Git](https://en.wikipedia.org/wiki/Git) is a system to track changes in files, it is most often used to coordinate the work among several persons who access the files online on a server or sync them to their computer. The online use does not require any installation, local use is only possible after installing [Git](https://git-scm.com/downloads).
+> The *de facto* standard set of tools for source control is called *Git*. It is an open-source system created by Linus Torvalds in 2015.   
 
-[Gitlab.com](https://about.gitlab.com/) and [Github.com](https://github.com/) are commercial hosting services for version control with Git. The UZH instance of the open source Gitlab at [Gitlab.uzh.ch](https://gitlab.uzh.ch) is hosted by the UZH on servers owned by [SWITCH](https://www.switch.ch/de/edu-id/), a non-profit foundation that has been established by the Swiss Federal Government. See [https://www.zi.uzh.ch/en/staff/software-elearning/webplatforms/gitlab.html]() for more information.
+# Overview
 
-A Git repository is a set of folders and files with complete history and full version-tracking abilities, locally or on a server.
+This tutorial is a short step-by-step guide on using Git and Gitlab and provides a workflow to use Github Desktop to sync with local files. For complete beginners we recommend the [Git book](https://git-scm.com/book), which is very accessible but also very detailed. It is available in several languages and as pdf. Another option for beginners are the [Gitlab tutorials](https://docs.gitlab.com/ee/tutorials/) by [Gitlab.com](https://about.gitlab.com/) (commercial).
 
-# 1. Create and use a repository (in browser)
+-   [Git](https://en.wikipedia.org/wiki/Git) is a system to track changes in files, it is most often used to coordinate the work among several persons who access the files online on a server or sync them to their computer. The online use does not require any installation, local use is only possible after installing [Git](https://git-scm.com/downloads).
+
+-   [Gitlab.com](https://about.gitlab.com/) and [Github.com](https://github.com/) are commercial hosting services for version control with Git. The UZH instance of the open source Gitlab at [Gitlab.uzh.ch](https://gitlab.uzh.ch) is hosted by the UZH on servers owned by [SWITCH](https://www.switch.ch/de/edu-id/), a non-profit foundation that has been established by the Swiss Federal Government. See [https://www.zi.uzh.ch/en/staff/software-elearning/webplatforms/gitlab.html]() for more information.
+
+-   A **Git repository** is a set of folders and files with complete history and full version-tracking abilities, locally or on a server.
+
+# Workflow
+
+## 1. Create and use a repository (in browser)
 
 ### For *project owners*
 
@@ -37,8 +47,9 @@ For someone who just wants to navigate through the data of a lab, when this is n
 1.  Ask the owner of the data to be invited as a member of the project repository
 2.  Go to the project repository on [Gitlab.uzh.ch](https://gitlab.uzh.ch) or Pages URL [e.g., https://crsuzh.pages.uzh.ch/afford_website/](https://crsuzh.pages.uzh.ch/afford_website/) and login with your SWITCH edu-ID (if required).
 
-# 2. Cloning a repository to local computer 
-## For project owners
+## 2. Cloning a repository to local computer
+
+### For project owners
 
 Our remote Gitlab repository, which we access via the browser is now our main location of metadata, code and (some) data. But sometimes it is convenient to make our edits locally. Specially if we are data **owners** and want to edit and share a large number of files or code, we cannot do this easily in the browser. Recall that you need to install [Git](https://git-scm.com/downloads) for this.
 
@@ -46,7 +57,7 @@ In Git, you can `clone a repository` to create a copy on your computer, that wil
 
 NOTE: if we *fork* a repository instead of cloning it, this will create a completely independent copy of the Git repository. Here, we need *cloning* so that our local changes can be synchronized and we don't create duplicates of the repository.
 
-## Personal access token
+### Personal access token
 
 To clone a repository to your machine you will most likely need a personal access token (due to the security of SWITCH login). In your project repository on [Gitlab.uzh.ch](https://gitlab.uzh.ch) go to `Settings/Access tokens`. In the Access Tokens menu you will be able to give the token a `name`, choose an `expiration date` (or leave it blank), choose `permissions` (choose at least developer for making edits) and `scope` (select API). See also the picture below.
 
