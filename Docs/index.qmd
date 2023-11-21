@@ -1,15 +1,15 @@
 ---
 title: AFFORD
 subtitle: Tools and workflows for Open Research Data 
-
+sidebar: false
 about:
   template: jolla
   image: "assets/logos/Logo_AFFORD_col.svg"
   image-width: 12em
   image-shape: rectangle
   links:
-    #- text: CRS
-    #  href: "https://www.crs.uzh.ch/en.html"
+    - text: CRS
+      href: "https://www.crs.uzh.ch/en.html"
     - icon:  git
       aria-label: CRS Gitlab
       href: "https://gitlab.uzh.ch/crsuzh/AFFORD_tutorials"

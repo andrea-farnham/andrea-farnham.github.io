@@ -15,7 +15,7 @@ description: A very easy set up of a free website where you can share your dynam
 
 
 ```{=html}
-<iframe src="https://drive.google.com/file/d/1hw2ZIf7RuMHZ0xghZBfcnhe1sqvckiYr/preview"allow="autoplay"></iframe>
+<iframe src="https://drive.google.com/file/d/1hw2ZIf7RuMHZ0xghZBfcnhe1sqvckiYr/preview"></iframe>
 ```
 # Why is this relevant?
 

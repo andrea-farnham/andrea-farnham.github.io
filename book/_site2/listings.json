@@ -1,0 +1,10 @@
+[
+  {
+    "listing": "/index.html",
+    "items": [
+      "/Tutorial_Gitlab-1.-Using-Gitlab-for-Project-Owners-and-Collaborators.html",
+      "/Tutorial_Gitlab-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.html",
+      "/Tutorial_Gitlab-3.-Customizing-Gitlab-Continuous-Integration.html"
+    ]
+  }
+]

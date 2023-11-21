@@ -1,0 +1,15 @@
+---
+listing:
+  categories: true
+  type: default
+  fields: [title, description, categories, author,date, image]
+  sort-ui: true
+  filter-ui: true
+  image-height: "150px"
+  image-align: right
+
+---
+
+# Tools {.unnumbered}
+
+This collection of interactive tools is work in progress...

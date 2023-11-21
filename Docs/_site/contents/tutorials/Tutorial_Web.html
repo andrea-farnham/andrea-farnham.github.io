@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="G.Fraga Gonzalez">
-<meta name="dcterms.date" content="2023-11-20">
+<meta name="dcterms.date" content="2023-11-21">
 <meta name="description" content="A very easy set up of a free website where you can share your dynamic reports or other research outputs">
 
-<title>Easy-to-build website with R and Quarto</title>
+<title>Home - Easy-to-build website with R and Quarto</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,6 +33,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<link href="../../contents/tutorials/Tutorial_Gitlab-3.-Customizing-Gitlab-Continuous-Integration.html" rel="prev">
 <link href="../../assets/logos/Logo_CRS_col.svg" rel="icon" type="image/svg+xml">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -68,7 +69,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar docked nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -89,23 +90,48 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../contents/tutorials/index.html" rel="" target="">
+    <a class="nav-link active" href="../../contents/tutorials/index.html" rel="" target="" aria-current="page">
  <span class="menu-text">Tutorials</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../contents/presentations/Presentations.html" rel="" target="">
- <span class="menu-text">Presentations</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-presentations" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Presentations</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-presentations">    
+        <li>
+    <a class="dropdown-item" href="../../contents/presentations/Presentations_1.html" rel="" target="">
+ <span class="dropdown-text">AFFORD deliverables - ORD Hub</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../contents/reports/Reports.html" rel="" target="">
- <span class="menu-text">Reports</span></a>
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-reports" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Reports</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-reports">    
+        <li>
+    <a class="dropdown-item" href="../../contents/reports/Reports_1.html" rel="" target="">
+ <span class="dropdown-text">Report 1 Data Archiving</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../contents/tools/Tools.html" rel="" target="">
- <span class="menu-text">Tools</span></a>
+        <li>
+    <a class="dropdown-item" href="../../contents/reports/Reports_2.html" rel="" target="">
+ <span class="dropdown-text">Report 2 Another test pdf</span></a>
   </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-tools" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Tools</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-tools">    
+        <li>
+    <a class="dropdown-item" href="../../contents/tools/Tools_1.html" rel="" target="">
+ <span class="dropdown-text">Example 1 Shinylive in Quarto</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../contents/about/About.html" rel="" target="">
+    <a class="nav-link" href="../../contents/about/about.html" rel="" target="">
  <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -115,10 +141,57 @@ ul.task-list li input[type="checkbox"] {
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../contents/tutorials/Tutorial_Web.html">Easy-to-build website with R and Quarto</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../contents/tutorials/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tutorials</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../contents/tutorials/Tutorial_Gitlab-1.-Using-Gitlab-for-Project-Owners-and-Collaborators.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gitlab Tutorial 1 - short step-by-step guide to Git and Gitlab</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../contents/tutorials/Tutorial_Gitlab-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gitlab Tutorial 2 - Creating and Updating a Data Hub</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../contents/tutorials/Tutorial_Gitlab-3.-Customizing-Gitlab-Continuous-Integration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gitlab Tutorial 3 - Continuous Integration (CI)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../contents/tutorials/Tutorial_Web.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Easy-to-build website with R and Quarto</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -171,7 +244,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 20, 2023</p>
+      <p class="date">November 21, 2023</p>
     </div>
   </div>
   
@@ -181,7 +254,7 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<iframe src="https://drive.google.com/file/d/1hw2ZIf7RuMHZ0xghZBfcnhe1sqvckiYr/preview" allow="autoplay"></iframe>
+<iframe src="https://drive.google.com/file/d/1hw2ZIf7RuMHZ0xghZBfcnhe1sqvckiYr/preview"></iframe>
 <section id="why-is-this-relevant" class="level1">
 <h1>Why is this relevant?</h1>
 <p>Sharing documents, code, data and outputs with collaborators or to a broader audience is an essential step towards a good scientific practice. A website that can be managed by researchers themselves seems the ideal platform for efficient sharing. If this depends on IT support for maintenance it will not be practical for routine use, but learning web-development imposes an unnecessary and unacceptable burden to a scientist’s already heavy workload.</p>
@@ -567,6 +640,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../contents/tutorials/Tutorial_Gitlab-3.-Customizing-Gitlab-Continuous-Integration.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Gitlab Tutorial 3 - Continuous Integration (CI)</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

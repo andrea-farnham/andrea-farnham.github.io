@@ -1,19 +1,23 @@
 [
   {
-    "listing": "/contents/presentations/Presentations.html",
+    "listing": "/contents/presentations/index.html",
     "items": [
       "/contents/presentations/Presentations_1.html"
     ]
   },
   {
-    "listing": "/contents/reports/Reports.html",
+    "listing": "/contents/reports/index.html",
     "items": [
       "/contents/reports/Reports_1.html",
       "/contents/reports/Reports_2.html"
     ]
   },
   {
-    "listing": "/contents/tools/Tools.html",
+    "listing": "/contents/templates/index.html",
+    "items": []
+  },
+  {
+    "listing": "/contents/tools/index.html",
     "items": [
       "/contents/tools/Tools_1.html"
     ]
@@ -25,6 +29,16 @@
       "/contents/tutorials/Tutorial_Gitlab-1.-Using-Gitlab-for-Project-Owners-and-Collaborators.html",
       "/contents/tutorials/Tutorial_Gitlab-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.html",
       "/contents/tutorials/Tutorial_Gitlab-3.-Customizing-Gitlab-Continuous-Integration.html"
+    ]
+  },
+  {
+    "listing": "/contents/tutorials/tutorials.html",
+    "items": [
+      "/contents/tutorials/Tutorial_Web.html",
+      "/contents/tutorials/Tutorial_Gitlab-1.-Using-Gitlab-for-Project-Owners-and-Collaborators.html",
+      "/contents/tutorials/Tutorial_Gitlab-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.html",
+      "/contents/tutorials/Tutorial_Gitlab-3.-Customizing-Gitlab-Continuous-Integration.html",
+      "/contents/tutorials/tutorials_compiled.html"
     ]
   }
 ]

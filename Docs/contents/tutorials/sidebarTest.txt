@@ -1,0 +1,11 @@
+    sidebar:
+        - id: tutorials
+          title: "Tutorials"
+          style: "floating"
+          contents:
+            - section: "Gitlab Tutorials"
+              contents: 
+                - text: "Tutorial 1"
+                  file: contents/tutorials/Tutorial_Gitlab-1.-Using-Gitlab-for-Project-Owners-and-Collaborators.qmd
+                - text: "Tutorial 2"
+                  file: contents/tutorials/Tutorial_Gitlab-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.qmd  

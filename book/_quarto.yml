@@ -1,0 +1,32 @@
+project:
+  type: website
+  output-dir: _site2
+
+website:
+
+    sidebar:
+        - id: tutorials
+          title: "Tutorials"
+          style: "docked"
+          contents:
+            - section: "Gitlab Tutorials"
+              contents: 
+                - text: "Tutorial 1"
+                  file: Tutorial_Gitlab-1.-Using-Gitlab-for-Project-Owners-and-Collaborators.qmd
+                - text: "Tutorial 2"
+                  file: Tutorial_Gitlab-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.qmd
+                 
+
+format:
+  html:
+    theme:
+      light:
+        - cosmo
+      dark: solar
+    code-link: true
+    toc: true
+    toc-expand: false
+    number-sections: false  
+    mermaid:
+        theme: default
+editor: visual

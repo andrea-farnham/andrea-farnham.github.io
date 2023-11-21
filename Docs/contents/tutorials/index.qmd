@@ -1,14 +1,16 @@
 ---
-listing:
-  categories: true
-  type: table
-  fields: [title, subtitle, date]
-  sort-ui: true
-  filter-ui: true
+#listing:
+  #categories: true
+  #type: table
+  #fields: [title, subtitle, date]
+  #sort-ui: true
+  #filter-ui: true
+  #contents: 'Tutorial*.qmd'
 ---
-
 
 # Tutorials {.unnumbered}
 
-A series of practical tutorials for managing Open Research Data 
+A series of practical tutorials for managing Open Research Data
 
+
+## 

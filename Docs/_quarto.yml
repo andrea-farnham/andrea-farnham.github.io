@@ -9,29 +9,66 @@ website:
           Created by the [Center for Reproducible Science](https://www.crs.uzh.ch/en.html) of the [University of Zurich](https://www.uzh.ch/de.html).
           
         right: |
-           This website is and will always be free, licensed under the [CC BY internationa license 4.0 ](https://creativecommons.org/licenses/by/4.0/) License.
+           This website is and will always be free, licensed under the [CC BY internationa license 4.0 ](https://creativecommons.org/licenses/by/4.0/) 
+           License.
            
-    
     favicon:  assets/logos/Logo_CRS_col.svg
     
     site-url: https://crsuzh.pages.uzh.ch/AFFORD_website/
     repo-url: https://gitlab.uzh.ch/crsuzh/AFFORD_website 
     
-    navbar:
-        title: Home
-        logo:  assets/logos/Logo_AFFORD_col.svg
+    title: Home
+    
+    navbar:        
+        logo:  assets/logos/Logo_AFFORD_col.svg        
+        collapse-below: lg
         right:                  
-          - text: Tutorials  
-            href: contents/tutorials/index.qmd                
-          - text: Presentations
-            href: contents/presentations/Presentations.qmd                
-          - text: Reports
-            href: contents/reports/Reports.qmd                
-          - text: Tools
-            href: contents/tools/Tools.qmd                
-          - text: About
-            href: contents/about/About.qmd                
+          - text: "Tutorials"            
+            href: contents/tutorials/index.qmd
+          - sidebar:Presentations
+          - sidebar:Reports
+          - sidebar:Tools                     
+          - text: "About"
+            href: contents/about/about.qmd                  
+    
+    sidebar:          
+        - id: Tutorials
+          title: "Tutorials"                  
+          background: light
+          style: "docked"          
+          contents: 
+            - href: contents/tutorials/index.qmd
+            - href: contents/tutorials/Tutorial_Gitlab-1.-Using-Gitlab-for-Project-Owners-and-Collaborators.qmd
+            - href: contents/tutorials/Tutorial_Gitlab-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.qmd
+            - href: contents/tutorials/Tutorial_Gitlab-3.-Customizing-Gitlab-Continuous-Integration.qmd
+            - href: contents/tutorials/Tutorial_Web.qmd
+          
+        - id: Templates
+          title: "Templates"
+          contents: contents/templates/*.qmd 
+          
+        
+        - id: Presentations
+          title: "Presentations"
+          style: "docked"          
+          contents: contents/presentations/*.qmd 
+          
+          
+        - id: Reports
+          title: "Reports"
+          
+          contents: contents/reports/*.qmd 
+          
+        - id: Tools
+          title: "Tools"
+          
+          contents: contents/tools/*.qmd 
+    
+         
             
+        
+        
+
 format:
     html:            
         theme:
@@ -44,3 +81,6 @@ format:
         code-copy: false      
         mermaid: 
           theme: default
+
+freeze: auto
+

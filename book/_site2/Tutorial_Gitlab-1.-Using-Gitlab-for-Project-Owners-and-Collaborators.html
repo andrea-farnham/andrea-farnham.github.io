@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.353">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="G.Fraga Gonzalez &amp; E. Furrer">
+<meta name="dcterms.date" content="2023-11-16">
+
+<title>Gitlab Tutorial 1 - short step-by-step guide to Git and Gitlab</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Tutorial_Gitlab-1.-Using-Gitlab-for-Project-Owners-and-Collaborators.html">Gitlab Tutorials</a></li><li class="breadcrumb-item"><a href="./Tutorial_Gitlab-1.-Using-Gitlab-for-Project-Owners-and-Collaborators.html">Tutorial 1</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Tutorials</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Gitlab Tutorials</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Tutorial_Gitlab-1.-Using-Gitlab-for-Project-Owners-and-Collaborators.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Tutorial 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Tutorial_Gitlab-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tutorial 2</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="-1">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#create-and-use-a-repository-in-browser" id="toc-create-and-use-a-repository-in-browser" class="nav-link active" data-scroll-target="#create-and-use-a-repository-in-browser">1. Create and use a repository (in browser)</a>
+  <ul class="collapse">
+  <li><a href="#for-project-owners" id="toc-for-project-owners" class="nav-link" data-scroll-target="#for-project-owners">For <em>project owners</em></a></li>
+  <li><a href="#for-collaborators" id="toc-for-collaborators" class="nav-link" data-scroll-target="#for-collaborators">For <em>collaborators</em></a></li>
+  </ul></li>
+  <li><a href="#cloning-a-repository-to-local-computer" id="toc-cloning-a-repository-to-local-computer" class="nav-link" data-scroll-target="#cloning-a-repository-to-local-computer">2. Cloning a repository to local computer</a>
+  <ul class="collapse">
+  <li><a href="#for-project-owners-1" id="toc-for-project-owners-1" class="nav-link" data-scroll-target="#for-project-owners-1">For project owners</a></li>
+  <li><a href="#personal-access-token" id="toc-personal-access-token" class="nav-link" data-scroll-target="#personal-access-token">Personal access token</a></li>
+  <li><a href="#cloning-with-github-desktop-user-friendly" id="toc-cloning-with-github-desktop-user-friendly" class="nav-link" data-scroll-target="#cloning-with-github-desktop-user-friendly">2.1 Cloning with Github-desktop (user-friendly)</a>
+  <ul class="collapse">
+  <li><a href="#setup-of-github-desktop-for-gitlab" id="toc-setup-of-github-desktop-for-gitlab" class="nav-link" data-scroll-target="#setup-of-github-desktop-for-gitlab">Setup of Github-desktop for Gitlab</a></li>
+  <li><a href="#editing-repository" id="toc-editing-repository" class="nav-link" data-scroll-target="#editing-repository">Editing repository</a></li>
+  </ul></li>
+  <li><a href="#cloning-with-git-using-command-line" id="toc-cloning-with-git-using-command-line" class="nav-link" data-scroll-target="#cloning-with-git-using-command-line">2.2 Cloning with Git (using command line)</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Gitlab Tutorial 1 - short step-by-step guide to Git and Gitlab</h1>
+<p class="subtitle lead">Using a UZH Gitlab repository for Project Owners and Collaborators</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">Gitlab</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>G.Fraga Gonzalez &amp; E. Furrer </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 16, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<p><a href="./index.html">Back</a></p>
+<p>This Tutorial is a short step-by-step guide on using Git and Gitlab and provides a workflow to use Github Desktop to sync with local files. For complete beginners we recommend the <a href="https://git-scm.com/book">Git book</a>, which is very accessible but also very detailed. It is available in several languages and as pdf. Another option for beginners are the <a href="https://docs.gitlab.com/ee/tutorials/">Gitlab tutorials</a> by <a href="https://about.gitlab.com/">Gitlab.com</a> (commercial).</p>
+<p><a href="https://en.wikipedia.org/wiki/Git">Git</a> is a system to track changes in files, it is most often used to coordinate the work among several persons who access the files online on a server or sync them to their computer. The online use does not require any installation, local use is only possible after installing <a href="https://git-scm.com/downloads">Git</a>.</p>
+<p><a href="https://about.gitlab.com/">Gitlab.com</a> and <a href="https://github.com/">Github.com</a> are commercial hosting services for version control with Git. The UZH instance of the open source Gitlab at <a href="https://gitlab.uzh.ch">Gitlab.uzh.ch</a> is hosted by the UZH on servers owned by <a href="https://www.switch.ch/de/edu-id/">SWITCH</a>, a non-profit foundation that has been established by the Swiss Federal Government. See <a href="">https://www.zi.uzh.ch/en/staff/software-elearning/webplatforms/gitlab.html</a> for more information.</p>
+<p>A Git repository is a set of folders and files with complete history and full version-tracking abilities, locally or on a server.</p>
+<section id="create-and-use-a-repository-in-browser" class="level1">
+<h1>1. Create and use a repository (in browser)</h1>
+<section id="for-project-owners" class="level3">
+<h3 class="anchored" data-anchor-id="for-project-owners">For <em>project owners</em></h3>
+<p>For someone that wants to share data or metadata (e.g., a data hub)</p>
+<ol type="1">
+<li><strong>Login</strong> to <a href="https://gitlab.uzh.ch">Gitlab.uzh.ch</a> with your <a href="https://www.switch.ch/edu-id/">SWITCH edu-ID</a>.</li>
+<li>Create a <strong>new project repository</strong>, give it an informative, easy name (e.g., _pages, project x)</li>
+<li>In Settings/General/<strong>Visibility</strong> mark it as private</li>
+<li>In Manage/Members/<strong>Invite members</strong> add new members to the team, with different levels of permissions</li>
+<li>Add your files and code (works through the browser but is easier with the Gitlab workflow below)</li>
+</ol>
+</section>
+<section id="for-collaborators" class="level3">
+<h3 class="anchored" data-anchor-id="for-collaborators">For <em>collaborators</em></h3>
+<p>For someone who just wants to navigate through the data of a lab, when this is not made fully public:</p>
+<ol type="1">
+<li>Ask the owner of the data to be invited as a member of the project repository</li>
+<li>Go to the project repository on <a href="https://gitlab.uzh.ch">Gitlab.uzh.ch</a> or Pages URL <a href="https://crsuzh.pages.uzh.ch/afford_website/">e.g., https://crsuzh.pages.uzh.ch/afford_website/</a> and login with your SWITCH edu-ID (if required).</li>
+</ol>
+</section>
+</section>
+<section id="cloning-a-repository-to-local-computer" class="level1">
+<h1>2. Cloning a repository to local computer</h1>
+<section id="for-project-owners-1" class="level2">
+<h2 class="anchored" data-anchor-id="for-project-owners-1">For project owners</h2>
+<p>Our remote Gitlab repository, which we access via the browser is now our main location of metadata, code and (some) data. But sometimes it is convenient to make our edits locally. Specially if we are data <strong>owners</strong> and want to edit and share a large number of files or code, we cannot do this easily in the browser. Recall that you need to install <a href="https://git-scm.com/downloads">Git</a> for this.</p>
+<p>In Git, you can <code>clone a repository</code> to create a copy on your computer, that will be synchronized with your remote repository. Once cloned we can <code>pull</code> changes done in the remote repository (in the browser). If we have local changes and want to ‘send’ them to the remote we do: 1) <code>commit</code> and 2) <code>push</code> the local changes to remote. (??? what about add?)</p>
+<p>NOTE: if we <em>fork</em> a repository instead of cloning it, this will create a completely independent copy of the Git repository. Here, we need <em>cloning</em> so that our local changes can be synchronized and we don’t create duplicates of the repository.</p>
+</section>
+<section id="personal-access-token" class="level2">
+<h2 class="anchored" data-anchor-id="personal-access-token">Personal access token</h2>
+<p>To clone a repository to your machine you will most likely need a personal access token (due to the security of SWITCH login). In your project repository on <a href="https://gitlab.uzh.ch">Gitlab.uzh.ch</a> go to <code>Settings/Access tokens</code>. In the Access Tokens menu you will be able to give the token a <code>name</code>, choose an <code>expiration date</code> (or leave it blank), choose <code>permissions</code> (choose at least developer for making edits) and <code>scope</code> (select API). See also the picture below.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="uploads/aeef5aff4db2c295384c7ab1f1912c03/image.png" width="610" height="439" class="figure-img"></p>
+<figcaption class="figure-caption">image</figcaption>
+</figure>
+</div>
+<p>After this you will see a long alphanumeric string, the token, that you should save somewhere so you can use it as your <code>password</code> later on when using Github-desktop, Git or any other platform to manage local copies of the repositories.</p>
+</section>
+<section id="cloning-with-github-desktop-user-friendly" class="level2">
+<h2 class="anchored" data-anchor-id="cloning-with-github-desktop-user-friendly">2.1 Cloning with Github-desktop (user-friendly)</h2>
+<p>The open source tool Github-desktop with a graphical user interface will simplify pull, commit, push operations for both advanced as well as new users. !Note: official support seems to be only for Windows and Mac. See further documentation on <a href="https://github.com/desktop/desktop/blob/development/docs/integrations/gitlab.md">integration with Gitlab</a></p>
+<section id="setup-of-github-desktop-for-gitlab" class="level3">
+<h3 class="anchored" data-anchor-id="setup-of-github-desktop-for-gitlab">Setup of Github-desktop for Gitlab</h3>
+<ol type="1">
+<li><p>Download and install <a href="https://desktop.github.com/">Github desktop</a></p></li>
+<li><p>In your Gitlab project, get your personal access token (see above) and save it somewhere</p></li>
+<li><p>On Github desktop go to File/Clone repository. Then enter the URL of your Gitlab repository (see the clone button) and a local directory name. For example:</p>
+<img src="uploads/7a0a2bd44e724b5c59f4c4e0ac983573/image.png" width="551" height="277" alt="image.png"></li>
+<li><p>Then you will be asked for <strong>username</strong> and <strong>password.</strong> Your username is your Gitlab username (e.g., the name in your email address) and the password is the <strong>Token</strong> that you just created.</p></li>
+</ol>
+<p>Now your Local folder is linked to your Gitlab remote repository. You can check below how to pull, commit and push changes.</p>
+</section>
+<section id="editing-repository" class="level3">
+<h3 class="anchored" data-anchor-id="editing-repository">Editing repository</h3>
+<p>Pull,commit and Push changes in the content of the repository. The workflow can get quite complex. Here we will ignore elements like <em>branches</em> to oversimplify it into the main steps:</p>
+<ol type="1">
+<li>Work on your <strong>local</strong> repository, for example, create or edit code, update your metadata table, add new files [^1]</li>
+<li>Open <strong>Github desktop.</strong> If you have several repositories, make sure you select the one you are currently working on or the one you want to update. It should detect the local changes done. If there are changes done remotely, but not locally, it willl prompt you to <code>pull</code> those changes (but here, beware there may be conflicts, which you shold be able to solve with Github but may complicate things).</li>
+<li>Click <code>Commit</code> ( you will need to write a brief description, e.g., ‘updated figures’). This will prepare your changes to be sent to the remote repository (‘origin’). If you edited multiple scripts, you can commit all changes at once or select specific scripts</li>
+<li>Click <code>push</code> to origin so that the changes are uploaded.</li>
+</ol>
+<p>[^1]: Gitlab is not intended as a large data storage. For the pages in this example we need to have the pictures we want to render in the repository. But sometimes we have many files in our local repository that we do not want to push to the online repository. For that we can use a plain text file in that directory and call it <code>.gitignore</code>. In that file we can have statements like ‘*.jpg’. Then Git will ignore all jpg files in the folder when pushing.</p>
+</section>
+</section>
+<section id="cloning-with-git-using-command-line" class="level2">
+<h2 class="anchored" data-anchor-id="cloning-with-git-using-command-line">2.2 Cloning with Git (using command line)</h2>
+<p>Git refers to this version control system used in Gitlab, but you can also manage the repositories locally downloading the program <a href="https://git-scm.com/download/win">Git SCM</a>, a free and open source distributed version control system. It is light and works across operating systems, and also has a very basic graphical interface. But it is mostly designed for working through a terminal. As in Github-desktop you use this to do the main Git actions of <em>pulling</em>, <em>committing</em> and <em>pushing</em> changes between local and remote repositories.</p>
+</section>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"></h2>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
