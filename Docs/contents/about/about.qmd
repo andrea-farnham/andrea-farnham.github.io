@@ -1,6 +1,3 @@
----
-
----
 
 # About {.unnumbered}
 
@@ -10,6 +7,33 @@ A Framework for Avoiding the Open Research Data Dump.
 
 
 The project AFFORD aims at designing a sustainable support framework to lower the barriers to publishing data and other research outputs in an accessible form by bundling know-how, workflows, and tools under the umbrella of one organizational entity. It is a collaboration between the [InterfaceGroup](https://interfacegroup.ch/) and the [Center for Reproducible Science](https://www.crs.uzh.ch/en.html) of the University of Zurich. It uses the Sinergia project [Fluid Dynamics of the central nervous system](https://interfacegroup.ch/project/fluid-dynamics-of-the-central-nervous-system/) as a reference project and accompanies this project in the full cycle of Open Research Data (ORD) generation from experiment planning to publishing. This project-based, data-driven approach will help the framework reach a sufficient level of maturity before it is made available to all university researchers.
+
+```{r}
+#| warning: false
+#| code-fold: true
+ 
+ library(collapsibleTree)
+
+ # Read data 
+ AFFORD <- read.csv('AFFORD_tree.csv')
+
+ # Unique lenghts for coloring  
+ # Plot dendrogram 
+ collapsibleTree(AFFORD, 
+                 root = 'AFFORD deliverables',
+                                 hierarchy = c("Topic", 'Output','Description'),  
+                                                 #attribute = "Description",
+                                                                 #fill = 'Color',
+                                                                                 #width = 100,
+                                                                                                 fill = c('forestgreen',
+                                                                                                                   rep("darkorange", length(unique(AFFORD$Topic)[!is.na(unique(AFFORD$Topic))])),
+                                                                                                                                     rep("gold", length(unique(AFFORD$Output)[!is.na(unique(AFFORD$Output))])),
+                                                                                                                                                       rep("papayawhip", length(unique(AFFORD$Description)[!is.na(unique(AFFORD$Description))]))
+                                                                                                                                                                       ),
+                                                                                                                                                                                       collapsed = FALSE)
+
+                                                                                                                                                                                       ```
+
 
 ## The CRS
 
