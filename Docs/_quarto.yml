@@ -71,11 +71,14 @@ website:
           title: "Tools"
           
           contents: contents/tools/*.qmd 
+
+        - id: About
+          title: "About"
+          contents: contents/about/about.qmd
     
          
             
-        
-        
+      
 
 format:
     html:         
