@@ -13,9 +13,11 @@ The project AFFORD aims at designing a sustainable support framework to lower th
 
 Overview of AFFORD deliverables 
 (click on nodes to expand/collapse)
+
 ```{r}
 #| warning: false
 #| code-fold: true
+#| include: false
  
 library(collapsibleTree)
 
