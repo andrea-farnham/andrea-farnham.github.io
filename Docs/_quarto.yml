@@ -31,8 +31,6 @@ website:
             href: contents/presentations/index.qmd
           - text: "Reports"            
             href: contents/reports/index.qmd
-          - text: "Tools"            
-            href: contents/tools/index.qmd
           - text: "About"
             href: contents/about/about.qmd                  
     
@@ -67,8 +65,6 @@ website:
           
           contents: contents/reports/*.qmd 
           
-        - id: Tools
-          title: "Tools"
           
           contents: contents/tools/*.qmd 
 
