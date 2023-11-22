@@ -14,6 +14,7 @@ pages:
   - R -e "quarto::quarto_version()"
   - R -e "quarto::quarto_render()"       
   - mv ./_site/* ../public/
+  - mv ./_freeze/* ../public/
   
 
   artifacts:    
