@@ -1,0 +1,34 @@
+[
+  {
+    "listing": "/contents/presentations/index.html",
+    "items": [
+      "/contents/presentations/Presentations_1.html"
+    ]
+  },
+  {
+    "listing": "/contents/reports/index.html",
+    "items": [
+      "/contents/reports/Reports_1.html",
+      "/contents/reports/Reports_2.html"
+    ]
+  },
+  {
+    "listing": "/contents/templates/index.html",
+    "items": []
+  },
+  {
+    "listing": "/contents/tools/index.html",
+    "items": [
+      "/contents/tools/Tools_1.html"
+    ]
+  },
+  {
+    "listing": "/contents/tutorials/index.html",
+    "items": [
+      "/contents/tutorials/Tutorial_Gitlab1_IntroGit.html",
+      "/contents/tutorials/Tutorial_Gitlab2_DataHub.html",
+      "/contents/tutorials/Tutorial_Gitlab3_CI.html",
+      "/contents/tutorials/Tutorial_Web.html"
+    ]
+  }
+]

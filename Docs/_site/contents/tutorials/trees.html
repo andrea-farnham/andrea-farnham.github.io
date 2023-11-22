@@ -1,15 +1,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.3.353">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-<meta name="author" content="G.Fraga Gonzalez">
-<meta name="dcterms.date" content="2023-11-21">
-
-<title>Home - Tutorials compiled</title>
+<title>Home - Untitled</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,8 +17,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
-
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/quarto-nav/headroom.min.js"></script>
@@ -32,7 +60,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../contents/tutorials/Tutorial_Web.html" rel="prev">
 <link href="../../assets/logos/Logo_CRS_col.svg" rel="icon" type="image/svg+xml">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -44,8 +71,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<script id="quarto-search-options" type="application/json">{
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -63,21 +89,16 @@ ul.task-list li input[type="checkbox"] {
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit"
   }
-}</script>
-
-
+}</script><script src="../../site_libs/htmlwidgets-1.6.2/htmlwidgets.js"></script><script src="../../site_libs/d3-4.10.2/d3.min.js"></script><link href="../../site_libs/collapsibleTree-0.1.6/collapsibleTree.css" rel="stylesheet">
+<script src="../../site_libs/collapsibleTree-binding-0.1.8/collapsibleTree.js"></script>
 </head>
-
-<body class="nav-sidebar docked nav-fixed">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
-      <div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../assets/logos/Logo_AFFORD_col.svg" alt="" class="navbar-logo">
-    </a>
+    <img src="../../assets/logos/Logo_AFFORD_col.svg" alt="" class="navbar-logo"></a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Home</span>
     </a>
@@ -88,151 +109,103 @@ ul.task-list li input[type="checkbox"] {
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
+<li class="nav-item">
     <a class="nav-link" href="../../contents/tutorials/index.html" rel="" target="">
  <span class="menu-text">Tutorials</span></a>
   </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-presentations" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
- <span class="menu-text">Presentations</span>
-    </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-presentations">    
-        <li>
-    <a class="dropdown-item" href="../../contents/presentations/Presentations_1.html" rel="" target="">
- <span class="dropdown-text">AFFORD deliverables - ORD Hub</span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="../../contents/templates/index.html" rel="" target="">
+ <span class="menu-text">Templates</span></a>
   </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-reports" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
- <span class="menu-text">Reports</span>
-    </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-reports">    
-        <li>
-    <a class="dropdown-item" href="../../contents/reports/Reports_1.html" rel="" target="">
- <span class="dropdown-text">Report 1 Data Archiving</span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="../../contents/presentations/index.html" rel="" target="">
+ <span class="menu-text">Presentations</span></a>
   </li>  
-        <li>
-    <a class="dropdown-item" href="../../contents/reports/Reports_2.html" rel="" target="">
- <span class="dropdown-text">Report 2 Another test pdf</span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="../../contents/reports/index.html" rel="" target="">
+ <span class="menu-text">Reports</span></a>
   </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-tools" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
- <span class="menu-text">Tools</span>
-    </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-tools">    
-        <li>
-    <a class="dropdown-item" href="../../contents/tools/Tools_1.html" rel="" target="">
- <span class="dropdown-text">Example 1 Shinylive in Quarto</span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="../../contents/tools/index.html" rel="" target="">
+ <span class="menu-text">Tools</span></a>
   </li>  
-    </ul>
-  </li>
   <li class="nav-item">
     <a class="nav-link" href="../../contents/about/about.html" rel="" target="">
  <span class="menu-text">About</span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
+<div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
-    </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../contents/tutorials/tutorials_compiled.html">Tutorials compiled</a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
-    </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+    </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../contents/tutorials/Tutorial_Gitlab-1.-Using-Gitlab-for-Project-Owners-and-Collaborators.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Gitlab Tutorial 1 - short step-by-step guide to Git and Gitlab</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../contents/tutorials/Tutorial_Gitlab-2.-Creating-and-Updating-a-Data-Hub-in-Gitlab.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Gitlab Tutorial 2 - Creating and Updating a Data Hub</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../contents/tutorials/Tutorial_Gitlab-3.-Customizing-Gitlab-Continuous-Integration.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Gitlab Tutorial 3 - Continuous Integration (CI)</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../contents/tutorials/Tutorial_Web.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Easy-to-build website with R and Quarto</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../contents/tutorials/tutorials_compiled.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Tutorials compiled</span></a>
-  </div>
-</li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Tutorials compiled</h1>
-<p class="subtitle lead">A series of practical tutorials for afford</p>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<h1 class="title">Untitled</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>G.Fraga Gonzalez </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">November 21, 2023</p>
-    </div>
-  </div>
   
     
   </div>
   
 
-</header>
+</header><div class="cell">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/AdeelK93/collapsibleTree">collapsibleTree</a></span><span class="op">)</span></span></code></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'collapsibleTree' was built under R version 4.3.2</code></pre>
+</div>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r"><code class="sourceCode R"><span><span class="co"># Fill table content</span></span>
+<span><span class="co"># </span></span>
+<span><span class="co">#tbl &lt;- as.data.frame(dir(pattern='Tutorial_Git.*.*.qmd'))</span></span>
+<span><span class="co">#colnames(tbl)[1] &lt;- 'file'</span></span>
+<span><span class="co">#tbl$type &lt;- rep("tutorial",nrow(tbl))</span></span>
+<span><span class="co">#tbl$content &lt;- rep("git",nrow(tbl))</span></span>
+<span><span class="co"># </span></span>
+<span><span class="va">org</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span></span>
+<span>    Manager <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span></span>
+<span>        <span class="cn">NA</span>, <span class="st">"Ana"</span>, <span class="st">"Ana"</span>, <span class="st">"Bill"</span>, <span class="st">"Bill"</span>, <span class="st">"Bill"</span>, <span class="st">"Claudette"</span>, <span class="st">"Claudette"</span>, <span class="st">"Danny"</span>,</span>
+<span>        <span class="st">"Fred"</span>, <span class="st">"Fred"</span>, <span class="st">"Grace"</span>, <span class="st">"Larry"</span>, <span class="st">"Larry"</span>, <span class="st">"Nicholas"</span>, <span class="st">"Nicholas"</span></span>
+<span>    <span class="op">)</span>,</span>
+<span>    Employee <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span></span>
+<span>        <span class="st">"Ana"</span>, <span class="st">"Bill"</span>, <span class="st">"Larry"</span>, <span class="st">"Claudette"</span>, <span class="st">"Danny"</span>, <span class="st">"Erika"</span>, <span class="st">"Fred"</span>, <span class="st">"Grace"</span>,</span>
+<span>        <span class="st">"Henri"</span>, <span class="st">"Ida"</span>, <span class="st">"Joaquin"</span>, <span class="st">"Kate"</span>, <span class="st">"Mindy"</span>, <span class="st">"Nicholas"</span>, <span class="st">"Odette"</span>, <span class="st">"Peter"</span></span>
+<span>    <span class="op">)</span>,</span>
+<span>    Title <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span></span>
+<span>        <span class="st">"President"</span>, <span class="st">"VP Operations"</span>, <span class="st">"VP Finance"</span>, <span class="st">"Director"</span>, <span class="st">"Director"</span>, <span class="st">"Scientist"</span>,</span>
+<span>        <span class="st">"Manager"</span>, <span class="st">"Manager"</span>, <span class="st">"Jr Scientist"</span>, <span class="st">"Operator"</span>, <span class="st">"Operator"</span>, <span class="st">"Associate"</span>,</span>
+<span>        <span class="st">"Analyst"</span>, <span class="st">"Director"</span>, <span class="st">"Accountant"</span>, <span class="st">"Accountant"</span></span>
+<span>    <span class="op">)</span></span>
+<span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://colorspace.R-Forge.R-project.org/">colorspace</a></span><span class="op">)</span></span>
+<span><span class="va">org</span><span class="op">$</span><span class="va">Color</span> <span class="op">&lt;-</span> <span class="va">org</span><span class="op">$</span><span class="va">Title</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/levels.html">levels</a></span><span class="op">(</span><span class="va">org</span><span class="op">$</span><span class="va">Color</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu">colorspace</span><span class="fu">::</span><span class="fu"><a href="https://colorspace.R-Forge.R-project.org/reference/rainbow_hcl.html">rainbow_hcl</a></span><span class="op">(</span><span class="fl">11</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/pkg/collapsibleTree/man/collapsibleTreeNetwork.html">collapsibleTreeNetwork</a></span><span class="op">(</span></span>
+<span>  <span class="va">org</span>,</span>
+<span>  attribute <span class="op">=</span> <span class="st">"Title"</span>,</span>
+<span>  fill <span class="op">=</span> <span class="st">"Color"</span>,</span>
+<span>  nodeSize <span class="op">=</span> <span class="st">"leafCount"</span>,</span>
+<span>  collapsed <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span><span class="op">)</span></span></code></pre></div>
+<div class="cell-output-display">
+<div class="collapsibleTree html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-5cbe233d4dfcc27229d2" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-5cbe233d4dfcc27229d2">{"x":{"data":{"name":"Ana","fill":"President","SizeOfNode":14.05,"WeightOfNode":"President","children":[{"name":"Bill","fill":"VP Operations","SizeOfNode":11.11,"WeightOfNode":"VP Operations","children":[{"name":"Claudette","fill":"Director","SizeOfNode":8.6,"WeightOfNode":"Director","children":[{"name":"Fred","fill":"Manager","SizeOfNode":7.02,"WeightOfNode":"Manager","children":[{"name":"Ida","fill":"Operator","SizeOfNode":4.97,"WeightOfNode":"Operator"},{"name":"Joaquin","fill":"Operator","SizeOfNode":4.97,"WeightOfNode":"Operator"}]},{"name":"Grace","fill":"Manager","SizeOfNode":4.97,"WeightOfNode":"Manager","children":[{"name":"Kate","fill":"Associate","SizeOfNode":4.97,"WeightOfNode":"Associate"}]}]},{"name":"Danny","fill":"Director","SizeOfNode":4.97,"WeightOfNode":"Director","children":[{"name":"Henri","fill":"Jr Scientist","SizeOfNode":4.97,"WeightOfNode":"Jr Scientist"}]},{"name":"Erika","fill":"Scientist","SizeOfNode":4.97,"WeightOfNode":"Scientist"}]},{"name":"Larry","fill":"VP Finance","SizeOfNode":8.6,"WeightOfNode":"VP Finance","children":[{"name":"Mindy","fill":"Analyst","SizeOfNode":4.97,"WeightOfNode":"Analyst"},{"name":"Nicholas","fill":"Director","SizeOfNode":7.02,"WeightOfNode":"Director","children":[{"name":"Odette","fill":"Accountant","SizeOfNode":4.97,"WeightOfNode":"Accountant"},{"name":"Peter","fill":"Accountant","SizeOfNode":4.97,"WeightOfNode":"Accountant"}]}]}]},"options":{"hierarchy":[1,2,3,4,5],"input":null,"attribute":"Title","linkLength":null,"fontSize":10,"tooltip":true,"collapsed":false,"zoomable":true,"margin":{"top":20,"bottom":20,"left":44.05,"right":60}}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
 
 
 
-
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -528,18 +501,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../../contents/tutorials/Tutorial_Web.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Easy-to-build website with R and Quarto</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-  </div>
-</nav>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">Created by the <a href="https://www.crs.uzh.ch/en.html">Center for Reproducible Science</a> of the <a href="https://www.uzh.ch/de.html">University of Zurich</a>.</div>   
     <div class="nav-footer-center">
       &nbsp;
@@ -547,7 +510,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-right">This website is and will always be free, licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">CC BY internationa license 4.0</a> License.</div>
   </div>
 </footer>
-
 
 
 </body></html>
