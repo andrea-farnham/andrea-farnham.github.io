@@ -64,9 +64,6 @@ website:
           title: "Reports"
           
           contents: contents/reports/*.qmd 
-          
-          
-          contents: contents/tools/*.qmd 
 
         - id: About
           title: "About"
