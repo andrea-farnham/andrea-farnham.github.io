@@ -16,40 +16,4 @@ Use the table below or the left side bar to navigate through all tutorials.
 
 
 
-## 
-
-```{r}
-#| echo: false
-#| warning: false
-
-
-library(collapsibleTree)
-# Fill table content
-tbl <- read.csv('tree.csv')
-collapsibleTreeNetwork(tbl, attribute = "Title", collapsed = FALSE)
-
-# 
-#tbl <- as.data.frame(dir(pattern='Tutorial_Git.*.*.qmd'))
-#colnames(tbl)[1] <- 'file'
-#tbl$type <- rep("tutorial",nrow(tbl))
-#tbl$content <- rep("git",nrow(tbl))
-# 
-org <- data.frame(
-    Manager = c(
-        NA, "AFFORD", "AFFORD", "Tutorials", "Tutorials", "Tutorials", "Claudette", "Claudette", "Danny",
-        "Fred", "Fred", "Grace", "Larry", "Larry", "Nicholas", "Nicholas"
-    ),
-    Employee = c(
-        "AFFORD", "Tutorials", "Gitlab", "Claudette", "Danny", "Erika", "Fred", "Grace",
-        "Henri", "Ida", "Joaquin", "Kate", "Mindy", "Nicholas", "Odette", "Peter"
-    ),
-    Title = c(
-        "President", "VP Operations", "VP Finance", "Director", "Director", "Scientist",
-        "Manager", "Manager", "Jr Scientist", "Operator", "Operator", "Associate",
-        "Analyst", "Director", "Accountant", "Accountant"
-    )
-)
-
-collapsibleTreeNetwork(org, attribute = "Title", collapsed = FALSE)
- 
-``` 
+##  

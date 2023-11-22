@@ -84,13 +84,6 @@
     "text": "A series of practical tutorials for managing Open Research Data. Use the table below or the left side bar to navigate through all tutorials."
   },
   {
-    "objectID": "contents/tutorials/trees.html",
-    "href": "contents/tutorials/trees.html",
-    "title": "Untitled",
-    "section": "",
-    "text": "library(collapsibleTree)\n\nWarning: package 'collapsibleTree' was built under R version 4.3.2\n\n# Fill table content\n# \n#tbl &lt;- as.data.frame(dir(pattern='Tutorial_Git.*.*.qmd'))\n#colnames(tbl)[1] &lt;- 'file'\n#tbl$type &lt;- rep(\"tutorial\",nrow(tbl))\n#tbl$content &lt;- rep(\"git\",nrow(tbl))\n# \norg &lt;- data.frame(\n    Manager = c(\n        NA, \"Ana\", \"Ana\", \"Bill\", \"Bill\", \"Bill\", \"Claudette\", \"Claudette\", \"Danny\",\n        \"Fred\", \"Fred\", \"Grace\", \"Larry\", \"Larry\", \"Nicholas\", \"Nicholas\"\n    ),\n    Employee = c(\n        \"Ana\", \"Bill\", \"Larry\", \"Claudette\", \"Danny\", \"Erika\", \"Fred\", \"Grace\",\n        \"Henri\", \"Ida\", \"Joaquin\", \"Kate\", \"Mindy\", \"Nicholas\", \"Odette\", \"Peter\"\n    ),\n    Title = c(\n        \"President\", \"VP Operations\", \"VP Finance\", \"Director\", \"Director\", \"Scientist\",\n        \"Manager\", \"Manager\", \"Jr Scientist\", \"Operator\", \"Operator\", \"Associate\",\n        \"Analyst\", \"Director\", \"Accountant\", \"Accountant\"\n    )\n)\nlibrary(colorspace)\norg$Color &lt;- org$Title\nlevels(org$Color) &lt;- colorspace::rainbow_hcl(11)\ncollapsibleTreeNetwork(\n  org,\n  attribute = \"Title\",\n  fill = \"Color\",\n  nodeSize = \"leafCount\",\n  collapsed = FALSE\n)\n\n\n\n\n\n\n\n\n Back to top"
-  },
-  {
     "objectID": "contents/tutorials/Tutorial_Gitlab1_IntroGit.html",
     "href": "contents/tutorials/Tutorial_Gitlab1_IntroGit.html",
     "title": "Gitlab Tutorial 1. Step-by-Step Guide to Git and Gitlab",
@@ -201,12 +194,5 @@
     "title": "AFFORD",
     "section": "",
     "text": "This site compiles resources for Open Research Data management curated and developed by the Center of Reproducible Science of the University of Zurich for the SwissUniversities project AFFORD: A Framework for Avoiding Open Research Data Dump.\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\nLast edited: Tue Nov 21 08:55:22 2023\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "contents/tutorials/index.html#section",
-    "href": "contents/tutorials/index.html#section",
-    "title": "Tutorials",
-    "section": "",
-    "text": "Warning: package 'collapsibleTree' was built under R version 4.3.2"
   }
 ]
