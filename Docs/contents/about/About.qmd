@@ -16,3 +16,4 @@ The project AFFORD aims at designing a sustainable support framework to lower th
 The reproducibility of scientific findings is crucial for the credibility of empirical research. The objective of the [Center for Reproducible Science](https://www.crs.uzh.ch/en.html) is to train the next generation of researchers in good research practices, to develop novel methodology related to reproducibility and replicability, and to improve the quality of scientific investigation using meta-science.
 
 The CRS is a competence center supported by the Vice President Research and by the Faculties of Medicine (MeF, leading house), Science (MNF), Business, Economics and Informatics (WWF), Arts and Social Sciences (PhF), Law (RWF), and Vetsuisse Faculty (VSF).
+
