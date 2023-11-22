@@ -1,3 +1,7 @@
+---
+
+---
+
 # About {.unnumbered}
 
 <!-- ![](images/AFFORD_intro_trimmed.gif){width="100%" fig-align="center"} -->
