@@ -1,8 +1,0 @@
----
-author: G.Fraga Gonzalez & E. Furrer
-date: last-modified
----
-
-# Report 2 Another test pdf {.unnumbered}
-
- <iframe src="CRS_AFFORD.pdf" width="100%" height="900" style="border:none;"></iframe>
