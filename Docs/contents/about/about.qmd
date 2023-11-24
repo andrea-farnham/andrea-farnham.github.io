@@ -23,7 +23,6 @@ The project AFFORD aims at designing a sustainable support framework to lower th
  collapsibleTree(AFFORD, 
                 root = 'AFFORD deliverables',
                 hierarchy = c("Topic", 'Output','Description'),  
-                width = 100%,
                 fill = c('forestgreen',
                  rep("darkorange", length(unique(AFFORD$Topic)[!is.na(unique(AFFORD$Topic))])), 
                  rep("gold", length(unique(AFFORD$Output)[!is.na(unique(AFFORD$Output))])),
