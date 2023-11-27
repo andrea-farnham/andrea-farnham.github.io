@@ -5,9 +5,9 @@ date: last-modified
 
 [Back](index.qmd) 
 
-# An overview of the AFFORD projet {.unnumbered}
+# An overview of the AFFORD project {.unnumbered}
 
-<iframe src="<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTn6WHH_58YTQKZ0ChOoKLtZGwEHuE6fY72QvS-pIoCv0vHdIUzPmMvU0MYvWYDyw/embed?start=false&loop=false&delayms=3000" frameborder="0" width="800" height="600"  allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe> 
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTn6WHH_58YTQKZ0ChOoKLtZGwEHuE6fY72QvS-pIoCv0vHdIUzPmMvU0MYvWYDyw/embed?start=false&loop=false&delayms=3000" frameborder="0" width="800" height="600"  allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe> 
 
 
 
