@@ -48,6 +48,14 @@ website:
                 - contents/tutorials/Tutorial_Gitlab1_IntroGit.qmd
                 - contents/tutorials/Tutorial_Gitlab2_DataHub.qmd
                 - contents/tutorials/Tutorial_Gitlab3_CI.qmd
+                                
+            - section: "Filenames and Folder Structures"    
+              contents: 
+                - "coming soon..."            
+            - section: "Metadata"    
+              contents: 
+                - "coming soon..."
+                
                 
           
         - id: Templates

@@ -2,15 +2,13 @@
   {
     "listing": "/contents/presentations/index.html",
     "items": [
-      "/contents/presentations/Presentations_1.html"
+      "/contents/presentations/Presentations_1.html",
+      "/contents/presentations/Presentations_2.html"
     ]
   },
   {
     "listing": "/contents/reports/index.html",
-    "items": [
-      "/contents/reports/Reports_1.html",
-      "/contents/reports/Reports_2.html"
-    ]
+    "items": []
   },
   {
     "listing": "/contents/templates/index.html",

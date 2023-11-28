@@ -1,5 +1,7 @@
 ---
-listing: table
+listing:
+  type: table
+  fields: [title, date]
 ---
 
 # Presentations {.unnumbered}

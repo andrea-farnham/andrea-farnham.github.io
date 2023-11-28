@@ -73,7 +73,7 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
+      valueNames: ['listing-title','listing-date',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
       searchColumns: ["listing-date","listing-title","listing-author"],
     };
@@ -135,10 +135,6 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Reports</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../contents/tools/index.html" rel="" target="">
- <span class="menu-text">Tools</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="../../contents/about/about.html" rel="" target="">
  <span class="menu-text">About</span></a>
   </li>  
@@ -192,9 +188,6 @@ ul.task-list li input[type="checkbox"] {
          <option value="listing-title-sort" data-direction="asc">
           Title
         </option>
-         <option value="listing-author" data-direction="asc">
-          Author
-        </option>
      </select>
   </div>
     <div class="input-group input-group-sm quarto-listing-filter">
@@ -207,26 +200,28 @@ ul.task-list li input[type="checkbox"] {
 <thead>
 <tr>
 <th>
-<a class="sort" data-sort="listing-date-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Date</a>
-</th>
-<th>
 <a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
 </th>
 <th>
-<a class="sort" data-sort="listing-author" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Author</a>
+<a class="sort" data-sort="listing-date-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Date</a>
 </th>
 </tr>
 </thead>
 <tbody class="list">
-<tr data-index="0" data-listing-date-sort="1700670092000" data-listing-file-modified-sort="1700670092691" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-title-sort="AFFORD deliverables - ORD Hub" data-listing-filename-sort="Presentations_1.qmd">
+<tr data-index="0" data-listing-date-sort="1701073825000" data-listing-file-modified-sort="1701073825095" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-title-sort="An overview of the AFFORD project" data-listing-filename-sort="Presentations_1.qmd">
 <td>
-<span class="listing-date">Nov 22, 2023</span>
+<a href="../../contents/presentations/Presentations_1.html" class="title listing-title">An overview of the AFFORD project</a>
 </td>
 <td>
-<a href="../../contents/presentations/Presentations_1.html" class="title listing-title">AFFORD deliverables - ORD Hub</a>
+<span class="listing-date">Nov 27, 2023</span>
+</td>
+</tr>
+<tr data-index="1" data-listing-date-sort="1701084785000" data-listing-file-modified-sort="1701084785808" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-title-sort="Quick Notes on Integrating Version Control in Your Workflow using Repositories" data-listing-filename-sort="Presentations_2.qmd">
+<td>
+<a href="../../contents/presentations/Presentations_2.html" class="title listing-title">Quick Notes on Integrating Version Control in Your Workflow using Repositories</a>
 </td>
 <td>
-<span class="listing-author">G.Fraga Gonzalez</span>
+<span class="listing-date">Nov 27, 2023</span>
 </td>
 </tr>
 </tbody>

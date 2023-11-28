@@ -1,5 +1,5 @@
 ---
-title: Make a Simple Website with R and Quarto 
+title: Website Tutorial using R, Quarto and Gitlab Pages
 subtitle: Share data, code and dynamic reports in an easy-to-build website
 author: "G.Fraga Gonzalez"
 affiliation: "Center for Reproducible Science, UZH"
@@ -13,11 +13,7 @@ categories:
 description: A very easy set up of a free website where you can share your dynamic reports or other research outputs 
 ---
 
-
-```{=html}
-<iframe src="https://drive.google.com/file/d/1hw2ZIf7RuMHZ0xghZBfcnhe1sqvckiYr/preview"></iframe>
-```
-# Why is this relevant?
+# Why is this useful?
 
 Sharing documents, code, data and outputs with collaborators or to a broader audience is an essential step towards a good scientific practice. A website that can be managed by researchers themselves seems the ideal platform for efficient sharing. If this depends on IT support for maintenance it will not be practical for routine use, but learning web-development imposes an unnecessary and unacceptable burden to a scientist's already heavy workload.
 
@@ -49,7 +45,7 @@ Some terms that often pop up if you search for documentation on the tools above:
 -   *yaml* or *yml*: YAML is a human-readable language used for configuration files. Here we use a .yml file to configure our site and a yml header to add settings and metadata on top of each quarto file
 :::
 
-# Files needed
+# Files required
 
 At least you will need the following:
 
@@ -57,19 +53,21 @@ At least you will need the following:
 
 -   An **index.qmd** quarto markdown (suggested filename)
 
-# Step-by-step shorts
+# Step-by-step videos
 
 Assuming you have installed RStudio and quarto
 
-### 1. Make a website from scratch in 5 minutes
+## 1. Make a website from scratch in 5 minutes
 
 This 5 minutes video shows how easy it is to create the basic skeleton of the website.
 
 #### Step 1. Make a new folder for your website
-Inside the folder you will have the _quarto.yml file at the top level, then you can organize the quarto markdown files with the content in subfolders if you want. 
+
+Inside the folder you will have the \_quarto.yml file at the top level, then you can organize the quarto markdown files with the content in subfolders if you want.
 
 #### Step 2. Create a \_quarto.yml file with some settings
-They are given in plain text. Indentation counts. There are many examples online which would require minimal adjustments. A very simple example: 
+
+They are given in plain text. Indentation counts. There are many examples online which would require minimal adjustments. A very simple example:
 
 ``` {style="background-color: WhiteSmoke"}
 project:
@@ -84,21 +82,55 @@ format:
         author: Center for Reproducible Science
 ```
 
-"navbar" indicates a navigation bar on top of the website, but you can also define a "sidebar". In there you can refer to the different pages that will make up your site. In this example we just make an skeleton with the home page. 
+"navbar" indicates a navigation bar on top of the website, but you can also define a "sidebar". In there you can refer to the different pages that will make up your site. In this example we just make an skeleton with the home page.
 
-#### Step 3. Create a quarto  file and open it in R studio
+#### Step 3. Create a quarto file and open it in R studio
 
 We recommend creating an *R project file* in Rstudio to point at your web's folder and open your quarto files with that project open in Rstudio to avoid having future problems finding the path to your files.
 
 You can write plain text with markdown syntax on it and use a *yml* header delimited by `---` symbols to add metadata or settings
 
-#### Step 4. Click render
+#### Step 4. Click 'render' or type `quarto::quarto_render()` in Rstudio 
 
 That's it. A new subfolder named `_site` will be created with a file index.html which is your website
 
 ```{=html}
-<iframe src="https://drive.google.com/file/d/1hw2ZIf7RuMHZ0xghZBfcnhe1sqvckiYr/preview" width="800" height="600" allow="autoplay"></iframe>
-```
-### 2. Add pages and lists of pages within your website
 
-### 3. Host it for free using Gitlab pages
+<iframe src="https://drive.google.com/file/d/1hw2ZIf7RuMHZ0xghZBfcnhe1sqvckiYr/preview" width="100%" height="600" allow="autoplay" allowFullScreen="true"></iframe>
+```
+## 2. Add pages to your website
+
+Now we can just populate the pages by: 
+
+-   Adding `.qmd` files with content. A recommended organization is a page per folder. If a page will contain many subpages, you can set up a main file in that folder (e.g., index.qmd) with a yml header  (delimited by `---`) using the [listing](https://quarto.org/docs/websites/website-listings.html) option. This will automatically include all .qmd files without having the need to specifying the _quarto.yml file. 
+
+-   Adapting the `_quarto.yml` file to indicate which pages and where you want to show them (e.g., in a navigation bar on top, right or left or in a sidebar) 
+
+-   Click 'render' or type `quarto::quarto_render()` in Rstudio 
+
+An example of a folder structure of the website before rendering:
+``` {style="background-color: WhiteSmoke"}
+website
+│
+├── index.qmd               # (REQUIRED) Contents of home page 
+├── _quarto.yml             # (REQUIRED) Quarto project configurations 
+│
+├── Project.Rproj           # Recommended when working with R studio 
+│
+└── contents                # (suggested name) Contents of each page
+   ├── Page1                # Each page has a folder  
+   |   └──  index.qmd       # A page can be just one qmd
+   └── Page2                 
+       ├──  index.qmd       # We can set a page to list all other .qmds in folder     
+       └──  section1.qmd      
+```
+
+
+The following 5.5 minutes video shows a quick example. Read the subtitles for details.
+
+```{=html}
+<iframe src="https://drive.google.com/file/d/1mD29uL3-sBm17YqgrtwvyOsng9JEikRs/preview" width="100%" height="600" allow="autoplay" allowFullScreen="true"></iframe>
+```
+## 3. Host it for free using Gitlab pages
+
+ (...) First activate gitlab pages, then move the content to 'public' folder (...)

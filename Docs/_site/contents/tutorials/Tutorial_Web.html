@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="G.Fraga Gonzalez">
-<meta name="dcterms.date" content="2023-11-21">
+<meta name="dcterms.date" content="2023-11-27">
 <meta name="description" content="A very easy set up of a free website where you can share your dynamic reports or other research outputs">
 
-<title>Home - Make a Simple Website with R and Quarto</title>
+<title>Home - Website Tutorial using R, Quarto and Gitlab Pages</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -107,10 +107,6 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Reports</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../contents/tools/index.html" rel="" target="">
- <span class="menu-text">Tools</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="../../contents/about/about.html" rel="" target="">
  <span class="menu-text">About</span></a>
   </li>  
@@ -126,7 +122,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../contents/tutorials/Tutorial_Web.html">Data Sharing and Repositories</a></li><li class="breadcrumb-item"><a href="../../contents/tutorials/Tutorial_Web.html">Make a Simple Website with R and Quarto</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../contents/tutorials/Tutorial_Web.html">Data Sharing and Repositories</a></li><li class="breadcrumb-item"><a href="../../contents/tutorials/Tutorial_Web.html">Website Tutorial using R, Quarto and Gitlab Pages</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -156,7 +152,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../contents/tutorials/Tutorial_Web.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Make a Simple Website with R and Quarto</span></a>
+ <span class="menu-text">Website Tutorial using R, Quarto and Gitlab Pages</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -179,6 +175,34 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Filenames and Folder Structures</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">coming soon...</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">Metadata</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">coming soon...</span>
+  </li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -189,13 +213,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#why-is-this-relevant" id="toc-why-is-this-relevant" class="nav-link active" data-scroll-target="#why-is-this-relevant">Why is this relevant?</a></li>
+  <li><a href="#why-is-this-useful" id="toc-why-is-this-useful" class="nav-link active" data-scroll-target="#why-is-this-useful">Why is this useful?</a></li>
   <li><a href="#software-required" id="toc-software-required" class="nav-link" data-scroll-target="#software-required">Software required</a></li>
-  <li><a href="#files-needed" id="toc-files-needed" class="nav-link" data-scroll-target="#files-needed">Files needed</a></li>
-  <li><a href="#step-by-step-shorts" id="toc-step-by-step-shorts" class="nav-link" data-scroll-target="#step-by-step-shorts">Step-by-step shorts</a>
+  <li><a href="#files-required" id="toc-files-required" class="nav-link" data-scroll-target="#files-required">Files required</a></li>
+  <li><a href="#step-by-step-videos" id="toc-step-by-step-videos" class="nav-link" data-scroll-target="#step-by-step-videos">Step-by-step videos</a>
   <ul class="collapse">
   <li><a href="#make-a-website-from-scratch-in-5-minutes" id="toc-make-a-website-from-scratch-in-5-minutes" class="nav-link" data-scroll-target="#make-a-website-from-scratch-in-5-minutes">1. Make a website from scratch in 5 minutes</a></li>
-  <li><a href="#add-pages-and-lists-of-pages-within-your-website" id="toc-add-pages-and-lists-of-pages-within-your-website" class="nav-link" data-scroll-target="#add-pages-and-lists-of-pages-within-your-website">2. Add pages and lists of pages within your website</a></li>
+  <li><a href="#add-pages-to-your-website" id="toc-add-pages-to-your-website" class="nav-link" data-scroll-target="#add-pages-to-your-website">2. Add pages to your website</a></li>
   <li><a href="#host-it-for-free-using-gitlab-pages" id="toc-host-it-for-free-using-gitlab-pages" class="nav-link" data-scroll-target="#host-it-for-free-using-gitlab-pages">3. Host it for free using Gitlab pages</a></li>
   </ul></li>
   </ul>
@@ -206,7 +230,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Make a Simple Website with R and Quarto</h1>
+<h1 class="title">Website Tutorial using R, Quarto and Gitlab Pages</h1>
 <p class="subtitle lead">Share data, code and dynamic reports in an easy-to-build website</p>
   <div class="quarto-categories">
     <div class="quarto-category">Quarto</div>
@@ -236,7 +260,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 21, 2023</p>
+      <p class="date">November 27, 2023</p>
     </div>
   </div>
   
@@ -246,9 +270,8 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<iframe src="https://drive.google.com/file/d/1hw2ZIf7RuMHZ0xghZBfcnhe1sqvckiYr/preview"></iframe>
-<section id="why-is-this-relevant" class="level1">
-<h1>Why is this relevant?</h1>
+<section id="why-is-this-useful" class="level1">
+<h1>Why is this useful?</h1>
 <p>Sharing documents, code, data and outputs with collaborators or to a broader audience is an essential step towards a good scientific practice. A website that can be managed by researchers themselves seems the ideal platform for efficient sharing. If this depends on IT support for maintenance it will not be practical for routine use, but learning web-development imposes an unnecessary and unacceptable burden to a scientist’s already heavy workload.</p>
 <p>Here we describe an approach that uses free, open-source tools which are also widely-used for analytic purposes (e.g., data handling, statistics and visualizations). Thus, the requirements for learning web-specific tools is minimal. Importantly, this approach can be integrated in a research group’s routines to compile dynamic reports with documentation, code, analysis and outputs in a single-document. This makes each step easier to understand, facilitates troubleshooting and improves computational reproducibility <a href="https://zenodo.org/records/8354360">see CRS primer</a></p>
 </section>
@@ -281,19 +304,19 @@ Dictionary
 </div>
 </div>
 </section>
-<section id="files-needed" class="level1">
-<h1>Files needed</h1>
+<section id="files-required" class="level1">
+<h1>Files required</h1>
 <p>At least you will need the following:</p>
 <ul>
 <li><p>A <strong>_quarto.yml</strong> configuration file (required filename &amp; extension)</p></li>
 <li><p>An <strong>index.qmd</strong> quarto markdown (suggested filename)</p></li>
 </ul>
 </section>
-<section id="step-by-step-shorts" class="level1">
-<h1>Step-by-step shorts</h1>
+<section id="step-by-step-videos" class="level1">
+<h1>Step-by-step videos</h1>
 <p>Assuming you have installed RStudio and quarto</p>
-<section id="make-a-website-from-scratch-in-5-minutes" class="level3">
-<h3 class="anchored" data-anchor-id="make-a-website-from-scratch-in-5-minutes">1. Make a website from scratch in 5 minutes</h3>
+<section id="make-a-website-from-scratch-in-5-minutes" class="level2">
+<h2 class="anchored" data-anchor-id="make-a-website-from-scratch-in-5-minutes">1. Make a website from scratch in 5 minutes</h2>
 <p>This 5 minutes video shows how easy it is to create the basic skeleton of the website.</p>
 <section id="step-1.-make-a-new-folder-for-your-website" class="level4">
 <h4 class="anchored" data-anchor-id="step-1.-make-a-new-folder-for-your-website">Step 1. Make a new folder for your website</h4>
@@ -319,17 +342,41 @@ format:
 <p>We recommend creating an <em>R project file</em> in Rstudio to point at your web’s folder and open your quarto files with that project open in Rstudio to avoid having future problems finding the path to your files.</p>
 <p>You can write plain text with markdown syntax on it and use a <em>yml</em> header delimited by <code>---</code> symbols to add metadata or settings</p>
 </section>
-<section id="step-4.-click-render" class="level4">
-<h4 class="anchored" data-anchor-id="step-4.-click-render">Step 4. Click render</h4>
+<section id="step-4.-click-render-or-type-quartoquarto_render-in-rstudio" class="level4">
+<h4 class="anchored" data-anchor-id="step-4.-click-render-or-type-quartoquarto_render-in-rstudio">Step 4. Click ‘render’ or type <code>quarto::quarto_render()</code> in Rstudio</h4>
 <p>That’s it. A new subfolder named <code>_site</code> will be created with a file index.html which is your website</p>
-<iframe src="https://drive.google.com/file/d/1hw2ZIf7RuMHZ0xghZBfcnhe1sqvckiYr/preview" width="800" height="600" allow="autoplay"></iframe>
+
+<iframe src="https://drive.google.com/file/d/1hw2ZIf7RuMHZ0xghZBfcnhe1sqvckiYr/preview" width="100%" height="600" allow="autoplay" allowfullscreen="true"></iframe>
 </section>
 </section>
-<section id="add-pages-and-lists-of-pages-within-your-website" class="level3">
-<h3 class="anchored" data-anchor-id="add-pages-and-lists-of-pages-within-your-website">2. Add pages and lists of pages within your website</h3>
+<section id="add-pages-to-your-website" class="level2">
+<h2 class="anchored" data-anchor-id="add-pages-to-your-website">2. Add pages to your website</h2>
+<p>Now we can just populate the pages by:</p>
+<ul>
+<li><p>Adding <code>.qmd</code> files with content. A recommended organization is a page per folder. If a page will contain many subpages, you can set up a main file in that folder (e.g., index.qmd) with a yml header (delimited by <code>---</code>) using the <a href="https://quarto.org/docs/websites/website-listings.html">listing</a> option. This will automatically include all .qmd files without having the need to specifying the _quarto.yml file.</p></li>
+<li><p>Adapting the <code>_quarto.yml</code> file to indicate which pages and where you want to show them (e.g., in a navigation bar on top, right or left or in a sidebar)</p></li>
+<li><p>Click ‘render’ or type <code>quarto::quarto_render()</code> in Rstudio</p></li>
+</ul>
+<p>An example of a folder structure of the website before rendering:</p>
+<pre style="background-color: WhiteSmoke"><code>website
+│
+├── index.qmd               # (REQUIRED) Contents of home page 
+├── _quarto.yml             # (REQUIRED) Quarto project configurations 
+│
+├── Project.Rproj           # Recommended when working with R studio 
+│
+└── contents                # (suggested name) Contents of each page
+   ├── Page1                # Each page has a folder  
+   |   └──  index.qmd       # A page can be just one qmd
+   └── Page2                 
+       ├──  index.qmd       # We can set a page to list all other .qmds in folder     
+       └──  section1.qmd      </code></pre>
+<p>The following 5.5 minutes video shows a quick example. Read the subtitles for details.</p>
+<iframe src="https://drive.google.com/file/d/1mD29uL3-sBm17YqgrtwvyOsng9JEikRs/preview" width="100%" height="600" allow="autoplay" allowfullscreen="true"></iframe>
 </section>
-<section id="host-it-for-free-using-gitlab-pages" class="level3">
-<h3 class="anchored" data-anchor-id="host-it-for-free-using-gitlab-pages">3. Host it for free using Gitlab pages</h3>
+<section id="host-it-for-free-using-gitlab-pages" class="level2">
+<h2 class="anchored" data-anchor-id="host-it-for-free-using-gitlab-pages">3. Host it for free using Gitlab pages</h2>
+<p>(…) First activate gitlab pages, then move the content to ‘public’ folder (…)</p>
 
 
 </section>
