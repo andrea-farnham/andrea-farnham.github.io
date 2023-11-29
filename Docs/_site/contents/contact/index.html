@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="G.Fraga Gonzalez &amp; E. Furrer">
-<meta name="dcterms.date" content="2023-11-27">
 
-<title>Home - Gitlab Tutorial 3. Continuous Integration (CI)</title>
+<title>Home – index</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,7 +30,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../contents/tutorials/Tutorial_Gitlab2_DataHub.html" rel="prev">
 <link href="../../assets/logos/Logo_CRS_col.svg" rel="icon" type="image/svg+xml">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -68,7 +65,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-sidebar docked nav-fixed">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -89,7 +86,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../../contents/tutorials/index.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="../../contents/tutorials/index.html" rel="" target="">
  <span class="menu-text">Tutorials</span></a>
   </li>  
   <li class="nav-item">
@@ -105,7 +102,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../contents/contact/index.html" rel="" target="">
+    <a class="nav-link active" href="../../contents/contact/index.html" rel="" target="" aria-current="page">
  <span class="menu-text">Let us Know</span></a>
   </li>  
 </ul>
@@ -115,226 +112,31 @@ ul.task-list li input[type="checkbox"] {
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../contents/tutorials/Tutorial_Web.html">Data Sharing and Repositories</a></li><li class="breadcrumb-item"><a href="../../contents/tutorials/Tutorial_Gitlab3_CI.html">Gitlab Tutorial 3. Continuous Integration (CI)</a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
-    </div>
-  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../contents/tutorials/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Tutorials</span></a>
-  </div>
-</li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
- <span class="menu-text">Data Sharing and Repositories</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../contents/tutorials/Tutorial_Web.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Website Tutorial using R, Quarto and Gitlab Pages</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../contents/tutorials/Tutorial_Gitlab1_IntroGit.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Gitlab Tutorial 1. Step-by-Step Guide to Git and Gitlab</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../contents/tutorials/Tutorial_Gitlab2_DataHub.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Gitlab Tutorial 2. Create and Update a Data Hub</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../contents/tutorials/Tutorial_Gitlab3_CI.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Gitlab Tutorial 3. Continuous Integration (CI)</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
- <span class="menu-text">Filenames and Folder Structures</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
- <span class="menu-text">coming soon...</span>
-  </li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
- <span class="menu-text">Metadata</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
- <span class="menu-text">coming soon...</span>
-  </li>
-      </ul>
-  </li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#why-is-this-useful" id="toc-why-is-this-useful" class="nav-link active" data-scroll-target="#why-is-this-useful">Why is this useful?</a></li>
-  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a>
-  <ul class="collapse">
-  <li><a href="#gitlab-runner" id="toc-gitlab-runner" class="nav-link" data-scroll-target="#gitlab-runner">1. Gitlab Runner</a></li>
-  <li><a href="#the-.gitlab-ci.yml-file" id="toc-the-.gitlab-ci.yml-file" class="nav-link" data-scroll-target="#the-.gitlab-ci.yml-file">2. The .gitlab-ci.yml file</a></li>
-  </ul></li>
+  <li><a href="#let-us-know" id="toc-let-us-know" class="nav-link active" data-scroll-target="#let-us-know">Let us know</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Gitlab Tutorial 3. Continuous Integration (CI)</h1>
-<p class="subtitle lead">Additional details on basic customization of CI pipelines</p>
-  <div class="quarto-categories">
-    <div class="quarto-category">Code</div>
-    <div class="quarto-category">Gitlab</div>
-    <div class="quarto-category">Advanced</div>
-  </div>
-  </div>
 
 
-
-<div class="quarto-title-meta">
-
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>G.Fraga Gonzalez &amp; E. Furrer </p>
-          </div>
-  </div>
-    
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">November 27, 2023</p>
-    </div>
-  </div>
-  
-    
-  </div>
-  
-
-</header>
-
-<p><a href="../../contents/tutorials/index.html">Back</a></p>
-<section id="why-is-this-useful" class="level1">
-<h1>Why is this useful?</h1>
-<p>We can make use of the continuous integration (CI) feature in systems like Gitlab to improved <strong>interoperability</strong> and <strong>reproducibility</strong>. CI allows to use our Gitlab repository to run scripts directly in the web browser, without the need to download any software. For example, it allows to automatically update our website or data hub whenever a change in the repository is detected. Thus, different users can edit and conduct analysis in the same software environment and from the web-browser. This tutorial presents a simple use case of this feature.</p>
-</section>
-<section id="overview" class="level1">
-<h1>Overview</h1>
-<p><strong>Continuous integration (CI)</strong> refers to the process of automating the integration of changes made by different developers working in the code. In the context of using Gitlab pages as a data hub, the CI will integrating changes in the metadata table and/or images into the resulting HTML. That is, it will update our website so that it shows the last version of our metadata and include any change we want in its content. The advantage is that users do not require to install any software dependencies (like R) and <strong>changes</strong> can be implemented <strong>using the browser</strong>, from any computer.</p>
-<p>Simplifying this There are 2 main elements we need to set up for Gitlab CI:</p>
-<section id="gitlab-runner" class="level3">
-<h3 class="anchored" data-anchor-id="gitlab-runner">1. Gitlab Runner</h3>
-<p>This is the service that will execute whatever operation you want to do in your CI pipeline. In this case we will use a <code>shared-runner</code> that is supported by the UZH. We only have this if we have our gitlab repository as part of the <a href="https://gitlab.uzh.ch/">UZH Gitlab</a>. We can also use our own runners but that is more complicated and beyond the scope of this tutorial (see <a href="https://docs.gitlab.com/runner/">Gitlab official documentation</a>)</p>
-<p>You can enable the shared-runner in your repository Settings&gt; CI/CD &gt; Runners. If you are using the UZH Gitlab there should be an available runner listed on the Shared runners section</p>
-<p><img src="images/GitlabRunner-01.gif" class="img-fluid"></p>
-</section>
-<section id="the-.gitlab-ci.yml-file" class="level3">
-<h3 class="anchored" data-anchor-id="the-.gitlab-ci.yml-file">2. The .gitlab-ci.yml file</h3>
-<p>This file defines a <em>pipeline</em> which will run every time we make a change in the repository. A pipeline can have one or multiple jobs defined by a script (see complete documentation (here)[https://docs.gitlab.com/ee/ci/]. In the following example the pipeline has one job: rendering the website using R Quarto markdown files (see our tutorial on making a website with R quarto from scratch).</p>
-<p>There are examples and <a href="https://docs.gitlab.com/ee/user/project/pages/getting_started/pages_ci_cd_template.html">Continous Integration templates of this file</a> online. They all need an <strong>image</strong> of a software environment, some <strong>jobs</strong> defined by a script and some <strong>artifacts</strong> that are output files from the jobs. The example below uses an image from and it is nased on a template taken from <a href="https://rocker-project.org/">Rocker</a>, which is a project offering <a href="https://www.docker.com/resources/what-container/#:~:text=A%20Docker%20container%20image%20is,tools%2C%20system%20libraries%20and%20settings">docker containers</a> for R environments. Broadly speaking, we can think of a docker container as a light-weight virtual machine and of a <em>docker image</em> as a snapshot of a virtual machine, what defines its software contents.</p>
-<p>Below we show and describe the following example:</p>
-<pre style="background: whitesmoke"><code>image: rocker/verse:4.3
-
-pages:
-  stage: deploy
-  before_script:
-   - R -e "install.packages('quarto')" 
-   - R -e "install.packages('kableExtra')" 
-   - R -e "install.packages('DT')"  
-   - mkdir -p public/SPring/Images
-   - cp _data/SPring/Images/* public/SPring/Images/   
-  
-  script:   
-   - cd _scripts
-   - R -e "baseDir &lt;- getwd(); quarto::quarto_render('*.qmd')"
-   - mv ./_site/* ../public/ 
-  
-  artifacts:    
-    paths:
-    - public    
-     
-  only:
-  - master
-  interruptible: true</code></pre>
-<section id="image" class="level4">
-<h4 class="anchored" data-anchor-id="image">Image</h4>
-<ul>
-<li>The first part loads a <code>docker container image</code>, similar to a snapshot of a virtual machine, which will define a software environment.</li>
-</ul>
-</section>
-<section id="pages" class="level4">
-<h4 class="anchored" data-anchor-id="pages">Pages</h4>
-<ul>
-<li><p>We define different <code>stages</code> (<em>deploy</em> is the main, but some <em>tests</em> stages are usually included as well).</p></li>
-<li><p>Because our image did not include some R packages that we need, we install them in the <code>before the script</code> section. The following lines after installing packages are to create a new folder with copies of the pictures that will be rendered in the website, in the ‘public’ folder (see below, this is the folder where the website html needs to be stored).</p></li>
-<li><p>Then the <code>script</code> to actually do the job. First for convenience here we set the _scripts folder as our current directory. Then we run the R code using the R quarto package to build a website by using the command quarto_render indicating all .qmd files in the folder. In our case the .qmd contain text and code to read tables with metadata (see our tutorial on how to make a website with Quarto). The <code>quarto_render()</code> command will automatically create a <code>_site</code> folder with the website. If we change a table or the text in one of those files, this will run again and generate the site again.</p></li>
-<li><p>We then move the content of the website to the <em>public folder</em>. This is necessary as Gitlab pages will only display the content of that folder</p></li>
-</ul>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Although it is called ‘public’ it does not mean that the page will be publicly available. Gitlab allows pages in private repository so that only people with access can see the content.</p>
-</div>
-</div>
-<ul>
-<li>The job <code>artifacts</code> are the outputs of the job. In this example, the website HTMLs rendered by quarto. We define the path where we want those outputs as the ‘public’ folder for it to work with Gitlab pages</li>
-</ul>
+<section id="let-us-know" class="level1 unnumbered">
+<h1 class="unnumbered">Let us know</h1>
+<iframe width="640px" height="800px" src="https://forms.office.com/Pages/ResponsePage.aspx?id=2zjkx2LkIkypCsNYsWmAs_wTPN1qZPBGjqGMnEDkg1FURTk1Rkc3T1BGWFpJNDRJWVNZRkJZN081QS4u&amp;embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" msallowfullscreen="">
+</iframe>
 
 
-</section>
-</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
@@ -634,15 +436,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../../contents/tutorials/Tutorial_Gitlab2_DataHub.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Gitlab Tutorial 2. Create and Update a Data Hub</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

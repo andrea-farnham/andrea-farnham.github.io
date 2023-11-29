@@ -21,6 +21,13 @@
     "text": "The reproducibility of scientific findings is crucial for the credibility of empirical research. The objective of the Center for Reproducible Science is to train the next generation of researchers in good research practices, to develop novel methodology related to reproducibility and replicability, and to improve the quality of scientific investigation using meta-science.\nThe CRS is a competence center supported by the Vice President Research and by the Faculties of Medicine (MeF, leading house), Science (MNF), Business, Economics and Informatics (WWF), Arts and Social Sciences (PhF), Law (RWF), and Vetsuisse Faculty (VSF)."
   },
   {
+    "objectID": "contents/contact/index.html",
+    "href": "contents/contact/index.html",
+    "title": "Let us know",
+    "section": "",
+    "text": "Let us know\n\n\n\n\n\n\n Back to top"
+  },
+  {
     "objectID": "contents/presentations/index.html",
     "href": "contents/presentations/index.html",
     "title": "Presentations",
@@ -196,17 +203,17 @@
     "text": "2. Add pages to your website\nNow we can just populate the pages by:\n\nAdding .qmd files with content. A recommended organization is a page per folder. If a page will contain many subpages, you can set up a main file in that folder (e.g., index.qmd) with a yml header (delimited by ---) using the listing option. This will automatically include all .qmd files without having the need to specifying the _quarto.yml file.\nAdapting the _quarto.yml file to indicate which pages and where you want to show them (e.g., in a navigation bar on top, right or left or in a sidebar)\nClick ‘render’ or type quarto::quarto_render() in Rstudio\n\nAn example of a folder structure of the website before rendering:\nwebsite\n│\n├── index.qmd               # (REQUIRED) Contents of home page \n├── _quarto.yml             # (REQUIRED) Quarto project configurations \n│\n├── Project.Rproj           # Recommended when working with R studio \n│\n└── contents                # (suggested name) Contents of each page\n   ├── Page1                # Each page has a folder  \n   |   └──  index.qmd       # A page can be just one qmd\n   └── Page2                 \n       ├──  index.qmd       # We can set a page to list all other .qmds in folder     \n       └──  section1.qmd      \nThe following 5.5 minutes video shows a quick example. Read the subtitles for details."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "AFFORD",
-    "section": "",
-    "text": "This site compiles resources for Open Research Data management curated and developed by the Center of Reproducible Science of the University of Zurich for the SwissUniversities project AFFORD: A Framework for Avoiding Open Research Data Dump.\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\nLast edited: Mon Nov 27 17:47:46 2023\n\n\n\n Back to top"
-  },
-  {
     "objectID": "contents/tutorials/Tutorial_Web.html#host-it-for-free-using-gitlab-pages",
     "href": "contents/tutorials/Tutorial_Web.html#host-it-for-free-using-gitlab-pages",
     "title": "Website Tutorial using R, Quarto and Gitlab Pages",
     "section": "3. Host it for free using Gitlab pages",
     "text": "3. Host it for free using Gitlab pages\n(…) First activate gitlab pages, then move the content to ‘public’ folder (…)"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "AFFORD",
+    "section": "",
+    "text": "This site compiles resources for Open Research Data management curated and developed by the Center of Reproducible Science of the University of Zurich for the SwissUniversities project AFFORD: A Framework for Avoiding Open Research Data Dump.\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\nLast edited: Mon Nov 27 17:47:46 2023\n\n\n\n Back to top"
   }
 ]
