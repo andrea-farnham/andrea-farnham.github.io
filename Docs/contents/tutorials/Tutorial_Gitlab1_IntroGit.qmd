@@ -12,9 +12,9 @@ categories:
 
 # Why is this useful?
 
-**Collaborative research** requires a **version control** system for multiple files as researchers need to be able to track changes, to revise change history and to share code, documentation and metadata. Our [CRS primer on Digital Collaboration ](https://zenodo.org/records/8354375) further describes available tools and their importance to good research practices.  
-
-> The *de facto* standard set of tools for source control is called *Git*. It is an open-source system created by Linus Torvalds in 2015.   
+> **Collaborative research** requires a **version control** system for multiple files as researchers need to be able to track changes, to revise change history and to share code, documentation and metadata. Our [CRS primer on Digital Collaboration](https://zenodo.org/records/8354375) further describes the available tools and their relevance to good research practices.
+>
+> This tutorial is based on *Git* as it is the *de facto* standard set of tools for source control.
 
 # Overview
 

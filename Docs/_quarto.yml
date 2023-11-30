@@ -20,7 +20,8 @@ website:
        
     
     navbar:        
-        logo:  assets/logos/Logo_AFFORD_col.svg        
+        logo:  assets/logos/Logo_AFFORD_col.svg    
+        background: '#1e5e50'  #light
         collapse-below: lg
         right:                  
           - text: "Tutorials"            
@@ -39,22 +40,22 @@ website:
     sidebar:          
         - id: Tutorials
           title: "Tutorials"                  
-          background: light
+          background:  '#e8faf6'
           style: "docked"       
           #href:  contents/tutorials/index.qmd      
           contents:
             - contents/tutorials/index.qmd
-            - section: "Data Sharing and Repositories"
+            - section: "🌍 **Data Sharing and Repositories**"              
               contents: 
                 - contents/tutorials/Tutorial_Web.qmd
                 - contents/tutorials/Tutorial_Gitlab1_IntroGit.qmd
                 - contents/tutorials/Tutorial_Gitlab2_DataHub.qmd
                 - contents/tutorials/Tutorial_Gitlab3_CI.qmd
                                 
-            - section: "Filenames and Folder Structures"    
+            - section: "📂 **Filenames and folder structures**"    
               contents: 
                 - "coming soon..."            
-            - section: "Metadata"    
+            - section: "🏷 **Metadata**"    
               contents: 
                 - "coming soon..."
                 
@@ -67,8 +68,7 @@ website:
         - id: Presentations
           title: "Presentations"
           style: "docked"          
-          contents: contents/presentations/*.qmd 
-          
+          contents: contents/presentations/*.qmd          
           
         #- id: Reports
           #title: "Reports"          
@@ -91,8 +91,7 @@ format:
         grid:
           sidebar-width: 350px
         theme:
-            light:
-                - cosmo
+            light: cosmo
             dark: solar
         highlight-style: a11y
         code-link: true

@@ -12,7 +12,7 @@ categories:
 [Back](index.qmd)
 
 # Why is this useful? 
-We can make use of the continuous integration (CI) feature in systems like Gitlab to improved **interoperability** and **reproducibility**. CI allows to use our Gitlab repository to run scripts directly in the web browser, without the need to download any software. For example, it allows to automatically update our website or data hub whenever a change in the repository is detected. Thus, different users can edit and conduct analysis in the same software environment and from the web-browser. This tutorial presents a simple use case of this feature.   
+>We can make use of the continuous integration (CI) feature in systems like Gitlab to improved **interoperability** and **reproducibility**. CI allows to use our Gitlab repository to run scripts directly in the web browser, without the need to download any software. For example, it allows to automatically update our website or data hub whenever a change in the repository is detected. Thus, different users can edit and conduct analysis in the same software environment and from the web-browser. This tutorial presents a simple use case of this feature.   
 
 
 # Overview

@@ -1,89 +1,5 @@
 [
   {
-    "objectID": "contents/about/about.html",
-    "href": "contents/about/about.html",
-    "title": "About",
-    "section": "",
-    "text": "A Framework for Avoiding the Open Research Data Dump.\n\n\n\n\nThe project AFFORD aims at designing a sustainable support framework to lower the barriers to publishing data and other research outputs in an accessible form by bundling know-how, workflows, and tools under the umbrella of one organizational entity. It is a collaboration between the InterfaceGroup and the Center for Reproducible Science of the University of Zurich. It uses the Sinergia project Fluid Dynamics of the central nervous system as a reference project and accompanies this project in the full cycle of Open Research Data (ORD) generation from experiment planning to publishing. This project-based, data-driven approach will help the framework reach a sufficient level of maturity before it is made available to all university researchers.\n\nCode library(collapsibleTree)\n\n # Read data \n AFFORD &lt;- read.csv('AFFORD_tree.csv')\n\n # Unique lenghts for coloring  \n # Plot dendrogram \n collapsibleTree(AFFORD, \n                root = 'AFFORD deliverables',\n                hierarchy = c(\"Topic\", 'Output','Description'),  \n                fill = c('forestgreen',\n                 rep(\"darkorange\", length(unique(AFFORD$Topic)[!is.na(unique(AFFORD$Topic))])), \n                 rep(\"gold\", length(unique(AFFORD$Output)[!is.na(unique(AFFORD$Output))])),\n                 rep(\"papayawhip\", length(unique(AFFORD$Description)[!is.na(unique(AFFORD$Description))]))\n                  ), \n                 collapsed = FALSE)\n\n\n\n\n\n\n\nThe reproducibility of scientific findings is crucial for the credibility of empirical research. The objective of the Center for Reproducible Science is to train the next generation of researchers in good research practices, to develop novel methodology related to reproducibility and replicability, and to improve the quality of scientific investigation using meta-science.\nThe CRS is a competence center supported by the Vice President Research and by the Faculties of Medicine (MeF, leading house), Science (MNF), Business, Economics and Informatics (WWF), Arts and Social Sciences (PhF), Law (RWF), and Vetsuisse Faculty (VSF)."
-  },
-  {
-    "objectID": "contents/about/about.html#the-afford-project",
-    "href": "contents/about/about.html#the-afford-project",
-    "title": "About",
-    "section": "",
-    "text": "A Framework for Avoiding the Open Research Data Dump.\n\n\n\n\nThe project AFFORD aims at designing a sustainable support framework to lower the barriers to publishing data and other research outputs in an accessible form by bundling know-how, workflows, and tools under the umbrella of one organizational entity. It is a collaboration between the InterfaceGroup and the Center for Reproducible Science of the University of Zurich. It uses the Sinergia project Fluid Dynamics of the central nervous system as a reference project and accompanies this project in the full cycle of Open Research Data (ORD) generation from experiment planning to publishing. This project-based, data-driven approach will help the framework reach a sufficient level of maturity before it is made available to all university researchers.\n\nCode library(collapsibleTree)\n\n # Read data \n AFFORD &lt;- read.csv('AFFORD_tree.csv')\n\n # Unique lenghts for coloring  \n # Plot dendrogram \n collapsibleTree(AFFORD, \n                root = 'AFFORD deliverables',\n                hierarchy = c(\"Topic\", 'Output','Description'),  \n                fill = c('forestgreen',\n                 rep(\"darkorange\", length(unique(AFFORD$Topic)[!is.na(unique(AFFORD$Topic))])), \n                 rep(\"gold\", length(unique(AFFORD$Output)[!is.na(unique(AFFORD$Output))])),\n                 rep(\"papayawhip\", length(unique(AFFORD$Description)[!is.na(unique(AFFORD$Description))]))\n                  ), \n                 collapsed = FALSE)"
-  },
-  {
-    "objectID": "contents/about/about.html#the-crs",
-    "href": "contents/about/about.html#the-crs",
-    "title": "About",
-    "section": "",
-    "text": "The reproducibility of scientific findings is crucial for the credibility of empirical research. The objective of the Center for Reproducible Science is to train the next generation of researchers in good research practices, to develop novel methodology related to reproducibility and replicability, and to improve the quality of scientific investigation using meta-science.\nThe CRS is a competence center supported by the Vice President Research and by the Faculties of Medicine (MeF, leading house), Science (MNF), Business, Economics and Informatics (WWF), Arts and Social Sciences (PhF), Law (RWF), and Vetsuisse Faculty (VSF)."
-  },
-  {
-    "objectID": "contents/contact/index.html",
-    "href": "contents/contact/index.html",
-    "title": "Let us know",
-    "section": "",
-    "text": "Let us know\n\n\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "contents/presentations/index.html",
-    "href": "contents/presentations/index.html",
-    "title": "Presentations",
-    "section": "",
-    "text": "Presentations\nCollection of presentations related to AFFORD project\n\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nTitle\n\n\nDate\n\n\n\n\n\n\nAn overview of the AFFORD project\n\n\nNov 27, 2023\n\n\n\n\nQuick Notes on Integrating Version Control in Your Workflow using Repositories\n\n\nNov 27, 2023\n\n\n\n\n\n\nNo matching items\n\n Back to top"
-  },
-  {
-    "objectID": "contents/presentations/Presentations_1.html",
-    "href": "contents/presentations/Presentations_1.html",
-    "title": "An overview of the AFFORD project",
-    "section": "",
-    "text": "Back\n\nAn overview of the AFFORD project\n\n\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "contents/presentations/Presentations_2.html",
-    "href": "contents/presentations/Presentations_2.html",
-    "title": "Quick Notes on Integrating Version Control in Your Workflow using Repositories",
-    "section": "",
-    "text": "Back\n\nQuick Notes on Integrating Version Control in Your Workflow using Repositories\n\n\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "contents/reports/index.html",
-    "href": "contents/reports/index.html",
-    "title": "Reports",
-    "section": "",
-    "text": "Reports\nCollection of reports from the AFFORD project\n\n\n\n\n\n\n\n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
-  },
-  {
-    "objectID": "contents/templates/index.html",
-    "href": "contents/templates/index.html",
-    "title": "Templates",
-    "section": "",
-    "text": "Templates\nA series of useful starter-templates\n\n\n\n\n\n\n\n    \n      \n      \n    \n\n\n\n\n\n\nTitle\n\n\nSubtitle\n\n\nDate\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
-  },
-  {
-    "objectID": "contents/tools/index.html",
-    "href": "contents/tools/index.html",
-    "title": "Tools",
-    "section": "",
-    "text": "Tools\nThis collection of interactive tools is work in progress…\n\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nExample 1 Shinylive in Quarto\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items\n\n Back to top"
-  },
-  {
-    "objectID": "contents/tools/Tools_1.html",
-    "href": "contents/tools/Tools_1.html",
-    "title": "Example 1 Shinylive in Quarto",
-    "section": "",
-    "text": "This might take a while to load….\n#| standalone: true\n#| viewerHeight: 420\n  \nui &lt;- fluidPage(\n  sidebarLayout(\n    sidebarPanel(\n      fileInput(\"file1\", \"Choose CSV File\", accept = \".csv\"),\n      checkboxInput(\"header\", \"Header\", TRUE)\n    ),\n    mainPanel(\n      tableOutput(\"contents\")\n    )\n  )\n)\n\nserver &lt;- function(input, output) {\n  output$contents &lt;- renderTable({\n    file &lt;- input$file1\n    ext &lt;- tools::file_ext(file$datapath)\n    \n    req(file)\n    validate(need(ext == \"csv\", \"Please upload a csv file\"))\n    \n    read.csv(file$datapath, header = input$header)\n  })\n}\n\nshinyApp(ui, server)\n \n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "contents/tutorials/index.html",
-    "href": "contents/tutorials/index.html",
-    "title": "Tutorials",
-    "section": "",
-    "text": "A series of practical tutorials for managing Open Research Data. Use the table below or the left side bar to navigate through all tutorials."
-  },
-  {
     "objectID": "contents/tutorials/Tutorial_Gitlab1_IntroGit.html",
     "href": "contents/tutorials/Tutorial_Gitlab1_IntroGit.html",
     "title": "Gitlab Tutorial 1. Step-by-Step Guide to Git and Gitlab",
@@ -117,6 +33,62 @@
     "title": "Gitlab Tutorial 1. Step-by-Step Guide to Git and Gitlab",
     "section": "2.2 Cloning with Git (using command line)",
     "text": "2.2 Cloning with Git (using command line)\nGit refers to this version control system used in Gitlab, but you can also manage the repositories locally downloading the program Git SCM, a free and open source distributed version control system. It is light and works across operating systems, and also has a very basic graphical interface. But it is mostly designed for working through a terminal. As in Github-desktop you use this to do the main Git actions of pulling, committing and pushing changes between local and remote repositories."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "AFFORD",
+    "section": "",
+    "text": "This site compiles resources for Open Research Data management curated and developed by the Center of Reproducible Science of the University of Zurich for the SwissUniversities project AFFORD: A Framework for Avoiding Open Research Data Dump.\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\nLast edited: Thu Nov 30 09:16:09 2023\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "contents/about/about.html",
+    "href": "contents/about/about.html",
+    "title": "About",
+    "section": "",
+    "text": "A Framework for Avoiding the Open Research Data Dump.\n\n\n\n\nThe project AFFORD aims at designing a sustainable support framework to lower the barriers to publishing data and other research outputs in an accessible form by bundling know-how, workflows, and tools under the umbrella of one organizational entity. It is a collaboration between the InterfaceGroup and the Center for Reproducible Science of the University of Zurich. It uses the Sinergia project Fluid Dynamics of the central nervous system as a reference project and accompanies this project in the full cycle of Open Research Data (ORD) generation from experiment planning to publishing. This project-based, data-driven approach will help the framework reach a sufficient level of maturity before it is made available to all university researchers.\n\nCode library(collapsibleTree)\n\n # Read data \n AFFORD &lt;- read.csv('AFFORD_tree.csv')\n\n # Unique lenghts for coloring  \n # Plot dendrogram \n collapsibleTree(AFFORD, \n                root = 'AFFORD deliverables',\n                hierarchy = c(\"Topic\", 'Output','Description'),  \n                fill = c('forestgreen',\n                 rep(\"darkorange\", length(unique(AFFORD$Topic)[!is.na(unique(AFFORD$Topic))])), \n                 rep(\"gold\", length(unique(AFFORD$Output)[!is.na(unique(AFFORD$Output))])),\n                 rep(\"papayawhip\", length(unique(AFFORD$Description)[!is.na(unique(AFFORD$Description))]))\n                  ), \n                 collapsed = FALSE)\n\n\n\n\n\n\n\nThe reproducibility of scientific findings is crucial for the credibility of empirical research. The objective of the Center for Reproducible Science is to train the next generation of researchers in good research practices, to develop novel methodology related to reproducibility and replicability, and to improve the quality of scientific investigation using meta-science.\nThe CRS is a competence center supported by the Vice President Research and by the Faculties of Medicine (MeF, leading house), Science (MNF), Business, Economics and Informatics (WWF), Arts and Social Sciences (PhF), Law (RWF), and Vetsuisse Faculty (VSF)."
+  },
+  {
+    "objectID": "contents/about/about.html#the-afford-project",
+    "href": "contents/about/about.html#the-afford-project",
+    "title": "About",
+    "section": "",
+    "text": "A Framework for Avoiding the Open Research Data Dump.\n\n\n\n\nThe project AFFORD aims at designing a sustainable support framework to lower the barriers to publishing data and other research outputs in an accessible form by bundling know-how, workflows, and tools under the umbrella of one organizational entity. It is a collaboration between the InterfaceGroup and the Center for Reproducible Science of the University of Zurich. It uses the Sinergia project Fluid Dynamics of the central nervous system as a reference project and accompanies this project in the full cycle of Open Research Data (ORD) generation from experiment planning to publishing. This project-based, data-driven approach will help the framework reach a sufficient level of maturity before it is made available to all university researchers.\n\nCode library(collapsibleTree)\n\n # Read data \n AFFORD &lt;- read.csv('AFFORD_tree.csv')\n\n # Unique lenghts for coloring  \n # Plot dendrogram \n collapsibleTree(AFFORD, \n                root = 'AFFORD deliverables',\n                hierarchy = c(\"Topic\", 'Output','Description'),  \n                fill = c('forestgreen',\n                 rep(\"darkorange\", length(unique(AFFORD$Topic)[!is.na(unique(AFFORD$Topic))])), \n                 rep(\"gold\", length(unique(AFFORD$Output)[!is.na(unique(AFFORD$Output))])),\n                 rep(\"papayawhip\", length(unique(AFFORD$Description)[!is.na(unique(AFFORD$Description))]))\n                  ), \n                 collapsed = FALSE)"
+  },
+  {
+    "objectID": "contents/about/about.html#the-crs",
+    "href": "contents/about/about.html#the-crs",
+    "title": "About",
+    "section": "",
+    "text": "The reproducibility of scientific findings is crucial for the credibility of empirical research. The objective of the Center for Reproducible Science is to train the next generation of researchers in good research practices, to develop novel methodology related to reproducibility and replicability, and to improve the quality of scientific investigation using meta-science.\nThe CRS is a competence center supported by the Vice President Research and by the Faculties of Medicine (MeF, leading house), Science (MNF), Business, Economics and Informatics (WWF), Arts and Social Sciences (PhF), Law (RWF), and Vetsuisse Faculty (VSF)."
+  },
+  {
+    "objectID": "contents/presentations/index.html",
+    "href": "contents/presentations/index.html",
+    "title": "Presentations",
+    "section": "",
+    "text": "Presentations\nCollection of presentations related to AFFORD project\n\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nTitle\n\n\nDate\n\n\n\n\n\n\nAn overview of the AFFORD project\n\n\nNov 27, 2023\n\n\n\n\nQuick Notes on Integrating Version Control in Your Workflow using Repositories\n\n\nNov 27, 2023\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+  },
+  {
+    "objectID": "contents/templates/index.html",
+    "href": "contents/templates/index.html",
+    "title": "Templates",
+    "section": "",
+    "text": "Templates\nA series of useful starter-templates\n\n\n\n\n\n\n\n    \n      \n      \n    \n\n\n\n\n\n\nTitle\n\n\nSubtitle\n\n\nDate\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+  },
+  {
+    "objectID": "contents/tutorials/index.html",
+    "href": "contents/tutorials/index.html",
+    "title": "Tutorials",
+    "section": "",
+    "text": "A series of practical tutorials for managing Open Research Data. Use the table below or the left side bar to navigate through all tutorials."
+  },
+  {
+    "objectID": "contents/contact/index.html",
+    "href": "contents/contact/index.html",
+    "title": "Let us know",
+    "section": "",
+    "text": "Let us know\n\n\n\n\n\n\n Back to top"
   },
   {
     "objectID": "contents/tutorials/Tutorial_Gitlab2_DataHub.html",
@@ -175,13 +147,6 @@
     "text": "4. AUTO: The HTML is updated and collaborators can navigate through the updated data\nA static site like the one you are seeing this tutorial can include interactive elements. In this example we propose an interactive table that can be used to navigate through metadata and even some data (e.g., displaying clickable image thumbnails). By static we mean that the user will just see whatever data is contained in the HTML of the site. Although it contains an interactive table, all users have access to the same data which they cannot modify (unlike in dynamic websites).\nThe website hosted using Gitlab pages is rendered with an [R Markdown] (https://rmarkdown.rstudio.com/) script, that uses the R DT package). The script creates an interactive page in HTML. Gitlab CI is used to run the R Markdown script automatically at each update (push) and render the site from the browser so that users do not need to install R or other programs to update the site."
   },
   {
-    "objectID": "contents/tutorials/Tutorial_Gitlab3_CI.html",
-    "href": "contents/tutorials/Tutorial_Gitlab3_CI.html",
-    "title": "Gitlab Tutorial 3. Continuous Integration (CI)",
-    "section": "",
-    "text": "Back\n\nWhy is this useful?\nWe can make use of the continuous integration (CI) feature in systems like Gitlab to improved interoperability and reproducibility. CI allows to use our Gitlab repository to run scripts directly in the web browser, without the need to download any software. For example, it allows to automatically update our website or data hub whenever a change in the repository is detected. Thus, different users can edit and conduct analysis in the same software environment and from the web-browser. This tutorial presents a simple use case of this feature.\n\n\nOverview\nContinuous integration (CI) refers to the process of automating the integration of changes made by different developers working in the code. In the context of using Gitlab pages as a data hub, the CI will integrating changes in the metadata table and/or images into the resulting HTML. That is, it will update our website so that it shows the last version of our metadata and include any change we want in its content. The advantage is that users do not require to install any software dependencies (like R) and changes can be implemented using the browser, from any computer.\nSimplifying this There are 2 main elements we need to set up for Gitlab CI:\n\n1. Gitlab Runner\nThis is the service that will execute whatever operation you want to do in your CI pipeline. In this case we will use a shared-runner that is supported by the UZH. We only have this if we have our gitlab repository as part of the UZH Gitlab. We can also use our own runners but that is more complicated and beyond the scope of this tutorial (see Gitlab official documentation)\nYou can enable the shared-runner in your repository Settings&gt; CI/CD &gt; Runners. If you are using the UZH Gitlab there should be an available runner listed on the Shared runners section\n\n\n\n2. The .gitlab-ci.yml file\nThis file defines a pipeline which will run every time we make a change in the repository. A pipeline can have one or multiple jobs defined by a script (see complete documentation (here)[https://docs.gitlab.com/ee/ci/]. In the following example the pipeline has one job: rendering the website using R Quarto markdown files (see our tutorial on making a website with R quarto from scratch).\nThere are examples and Continous Integration templates of this file online. They all need an image of a software environment, some jobs defined by a script and some artifacts that are output files from the jobs. The example below uses an image from and it is nased on a template taken from Rocker, which is a project offering docker containers for R environments. Broadly speaking, we can think of a docker container as a light-weight virtual machine and of a docker image as a snapshot of a virtual machine, what defines its software contents.\nBelow we show and describe the following example:\nimage: rocker/verse:4.3\n\npages:\n  stage: deploy\n  before_script:\n   - R -e \"install.packages('quarto')\" \n   - R -e \"install.packages('kableExtra')\" \n   - R -e \"install.packages('DT')\"  \n   - mkdir -p public/SPring/Images\n   - cp _data/SPring/Images/* public/SPring/Images/   \n  \n  script:   \n   - cd _scripts\n   - R -e \"baseDir &lt;- getwd(); quarto::quarto_render('*.qmd')\"\n   - mv ./_site/* ../public/ \n  \n  artifacts:    \n    paths:\n    - public    \n     \n  only:\n  - master\n  interruptible: true\n\nImage\n\nThe first part loads a docker container image, similar to a snapshot of a virtual machine, which will define a software environment.\n\n\n\nPages\n\nWe define different stages (deploy is the main, but some tests stages are usually included as well).\nBecause our image did not include some R packages that we need, we install them in the before the script section. The following lines after installing packages are to create a new folder with copies of the pictures that will be rendered in the website, in the ‘public’ folder (see below, this is the folder where the website html needs to be stored).\nThen the script to actually do the job. First for convenience here we set the _scripts folder as our current directory. Then we run the R code using the R quarto package to build a website by using the command quarto_render indicating all .qmd files in the folder. In our case the .qmd contain text and code to read tables with metadata (see our tutorial on how to make a website with Quarto). The quarto_render() command will automatically create a _site folder with the website. If we change a table or the text in one of those files, this will run again and generate the site again.\nWe then move the content of the website to the public folder. This is necessary as Gitlab pages will only display the content of that folder\n\n\n\n\n\n\n\nNote\n\n\n\nAlthough it is called ‘public’ it does not mean that the page will be publicly available. Gitlab allows pages in private repository so that only people with access can see the content.\n\n\n\nThe job artifacts are the outputs of the job. In this example, the website HTMLs rendered by quarto. We define the path where we want those outputs as the ‘public’ folder for it to work with Gitlab pages\n\n\n\n\n\n\n\n Back to top"
-  },
-  {
     "objectID": "contents/tutorials/Tutorial_Web.html",
     "href": "contents/tutorials/Tutorial_Web.html",
     "title": "Website Tutorial using R, Quarto and Gitlab Pages",
@@ -210,10 +175,10 @@
     "text": "3. Host it for free using Gitlab pages\n(…) First activate gitlab pages, then move the content to ‘public’ folder (…)"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "AFFORD",
+    "objectID": "contents/tutorials/Tutorial_Gitlab3_CI.html",
+    "href": "contents/tutorials/Tutorial_Gitlab3_CI.html",
+    "title": "Gitlab Tutorial 3. Continuous Integration (CI)",
     "section": "",
-    "text": "This site compiles resources for Open Research Data management curated and developed by the Center of Reproducible Science of the University of Zurich for the SwissUniversities project AFFORD: A Framework for Avoiding Open Research Data Dump.\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\nLast edited: Mon Nov 27 17:47:46 2023\n\n\n\n Back to top"
+    "text": "Back\n\nWhy is this useful?\n\nWe can make use of the continuous integration (CI) feature in systems like Gitlab to improved interoperability and reproducibility. CI allows to use our Gitlab repository to run scripts directly in the web browser, without the need to download any software. For example, it allows to automatically update our website or data hub whenever a change in the repository is detected. Thus, different users can edit and conduct analysis in the same software environment and from the web-browser. This tutorial presents a simple use case of this feature.\n\n\n\nOverview\nContinuous integration (CI) refers to the process of automating the integration of changes made by different developers working in the code. In the context of using Gitlab pages as a data hub, the CI will integrating changes in the metadata table and/or images into the resulting HTML. That is, it will update our website so that it shows the last version of our metadata and include any change we want in its content. The advantage is that users do not require to install any software dependencies (like R) and changes can be implemented using the browser, from any computer.\nSimplifying this There are 2 main elements we need to set up for Gitlab CI:\n\n1. Gitlab Runner\nThis is the service that will execute whatever operation you want to do in your CI pipeline. In this case we will use a shared-runner that is supported by the UZH. We only have this if we have our gitlab repository as part of the UZH Gitlab. We can also use our own runners but that is more complicated and beyond the scope of this tutorial (see Gitlab official documentation)\nYou can enable the shared-runner in your repository Settings&gt; CI/CD &gt; Runners. If you are using the UZH Gitlab there should be an available runner listed on the Shared runners section\n\n\n\n2. The .gitlab-ci.yml file\nThis file defines a pipeline which will run every time we make a change in the repository. A pipeline can have one or multiple jobs defined by a script (see complete documentation (here)[https://docs.gitlab.com/ee/ci/]. In the following example the pipeline has one job: rendering the website using R Quarto markdown files (see our tutorial on making a website with R quarto from scratch).\nThere are examples and Continous Integration templates of this file online. They all need an image of a software environment, some jobs defined by a script and some artifacts that are output files from the jobs. The example below uses an image from and it is nased on a template taken from Rocker, which is a project offering docker containers for R environments. Broadly speaking, we can think of a docker container as a light-weight virtual machine and of a docker image as a snapshot of a virtual machine, what defines its software contents.\nBelow we show and describe the following example:\nimage: rocker/verse:4.3\n\npages:\n  stage: deploy\n  before_script:\n   - R -e \"install.packages('quarto')\" \n   - R -e \"install.packages('kableExtra')\" \n   - R -e \"install.packages('DT')\"  \n   - mkdir -p public/SPring/Images\n   - cp _data/SPring/Images/* public/SPring/Images/   \n  \n  script:   \n   - cd _scripts\n   - R -e \"baseDir &lt;- getwd(); quarto::quarto_render('*.qmd')\"\n   - mv ./_site/* ../public/ \n  \n  artifacts:    \n    paths:\n    - public    \n     \n  only:\n  - master\n  interruptible: true\n\nImage\n\nThe first part loads a docker container image, similar to a snapshot of a virtual machine, which will define a software environment.\n\n\n\nPages\n\nWe define different stages (deploy is the main, but some tests stages are usually included as well).\nBecause our image did not include some R packages that we need, we install them in the before the script section. The following lines after installing packages are to create a new folder with copies of the pictures that will be rendered in the website, in the ‘public’ folder (see below, this is the folder where the website html needs to be stored).\nThen the script to actually do the job. First for convenience here we set the _scripts folder as our current directory. Then we run the R code using the R quarto package to build a website by using the command quarto_render indicating all .qmd files in the folder. In our case the .qmd contain text and code to read tables with metadata (see our tutorial on how to make a website with Quarto). The quarto_render() command will automatically create a _site folder with the website. If we change a table or the text in one of those files, this will run again and generate the site again.\nWe then move the content of the website to the public folder. This is necessary as Gitlab pages will only display the content of that folder\n\n\n\n\n\n\n\nNote\n\n\n\nAlthough it is called ‘public’ it does not mean that the page will be publicly available. Gitlab allows pages in private repository so that only people with access can see the content.\n\n\n\nThe job artifacts are the outputs of the job. In this example, the website HTMLs rendered by quarto. We define the path where we want those outputs as the ‘public’ folder for it to work with Gitlab pages\n\n\n\n\n\n\n\n Back to top"
   }
 ]

@@ -1,63 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://crsuzh.pages.uzh.ch/AFFORD_website/contents/about/about.html</loc>
-    <lastmod>2023-11-29T15:24:31.701Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crsuzh.pages.uzh.ch/AFFORD_website/contents/contact/index.html</loc>
-    <lastmod>2023-11-29T15:24:32.025Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crsuzh.pages.uzh.ch/AFFORD_website/contents/presentations/index.html</loc>
-    <lastmod>2023-11-29T15:24:32.569Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crsuzh.pages.uzh.ch/AFFORD_website/contents/presentations/Presentations_1.html</loc>
-    <lastmod>2023-11-29T15:24:33.167Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crsuzh.pages.uzh.ch/AFFORD_website/contents/presentations/Presentations_2.html</loc>
-    <lastmod>2023-11-29T15:24:33.499Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crsuzh.pages.uzh.ch/AFFORD_website/contents/reports/index.html</loc>
-    <lastmod>2023-11-29T15:24:33.877Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crsuzh.pages.uzh.ch/AFFORD_website/contents/templates/index.html</loc>
-    <lastmod>2023-11-29T15:24:34.201Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crsuzh.pages.uzh.ch/AFFORD_website/contents/tools/index.html</loc>
-    <lastmod>2023-11-29T15:24:34.697Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crsuzh.pages.uzh.ch/AFFORD_website/contents/tools/Tools_1.html</loc>
-    <lastmod>2023-11-29T15:24:41.167Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crsuzh.pages.uzh.ch/AFFORD_website/contents/tutorials/index.html</loc>
-    <lastmod>2023-11-29T15:24:41.603Z</lastmod>
-  </url>
-  <url>
     <loc>https://crsuzh.pages.uzh.ch/AFFORD_website/contents/tutorials/Tutorial_Gitlab1_IntroGit.html</loc>
-    <lastmod>2023-11-29T15:24:42.129Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crsuzh.pages.uzh.ch/AFFORD_website/contents/tutorials/Tutorial_Gitlab2_DataHub.html</loc>
-    <lastmod>2023-11-29T15:24:42.921Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crsuzh.pages.uzh.ch/AFFORD_website/contents/tutorials/Tutorial_Gitlab3_CI.html</loc>
-    <lastmod>2023-11-29T15:24:43.400Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crsuzh.pages.uzh.ch/AFFORD_website/contents/tutorials/Tutorial_Web.html</loc>
-    <lastmod>2023-11-29T15:24:43.872Z</lastmod>
+    <lastmod>2023-11-30T16:18:15.465Z</lastmod>
   </url>
   <url>
     <loc>https://crsuzh.pages.uzh.ch/AFFORD_website/index.html</loc>
-    <lastmod>2023-11-29T15:24:45.445Z</lastmod>
+    <lastmod>2023-11-30T16:54:32.874Z</lastmod>
+  </url>
+  <url>
+    <loc>https://crsuzh.pages.uzh.ch/AFFORD_website/contents/about/about.html</loc>
+    <lastmod>2023-11-30T16:11:05.490Z</lastmod>
+  </url>
+  <url>
+    <loc>https://crsuzh.pages.uzh.ch/AFFORD_website/contents/presentations/index.html</loc>
+    <lastmod>2023-11-30T16:50:45.137Z</lastmod>
+  </url>
+  <url>
+    <loc>https://crsuzh.pages.uzh.ch/AFFORD_website/contents/templates/index.html</loc>
+    <lastmod>2023-11-30T16:50:43.359Z</lastmod>
+  </url>
+  <url>
+    <loc>https://crsuzh.pages.uzh.ch/AFFORD_website/contents/tutorials/index.html</loc>
+    <lastmod>2023-11-30T16:54:26.405Z</lastmod>
+  </url>
+  <url>
+    <loc>https://crsuzh.pages.uzh.ch/AFFORD_website/contents/contact/index.html</loc>
+    <lastmod>2023-11-30T16:50:39.932Z</lastmod>
+  </url>
+  <url>
+    <loc>https://crsuzh.pages.uzh.ch/AFFORD_website/contents/tutorials/Tutorial_Gitlab2_DataHub.html</loc>
+    <lastmod>2023-11-30T16:04:29.113Z</lastmod>
+  </url>
+  <url>
+    <loc>https://crsuzh.pages.uzh.ch/AFFORD_website/contents/tutorials/Tutorial_Web.html</loc>
+    <lastmod>2023-11-30T16:54:27.042Z</lastmod>
+  </url>
+  <url>
+    <loc>https://crsuzh.pages.uzh.ch/AFFORD_website/contents/tutorials/Tutorial_Gitlab3_CI.html</loc>
+    <lastmod>2023-11-30T16:04:29.820Z</lastmod>
   </url>
 </urlset>

@@ -11,8 +11,8 @@ categories:
 [Back](index.qmd)
 
 # Why is this useful? 
-Researchers need to be able to **find** and **share** their data and to *showcase* it to internal and external collaborations. Creating copies or transferring files can be cumbersome and lead to propagating errors or sharing of outdated file versions. 
-
+>Researchers need to be able to **find** and **share** their data and to *showcase* it to internal and external collaborations. Creating copies or transferring files can be cumbersome and lead to propagating errors or sharing of outdated file versions. 
+>
 With Gitlab and R Quarto we can easily integrate all metadata and documentation stored and maintained in our repository, and render it into a website. This website, which can have a **private or public access**, becomes a safe 'data hub' or central platform from which researchers and collaborators can **navigate through research outputs**, find the location of data files in specialized repositories or preview thumbnails of some of the data. 
 
 

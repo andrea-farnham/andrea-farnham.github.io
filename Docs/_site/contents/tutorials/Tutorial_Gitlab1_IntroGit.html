@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="G.Fraga Gonzalez &amp; E. Furrer">
-<meta name="dcterms.date" content="2023-11-27">
+<meta name="dcterms.date" content="2023-11-30">
 
 <title>Home - Gitlab Tutorial 1. Step-by-Step Guide to Git and Gitlab</title>
 <style>
@@ -121,7 +121,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../contents/tutorials/Tutorial_Web.html">Data Sharing and Repositories</a></li><li class="breadcrumb-item"><a href="../../contents/tutorials/Tutorial_Gitlab1_IntroGit.html">Gitlab Tutorial 1. Step-by-Step Guide to Git and Gitlab</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../contents/tutorials/Tutorial_Web.html">🌍 <strong>Data Sharing and Repositories</strong></a></li><li class="breadcrumb-item"><a href="../../contents/tutorials/Tutorial_Gitlab1_IntroGit.html">Gitlab Tutorial 1. Step-by-Step Guide to Git and Gitlab</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -142,7 +142,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
- <span class="menu-text">Data Sharing and Repositories</span></a>
+ <span class="menu-text">🌍 <strong>Data Sharing and Repositories</strong></span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -151,7 +151,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../contents/tutorials/Tutorial_Web.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Website Tutorial using R, Quarto and Gitlab Pages</span></a>
+ <span class="menu-text">🕸️ Website Tutorial using R, Quarto and Gitlab Pages</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -177,7 +177,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
- <span class="menu-text">Filenames and Folder Structures</span></a>
+ <span class="menu-text">📂 <strong>Filenames and folder structures</strong></span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -191,7 +191,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
- <span class="menu-text">Metadata</span></a>
+ <span class="menu-text">🏷 <strong>Metadata</strong></span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -264,7 +264,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 27, 2023</p>
+      <p class="date">November 30, 2023</p>
     </div>
   </div>
   
@@ -277,9 +277,9 @@ ul.task-list li input[type="checkbox"] {
 <p><a href="../../contents/tutorials/index.html">Back</a></p>
 <section id="why-is-this-useful" class="level1">
 <h1>Why is this useful?</h1>
-<p><strong>Collaborative research</strong> requires a <strong>version control</strong> system for multiple files as researchers need to be able to track changes, to revise change history and to share code, documentation and metadata. Our <a href="https://zenodo.org/records/8354375">CRS primer on Digital Collaboration</a> further describes available tools and their importance to good research practices.</p>
 <blockquote class="blockquote">
-<p>The <em>de facto</em> standard set of tools for source control is called <em>Git</em>. It is an open-source system created by Linus Torvalds in 2015.</p>
+<p><strong>Collaborative research</strong> requires a <strong>version control</strong> system for multiple files as researchers need to be able to track changes, to revise change history and to share code, documentation and metadata. Our <a href="https://zenodo.org/records/8354375">CRS primer on Digital Collaboration</a> further describes the available tools and their relevance to good research practices.</p>
+<p>This tutorial is based on <em>Git</em> as it is the <em>de facto</em> standard set of tools for source control.</p>
 </blockquote>
 </section>
 <section id="overview" class="level1">
@@ -672,7 +672,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../../contents/tutorials/Tutorial_Web.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Website Tutorial using R, Quarto and Gitlab Pages</span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">🕸️ Website Tutorial using R, Quarto and Gitlab Pages</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

@@ -90,7 +90,7 @@ We recommend creating an *R project file* in Rstudio to point at your web's fold
 
 You can write plain text with markdown syntax on it and use a *yml* header delimited by `---` symbols to add metadata or settings
 
-#### Step 4. Click 'render' or type `quarto::quarto_render()` in Rstudio 
+#### Step 4. Click 'render' or type `quarto::quarto_render()` in Rstudio
 
 That's it. A new subfolder named `_site` will be created with a file index.html which is your website
 
@@ -100,15 +100,16 @@ That's it. A new subfolder named `_site` will be created with a file index.html 
 ```
 ## 2. Add pages to your website
 
-Now we can just populate the pages by: 
+Now we can just populate the pages by:
 
--   Adding `.qmd` files with content. A recommended organization is a page per folder. If a page will contain many subpages, you can set up a main file in that folder (e.g., index.qmd) with a yml header  (delimited by `---`) using the [listing](https://quarto.org/docs/websites/website-listings.html) option. This will automatically include all .qmd files without having the need to specifying the _quarto.yml file. 
+-   Adding `.qmd` files with content. A recommended organization is a page per folder. If a page will contain many subpages, you can set up a main file in that folder (e.g., index.qmd) with a yml header (delimited by `---`) using the [listing](https://quarto.org/docs/websites/website-listings.html) option. This will automatically include all .qmd files without having the need to specifying the \_quarto.yml file.
 
--   Adapting the `_quarto.yml` file to indicate which pages and where you want to show them (e.g., in a navigation bar on top, right or left or in a sidebar) 
+-   Adapting the `_quarto.yml` file to indicate which pages and where you want to show them (e.g., in a navigation bar on top, right or left or in a sidebar)
 
--   Click 'render' or type `quarto::quarto_render()` in Rstudio 
+-   Click 'render' or type `quarto::quarto_render()` in Rstudio
 
 An example of a folder structure of the website before rendering:
+
 ``` {style="background-color: WhiteSmoke"}
 website
 │
@@ -125,7 +126,6 @@ website
        └──  section1.qmd      
 ```
 
-
 The following 5.5 minutes video shows a quick example. Read the subtitles for details.
 
 ```{=html}
@@ -133,4 +133,4 @@ The following 5.5 minutes video shows a quick example. Read the subtitles for de
 ```
 ## 3. Host it for free using Gitlab pages
 
- (...) First activate gitlab pages, then move the content to 'public' folder (...)
+(...) First activate gitlab pages, then move the content to 'public' folder (...)
