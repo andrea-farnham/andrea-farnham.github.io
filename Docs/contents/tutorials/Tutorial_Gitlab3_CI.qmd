@@ -30,7 +30,7 @@ You can enable the shared-runner in your repository Settings\> CI/CD \> Runners.
 
 ### 2. The .gitlab-ci.yml file
 
-This file defines a *pipeline* which will run every time we make a change in the repository. A pipeline can have one or multiple jobs defined by a script (see complete documentation [here]\(https://docs.gitlab.com/ee/ci/\). In the following example the pipeline has one job: rendering the website using R Quarto markdown files (see our tutorial on making a website with R quarto from scratch).
+This file defines a *pipeline* which will run every time we make a change in the repository. A pipeline can have one or multiple jobs defined by a script (see complete documentation [here](https://docs.gitlab.com/ee/ci/) ). In the following example the pipeline has one job: rendering the website using R Quarto markdown files (see our tutorial on making a website with R quarto from scratch).
 
 There are examples and [Continous Integration templates of this file](https://docs.gitlab.com/ee/user/project/pages/getting_started/pages_ci_cd_template.html) online. They all need an **image** of a software environment, some **jobs** defined by a script and some **artifacts** that are output files from the jobs. The example below uses an image from and it is nased on a template taken from [Rocker](https://rocker-project.org/), which is a project offering [docker containers](https://www.docker.com/resources/what-container/#:~:text=A%20Docker%20container%20image%20is,tools%2C%20system%20libraries%20and%20settings) for R environments. Broadly speaking, we can think of a docker container as a light-weight virtual machine and of a *docker image* as a snapshot of a virtual machine, what defines its software contents.
 
