@@ -49,6 +49,7 @@ website:
               contents: 
                 - contents/tutorials/Tutorial_Web.qmd
                 - contents/tutorials/Tutorial_Gitlab1_IntroGit.qmd
+                - contents/tutorials/Tutorial_Gitlab_workflows.qmd
                 - contents/tutorials/Tutorial_Gitlab2_DataHub.qmd
                 - contents/tutorials/Tutorial_Gitlab3_CI.qmd
                                 

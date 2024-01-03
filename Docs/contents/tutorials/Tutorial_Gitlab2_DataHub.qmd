@@ -95,6 +95,8 @@ The access to the website using SWITCH edu-id credentials works with Gitlab page
 
 # Required actions (for data owners)
 Once the Continuous Integration (CI) file and R Quarto scripts are set, the only action required by the owner will be to edit the metadata tables and/or some of the content of the R Quarto files in the repository. Any change in the repository will trigger the CI pipeline and the website will be rendered again.  
+ 
+
 
 ```{mermaid} 
 %%{

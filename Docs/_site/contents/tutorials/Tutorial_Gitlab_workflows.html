@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="G.Fraga Gonzalez &amp; E. Furrer">
-<meta name="dcterms.date" content="2023-11-30">
+<meta name="dcterms.date" content="2024-01-03">
 
-<title>Home - Gitlab Tutorial 1. Step-by-Step Guide to Git and Gitlab</title>
+<title>Home - Gitlab workflows</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,6 +22,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -32,8 +66,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../contents/tutorials/Tutorial_Gitlab_workflows.html" rel="next">
-<link href="../../contents/tutorials/Tutorial_Web.html" rel="prev">
+<link href="../../contents/tutorials/Tutorial_Gitlab2_DataHub.html" rel="next">
+<link href="../../contents/tutorials/Tutorial_Gitlab1_IntroGit.html" rel="prev">
 <link href="../../assets/logos/Logo_CRS_col.svg" rel="icon" type="image/svg+xml">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -65,6 +99,10 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
+<meta name="mermaid-theme" content="default">
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 </head>
@@ -125,7 +163,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../contents/tutorials/Tutorial_Web.html">🌍 <strong>Data Sharing and Repositories</strong></a></li><li class="breadcrumb-item"><a href="../../contents/tutorials/Tutorial_Gitlab1_IntroGit.html">Gitlab Tutorial 1. Step-by-Step Guide to Git and Gitlab</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../contents/tutorials/Tutorial_Web.html">🌍 <strong>Data Sharing and Repositories</strong></a></li><li class="breadcrumb-item"><a href="../../contents/tutorials/Tutorial_Gitlab_workflows.html">Gitlab workflows</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -160,13 +198,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../contents/tutorials/Tutorial_Gitlab1_IntroGit.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../contents/tutorials/Tutorial_Gitlab1_IntroGit.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Gitlab Tutorial 1. Step-by-Step Guide to Git and Gitlab</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../contents/tutorials/Tutorial_Gitlab_workflows.html" class="sidebar-item-text sidebar-link">
+  <a href="../../contents/tutorials/Tutorial_Gitlab_workflows.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Gitlab workflows</span></a>
   </div>
 </li>
@@ -222,27 +260,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#why-is-this-useful" id="toc-why-is-this-useful" class="nav-link active" data-scroll-target="#why-is-this-useful">Why is this useful?</a></li>
-  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#workflow" id="toc-workflow" class="nav-link" data-scroll-target="#workflow">Workflow</a>
+  <li><a href="#a-single-project-or-data-source" id="toc-a-single-project-or-data-source" class="nav-link active" data-scroll-target="#a-single-project-or-data-source">A single project or data source</a>
   <ul class="collapse">
-  <li><a href="#create-and-use-a-repository-in-browser" id="toc-create-and-use-a-repository-in-browser" class="nav-link" data-scroll-target="#create-and-use-a-repository-in-browser">1. Create and use a repository (in browser)</a>
-  <ul class="collapse">
-  <li><a href="#for-project-owners" id="toc-for-project-owners" class="nav-link" data-scroll-target="#for-project-owners">For <em>project owners</em></a></li>
-  <li><a href="#for-collaborators" id="toc-for-collaborators" class="nav-link" data-scroll-target="#for-collaborators">For <em>collaborators</em></a></li>
-  </ul></li>
-  <li><a href="#cloning-a-repository-to-local-computer" id="toc-cloning-a-repository-to-local-computer" class="nav-link" data-scroll-target="#cloning-a-repository-to-local-computer">2. Cloning a repository to local computer</a>
-  <ul class="collapse">
-  <li><a href="#for-project-owners-1" id="toc-for-project-owners-1" class="nav-link" data-scroll-target="#for-project-owners-1">For project owners</a></li>
-  <li><a href="#personal-access-token" id="toc-personal-access-token" class="nav-link" data-scroll-target="#personal-access-token">Personal access token</a></li>
-  </ul></li>
-  <li><a href="#cloning-with-github-desktop-user-friendly" id="toc-cloning-with-github-desktop-user-friendly" class="nav-link" data-scroll-target="#cloning-with-github-desktop-user-friendly">2.1 Cloning with Github-desktop (user-friendly)</a>
-  <ul class="collapse">
-  <li><a href="#setup-of-github-desktop-for-gitlab" id="toc-setup-of-github-desktop-for-gitlab" class="nav-link" data-scroll-target="#setup-of-github-desktop-for-gitlab">Setup of Github-desktop for Gitlab</a></li>
-  <li><a href="#editing-repository" id="toc-editing-repository" class="nav-link" data-scroll-target="#editing-repository">Editing repository</a></li>
-  </ul></li>
-  <li><a href="#cloning-with-git-using-command-line" id="toc-cloning-with-git-using-command-line" class="nav-link" data-scroll-target="#cloning-with-git-using-command-line">2.2 Cloning with Git (using command line)</a></li>
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
+  <li><a href="#multiple-repositories" id="toc-multiple-repositories" class="nav-link" data-scroll-target="#multiple-repositories">Multiple repositories</a></li>
+  <li><a href="#a-single-repository" id="toc-a-single-repository" class="nav-link" data-scroll-target="#a-single-repository">A single repository</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -252,8 +273,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Gitlab Tutorial 1. Step-by-Step Guide to Git and Gitlab</h1>
-<p class="subtitle lead">Using a UZH Gitlab repository for Project Owners and Collaborators</p>
+<h1 class="title">Gitlab workflows</h1>
+<p class="subtitle lead">different scenarios</p>
   <div class="quarto-categories">
     <div class="quarto-category">Gitlab</div>
     <div class="quarto-category">Basic</div>
@@ -274,7 +295,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 30, 2023</p>
+      <p class="date">January 3, 2024</p>
     </div>
   </div>
   
@@ -284,101 +305,160 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p><a href="../../contents/tutorials/index.html">Back</a></p>
-<section id="why-is-this-useful" class="level1">
-<h1>Why is this useful?</h1>
-<blockquote class="blockquote">
-<p><strong>Collaborative research</strong> requires a <strong>version control</strong> system for multiple files as researchers need to be able to track changes, to revise change history and to share code, documentation and metadata. Our <a href="https://zenodo.org/records/8354375">CRS primer on Digital Collaboration</a> further describes the available tools and their relevance to good research practices.</p>
-<p>This tutorial is based on <em>Git</em> as it is the <em>de facto</em> standard set of tools for source control.</p>
-</blockquote>
-</section>
-<section id="overview" class="level1">
-<h1>Overview</h1>
-<p>This tutorial is a short step-by-step guide on using Git and Gitlab and provides a workflow to use Github Desktop to sync with local files. For complete beginners we recommend the <a href="https://git-scm.com/book">Git book</a>, which is very accessible but also very detailed. It is available in several languages and as pdf. Another option for beginners are the <a href="https://docs.gitlab.com/ee/tutorials/">Gitlab tutorials</a> by <a href="https://about.gitlab.com/">Gitlab.com</a> (commercial).</p>
+<p>Here we present different scenarios in which researchers can use Git</p>
+<section id="a-single-project-or-data-source" class="level1">
+<h1>A single project or data source</h1>
+<p>Here we describe several scenarios in which there are <strong>several</strong> <strong>researchers</strong> working on separate analysis or features within the same project. They use the same source data but their scripts are <strong>independent</strong>. We assume that each researcher is the <strong>main</strong> contributor to a set of scripts for a given analysis, study or experiment within the main project.</p>
+<section id="multiple-repositories" class="level2">
+<h2 class="anchored" data-anchor-id="multiple-repositories">Multiple repositories</h2>
 <ul>
-<li><p><a href="https://en.wikipedia.org/wiki/Git">Git</a> is a system to track changes in files, it is most often used to coordinate the work among several persons who access the files online on a server or sync them to their computer. The online use does not require any installation, local use is only possible after installing <a href="https://git-scm.com/downloads">Git</a>.</p></li>
-<li><p><a href="https://about.gitlab.com/">Gitlab.com</a> and <a href="https://github.com/">Github.com</a> are commercial hosting services for version control with Git. The UZH instance of the open source Gitlab at <a href="https://gitlab.uzh.ch">Gitlab.uzh.ch</a> is hosted by the UZH on servers owned by <a href="https://www.switch.ch/de/edu-id/">SWITCH</a>, a non-profit foundation that has been established by the Swiss Federal Government. See <a href="">https://www.zi.uzh.ch/en/staff/software-elearning/webplatforms/gitlab.html</a> for more information.</p></li>
-<li><p>A <strong>Git repository</strong> is a set of folders and files with complete history and full version-tracking abilities, locally or on a server.</p></li>
+<li>All project-related</li>
+<li>The scripts project subfolder is a <strong>clone of a remote repository</strong></li>
+<li>Each researcher manages a <strong>subfolder within the repository</strong> and pushes/commit changes within that folder</li>
 </ul>
+<section id="pros-cons-warnings" class="level4">
+<h4 class="anchored" data-anchor-id="pros-cons-warnings">Pros, Cons &amp; Warnings</h4>
+<p>✅ One can manage permissions and share only the scripts related to one analysis or user. The local clones can still be within the same project folder (see example 1 below)<br>
+⚠️ The different repositories should be preferably under a common git group/user, namely , the lab’s Gitlab or Github.<br>
+⚠️ Researchers may keep their local clones in their personal folders (outside project: see example 2). In this case their internal collaborators or principal investigator will only be able to see their scripts through the repository , so changes should be committed regularly.<br>
+🔻 If there are many users and analyses this can result in many repositories associated to a project<br>
+</p>
 </section>
-<section id="workflow" class="level1">
-<h1>Workflow</h1>
-<section id="create-and-use-a-repository-in-browser" class="level2">
-<h2 class="anchored" data-anchor-id="create-and-use-a-repository-in-browser">1. Create and use a repository (in browser)</h2>
-<section id="for-project-owners" class="level3">
-<h3 class="anchored" data-anchor-id="for-project-owners">For <em>project owners</em></h3>
-<p>For someone that wants to share data or metadata (e.g., a data hub)</p>
-<ol type="1">
-<li><strong>Login</strong> to <a href="https://gitlab.uzh.ch">Gitlab.uzh.ch</a> with your <a href="https://www.switch.ch/edu-id/">SWITCH edu-ID</a>.</li>
-<li>Create a <strong>new project repository</strong>, give it an informative, easy name (e.g., _pages, project x)</li>
-<li>In Settings/General/<strong>Visibility</strong> mark it as private</li>
-<li>In Manage/Members/<strong>Invite members</strong> add new members to the team, with different levels of permissions</li>
-<li>Add your files and code (works through the browser but is easier with the Gitlab workflow below)</li>
-</ol>
+<section id="folder-tree" class="level4">
+<h4 class="anchored" data-anchor-id="folder-tree">Folder tree</h4>
+<p>Example 1</p>
+<div class="sourceCode" id="cb1" style="line-height: 1em"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Project/              NAS folder accessible to all researchers       </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>├─ data</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>├─ outputs</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>├─ scripts        </span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>│   ├─ researcher1*   <span class="co">[</span><span class="ot">Cloned Git repository 1</span><span class="co">]</span> 🌐</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>│   └─ researcher2    <span class="co">[</span><span class="ot">Cloned Git repository 2</span><span class="co">]</span> 🌐  </span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>└─ ..</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>*subfolders may be named by analysis, experiment or study within the project</span></code></pre></div>
+<p>Example 2</p>
+<div class="sourceCode" id="cb2" style="line-height: 1em"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Project/              NAS folder accessible to all researchers       </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>├─ data</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>├─ outputs</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>└─ ..</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>researcher1/         Location may differ from that of the project     </span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>└─ scripts            <span class="co">[</span><span class="ot">Cloned Git repository 1</span><span class="co">]</span> 🌐</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>researcher2/           </span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>└─ scripts            <span class="co">[</span><span class="ot">Cloned Git repository 2</span><span class="co">]</span> 🌐</span></code></pre></div>
 </section>
-<section id="for-collaborators" class="level3">
-<h3 class="anchored" data-anchor-id="for-collaborators">For <em>collaborators</em></h3>
-<p>For someone who just wants to navigate through the data of a lab, when this is not made fully public:</p>
-<ol type="1">
-<li>Ask the owner of the data to be invited as a member of the project repository</li>
-<li>Go to the project repository on <a href="https://gitlab.uzh.ch">Gitlab.uzh.ch</a> or Pages URL <a href="https://crsuzh.pages.uzh.ch/afford_website/">e.g., https://crsuzh.pages.uzh.ch/afford_website/</a> and login with your SWITCH edu-ID (if required).</li>
-</ol>
-</section>
-</section>
-<section id="cloning-a-repository-to-local-computer" class="level2">
-<h2 class="anchored" data-anchor-id="cloning-a-repository-to-local-computer">2. Cloning a repository to local computer</h2>
-<section id="for-project-owners-1" class="level3">
-<h3 class="anchored" data-anchor-id="for-project-owners-1">For project owners</h3>
-<p>Our remote Gitlab repository, which we access via the browser is now our main location of metadata, code and (some) data. But sometimes it is convenient to make our edits locally. Specially if we are data <strong>owners</strong> and want to edit and share a large number of files or code, we cannot do this easily in the browser. Recall that you need to install <a href="https://git-scm.com/downloads">Git</a> for this.</p>
-<p>In Git, you can <code>clone a repository</code> to create a copy on your computer, that will be synchronized with your remote repository. Once cloned we can <code>pull</code> changes done in the remote repository (in the browser). If we have local changes and want to ‘send’ them to the remote we do: 1) <code>commit</code> and 2) <code>push</code> the local changes to remote. (??? what about add?)</p>
-<p>NOTE: if we <em>fork</em> a repository instead of cloning it, this will create a completely independent copy of the Git repository. Here, we need <em>cloning</em> so that our local changes can be synchronized and we don’t create duplicates of the repository.</p>
-</section>
-<section id="personal-access-token" class="level3">
-<h3 class="anchored" data-anchor-id="personal-access-token">Personal access token</h3>
-<p>To clone a repository to your machine you will most likely need a personal access token (due to the security of SWITCH login). In your project repository on <a href="https://gitlab.uzh.ch">Gitlab.uzh.ch</a> go to <code>Settings/Access tokens</code>. In the Access Tokens menu you will be able to give the token a <code>name</code>, choose an <code>expiration date</code> (or leave it blank), choose <code>permissions</code> (choose at least developer for making edits) and <code>scope</code> (select API). See also the picture below.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="uploads/aeef5aff4db2c295384c7ab1f1912c03/image.png" width="610" height="439" class="figure-img"></p>
-<figcaption class="figure-caption">image</figcaption>
-</figure>
+<section id="workflow" class="level4">
+<h4 class="anchored" data-anchor-id="workflow">Workflow</h4>
+<p>Each researcher has completely independent repositories. Researchers may edit and create code directly in the main branch or creating development branches and then merging with the main.</p>
+<section id="repository-1" class="level5">
+<h5 class="anchored" data-anchor-id="repository-1">Repository 1</h5>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">%%{init: { 'theme': 'base', 'gitGraph': {'showBranches': true,'showCommitLabel': false}} }%%
+gitGraph
+  commit
+  commit
+  branch branch1
+  commit
+  commit
+  checkout main
+  merge branch1
+  commit
+</pre>
 </div>
-<p>After this you will see a long alphanumeric string, the token, that you should save somewhere so you can use it as your <code>password</code> later on when using Github-desktop, Git or any other platform to manage local copies of the repositories.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="repository-2" class="level5">
+<h5 class="anchored" data-anchor-id="repository-2">Repository 2</h5>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">%%{init: { 'theme': 'base', 'gitGraph': {'showBranches': true,'showCommitLabel': false}} }%%
+gitGraph
+  commit
+  commit
+  branch branch1
+  commit
+  commit
+  checkout main
+  merge branch1
+  commit
+</pre>
+</div>
+</div>
+</div>
+</div>
 </section>
 </section>
-<section id="cloning-with-github-desktop-user-friendly" class="level2">
-<h2 class="anchored" data-anchor-id="cloning-with-github-desktop-user-friendly">2.1 Cloning with Github-desktop (user-friendly)</h2>
-<p>The open source tool Github-desktop with a graphical user interface will simplify pull, commit, push operations for both advanced as well as new users. !Note: official support seems to be only for Windows and Mac. See further documentation on <a href="https://github.com/desktop/desktop/blob/development/docs/integrations/gitlab.md">integration with Gitlab</a></p>
-<section id="setup-of-github-desktop-for-gitlab" class="level3">
-<h3 class="anchored" data-anchor-id="setup-of-github-desktop-for-gitlab">Setup of Github-desktop for Gitlab</h3>
-<ol type="1">
-<li><p>Download and install <a href="https://desktop.github.com/">Github desktop</a></p></li>
-<li><p>In your Gitlab project, get your personal access token (see above) and save it somewhere</p></li>
-<li><p>On Github desktop go to File/Clone repository. Then enter the URL of your Gitlab repository (see the clone button) and a local directory name. For example:</p>
-<img src="uploads/7a0a2bd44e724b5c59f4c4e0ac983573/image.png" width="551" height="277" alt="image.png"></li>
-<li><p>Then you will be asked for <strong>username</strong> and <strong>password.</strong> Your username is your Gitlab username (e.g., the name in your email address) and the password is the <strong>Token</strong> that you just created.</p></li>
-</ol>
-<p>Now your Local folder is linked to your Gitlab remote repository. You can check below how to pull, commit and push changes.</p>
 </section>
-<section id="editing-repository" class="level3">
-<h3 class="anchored" data-anchor-id="editing-repository">Editing repository</h3>
-<p>Pull,commit and Push changes in the content of the repository. The workflow can get quite complex. Here we will ignore elements like <em>branches</em> to oversimplify it into the main steps:</p>
-<ol type="1">
-<li>Work on your <strong>local</strong> repository, for example, create or edit code, update your metadata table, add new files [^1]</li>
-<li>Open <strong>Github desktop.</strong> If you have several repositories, make sure you select the one you are currently working on or the one you want to update. It should detect the local changes done. If there are changes done remotely, but not locally, it willl prompt you to <code>pull</code> those changes (but here, beware there may be conflicts, which you shold be able to solve with Github but may complicate things).</li>
-<li>Click <code>Commit</code> ( you will need to write a brief description, e.g., ‘updated figures’). This will prepare your changes to be sent to the remote repository (‘origin’). If you edited multiple scripts, you can commit all changes at once or select specific scripts</li>
-<li>Click <code>push</code> to origin so that the changes are uploaded.</li>
-</ol>
-<p>[^1]: Gitlab is not intended as a large data storage. For the pages in this example we need to have the pictures we want to render in the repository. But sometimes we have many files in our local repository that we do not want to push to the online repository. For that we can use a plain text file in that directory and call it <code>.gitignore</code>. In that file we can have statements like ‘*.jpg’. Then Git will ignore all jpg files in the folder when pushing.</p>
+<section id="a-single-repository" class="level2">
+<h2 class="anchored" data-anchor-id="a-single-repository">A single repository</h2>
+<ul>
+<li>All project-related files in one location accessible by all contributing researchers</li>
+<li>The scripts project subfolder is a <strong>clone of a remote repository</strong></li>
+<li>Each researcher manages a <strong>subfolder within the repository</strong> and pushes/commit changes within that folder</li>
+</ul>
+<section id="pros-cons-warnings-1" class="level4">
+<h4 class="anchored" data-anchor-id="pros-cons-warnings-1">Pros, Cons &amp; Warnings</h4>
+<p>✅ All scripts in one place<br>
+🔻Risk of accidental intereference with someone your colleague’s changes commits<br>
+🔻You can’t share or manage access to only one researcher’s scripts<br>
+⚠️ Researchers need to make sure they push and commit only their changes in their subfolders<br>
+⚠️Note that naming script subfolders by author is not informative and can work for a project in development, but not for publishing (sharing with external collaborators)<br>
+</p>
 </section>
+<section id="folder-tree-1" class="level4">
+<h4 class="anchored" data-anchor-id="folder-tree-1">Folder tree</h4>
+<div class="sourceCode" id="cb3" style="line-height: 1em"><pre class="sourceCode markdown code-overflow-wrap"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>#| code-overflow: wrap </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>Project/              ~NAS folder accessible to all researchers~       </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>├─ data</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>├─ outputs</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>├─ scripts*           <span class="co">[</span><span class="ot">Cloned Git repository</span><span class="co">]</span> 🌐</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>│   ├─ researcher1 </span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>│   └─ researcher2     </span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>└─ ..</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>*subfolders may be named by analysis, experiment or study within the project</span></code></pre></div>
 </section>
-<section id="cloning-with-git-using-command-line" class="level2">
-<h2 class="anchored" data-anchor-id="cloning-with-git-using-command-line">2.2 Cloning with Git (using command line)</h2>
-<p>Git refers to this version control system used in Gitlab, but you can also manage the repositories locally downloading the program <a href="https://git-scm.com/download/win">Git SCM</a>, a free and open source distributed version control system. It is light and works across operating systems, and also has a very basic graphical interface. But it is mostly designed for working through a terminal. As in Github-desktop you use this to do the main Git actions of <em>pulling</em>, <em>committing</em> and <em>pushing</em> changes between local and remote repositories.</p>
-</section>
-<section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section"></h2>
+<section id="workflow-1" class="level4">
+<h4 class="anchored" data-anchor-id="workflow-1">Workflow</h4>
+<p>The different researchers access the project folder and work within their folder. When they are done they and push their changes and commit them to the main branch of the project’s repository</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">%%{init: { 'theme': 'base', 'gitGraph': {'showBranches': true,'showCommitLabel': false}} }%%
+gitGraph
+  commit
+  commit
+  branch researcher1
+  commit
+  commit
+  checkout main
+  branch researcher2
+  commit
+  commit
+  checkout main
+  merge researcher1
+  merge researcher2
+  commit
+
+</pre>
+</div>
+</div>
+</div>
+</div>
 
 
+</section>
 </section>
 </section>
 
@@ -681,13 +761,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../contents/tutorials/Tutorial_Web.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Website Tutorial using R, Quarto and Gitlab Pages</span>
+      <a href="../../contents/tutorials/Tutorial_Gitlab1_IntroGit.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Gitlab Tutorial 1. Step-by-Step Guide to Git and Gitlab</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../contents/tutorials/Tutorial_Gitlab_workflows.html" class="pagination-link">
-        <span class="nav-page-text">Gitlab workflows</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../contents/tutorials/Tutorial_Gitlab2_DataHub.html" class="pagination-link">
+        <span class="nav-page-text">Gitlab Tutorial 2. Create and Update a Data Hub</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
