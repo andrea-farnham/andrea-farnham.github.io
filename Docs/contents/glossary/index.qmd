@@ -1,0 +1,9 @@
+---
+listing:
+  type: table
+  fields: [title, date]
+---
+
+# Glossary {.unnumbered}
+
+Coming soon 

@@ -30,8 +30,8 @@ website:
             href: contents/templates/index.qmd
           - text: "Presentations"            
             href: contents/presentations/index.qmd
-         # - text: "Reports"            
-         #   href: contents/reports/index.qmd          
+          - text: "Glossary"            
+            href: contents/glossary/index.qmd          
           - text: "About"
             href: contents/about/about.qmd                  
           - text: "Let us Know"
@@ -70,9 +70,9 @@ website:
           style: "docked"          
           contents: contents/presentations/*.qmd          
           
-        #- id: Reports
-          #title: "Reports"          
-          #contents: contents/reports/*.qmd 
+       # - id: Reports
+       #   title: "Glosssary"          
+       #   contents: contents/glossary/*.qmd 
 
         - id: About
           title: "About"
