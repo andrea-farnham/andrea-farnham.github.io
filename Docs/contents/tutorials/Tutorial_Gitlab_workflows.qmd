@@ -1,6 +1,6 @@
 ---
 title: Gitlab workflows
-subtitle: different scenarios
+subtitle: showcasing different scenarios
 author: G.Fraga Gonzalez & E. Furrer
 date: last-modified
 categories:
@@ -13,6 +13,52 @@ format:
 ---
 
 Here we present different scenarios in which researchers can use Git
+
+
+# An overview of Git
+This diagram summarizes the basic processes we will do with Git. We can do these using the command line or using a program with a Graphic User Interface. 
+
+```{mermaid} 
+
+%%{init: { 'theme': 'base', 'sequence': {'showSequenceNumbers': true}} }%%
+
+sequenceDiagram
+    participant Workspace
+    participant Staging Area (index)
+    participant Local Repository
+    participant Remote Repository
+
+    note over Remote Repository: 🌐 Hosted Online
+    
+    rect rgb(235, 242, 240)
+    opt Work on scripts locally and send to remote
+    Workspace->>Staging Area (index): git add
+    note right of Workspace: Prepares contents for commit
+    
+    note right of Staging Area (index): Records changes to the repository
+    Staging Area (index)->>Local Repository: git commit
+  
+    note right of Local Repository: Upload local content to remote
+    Local Repository->>Remote Repository: git push
+    end
+    end
+    
+    rect rgb(252, 243, 248)
+    alt Fetch changes from remote then merge with local
+    note right of Local Repository: ️Downloads refs and objects
+    Remote Repository->>Local Repository: git fetch
+    note right of Workspace: Incorporate changes 
+    Local Repository->>Workspace: git merge
+    
+    else  or do fetch & merge  at once
+    note right of Workspace: Downloads and incorporate changes  
+    Remote Repository->>Workspace: git pull
+    end
+    end
+    
+```
+ 
+ 
 
 # A single project or data source
 
