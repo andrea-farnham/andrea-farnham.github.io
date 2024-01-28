@@ -20,9 +20,9 @@ categories:
 
 This tutorial is a short step-by-step guide on using Git and Gitlab and provides a workflow to use Github Desktop to sync with local files. For complete beginners we recommend the [Git book](https://git-scm.com/book), which is very accessible but also very detailed. It is available in several languages and as pdf. Another option for beginners are the [Gitlab tutorials](https://docs.gitlab.com/ee/tutorials/) by [Gitlab.com](https://about.gitlab.com/) (commercial).
 
--   [Git](https://en.wikipedia.org/wiki/Git) is a system to track changes in files, it is most often used to coordinate the work among several persons who access the files online on a server or sync them to their computer. The online use does not require any installation, local use is only possible after installing [Git](https://git-scm.com/downloads).
+-   [Git](https://en.wikipedia.org/wiki/Git) is a **system to track changes** in files, it is most often used to coordinate the work among several persons who access the files online on a server or sync them to their computer. The online use does not require any installation, local use is only possible after installing [Git](https://git-scm.com/downloads).
 
--   [Gitlab.com](https://about.gitlab.com/) and [Github.com](https://github.com/) are commercial hosting services for version control with Git. The UZH instance of the open source Gitlab at [Gitlab.uzh.ch](https://gitlab.uzh.ch) is hosted by the UZH on servers owned by [SWITCH](https://www.switch.ch/de/edu-id/), a non-profit foundation that has been established by the Swiss Federal Government. See [https://www.zi.uzh.ch/en/staff/software-elearning/webplatforms/gitlab.html]() for more information.
+-   [Gitlab.com](https://about.gitlab.com/) and [Github.com](https://github.com/) are commercial **hosting services** for version control with Git. The UZH instance of the open source Gitlab at [Gitlab.uzh.ch](https://gitlab.uzh.ch) is hosted by the UZH on servers owned by [SWITCH](https://www.switch.ch/de/edu-id/), a non-profit foundation that has been established by the Swiss Federal Government. See [https://www.zi.uzh.ch/en/staff/software-elearning/webplatforms/gitlab.html]() for more information.
 
 -   A **Git repository** is a set of folders and files with complete history and full version-tracking abilities, locally or on a server.
 
