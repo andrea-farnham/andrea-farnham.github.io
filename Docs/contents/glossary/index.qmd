@@ -5,5 +5,7 @@ listing:
 ---
 
 # Glossary {.unnumbered}
+**...This glossary is a work in progress...** 
+Git 
 
-Coming soon 
+
