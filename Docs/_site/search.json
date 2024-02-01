@@ -32,7 +32,7 @@
     "href": "contents/glossary/index.html",
     "title": "Glossary",
     "section": "",
-    "text": "Glossary\nComing soon\n\n\n\n\n\n\n\n    \n      \n      \n    \n\n\n\n\n\n\nTitle\n\n\nDate\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+    "text": "…This Glossary is work in progress…\n\n\n\n\nGit is a system to track changes in files, it is most often used to coordinate the work among several persons who access the files online on a server or sync them to their computer. The online use does not require any installation, local use is only possible after installing Git.\n\n\n\nA Git repository is a set of folders and files with complete history and full version-tracking abilities, locally or on a server.\n\n\n\nGithub.com is a commercial hosting service for version control with Git.\n\n\n\nGitlab.com is acommercial hosting services for version control with Git.\n\n\n\nThe UZH instance of the open source Gitlab at Gitlab.uzh.ch is hosted by the UZH on servers owned by SWITCH, a non-profit foundation that has been established by the Swiss Federal Government. Learn more &gt;&gt;.\n\n\n\n\n\n\n\n\n\n\n\n\nSWITCH, a non-profit foundation that has been established by the Swiss Federal Governmen. It a cloud-based storage service for storing and sharing files online, with automatic sync of files across devices. University members get 100 Gb of storage. All personal data remains in Switzerland under the direct control of Switch and the universities and is covered by Swiss data protection provisions\n\n\n\nThe universal login for lifelong learning (for all students of swiss Universities). Orchestrated by the Switch foundation.\n\n\n\n\nA powerful tool to improve reproducibility of results. These are reports that contain code, text and code outputs in a single document. The outputs can be figures, tables and can even have interactive elements (for HTML reports). They can be parameterized and they are updated automatically with additions, modifications or deletions from the source code. Learn more on our CRS primer Dynamic Reporting\n\n\n\n\n… R packages …##### R DT …##### R crosstalk …##### R plotly\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThese are simple languages used for formatting and/or for specifying settings in many of the software tools and workflows we describe. They require a very minimal learning from users, and there are plenty of templates and examples online. A good approach is usually to build on some of them and adapt it to our case."
   },
   {
     "objectID": "contents/presentations/index.html",
@@ -257,5 +257,26 @@
     "title": "AFFORD",
     "section": "",
     "text": "This site compiles resources for Open Research Data management curated and developed by the Center of Reproducible Science of the University of Zurich for the SwissUniversities project AFFORD: A Framework for Avoiding Open Research Data Dump.\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\nLast edited: Wed Dec 13 15:00:17 2023\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "contents/glossary/index.html#version-control-and-repositories",
+    "href": "contents/glossary/index.html#version-control-and-repositories",
+    "title": "Glossary",
+    "section": "",
+    "text": "Git is a system to track changes in files, it is most often used to coordinate the work among several persons who access the files online on a server or sync them to their computer. The online use does not require any installation, local use is only possible after installing Git.\n\n\n\nA Git repository is a set of folders and files with complete history and full version-tracking abilities, locally or on a server.\n\n\n\nGithub.com is a commercial hosting service for version control with Git.\n\n\n\nGitlab.com is acommercial hosting services for version control with Git.\n\n\n\nThe UZH instance of the open source Gitlab at Gitlab.uzh.ch is hosted by the UZH on servers owned by SWITCH, a non-profit foundation that has been established by the Swiss Federal Government. Learn more &gt;&gt;."
+  },
+  {
+    "objectID": "contents/glossary/index.html#data-storage-and-security",
+    "href": "contents/glossary/index.html#data-storage-and-security",
+    "title": "Glossary",
+    "section": "",
+    "text": "SWITCH, a non-profit foundation that has been established by the Swiss Federal Governmen. It a cloud-based storage service for storing and sharing files online, with automatic sync of files across devices. University members get 100 Gb of storage. All personal data remains in Switzerland under the direct control of Switch and the universities and is covered by Swiss data protection provisions\n\n\n\nThe universal login for lifelong learning (for all students of swiss Universities). Orchestrated by the Switch foundation."
+  },
+  {
+    "objectID": "contents/glossary/index.html#dynamic-reports",
+    "href": "contents/glossary/index.html#dynamic-reports",
+    "title": "Glossary",
+    "section": "",
+    "text": "A powerful tool to improve reproducibility of results. These are reports that contain code, text and code outputs in a single document. The outputs can be figures, tables and can even have interactive elements (for HTML reports). They can be parameterized and they are updated automatically with additions, modifications or deletions from the source code. Learn more on our CRS primer Dynamic Reporting\n\n\n\n\n… R packages …##### R DT …##### R crosstalk …##### R plotly\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThese are simple languages used for formatting and/or for specifying settings in many of the software tools and workflows we describe. They require a very minimal learning from users, and there are plenty of templates and examples online. A good approach is usually to build on some of them and adapt it to our case."
   }
 ]

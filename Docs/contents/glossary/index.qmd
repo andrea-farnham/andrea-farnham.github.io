@@ -1,11 +1,86 @@
 ---
-listing:
-  type: table
-  fields: [title, date]
+format:
+  html:
+    toc-depth: 4
 ---
 
 # Glossary {.unnumbered}
-**...This glossary is a work in progress...** 
-Git 
+
+...*This Glossary is work in progress...*
+
+## Version control and repositories
+
+#### Git
+
+[Git](https://en.wikipedia.org/wiki/Git) is a system to track changes in files, it is most often used to coordinate the work among several persons who access the files online on a server or sync them to their computer. The online use does not require any installation, local use is only possible after installing [Git](https://git-scm.com/downloads).
+
+#### Git repository
+
+A Git repository is a set of folders and files with complete history and full version-tracking abilities, locally or on a server.
+
+#### Github
+
+[Github.com](https://github.com/) is a commercial hosting service for version control with Git.
+
+#### Gitlab
+
+[Gitlab.com](https://about.gitlab.com/) is acommercial hosting services for version control with Git.
+
+#### Gitlab UZH
+The UZH instance of the open source Gitlab at [Gitlab.uzh.ch](https://gitlab.uzh.ch) is hosted by the UZH on servers owned by [SWITCH](https://www.switch.ch/de/edu-id/), a non-profit foundation that has been established by the Swiss Federal Government. [Learn more \>\>](https://www.zi.uzh.ch/en/staff/software-elearning/webplatforms/gitlab.html).
 
 
+#### Gitlab pages 
+
+#### Continuous Integration 
+
+
+
+## Data storage and security
+
+#### Switch
+[SWITCH](https://www.switch.ch/de/edu-id/), a non-profit foundation that has been established by the Swiss Federal Governmen. It a cloud-based storage service for storing and sharing files online, with automatic sync of files across devices. University members get 100 Gb of storage. All personal data remains in Switzerland under the direct control of Switch and the universities and is covered by Swiss data protection provisions 
+
+#### Switch edu-ID
+
+The universal login for lifelong learning (for all students of swiss Universities). Orchestrated by the Switch foundation. 
+
+
+## Dynamic reports 
+A powerful tool to improve reproducibility of results. These are reports that contain code, text and code outputs in a single document. The outputs can be figures, tables and can even have interactive elements (for HTML reports). They can be parameterized and they are updated automatically with additions, modifications or deletions from the source code. Learn more on our CRS primer [*Dynamic Reporting*](https://zenodo.org/records/8354360) 
+
+### Software environment
+
+#### R
+... R packages 
+...##### R DT 
+...##### R crosstalk
+...##### R plotly
+
+
+
+#### Python  
+
+#### Python note
+
+### Publishing systems 
+
+#### R markdown
+
+
+
+#### Quarto
+###### R quarto markdown 
+
+
+### Human-readable syntaxes
+These are simple languages used for formatting and/or for specifying settings in many of the software tools and workflows we describe. They require a very minimal learning from users, and there are plenty of templates and examples online. A good approach is usually to build on some of them and adapt it to our case. 
+
+#### Markdown
+
+#### YAML 
+
+### Back end 
+#### Pandoc 
+
+#### Knitr
