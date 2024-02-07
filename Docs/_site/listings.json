@@ -33,5 +33,9 @@
       "/contents/tutorials/Tutorial_Gitlab_workflows.html",
       "/contents/tutorials/Tutorial_Web.html"
     ]
+  },
+  {
+    "listing": "/contents/hub/index.html",
+    "items": []
   }
 ]

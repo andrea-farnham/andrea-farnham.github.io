@@ -1,0 +1,13 @@
+---
+listing:
+  categories: true
+  type: table
+  fields: [title, subtitle, date]
+  sort-ui: true
+  filter-ui: true
+
+--- 
+
+# Templates {.unnumbered}
+
+ A series of useful **starter-templates**

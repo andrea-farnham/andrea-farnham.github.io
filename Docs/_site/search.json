@@ -256,7 +256,7 @@
     "href": "index.html",
     "title": "AFFORD",
     "section": "",
-    "text": "This site compiles resources for Open Research Data management curated and developed by the Center of Reproducible Science of the University of Zurich for the SwissUniversities project AFFORD: A Framework for Avoiding Open Research Data Dump.\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\nLast edited: Wed Dec 13 15:00:17 2023\n\n\n\n Back to top"
+    "text": "This site compiles resources for Open Research Data management curated and developed by the Center of Reproducible Science of the University of Zurich for the SwissUniversities project AFFORD: A Framework for Avoiding Open Research Data Dump.\n\n\nLearn more about us &gt;&gt;\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n Back to top"
   },
   {
     "objectID": "contents/glossary/index.html#version-control-and-repositories",
@@ -278,5 +278,33 @@
     "title": "Glossary",
     "section": "",
     "text": "A powerful tool to improve reproducibility of results. These are reports that contain code, text and code outputs in a single document. The outputs can be figures, tables and can even have interactive elements (for HTML reports). They can be parameterized and they are updated automatically with additions, modifications or deletions from the source code. Learn more on our CRS primer Dynamic Reporting\n\n\n\n\n… R packages …##### R DT …##### R crosstalk …##### R plotly\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThese are simple languages used for formatting and/or for specifying settings in many of the software tools and workflows we describe. They require a very minimal learning from users, and there are plenty of templates and examples online. A good approach is usually to build on some of them and adapt it to our case."
+  },
+  {
+    "objectID": "contents/hub/index.html",
+    "href": "contents/hub/index.html",
+    "title": "Templates",
+    "section": "",
+    "text": "Templates\nA series of useful starter-templates\n\n\n\n\n\n\n\n    \n      \n      \n    \n\n\n\n\n\n\nTitle\n\n\nSubtitle\n\n\nDate\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+  },
+  {
+    "objectID": "contents/about/index.html",
+    "href": "contents/about/index.html",
+    "title": "About",
+    "section": "",
+    "text": "A Framework for Avoiding the Open Research Data Dump.\n\n\n\n\nThe project AFFORD aims at designing a sustainable support framework to lower the barriers to publishing data and other research outputs in an accessible form by bundling know-how, workflows, and tools under the umbrella of one organizational entity. It is a collaboration between the InterfaceGroup and the Center for Reproducible Science of the University of Zurich. It uses the Sinergia project Fluid Dynamics of the central nervous system as a reference project and accompanies this project in the full cycle of Open Research Data (ORD) generation from experiment planning to publishing. This project-based, data-driven approach will help the framework reach a sufficient level of maturity before it is made available to all university researchers.\n\nCode library(collapsibleTree)\n\n # Read data \n AFFORD &lt;- read.csv('AFFORD_tree.csv')\n\n # Unique lenghts for coloring  \n # Plot dendrogram \n collapsibleTree(AFFORD, \n                root = 'AFFORD deliverables',\n                hierarchy = c(\"Topic\", 'Output','Description'),  \n                fill = c('forestgreen',\n                 rep(\"darkorange\", length(unique(AFFORD$Topic)[!is.na(unique(AFFORD$Topic))])), \n                 rep(\"gold\", length(unique(AFFORD$Output)[!is.na(unique(AFFORD$Output))])),\n                 rep(\"papayawhip\", length(unique(AFFORD$Description)[!is.na(unique(AFFORD$Description))]))\n                  ), \n                 collapsed = FALSE, zoomable = FALSE)\n\n\n\n\n\n\n\nThe reproducibility of scientific findings is crucial for the credibility of empirical research. The objective of the Center for Reproducible Science is to train the next generation of researchers in good research practices, to develop novel methodology related to reproducibility and replicability, and to improve the quality of scientific investigation using meta-science.\nThe CRS is a competence center supported by the Vice President Research and by the Faculties of Medicine (MeF, leading house), Science (MNF), Business, Economics and Informatics (WWF), Arts and Social Sciences (PhF), Law (RWF), and Vetsuisse Faculty (VSF)."
+  },
+  {
+    "objectID": "contents/about/index.html#the-afford-project",
+    "href": "contents/about/index.html#the-afford-project",
+    "title": "About",
+    "section": "",
+    "text": "A Framework for Avoiding the Open Research Data Dump.\n\n\n\n\nThe project AFFORD aims at designing a sustainable support framework to lower the barriers to publishing data and other research outputs in an accessible form by bundling know-how, workflows, and tools under the umbrella of one organizational entity. It is a collaboration between the InterfaceGroup and the Center for Reproducible Science of the University of Zurich. It uses the Sinergia project Fluid Dynamics of the central nervous system as a reference project and accompanies this project in the full cycle of Open Research Data (ORD) generation from experiment planning to publishing. This project-based, data-driven approach will help the framework reach a sufficient level of maturity before it is made available to all university researchers.\n\nCode library(collapsibleTree)\n\n # Read data \n AFFORD &lt;- read.csv('AFFORD_tree.csv')\n\n # Unique lenghts for coloring  \n # Plot dendrogram \n collapsibleTree(AFFORD, \n                root = 'AFFORD deliverables',\n                hierarchy = c(\"Topic\", 'Output','Description'),  \n                fill = c('forestgreen',\n                 rep(\"darkorange\", length(unique(AFFORD$Topic)[!is.na(unique(AFFORD$Topic))])), \n                 rep(\"gold\", length(unique(AFFORD$Output)[!is.na(unique(AFFORD$Output))])),\n                 rep(\"papayawhip\", length(unique(AFFORD$Description)[!is.na(unique(AFFORD$Description))]))\n                  ), \n                 collapsed = FALSE, zoomable = FALSE)"
+  },
+  {
+    "objectID": "contents/about/index.html#the-crs",
+    "href": "contents/about/index.html#the-crs",
+    "title": "About",
+    "section": "",
+    "text": "The reproducibility of scientific findings is crucial for the credibility of empirical research. The objective of the Center for Reproducible Science is to train the next generation of researchers in good research practices, to develop novel methodology related to reproducibility and replicability, and to improve the quality of scientific investigation using meta-science.\nThe CRS is a competence center supported by the Vice President Research and by the Faculties of Medicine (MeF, leading house), Science (MNF), Business, Economics and Informatics (WWF), Arts and Social Sciences (PhF), Law (RWF), and Vetsuisse Faculty (VSF)."
   }
 ]
