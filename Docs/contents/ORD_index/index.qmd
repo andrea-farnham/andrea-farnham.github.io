@@ -1,20 +1,28 @@
 ---
-listing:
-  categories: true
-  type: table
-  fields: [title, subtitle, date]
-  sort-ui: true
-  filter-ui: true
-
+title: "Data index"
+subtitle: "An example of a data index to navigate through metadata and showcase preview images" 
+author: "G.Fraga Gonzalez"
+affiliation: "Center for Reproducible Science, UZH"
+date: last-modified
+format: 
+  html:
+    code-overflow: scroll
 --- 
 
 # A data hub {.unnumbered}
+
 
 This is a demo of a simple data hub that allows to navigate through a table with metadata and thumbnail images. The idea is to facilitate finding and sharing your data. Visit our [Tutorials page]('.\contents\tutorials\index.qmd') for more details on this workflow. 
 
 In short, for the hub you need: (1) a source of structured metadata, i.e., tables (2) if you are to display thumbnails you need the image files (3) some R code to render the table interactive with the package [DT](https://rstudio.github.io/DT/). (4) R Quarto to create the entire page as html 
 
+::: {.callout-warning style="font-size: 4px"}
+## Instructions
 
+The highlighted columns below correspond to the metadata table created from the filenames in the folder. Use the \*filter boxes\* to select which data are displayed. You can also \*select Columns\* to choose which columns are displayed or change the column order if you \*click and drag\* on the variable names. You can also \*select\* one or multiple rows clicking on them or by using the \*select\* buttons. Click on a thumbnail to open the full-size image.
+
+Click the button \*Copy\* to copy the filtered or selected rows to the clipboard. With the buttons \*csv\* or \*pdf\* you can save them to these two formats.
+:::
 
 ```{r}
 library(dplyr)

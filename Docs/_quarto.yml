@@ -26,8 +26,8 @@ website:
         collapse-below: lg
                     
         right:                  
-          - text: "ORD Hub"            
-            href: contents/hub/index.qmd
+          - text: "Open Data Index"            
+            href: contents/ORD_index/index.qmd
           - text: "Tutorials"            
             href: contents/tutorials/index.qmd
           - text: "Templates"            
