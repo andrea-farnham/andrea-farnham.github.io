@@ -7,9 +7,8 @@ date: last-modified
 format: 
   html:
     code-overflow: scroll
+    code-fold: true
 --- 
-
-# A data hub {.unnumbered}
 
 
 This is a demo of a simple data hub that allows to navigate through a table with metadata and thumbnail images. The idea is to facilitate finding and sharing your data. Visit our [Tutorials page]('.\contents\tutorials\index.qmd') for more details on this workflow. 
@@ -56,8 +55,8 @@ tbl_joined  <- full_join(x=tbl,
 ```
 
 ```{r}
-pic_fullpath <- file.path('https://gitlab.uzh.ch/crsuzh/afford_website/-/tree/master/Docs/contents/hub/Images',tbl_joined$filenames)
-pic_relpath <- file.path('.','contents','hub',tbl_joined$filenames)
+pic_fullpath <- file.path('https://gitlab.uzh.ch/crsuzh/afford_website/-/tree/master/Docs/contents/ORD_index/Images',tbl_joined$filenames)
+pic_relpath <- file.path('.',tbl_joined$filenames)
 
 # add paths to filenames + some html code 
 tbl_joined$pic <- paste0('<a href=\'', pic_fullpath,'\' target=\'_blank\'>', 
