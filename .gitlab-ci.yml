@@ -7,6 +7,9 @@ pages:
   - R -e "install.packages('collapsibleTree')"   
   - R -e "install.packages('pak')" 
   - R -e "install.packages('crosstalk')" 
+  - R -e "install.packages('DT')" 
+
+
 
  
     
