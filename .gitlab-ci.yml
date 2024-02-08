@@ -6,7 +6,8 @@ pages:
   - R -e "install.packages('quarto')" 
   - R -e "install.packages('collapsibleTree')"   
   - R -e "install.packages('pak')" 
-  - R -e "pak::pak('posit-dev/r-shinylive')"   
+  - R -e "install.packages('crosstalk')" 
+
  
     
   script: 
