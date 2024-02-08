@@ -1,9 +1,5 @@
 [
   {
-    "listing": "/contents/glossary/index.html",
-    "items": []
-  },
-  {
     "listing": "/contents/presentations/index.html",
     "items": [
       "/contents/presentations/Presentations_1.html",
@@ -19,12 +15,6 @@
     "items": []
   },
   {
-    "listing": "/contents/tools/index.html",
-    "items": [
-      "/contents/tools/Tools_1.html"
-    ]
-  },
-  {
     "listing": "/contents/tutorials/index.html",
     "items": [
       "/contents/tutorials/Tutorial_Gitlab1_IntroGit.html",
@@ -33,9 +23,5 @@
       "/contents/tutorials/Tutorial_Gitlab_workflows.html",
       "/contents/tutorials/Tutorial_Web.html"
     ]
-  },
-  {
-    "listing": "/contents/hub/index.html",
-    "items": []
   }
 ]

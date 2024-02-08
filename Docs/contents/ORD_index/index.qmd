@@ -1,6 +1,6 @@
 ---
-title: "Data index"
-subtitle: "An example of a data index to navigate through metadata and showcase preview images" 
+title: "Open Data Index"
+subtitle: "An example of a data index to navigate through metadata and preview images" 
 author: "G.Fraga Gonzalez"
 affiliation: "Center for Reproducible Science, UZH"
 date: last-modified
@@ -8,22 +8,25 @@ format:
   html:
     code-overflow: scroll
     code-fold: true
---- 
+---
 
+This is a demo of a data index that allows to navigate through a table with metadata and thumbnail images. The idea is to facilitate finding and sharing your data. Visit our [Tutorials page]('.\contents\tutorials\index.qmd') for more details on this workflow.
 
-This is a demo of a simple data hub that allows to navigate through a table with metadata and thumbnail images. The idea is to facilitate finding and sharing your data. Visit our [Tutorials page]('.\contents\tutorials\index.qmd') for more details on this workflow. 
+In short, for the index you need: (1) a source of structured metadata, i.e., tables (2) if you are to display thumbnails you need the image files (3) some R code to render the table interactive with the package [DT](https://rstudio.github.io/DT/). (4) R Quarto to create the entire page as html
 
-In short, for the hub you need: (1) a source of structured metadata, i.e., tables (2) if you are to display thumbnails you need the image files (3) some R code to render the table interactive with the package [DT](https://rstudio.github.io/DT/). (4) R Quarto to create the entire page as html 
+::: callout-warning
+This demo used a dummy dataset and the source metadata table and images have no meaning. We demonstrate three operations that can be useful for creating a data index:
 
-::: {.callout-warning style="font-size: 4px"}
-## Instructions
+-   Reading filenames and extracting information into columns from filename parts
 
-The highlighted columns below correspond to the metadata table created from the filenames in the folder. Use the \*filter boxes\* to select which data are displayed. You can also \*select Columns\* to choose which columns are displayed or change the column order if you \*click and drag\* on the variable names. You can also \*select\* one or multiple rows clicking on them or by using the \*select\* buttons. Click on a thumbnail to open the full-size image.
+-   Joining two tables according to a key variable with shared values between them
 
-Click the button \*Copy\* to copy the filtered or selected rows to the clipboard. With the buttons \*csv\* or \*pdf\* you can save them to these two formats.
+-   Adding some HTML code to a column values (in this case filenames) to render the images (the same approach would be done to render hyperlinks).
 :::
 
 ```{r}
+#| warning: false
+
 library(dplyr)
 
 tbl <-  readxl::read_excel('DummyData1_20241234_subjects.xlsx',na=c("","N/A"))
@@ -56,11 +59,14 @@ tbl_joined  <- full_join(x=tbl,
 
 ```{r}
 pic_fullpath <- file.path('https://gitlab.uzh.ch/crsuzh/afford_website/-/tree/master/Docs/contents/ORD_index/Images',tbl_joined$filenames)
-pic_relpath <- file.path('.',tbl_joined$filenames)
+pic_relpath <- file.path(getwd(),'Images',tbl_joined$filenames)
 
 # add paths to filenames + some html code 
 tbl_joined$pic <- paste0('<a href=\'', pic_fullpath,'\' target=\'_blank\'>', 
                        '<img src=\'',pic_relpath, '\' height=\'70\'></a>')
+
+# Move to first column
+tbl_joined <- tbl_joined %>% relocate("pic",.before = 1)
 
 
 ```
@@ -111,8 +117,6 @@ datatable(
       )
       )
   ) 
-%>% 
-formatStyle(colnames(tbl),backgroundColor = "ivory")  
 )
 
 
