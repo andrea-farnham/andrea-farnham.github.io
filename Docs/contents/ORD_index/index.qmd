@@ -7,6 +7,8 @@ date: last-modified
 format: 
   html:
     code-overflow: scroll
+    code-tools: true
+    code-copy: true
     code-fold: true
 ---
 
@@ -14,7 +16,8 @@ This is a demo of a data index that allows to navigate through a table with meta
 
 In short, for the index you need: (1) a source of structured metadata, i.e., tables (2) if you are to display thumbnails you need the image files (3) some R code to render the table interactive with the package [DT](https://rstudio.github.io/DT/). (4) R Quarto to create the entire page as html
 
-::: callout-warning
+::: {.callout-note collapse=true}
+## Expand to know more about this example 
 This demo used a dummy dataset and the source metadata table and images have no meaning. We demonstrate three operations that can be useful for creating a data index:
 
 -   Reading filenames and extracting information into columns from filename parts
@@ -24,60 +27,61 @@ This demo used a dummy dataset and the source metadata table and images have no 
 -   Adding some HTML code to a column values (in this case filenames) to render the images (the same approach would be done to render hyperlinks).
 :::
 
-```{r}
-#| warning: false
 
+```{r readtable}
+#| include: false
 library(dplyr)
-
 tbl <-  readxl::read_excel('DummyData1_20241234_subjects.xlsx',na=c("","N/A"))
-# Minor fix to date-time format 
+
+# Minor adjustment of time format
 colsWithTime <- colnames(tbl)[grep('*time*',colnames(tbl))] # find variables with 
 tbl <- tbl %>%  mutate(across(all_of(colsWithTime), ~ format(., format = "%H:%M")))
 
 ```
 
-```{r}
-dirinput <- file.path('Images')
+```{r filenames}
+#| include: false
 
-# List all files with .jpg extension
-files <- dir(dirinput)
-extension <- '.jpg'
-filenames <- files[grepl(paste0('*',extension,'$'),files)]
+files <- dir('Images') # Find all files in our images folder
+filenames <- files[grepl(paste0('*.jpg$'),files)] #take only .jpg files
 
-tbl_files <- as.data.frame(filenames)
-tbl_files$sname <- sapply(strsplit(filenames,'-'),'[[',1)
+tbl_files <- as.data.frame(filenames) # make table with filenames
+tbl_files$subject <- sapply(strsplit(filenames,'-'),'[[',1) #take 1st filename part
 ```
 
-```{r}
+```{r jointables}
+#| include: false
 tbl_joined  <- full_join(x=tbl,
                          y = tbl_files,
-                         by=join_by("subjID"=="sname"),
+                         by=join_by("subjID"=="subject"),
                          keep=TRUE)
-
 
 ```
 
-```{r}
+```{r addhtml}
+#| include: false
+# define image paths
 pic_fullpath <- file.path('https://gitlab.uzh.ch/crsuzh/afford_website/-/tree/master/Docs/contents/ORD_index/Images',tbl_joined$filenames)
 pic_relpath <- file.path(getwd(),'Images',tbl_joined$filenames)
 
-# add paths to filenames + some html code 
+# add paths and HTML code 
 tbl_joined$pic <- paste0('<a href=\'', pic_fullpath,'\' target=\'_blank\'>', 
                        '<img src=\'',pic_relpath, '\' height=\'70\'></a>')
 
 # Move to first column
 tbl_joined <- tbl_joined %>% relocate("pic",.before = 1)
 
-
 ```
 
-```{r}
-library(crosstalk) # this package makes it possible to filter 
-library(DT)
-# an object that will be shared by filter panels and datatable 
+```{r rendertable}
+#| include: false 
+library(crosstalk) # for filter boxes
+library(DT) # For html table
+
+# first we need an object that will be shared by filter panels and datatable 
 shared_joined <- SharedData$new(tbl_joined, key = ~subjID, group = "shared_obj")
 
-# to make two columns one with filter panels and one with the table
+# to make two columns: one with filter panels and one with the table
 bscols(widths = c(2,10),
      device = c("xs", "sm", "md", "lg"),
 
@@ -98,7 +102,7 @@ datatable(
     extensions = c('Buttons', 'Select','ColReorder', 'Scroller',  'KeyTable'),
     selection = 'none',
     options = list(
-      pageLength = 20,
+      pageLength = 10,
       dom = 'Bfrtip',
       #buttons = c('colvis','selectAll', 'selectNone', 'copy', 'csv', 'pdf'),  
       buttons = list(list(extend = "colvis", text = "select Columns", background='yellow'),
@@ -121,3 +125,52 @@ datatable(
 
 
 ```
+
+::: {.panel-tabset}
+# Navigate data {.unnumbered}
+```{r }
+<<rendertable>>
+```
+
+# How-to 
+
+### 1. Read metadata table
+We first read a *source metadata table* with information about subjects and experiments (image recording)
+```{r }
+#| code-fold: show
+<<readtable>>
+```
+
+### 2. Make a table with filenames 
+We read the names of *files* with the images we want to show case. The files with subject images start with subject identifier separated by the rest by a hyphen '-'. We use this to create a new variable containing the subject identifier of each image file
+```{r }
+#| code-fold: show
+<<filenames>>
+```
+
+### 3. Join the two tables 
+Now we link the image filenames to the source metadata table
+```{r }
+#| code-fold: show
+<<jointables>>
+```
+
+ 
+### 4. Add HTML code to render the images
+Since we want to display images we will add some HTML with the address of the image files (the repository). The URL is added as *href * so that we access the image when we click. The path relative to this script is added to *src* so that the table renders the image thumbnail. 
+```{r }
+#| code-fold: show
+<<addhtml>>
+```
+
+
+### 5. Render the HTML table with DT package
+Finally we render the table interactive and add some custom filter boxes. We need two  [packages](https://r-pkgs.org/) (they were installed in advanced with `install.packages()` and then we load their libraries with the command `library()`). The main package is [DT](https://rstudio.github.io/DT/) which allows to render the table interactive. The R package [crosstalk](https://rstudio.github.io/crosstalk/) is used to allow filter boxes to change what rows we see in the table. Its function `bscols()` allows to lay out the filters on a column next to the table. 
+
+```{r }
+#| code-fold: show
+<<rendertable>>
+```
+
+
+::: 

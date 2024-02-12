@@ -26,7 +26,7 @@ website:
         collapse-below: lg
                     
         right:                  
-          - text: "Open Data Index"            
+          - text: "Data Index"            
             href: contents/ORD_index/index.qmd
           - text: "Tutorials"            
             href: contents/tutorials/index.qmd
