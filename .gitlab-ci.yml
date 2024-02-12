@@ -16,7 +16,7 @@ pages:
   script: 
   - cd Docs
   - R -e "quarto::quarto_render()"       
-  - mv ./_site/* ../public/  
+  - mv ./_site/* ./public/  
   
 
   artifacts:    
