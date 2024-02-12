@@ -10,6 +10,7 @@ format:
     code-tools: true
     code-copy: true
     code-fold: true
+    embed-resources: true
 ---
 
 This is a demo of a data index that allows to navigate through a table with metadata and thumbnail images. The idea is to facilitate finding and sharing your data. Visit our [Tutorials page]('.\contents\tutorials\index.qmd') for more details on this workflow.
@@ -62,7 +63,7 @@ tbl_joined  <- full_join(x=tbl,
 #| include: false
 # define image paths
 pic_fullpath <- file.path('https://gitlab.uzh.ch/crsuzh/afford_website/-/tree/master/Docs/contents/ORD_index/Images',tbl_joined$filenames)
-pic_relpath <- file.path('.','Images',tbl_joined$filenames)
+pic_relpath <- file.path(getwd(),'Images',tbl_joined$filenames)
 
 # add paths and HTML code 
 tbl_joined$pic <- paste0('<a href=\'', pic_fullpath,'\' target=\'_blank\'>', 
