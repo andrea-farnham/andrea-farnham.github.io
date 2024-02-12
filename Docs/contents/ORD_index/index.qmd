@@ -10,7 +10,7 @@ format:
     code-tools: true
     code-copy: true
     code-fold: true
-    embed-resources: true
+
 ---
 
 This is a demo of a data index that allows to navigate through a table with metadata and thumbnail images. The idea is to facilitate finding and sharing your data. Visit our [Tutorials page]('.\contents\tutorials\index.qmd') for more details on this workflow.
@@ -72,6 +72,7 @@ tbl_joined$pic <- paste0('<a href=\'', pic_fullpath,'\' target=\'_blank\'>',
 # Move to first column
 tbl_joined <- tbl_joined %>% relocate("pic",.before = 1)
 
+getwd()
 ```
 
 ```{r rendertable}
