@@ -9,8 +9,8 @@ pages:
   - R -e "install.packages('crosstalk')" 
   - R -e "install.packages('DT')" 
   - R -e "getwd()"
-  - mkdir -p public/
-  - cp -r ./Docs/contents/ORD_index/Images* public/ 
+  - mkdir -p public/Docs/contents/ORD_index/Images
+  - cp -r ./Docs/contents/ORD_index/Images* public/
     
   script: 
   - cd Docs
