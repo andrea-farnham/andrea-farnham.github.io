@@ -13,6 +13,7 @@ pages:
   - cp -r ./Docs/contents/ORD_index/Images* public/ 
     
   script: 
+  - cd Docs
   - R -e "quarto::quarto_render()"       
   - mv ./_site/* ../public/  
   
