@@ -9,13 +9,13 @@ pages:
   - R -e "install.packages('crosstalk')" 
   - R -e "install.packages('DT')" 
   - R -e "getwd()"
-  - mkdir -p public/contents/ORD_index/Images
-  - cp -r ./Docs/contents/ORD_index/Images* public/contents/ORD_index/Images 
+  - mkdir -p public/Images
+  - cp ./Docs/contents/ORD_index/Images* public/Images 
  
     
   script: 
   - cd Docs
-  - R -e "baseDir<- getwd(); quarto::quarto_render()"       
+  - R -e "quarto::quarto_render()"       
   - mv ./_site/* ../public/  
   
 
