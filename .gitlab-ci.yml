@@ -8,7 +8,7 @@ pages:
   - R -e "install.packages('pak')" 
   - R -e "install.packages('crosstalk')" 
   - R -e "install.packages('DT')" 
-  - mkdir -p  ./public/contents/ORD_index/Images
+  - mkdir -p /public/contents/ORD_index/Images
   - cp -r ./Docs/contents/ORD_index/Images* ./public/ORD_index/Images 
  
     
