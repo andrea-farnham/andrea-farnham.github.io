@@ -10,6 +10,7 @@ format:
     code-tools: true
     code-copy: true
     code-fold: true
+    page-layout: full
 
 ---
 
