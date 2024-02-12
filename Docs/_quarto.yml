@@ -90,6 +90,7 @@ format:
         code-link: true
         toc: true
         code-copy: false      
+        self-contained: true
         mermaid: 
           theme: default
 
