@@ -6,7 +6,7 @@ format:
 
 # Glossary {.unnumbered}
 
-...*This Glossary is work in progress...*
+Short descriptions and references for some technical terms and software used in our tutorials
 
 ## Version control and repositories
 
@@ -16,7 +16,7 @@ format:
 
 #### Git repository
 
-A Git repository is a set of folders and files with complete history and full version-tracking abilities, locally or on a server.
+A Git repository is a set of folders and files with complete history and full version-tracking abilities, locally or on a server. 
 
 #### Github
 
@@ -27,60 +27,55 @@ A Git repository is a set of folders and files with complete history and full ve
 [Gitlab.com](https://about.gitlab.com/) is acommercial hosting services for version control with Git.
 
 #### Gitlab UZH
+
 The UZH instance of the open source Gitlab at [Gitlab.uzh.ch](https://gitlab.uzh.ch) is hosted by the UZH on servers owned by [SWITCH](https://www.switch.ch/de/edu-id/), a non-profit foundation that has been established by the Swiss Federal Government. [Learn more \>\>](https://www.zi.uzh.ch/en/staff/software-elearning/webplatforms/gitlab.html).
 
+#### Gitlab pages
+[Gitlab pages](https://docs.gitlab.com/ee/user/project/pages/) is a service from Gitlab that allows you to publish static websites directly from a repository in Gitlab. 
 
-#### Gitlab pages 
+#### Static websites 
+By static we mean that the user will just see whatever data is contained in the HTML that compose the website. Anyone landing in that website will see the same content, no new content is generated based on the user's input. 
 
-#### Continuous Integration 
-
+#### Continuous Integration and deployment -  CI/CD
+[CI/CD](https://docs.gitlab.com/ee/ci/) is a method of software development where building, testing and deploying applications is done continuously. A very simple use case example in the context of Gitlab pages is a CI/CD script that is triggered whenever there are changes in the repository, and that renders the website HTML. Thus, enabling maintainers to change and update the website content directly from the browser. 
 
 
 ## Data storage and security
 
 #### Switch
-[SWITCH](https://www.switch.ch/de/edu-id/), a non-profit foundation that has been established by the Swiss Federal Governmen. It a cloud-based storage service for storing and sharing files online, with automatic sync of files across devices. University members get 100 Gb of storage. All personal data remains in Switzerland under the direct control of Switch and the universities and is covered by Swiss data protection provisions 
+
+[SWITCH](https://www.switch.ch/de/edu-id/), a non-profit foundation that has been established by the Swiss Federal Governmen. It a cloud-based storage service for storing and sharing files online, with automatic sync of files across devices. University members get 100 Gb of storage. All personal data remains in Switzerland under the direct control of Switch and the universities and is covered by Swiss data protection provisions
 
 #### Switch edu-ID
 
-The universal login for lifelong learning (for all students of swiss Universities). Orchestrated by the Switch foundation. 
+The universal login for lifelong learning (for all students of swiss Universities). Orchestrated by the Switch foundation.
 
+## Software and reporting
 
-## Dynamic reports 
-A powerful tool to improve reproducibility of results. These are reports that contain code, text and code outputs in a single document. The outputs can be figures, tables and can even have interactive elements (for HTML reports). They can be parameterized and they are updated automatically with additions, modifications or deletions from the source code. Learn more on our CRS primer [*Dynamic Reporting*](https://zenodo.org/records/8354360) 
+#### Dynamic reports
 
-### Software environment
+A powerful tool to improve reproducibility of results. These are reports that contain code, text and code outputs in a single document. The outputs can be figures, tables and can even have interactive elements (for HTML reports). They can be parameterized and they are updated automatically with additions, modifications or deletions from the source code. Learn more on our CRS primer [*Dynamic Reporting*](https://zenodo.org/records/8354360)
 
 #### R
-... R packages 
-...##### R DT 
-...##### R crosstalk
-...##### R plotly
-
-
-
-#### Python  
-
-#### Python note
-
-### Publishing systems 
+The [R](https://www.r-project.org/about.html) language and programming environment was designed for statistical computing and graphics. It is free and open source, broadly used in research and it has a very active community of users. 
 
 #### R markdown
 
-
-
 #### Quarto
-###### R quarto markdown 
+The multi-language publishing system [Quarto](https://quarto.org/) is an open-source scientific and technical publishing system. It is more advanced than [R markdown](https://rmarkdown.rstudio.com/) with more options for output types and languages. It can generate dynamic reports in different formats (e.g., pdf, HTML, MS word, ePub) with content written code in different languages (R, Python, Julia and Observable) 
 
+###### R quarto markdown
 
 ### Human-readable syntaxes
-These are simple languages used for formatting and/or for specifying settings in many of the software tools and workflows we describe. They require a very minimal learning from users, and there are plenty of templates and examples online. A good approach is usually to build on some of them and adapt it to our case. 
+
+These are simple languages used for formatting and/or for specifying settings in many of the software tools and workflows we describe. They require a very minimal learning from users, and there are plenty of templates and examples online. A good approach is usually to build on some of them and adapt it to our case.
 
 #### Markdown
 
-#### YAML 
+#### YAML
 
-### Back end 
-#### Pandoc 
+### Back end
+
+#### Pandoc
 
 #### Knitr

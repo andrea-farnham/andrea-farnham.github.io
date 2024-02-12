@@ -14,7 +14,7 @@ format:
 
 ---
 
-This is a demo of a data index that allows to navigate through a table with metadata and thumbnail images. The idea is to facilitate finding and sharing your data. Visit our [Tutorials page]('.\contents\tutorials\index.qmd') for more details on this workflow. In short, for the index you need: (1) a source of structured metadata (2) if you are to display thumbnails you need the picture files (3) some R code to render the table interactive with the package [DT](https://rstudio.github.io/DT/) and (4) R Quarto to output the table as an HTML page
+This is a demo of a data index that allows to navigate through a table with metadata and thumbnail images. The idea is to facilitate finding and sharing your data. Visit our [Tutorials page](https://crsuzh.pages.uzh.ch/AFFORD_website/contents/tutorials/) for more details on this workflow. In short, for the index you need: (1) a source of structured metadata (2) if you are to display thumbnails you need the picture files (3) some R code to render the table interactive with the package [DT](https://rstudio.github.io/DT/) and (4) R Quarto to output the table as an HTML page
 
 ::: {.callout-note collapse=true}
 #### Click to expand and know more about this example 
@@ -58,6 +58,7 @@ tbl_joined  <- full_join(x=tbl,
 
 ```
 
+
 ```{r addhtml}
 #| include: false
 # define image paths
@@ -70,8 +71,7 @@ tbl_joined$pic <- paste0('<a href=\'', pic_fullpath,'\' target=\'_blank\'>',
 
 # Move to first column
 tbl_joined <- tbl_joined %>% relocate("pic",.before = 1)
-
-getwd()
+ 
 ```
 
 ```{r rendertable}
@@ -169,12 +169,16 @@ Now we link the image filenames to the source metadata table
 
  
 ### 4. Add HTML code to render the images
-Since we want to display images we will add some HTML with the address of the image files (the repository). The URL is added as *href * so that we access the image when we click. The path relative to this script is added to *src* so that the table renders the image thumbnail. 
+Since we want to display images we will add some HTML with the address of the image files (the repository). The URL is added as *href * so that we access the image when we click. The path relative to this script is added to *src* so that the table renders the image thumbnail. We use `file.path()` to write the directories to avoid having to specify the operating system separator '\\' or '/'  (except for the URL address). 
+
 ```{r }
 #| code-fold: show
 <<addhtml>>
 ```
-
+::: {.callout-warning collapse=true}
+#### Note on relative paths and Gitlab pages for advanced users >>
+The *img src* usually has the path to the images relative to the current path e.g., ".\Images" if they are in subfolder of the current working directory (in R you can find it with `getwd()`). The current path "../../Images" indicates they are in a folder named 'Images' two folders above current folder. This is related to how our Continuous integration (CI/CD) pipeline is set. There are many other possible configurations. Beware your local relative paths may not function the same if you use CI/CD and Gitlab pages. Find more information about CI/CD is in our Tutorial section. 
+:::
 
 ### 5. Render the HTML table with DT package
 Finally we render the table interactive and add some custom filter boxes. We need two  [packages](https://r-pkgs.org/) (they were installed in advanced with `install.packages()` and then we load their libraries with the command `library()`). The main package is [DT](https://rstudio.github.io/DT/) which allows to render the table interactive. The R package [crosstalk](https://rstudio.github.io/crosstalk/) is used to allow filter boxes to change what rows we see in the table. Its function `bscols()` allows to lay out the filters on a column next to the table. 
