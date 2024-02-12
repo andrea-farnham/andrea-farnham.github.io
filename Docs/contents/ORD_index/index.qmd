@@ -1,5 +1,5 @@
 ---
-title: "Open Data Index"
+title: "Data Index"
 subtitle: "An example of a data index to navigate through metadata and preview images" 
 author: "G.Fraga Gonzalez"
 affiliation: "Center for Reproducible Science, UZH"
@@ -171,6 +171,5 @@ Finally we render the table interactive and add some custom filter boxes. We nee
 #| code-fold: show
 <<rendertable>>
 ```
-
 
 ::: 
