@@ -10,7 +10,7 @@ pages:
   - R -e "install.packages('DT')" 
   - R -e "getwd()"
   - mkdir -p public/contents/ORD_index/Images
-  - cp -r ./Docs/contents/ORD_index/Images* /public/ORD_index/Images 
+  - cp -r ./Docs/contents/ORD_index/Images* public/ORD_index/Images 
  
     
   script: 
