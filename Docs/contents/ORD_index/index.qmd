@@ -14,13 +14,11 @@ format:
 
 ---
 
-This is a demo of a data index that allows to navigate through a table with metadata and thumbnail images. The idea is to facilitate finding and sharing your data. Visit our [Tutorials page]('.\contents\tutorials\index.qmd') for more details on this workflow.
-
-In short, for the index you need: (1) a source of structured metadata, i.e., tables (2) if you are to display thumbnails you need the image files (3) some R code to render the table interactive with the package [DT](https://rstudio.github.io/DT/). (4) R Quarto to create the entire page as html
+This is a demo of a data index that allows to navigate through a table with metadata and thumbnail images. The idea is to facilitate finding and sharing your data. Visit our [Tutorials page]('.\contents\tutorials\index.qmd') for more details on this workflow. In short, for the index you need: (1) a source of structured metadata (2) if you are to display thumbnails you need the picture files (3) some R code to render the table interactive with the package [DT](https://rstudio.github.io/DT/) and (4) R Quarto to output the table as an HTML page
 
 ::: {.callout-note collapse=true}
-## Expand to know more about this example 
-This demo used a dummy dataset and the source metadata table and images have no meaning. We demonstrate three operations that can be useful for creating a data index:
+#### Click to expand and know more about this example 
+This demo used a dummy dataset and the source metadata table and images have no meaning. The example demonstrates three frequent operations that can be useful for creating a data index:
 
 -   Reading filenames and extracting information into columns from filename parts
 
@@ -45,10 +43,10 @@ tbl <- tbl %>%  mutate(across(all_of(colsWithTime), ~ format(., format = "%H:%M"
 #| include: false
 
 files <- dir('Images') # Find all files in our images folder
-filenames <- files[grepl(paste0('*.jpg$'),files)] #take only .jpg files
+fname <- files[grepl(paste0('*.jpg$'),files)] #take only .jpg files
 
-tbl_files <- as.data.frame(filenames) # make table with filenames
-tbl_files$subject <- sapply(strsplit(filenames,'-'),'[[',1) #take 1st filename part
+tbl_files <- as.data.frame(fname) # make table with filenames
+tbl_files$subject <- sapply(strsplit(fname,'-'),'[[',1) #take 1st filename part
 ```
 
 ```{r jointables}
@@ -56,15 +54,15 @@ tbl_files$subject <- sapply(strsplit(filenames,'-'),'[[',1) #take 1st filename p
 tbl_joined  <- full_join(x=tbl,
                          y = tbl_files,
                          by=join_by("subjID"=="subject"),
-                         keep=TRUE)
+                         keep=FALSE)
 
 ```
 
 ```{r addhtml}
 #| include: false
 # define image paths
-pic_fullpath <- file.path('https://gitlab.uzh.ch/crsuzh/afford_website/-/tree/master/Docs/contents/ORD_index/Images',tbl_joined$filenames)
-pic_relpath <- file.path('..','..','Images',tbl_joined$filenames)
+pic_fullpath <- file.path('https://gitlab.uzh.ch/crsuzh/afford_website/-/tree/master/Docs/contents/ORD_index/Images',tbl_joined$fname)
+pic_relpath <- file.path('..','..','Images',tbl_joined$fname)
 
 # add paths and HTML code 
 tbl_joined$pic <- paste0('<a href=\'', pic_fullpath,'\' target=\'_blank\'>', 
@@ -131,11 +129,22 @@ datatable(
 
 ::: {.panel-tabset}
 # Navigate data {.unnumbered}
+
+<!-- ::: {.callout-tip style="font-size: 4px" collapse=false} -->
+::: {.callout-tip collapse=false}
+# Instructions
+
+Use the **filter boxes** to select which data are displayed. You can also **select Columns** to choose which columns are displayed or change the column order if you *click and drag* on the variable names. You can also **select rows** (one or multiple) clicking on them or by using the select button. Click on a thumbnail to open the full-size image. 
+Click the button **Copy** to copy the filtered or selected rows to the clipboard. With the buttons **csv** or **pdf** you can save them to these two formats.
+::: 
+
 ```{r }
+
 <<rendertable>>
 ```
 
 # How-to 
+The following steps will vary depending on the index content. Steps 1 to 4 will change depending on our metadata tables and if we want to render links, images, etc. Step 5 will vary depending on the many possible options we have to display the table and filters. For this example we did: 
 
 ### 1. Read metadata table
 We first read a *source metadata table* with information about subjects and experiments (image recording)
