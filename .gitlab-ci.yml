@@ -11,7 +11,6 @@ pages:
   - R -e "getwd()"
   - mkdir -p public/Images
   - cp ./Docs/contents/ORD_index/Images* public/Images 
- 
     
   script: 
   - cd Docs
