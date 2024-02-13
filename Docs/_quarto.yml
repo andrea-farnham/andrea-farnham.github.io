@@ -60,25 +60,10 @@ website:
                 - "coming soon..."            
             - section: "🏷 **Metadata**"    
               contents: 
-                - "coming soon..."
+                - "coming soon..."               
                 
-                
-          
-        - id: Templates
-          title: "Templates"
-          contents: contents/templates/*.qmd 
-                  
-        - id: Presentations
-          title: "Presentations"
-          style: "docked"          
-          contents: contents/presentations/*.qmd                    
-       
-        - id: About
-          title: "About"
-          contents: contents/about/about.qmd
-         
-            
-      
+        - id: "" # leave other sections without sidebar
+          title: ""
 
 format:
     html:         
@@ -89,8 +74,7 @@ format:
         highlight-style: a11y
         code-link: true
         toc: true
-        code-copy: false      
-        self-contained: true
+        code-copy: false              
         mermaid: 
           theme: default
 

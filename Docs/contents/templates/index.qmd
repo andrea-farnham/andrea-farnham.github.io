@@ -10,4 +10,10 @@ listing:
 
 # Templates {.unnumbered}
 
- A series of useful **starter-templates**
+Here we present a series of useful **starter-templates**. These are templates for R Quarto, Markdown and Gitlab to help researchers to get started with some of the workflows proposed in AFFORD. They are not official templates and there is plenty of room for variations. 
+
+
+
+
+
+
