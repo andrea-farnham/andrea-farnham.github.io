@@ -2,6 +2,7 @@
 format:
   html:
     toc-depth: 4
+    toc-expand: 4
 ---
 
 # Glossary {.unnumbered}
@@ -59,23 +60,19 @@ A powerful tool to improve reproducibility of results. These are reports that co
 #### R
 The [R](https://www.r-project.org/about.html) language and programming environment was designed for statistical computing and graphics. It is free and open source, broadly used in research and it has a very active community of users. 
 
-#### R markdown
+#### Rstudio 
+The integrated development environment (IDE) [R studio](https://posit.co/download/rstudio-desktop/) is free and open source. It is the recommended software to use for R and Quarto as the latest versions support editing and previewing Quarto documents. The desktop application R studio includes a console, syntax-highlighting editor as well as tools for plotting, history, debugging and workspace management.
+
 
 #### Quarto
-The multi-language publishing system [Quarto](https://quarto.org/) is an open-source scientific and technical publishing system. It is more advanced than [R markdown](https://rmarkdown.rstudio.com/) with more options for output types and languages. It can generate dynamic reports in different formats (e.g., pdf, HTML, MS word, ePub) with content written code in different languages (R, Python, Julia and Observable) 
-
-###### R quarto markdown
+The multi-language publishing system [Quarto](https://quarto.org/) is an open-source scientific and technical publishing system. It is more advanced than [R markdown](https://rmarkdown.rstudio.com/) with more options for output types and languages. It can generate dynamic reports in different formats (e.g., pdf, HTML, MS word, ePub) with content written code in different languages (R, Python, Julia and Observable). When used in R, we have the **Quarto Markdown files (.qmd)** containing a YAML header, text written in Markdown and code chunks written in R. 
 
 ### Human-readable syntaxes
 
 These are simple languages used for formatting and/or for specifying settings in many of the software tools and workflows we describe. They require a very minimal learning from users, and there are plenty of templates and examples online. A good approach is usually to build on some of them and adapt it to our case.
 
 #### Markdown
+[Markdown](https://www.markdownguide.org/), a lightweight markup language with simple syntax that will add formatting elements to plain text. This format is widely used for technical documentation online. Documents in this format can be rendered into formatted text in multiple formats (e.g., pdf, HTML). These documents can contain tables and images (or animations if intended for HTML). There are multiple visual markdown editors to facilitate editing of these documents. The constrained formatting options can benefit researchers by facilitating more consistent and clear documentation styles and its *interoperability* makes it possible to share in a website or to try out different output formats. 
 
 #### YAML
-
-### Back end
-
-#### Pandoc
-
-#### Knitr
+Originally meaning *Yet Another Markup Language*, now *YAML Ain't Markup Language* [YAML](https://en.wikipedia.org/wiki/YAML) is a human-friendly data serialization language for all programming languages which is often used for configuration files. For example, in Quarto we have the _quarto.yml file  with the project settings (e.g., specifying if it is a web, what should be in the navigation bar, etc). The header of the Quarto markdown files are also written in YAML syntax, same as the project file. In Gitlab continuous integration the CI/CD file (.gitlab-ci.yml) with instructions and settings is also a YAML file.

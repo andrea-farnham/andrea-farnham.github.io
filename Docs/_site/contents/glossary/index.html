@@ -4498,7 +4498,7 @@ vertical-align: -.125em;
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="4">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
@@ -4524,17 +4524,12 @@ vertical-align: -.125em;
   <ul class="collapse">
   <li><a href="#dynamic-reports" id="toc-dynamic-reports" class="nav-link" data-scroll-target="#dynamic-reports">Dynamic reports</a></li>
   <li><a href="#r" id="toc-r" class="nav-link" data-scroll-target="#r">R</a></li>
-  <li><a href="#r-markdown" id="toc-r-markdown" class="nav-link" data-scroll-target="#r-markdown">R markdown</a></li>
+  <li><a href="#rstudio" id="toc-rstudio" class="nav-link" data-scroll-target="#rstudio">Rstudio</a></li>
   <li><a href="#quarto" id="toc-quarto" class="nav-link" data-scroll-target="#quarto">Quarto</a></li>
   <li><a href="#human-readable-syntaxes" id="toc-human-readable-syntaxes" class="nav-link" data-scroll-target="#human-readable-syntaxes">Human-readable syntaxes</a>
   <ul class="collapse">
   <li><a href="#markdown" id="toc-markdown" class="nav-link" data-scroll-target="#markdown">Markdown</a></li>
   <li><a href="#yaml" id="toc-yaml" class="nav-link" data-scroll-target="#yaml">YAML</a></li>
-  </ul></li>
-  <li><a href="#back-end" id="toc-back-end" class="nav-link" data-scroll-target="#back-end">Back end</a>
-  <ul class="collapse">
-  <li><a href="#pandoc" id="toc-pandoc" class="nav-link" data-scroll-target="#pandoc">Pandoc</a></li>
-  <li><a href="#knitr" id="toc-knitr" class="nav-link" data-scroll-target="#knitr">Knitr</a></li>
   </ul></li>
   </ul></li>
   </ul></li>
@@ -4605,33 +4600,24 @@ vertical-align: -.125em;
 <h4 class="anchored" data-anchor-id="r">R</h4>
 <p>The <a href="https://www.r-project.org/about.html">R</a> language and programming environment was designed for statistical computing and graphics. It is free and open source, broadly used in research and it has a very active community of users.</p>
 </section>
-<section id="r-markdown" class="level4">
-<h4 class="anchored" data-anchor-id="r-markdown">R markdown</h4>
+<section id="rstudio" class="level4">
+<h4 class="anchored" data-anchor-id="rstudio">Rstudio</h4>
+<p>The integrated development environment (IDE) <a href="https://posit.co/download/rstudio-desktop/">R studio</a> is free and open source. It is the recommended software to use for R and Quarto as the latest versions support editing and previewing Quarto documents. The desktop application R studio includes a console, syntax-highlighting editor as well as tools for plotting, history, debugging and workspace management.</p>
 </section>
 <section id="quarto" class="level4">
 <h4 class="anchored" data-anchor-id="quarto">Quarto</h4>
-<p>The multi-language publishing system <a href="https://quarto.org/">Quarto</a> is an open-source scientific and technical publishing system. It is more advanced than <a href="https://rmarkdown.rstudio.com/">R markdown</a> with more options for output types and languages. It can generate dynamic reports in different formats (e.g., pdf, HTML, MS word, ePub) with content written code in different languages (R, Python, Julia and Observable)</p>
-<section id="r-quarto-markdown" class="level6">
-<h6 class="anchored" data-anchor-id="r-quarto-markdown">R quarto markdown</h6>
-</section>
+<p>The multi-language publishing system <a href="https://quarto.org/">Quarto</a> is an open-source scientific and technical publishing system. It is more advanced than <a href="https://rmarkdown.rstudio.com/">R markdown</a> with more options for output types and languages. It can generate dynamic reports in different formats (e.g., pdf, HTML, MS word, ePub) with content written code in different languages (R, Python, Julia and Observable). When used in R, we have the <strong>Quarto Markdown files (.qmd)</strong> containing a YAML header, text written in Markdown and code chunks written in R.</p>
 </section>
 <section id="human-readable-syntaxes" class="level3">
 <h3 class="anchored" data-anchor-id="human-readable-syntaxes">Human-readable syntaxes</h3>
 <p>These are simple languages used for formatting and/or for specifying settings in many of the software tools and workflows we describe. They require a very minimal learning from users, and there are plenty of templates and examples online. A good approach is usually to build on some of them and adapt it to our case.</p>
 <section id="markdown" class="level4">
 <h4 class="anchored" data-anchor-id="markdown">Markdown</h4>
+<p><a href="https://www.markdownguide.org/">Markdown</a>, a lightweight markup language with simple syntax that will add formatting elements to plain text. This format is widely used for technical documentation online. Documents in this format can be rendered into formatted text in multiple formats (e.g., pdf, HTML). These documents can contain tables and images (or animations if intended for HTML). There are multiple visual markdown editors to facilitate editing of these documents. The constrained formatting options can benefit researchers by facilitating more consistent and clear documentation styles and its <em>interoperability</em> makes it possible to share in a website or to try out different output formats.</p>
 </section>
 <section id="yaml" class="level4">
 <h4 class="anchored" data-anchor-id="yaml">YAML</h4>
-</section>
-</section>
-<section id="back-end" class="level3">
-<h3 class="anchored" data-anchor-id="back-end">Back end</h3>
-<section id="pandoc" class="level4">
-<h4 class="anchored" data-anchor-id="pandoc">Pandoc</h4>
-</section>
-<section id="knitr" class="level4">
-<h4 class="anchored" data-anchor-id="knitr">Knitr</h4>
+<p>Originally meaning <em>Yet Another Markup Language</em>, now <em>YAML Ain’t Markup Language</em> <a href="https://en.wikipedia.org/wiki/YAML">YAML</a> is a human-friendly data serialization language for all programming languages which is often used for configuration files. For example, in Quarto we have the _quarto.yml file with the project settings (e.g., specifying if it is a web, what should be in the navigation bar, etc). The header of the Quarto markdown files are also written in YAML syntax, same as the project file. In Gitlab continuous integration the CI/CD file (.gitlab-ci.yml) with instructions and settings is also a YAML file.</p>
 
 
 </section>
