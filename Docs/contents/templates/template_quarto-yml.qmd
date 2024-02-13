@@ -1,10 +1,10 @@
 ---
-title: Quarto Project (\_quarto.yml files)
-subtitle: Templates of different Quarto project settings and arrangements
+title: Quarto Project
+subtitle: Templates of Quarto *\_quarto.yml* project configuration files
 author: G.Fraga Gonzalez & E. Furrer
 date: last-modified
 categories:
-  - QUARTO
+  - Quarto
   - YAML
 format: html 
 ---
@@ -22,7 +22,7 @@ When working with more than one dynamic report it will be very convenient to use
 The project settings are provided by a *\_quarto.yml* file. If you have such file in a folder and do `quarto::quarto_render()` in R, it will detect render the files according the settings specified in the \_quarto.yml.
  
 
-# Template - Website with a top navigation bar
+# Template - Website with a navigation bar on top
 Comments preceeded by \# suggest alternatives in some fields. Specifying project **type** and **format** is required. Most other settings like logos text and content of navigation bar, themes, etc are optional and we encourage trying out different options.
 
 ``` yaml

@@ -9,7 +9,7 @@
 <meta name="author" content="G.Fraga Gonzalez &amp; E. Furrer">
 <meta name="dcterms.date" content="2024-02-13">
 
-<title>Home - Quarto Project (_quarto.yml files)</title>
+<title>Home - Quarto Project</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -159,7 +159,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#template---website-with-a-top-navigation-bar" id="toc-template---website-with-a-top-navigation-bar" class="nav-link active" data-scroll-target="#template---website-with-a-top-navigation-bar">Template - Website with a top navigation bar</a></li>
+  <li><a href="#template---website-with-a-navigation-bar-on-top" id="toc-template---website-with-a-navigation-bar-on-top" class="nav-link active" data-scroll-target="#template---website-with-a-navigation-bar-on-top">Template - Website with a navigation bar on top</a></li>
   <li><a href="#template-2---website-with-top-nav-bar-and-a-side-bar" id="toc-template-2---website-with-top-nav-bar-and-a-side-bar" class="nav-link" data-scroll-target="#template-2---website-with-top-nav-bar-and-a-side-bar">Template 2 - Website with top nav bar and a side bar</a></li>
   </ul>
 </nav>
@@ -169,10 +169,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Quarto Project (_quarto.yml files)</h1>
-<p class="subtitle lead">Templates of different Quarto project settings and arrangements</p>
+<h1 class="title">Quarto Project</h1>
+<p class="subtitle lead">Templates of Quarto <em>_quarto.yml</em> project configuration files</p>
   <div class="quarto-categories">
-    <div class="quarto-category">QUARTO</div>
+    <div class="quarto-category">Quarto</div>
     <div class="quarto-category">YAML</div>
   </div>
   </div>
@@ -209,9 +209,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>Freeze rendered output, do not re-execute documents unless they changed</p></li>
 </ul>
 <p>The project settings are provided by a <em>_quarto.yml</em> file. If you have such file in a folder and do <code>quarto::quarto_render()</code> in R, it will detect render the files according the settings specified in the _quarto.yml.</p>
-<section id="template---website-with-a-top-navigation-bar" class="level1">
-<h1>Template - Website with a top navigation bar</h1>
-<p>Our comments preceeded by # suggest alternatives in some fields. Specifying project <strong>type</strong> and <strong>format</strong> is required. Most other settings like logos text and content of navigation bar, themes, etc are optional and we encourage trying out different options.</p>
+<section id="template---website-with-a-navigation-bar-on-top" class="level1">
+<h1>Template - Website with a navigation bar on top</h1>
+<p>Comments preceeded by # suggest alternatives in some fields. Specifying project <strong>type</strong> and <strong>format</strong> is required. Most other settings like logos text and content of navigation bar, themes, etc are optional and we encourage trying out different options.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">project</span><span class="kw">:</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> website</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">output-dir</span><span class="kw">:</span><span class="at"> your-output-directory</span><span class="co"> # omit this line to use current dir</span></span>
@@ -257,7 +257,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="template-2---website-with-top-nav-bar-and-a-side-bar" class="level1">
 <h1>Template 2 - Website with top nav bar and a side bar</h1>
-<p>Our comments preceeded by # suggest alternatives in some fields. Specifying project <strong>type</strong> and <strong>format</strong> is required. Most other settings like logos text and content of navigation bar, themes, etc are optional and we encourage trying out different options.</p>
+<p>This website has a navigation bar and a sidebar only in one of the subpages Comments preceeded by # suggest alternatives in some fields. Specifying project <strong>type</strong> and <strong>format</strong> is required. Most other settings like logos text and content of navigation bar, themes, etc are optional and we encourage trying out different options.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">project</span><span class="kw">:</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> website</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">output-dir</span><span class="kw">:</span><span class="at"> your-output-directory</span><span class="co"> # omit this line to use current dir</span></span>

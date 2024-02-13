@@ -1,0 +1,124 @@
+---
+title: "A data index"
+subtitle: "A Quarto Markdown file with simple data index with R and Quarto" 
+date: last-modified
+categories:
+  - Quarto
+  - R
+  - Markdown
+  - YAML
+format: 
+  html:
+    code-tools: true
+    code-copy: true
+---
+
+You can copy the content into an empty .qmd file. 
+
+
+````
+--- 
+#title: "Page-title"
+subtitle: "Page-subtitle"
+author: "author-name"
+affiliation: "affiliation-name"
+date: last-modified
+format: html 
+---
+``` 
+
+# Reading a metadata table in Excel 
+
+```{{r readfiles}}
+#| code-fold: true   
+
+# Manual inputs
+input_table_1 =  'table_filename.xlsx'  # specify fullpath if not in current dir
+sheet_name  =     'sheetname' # insert name of sheet in table
+miss_val_spec =  c("","N/A")            # labels used to specify missing value
+
+# read data
+tbl <- openxlsx::read.xlsx(xlsxFile = input_table_1,
+                           sheet = sheet_name,
+                           na.strings = c("","N/A"))
+``` 
+
+
+
+ 
+```{{r ,loadpackages}} 
+library(DT)      # for left_join and the 'pipe' function %>%  library(kableExtra) # for static table rendering  library(knitr)      # for executing code chunks NOTE! knitr must be >=  1.44 or DT won't work in Quarto library(DT)         # for the interactive table render library(crosstalk)  # for the filter panels of the interactive table #`
+
+<!-- The following code chunks create the metadata table. They are displayed later in this script with explanatory texts.  -->
+
+#\`\`\`{r readFiles} \# Read tables
+
+tbl_subj \<- readxl::read_excel(path = file.path(dirname(getwd()), '\_data',folder_datapackage,file_subj), sheet= sheet_subj, na=labels_missing_subj) print(paste0('table subjects: has' , nrow(tbl_subj), ' rows and ',ncol(tbl_subj),' columns')) \# tbl_scans \<- readxl::read_excel(path = file.path(dirname(getwd()), '\_data',folder_datapackage,file_scanlist), sheet= sheet_scanlist, na=labels_missing_scanlist)
+
+print(paste0('table subjects: has' , nrow(tbl_scans), ' rows and ',ncol(tbl_scans),' columns')) #\`\`\`
+
+#\`\`\`{r combineTables} \# Make a common variable with subject identifying variables (read as factor and not as number) tbl_subj\[\['subjID'\]\] \<- as.factor(tbl_subj\[\[sID_subj\]\]) tbl_scans\[\['subjID'\]\] \<- as.factor(tbl_scans\[\[sID_scans\]\])
+
+# Join tables with the largest table on the left
+
+tbl_joined \<- dplyr::full_join(x = tbl_subj, y = tbl_scans, by= 'subjID', keep=FALSE)
+
+tbl_joined \<- tbl_joined %\>% relocate("subjID",.before = 1) print(paste0('table subjects: has' , nrow(tbl_joined), ' rows and ',ncol(tbl_joined),' columns'))
+
+#\`\`\`
+
+#\`\`\`{r renderHub} #\| column: page-left
+
+# Code to render an interactive table
+
+#------------------------------------------ \# an object that will be shared by filter panels and datatable shared_joined \<- SharedData\$new(tbl_joined, key = \~subjID, group = "shared_obj")
+
+# to make two columns one with filter panels and one with the table
+
+bscols(widths = c(2,10), device = c("xs", "sm", "md", "lg"),
+
+# filter panels. Other formats are sliders and checkboxes https://rstudio.github.io/crosstalk/using.html
+
+list( filter_select( id = "subjID", label = "subject",sharedData = shared_joined, group = \~subjID) #filter_select( id = "status", label = "status",sharedData = shared_joined, group = \~status), #filter_select( id = "scanID", label = "scan",sharedData = shared_joined, group = \~scanID), #filter_select( id = "desc", label = "description",sharedData = shared_joined, group = \~desc), #filter_checkbox("Sex","Sex",shared_joined, \~Sex, inline = FALSE) ),
+
+# table
+
+interactive_table \<- datatable( shared_joined, #filter = "top", escape = FALSE, rownames = FALSE, width = "100%", class = 'compact cell-border hover', extensions = c('Buttons', 'Select','ColReorder', 'Scroller', 'KeyTable'), selection = 'none', options = list( pageLength = 20, dom = 'Bfrtip', #buttons = c('colvis','selectAll', 'selectNone', 'copy', 'csv', 'pdf'),\
+buttons = list(list(extend = "colvis", text = "select Columns", background='yellow'), 'selectAll', 'selectNone', 'copy', 'csv', 'pdf'), select = list(style = 'os', items = 'row'), scrollX = TRUE, scrollCollapse = FALSE,\
+autoWidth = TRUE, colReorder = TRUE, columnDefs = list( list( keys = TRUE, search = list(regex = TRUE), targets=0 ) ) ) ) %\>% formatStyle(colnames(tbl),backgroundColor = "ivory")\
+)
+
+#\`\`\`
+
+<!-- Below the content to be displayed-->
+
+::: {.panel-tabset .nav-pills}
+# Navigate data {.unnumbered}
+
+::: {.callout-tip style="font-size: 4px"}
+## Instructions
+
+The highlighted columns below correspond to the metadata table created from the filenames in the folder. Use the \*filter boxes\* to select which data are displayed. You can also \*select Columns\* to choose which columns are displayed or change the column order if you \*click and drag\* on the variable names. You can also \*select\* one or multiple rows clicking on them or by using the \*select\* buttons. Click on a thumbnail to open the full-size image.
+
+Click the button \*Copy\* to copy the filtered or selected rows to the clipboard. With the buttons \*csv\* or \*pdf\* you can save them to these two formats.
+:::
+
+#\`\`\`{r } #\| include: true
+
+\<<renderHub>\>
+
+#\`\`\`
+
+# Tutorials
+
+This table was created combining two tables with the following code :
+
+#\`\`\`{r } #\| code-fold: show #\| echo: true #\| include: true
+
+\<<readFiles>\> \<<combineTables>\>
+
+#\`\`\`
+:::
+
+\`\`\`
+````` 
