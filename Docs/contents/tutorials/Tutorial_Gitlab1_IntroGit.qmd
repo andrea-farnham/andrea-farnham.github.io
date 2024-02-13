@@ -1,6 +1,6 @@
 ---
 title: Gitlab Tutorial 1. Step-by-Step Guide to Git and Gitlab
-subtitle: Using a UZH Gitlab repository for Project Owners and Collaborators
+subtitle: Using a UZH Gitlab repository for project owners and collaborators
 author: G.Fraga Gonzalez & E. Furrer
 date: last-modified
 categories:

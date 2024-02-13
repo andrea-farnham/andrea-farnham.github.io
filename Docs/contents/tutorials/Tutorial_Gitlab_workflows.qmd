@@ -1,6 +1,6 @@
 ---
 title: Gitlab workflows
-subtitle: showcasing different scenarios
+subtitle: Showcasing different scenarios
 author: G.Fraga Gonzalez & E. Furrer
 date: last-modified
 categories:
@@ -16,7 +16,7 @@ Here we present different scenarios in which researchers can use Git
 
 
 # An overview of Git
-This diagram summarizes the basic processes we will do with Git. We can do these using the command line or using a program with a Graphic User Interface. 
+This diagram summarizes the basic steps for using Git. We can perform these steps using the command line or using a program with a Graphic User Interface. 
 
 ```{mermaid} 
 
@@ -62,12 +62,12 @@ sequenceDiagram
 
 # A single project or data source
 
-Here we describe several scenarios in which there are **several** **researchers** working on separate analysis or features within the same project. They use the same source data but their scripts are **independent**. We assume that each researcher is the **main** contributor to a set of scripts for a given analysis, study or experiment within the main project.
+Here we describe several scenarios in which there are **several** **researchers** working on separate analyses or features within the same project. They use the same source data but their scripts are **independent**. We assume that each researcher is the **main** contributor to a set of scripts for a given analysis, study or experiment within the main project.
 
 ## Multiple repositories
 
 -   All project-related
--   The scripts project subfolder is a **clone of a remote repository**
+-   The scripts subfolder is a **clone of a remote repository**
 -   Each researcher manages a **subfolder within the repository** and pushes/commit changes within that folder
 
 #### Pros, Cons & Warnings
@@ -152,7 +152,7 @@ gitGraph
 #### Pros, Cons & Warnings
 
 | ✅ All scripts in one place
-| 🔻Risk of accidental intereference with someone your colleague's changes commits
+| 🔻Risk of accidental interference with colleague's changes 
 | 🔻You can't share or manage access to only one researcher's scripts
 | ⚠️ Researchers need to make sure they push and commit only their changes in their subfolders
 | ⚠️Note  that naming script subfolders by author is not informative and can work for a project in development, but not for publishing (sharing with external collaborators)
