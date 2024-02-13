@@ -35,7 +35,7 @@ The UZH instance of the open source Gitlab at [Gitlab.uzh.ch](https://gitlab.uzh
 [Gitlab pages](https://docs.gitlab.com/ee/user/project/pages/) is a service from Gitlab that allows you to publish static websites directly from a repository in Gitlab. 
 
 #### Static websites 
-By static we mean that the user will just see whatever data is contained in the HTML that compose the website. Anyone landing in that website will see the same content, no new content is generated based on the user's input. 
+On a static website the user will just see whatever data is contained in the HTML that composes the website. Anyone landing on that website will see the same content, no new content is generated based on the user's input. 
 
 #### Continuous Integration and deployment -  CI/CD
 [CI/CD](https://docs.gitlab.com/ee/ci/) is a method of software development where building, testing and deploying applications is done continuously. A very simple use case example in the context of Gitlab pages is a CI/CD script that is triggered whenever there are changes in the repository, and that renders the website HTML. Thus, enabling maintainers to change and update the website content directly from the browser. 
@@ -45,17 +45,17 @@ By static we mean that the user will just see whatever data is contained in the 
 
 #### Switch
 
-[SWITCH](https://www.switch.ch/de/edu-id/), a non-profit foundation that has been established by the Swiss Federal Governmen. It a cloud-based storage service for storing and sharing files online, with automatic sync of files across devices. University members get 100 Gb of storage. All personal data remains in Switzerland under the direct control of Switch and the universities and is covered by Swiss data protection provisions
+[SWITCH](https://www.switch.ch/de/edu-id/), a non-profit foundation that has been established by the Swiss Federal Government. It provides a cloud-based storage service for storing and sharing files online, with automatic sync of files across devices. University members get 100 Gb of storage. All personal data remains in Switzerland under the direct control of Switch and the universities and is covered by Swiss data protection provisions.
 
 #### Switch edu-ID
 
-The universal login for lifelong learning (for all students of swiss Universities). Orchestrated by the Switch foundation.
+The universal login for lifelong learning (for all students of Swiss universities). Orchestrated by the Switch foundation.
 
 ## Software and reporting
 
 #### Dynamic reports
 
-A powerful tool to improve reproducibility of results. These are reports that contain code, text and code outputs in a single document. The outputs can be figures, tables and can even have interactive elements (for HTML reports). They can be parameterized and they are updated automatically with additions, modifications or deletions from the source code. Learn more on our CRS primer [*Dynamic Reporting*](https://zenodo.org/records/8354360)
+A powerful tool to improve reproducibility of results. These are reports that contain code, text and code outputs in a single document. The outputs can be figures, tables and can even have interactive elements (for HTML reports). They can be parameterized and they are updated automatically with additions, modifications or deletions from the source code. Learn more in our CRS primer [*Dynamic Reporting*](https://zenodo.org/records/8354360)
 
 #### R
 The [R](https://www.r-project.org/about.html) language and programming environment was designed for statistical computing and graphics. It is free and open source, broadly used in research and it has a very active community of users. 
@@ -65,7 +65,7 @@ The integrated development environment (IDE) [R studio](https://posit.co/downloa
 
 
 #### Quarto
-The multi-language publishing system [Quarto](https://quarto.org/) is an open-source scientific and technical publishing system. It is more advanced than [R markdown](https://rmarkdown.rstudio.com/) with more options for output types and languages. It can generate dynamic reports in different formats (e.g., pdf, HTML, MS word, ePub) with content written code in different languages (R, Python, Julia and Observable). When used in R, we have the **Quarto Markdown files (.qmd)** containing a YAML header, text written in Markdown and code chunks written in R. 
+The multi-language publishing system [Quarto](https://quarto.org/) is an open-source scientific and technical publishing system. It is more advanced than [R markdown](https://rmarkdown.rstudio.com/) with more options for output types and languages. It can generate dynamic reports in different formats (e.g., pdf, HTML, MS word, ePub) with content written in different languages (R, Python, Julia and Observable). When used in R, we have the **Quarto Markdown files (.qmd)** containing a YAML header, text written in Markdown and code chunks written in R. 
 
 ### Human-readable syntaxes
 
@@ -75,4 +75,4 @@ These are simple languages used for formatting and/or for specifying settings in
 [Markdown](https://www.markdownguide.org/), a lightweight markup language with simple syntax that will add formatting elements to plain text. This format is widely used for technical documentation online. Documents in this format can be rendered into formatted text in multiple formats (e.g., pdf, HTML). These documents can contain tables and images (or animations if intended for HTML). There are multiple visual markdown editors to facilitate editing of these documents. The constrained formatting options can benefit researchers by facilitating more consistent and clear documentation styles and its *interoperability* makes it possible to share in a website or to try out different output formats. 
 
 #### YAML
-Originally meaning *Yet Another Markup Language*, now *YAML Ain't Markup Language* [YAML](https://en.wikipedia.org/wiki/YAML) is a human-friendly data serialization language for all programming languages which is often used for configuration files. For example, in Quarto we have the _quarto.yml file  with the project settings (e.g., specifying if it is a web, what should be in the navigation bar, etc). The header of the Quarto markdown files are also written in YAML syntax, same as the project file. In Gitlab continuous integration the CI/CD file (.gitlab-ci.yml) with instructions and settings is also a YAML file.
+Originally meaning *Yet Another Markup Language*, now *YAML Ain't Markup Language* [YAML](https://en.wikipedia.org/wiki/YAML) is a human-friendly data serialization language for all programming languages which is often used for configuration files. For example, in Quarto we have the _quarto.yml file  with the project settings (e.g., specifying if it renders into a website, what should be in the navigation bar, etc). The header of the Quarto markdown files are also written in YAML syntax, same as the project file. In Gitlab continuous integration the CI/CD file (.gitlab-ci.yml) with instructions and settings is also a YAML file.
