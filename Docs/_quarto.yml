@@ -64,6 +64,12 @@ website:
                 
         - id: "" # leave other sections without sidebar
           title: ""
+          
+        - id: Templates
+          title: "Templates"     
+          contents:
+                - contents/templates/index.qmd
+                - auto: "contents/templates/*.qmd"
 
 format:
     html:         

@@ -30,6 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<link href="../../contents/templates/template_create_index.html" rel="next">
 <link href="../../assets/logos/Logo_CRS_col.svg" rel="icon" type="image/svg+xml">
 <script src="../../site_libs/quarto-listing/list.min.js"></script>
 <script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
@@ -96,7 +97,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar docked nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -146,10 +147,45 @@ ul.task-list li input[type="checkbox"] {
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../contents/templates/index.html">Templates</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../contents/templates/index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Templates</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../contents/templates/template_create_index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data index</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../contents/templates/template_quarto-yml.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Quarto project files</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -212,9 +248,9 @@ Subtitle
 </tr>
 </thead>
 <tbody class="list">
-<tr data-index="0" data-categories="Quarto,R,Markdown,YAML" data-listing-date-sort="1707904129000" data-listing-file-modified-sort="1707904129776" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-title-sort="A data index" data-listing-filename-sort="template_create_index.qmd">
+<tr data-index="0" data-categories="Quarto,R,Markdown,YAML" data-listing-date-sort="1707925571000" data-listing-file-modified-sort="1707925571818" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-title-sort="Data index" data-listing-filename-sort="template_create_index.qmd">
 <td>
-<a href="../../contents/templates/template_create_index.html" class="title listing-title">A data index</a>
+<a href="../../contents/templates/template_create_index.html" class="title listing-title">Data index</a>
 </td>
 <td>
 <span class="listing-subtitle">Use R Quarto Markdown files to render an interactive table</span>
@@ -223,15 +259,15 @@ Subtitle
 <span class="listing-date">Feb 14, 2024</span>
 </td>
 </tr>
-<tr data-index="1" data-categories="Quarto,YAML" data-listing-date-sort="1707839710000" data-listing-file-modified-sort="1707839710416" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-title-sort="Quarto Project" data-listing-filename-sort="template_quarto-yml.qmd">
+<tr data-index="1" data-categories="Quarto,YAML" data-listing-date-sort="1707925556000" data-listing-file-modified-sort="1707925556669" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-title-sort="Quarto project files" data-listing-filename-sort="template_quarto-yml.qmd">
 <td>
-<a href="../../contents/templates/template_quarto-yml.html" class="title listing-title">Quarto Project</a>
+<a href="../../contents/templates/template_quarto-yml.html" class="title listing-title">Quarto project files</a>
 </td>
 <td>
 <span class="listing-subtitle">Templates of Quarto <em>_quarto.yml</em> project configuration files</span>
 </td>
 <td>
-<span class="listing-date">Feb 13, 2024</span>
+<span class="listing-date">Feb 14, 2024</span>
 </td>
 </tr>
 </tbody>
@@ -474,6 +510,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../contents/templates/template_create_index.html" class="pagination-link">
+        <span class="nav-page-text">Data index</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

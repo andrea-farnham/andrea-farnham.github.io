@@ -1,5 +1,5 @@
 ---
-title: "A data index"
+title: "Data index"
 subtitle: "Use R Quarto Markdown files to render an interactive table" 
 date: last-modified
 categories:

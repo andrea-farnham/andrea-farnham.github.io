@@ -1,5 +1,5 @@
 ---
-title: Quarto Project
+title: Quarto project files
 subtitle: Templates of Quarto *\_quarto.yml* project configuration files
 author: G.Fraga Gonzalez & E. Furrer
 date: last-modified
