@@ -14,7 +14,7 @@ format:
 
 ---
 
-This is a demo of a data index that allowos to navigate through a table with metadata and thumbnail images. The idea is to facilitate finding and sharing your data. Visit our [Tutorials page](https://crsuzh.pages.uzh.ch/AFFORD_website/contents/tutorials/) for more details on the workflow of producing such a data index. In short, for the index you need: (1) a source table of structured metadata (2) if you are to display thumbnails you need the picture files (3) some R code to render the table interactive with the package [DT](https://rstudio.github.io/DT/) and (4) R Quarto to output the table as an HTML page.
+This is a demo of a data index that allows to navigate through a table with metadata and thumbnail images. The idea is to facilitate finding and sharing your data. Visit our [Tutorials page](https://crsuzh.pages.uzh.ch/AFFORD_website/contents/tutorials/) for more details on the workflow of producing such a data index. In short, for the index you need: (1) a source table of structured metadata (2) if you are to display thumbnails you need the picture files (3) some R code to render the table interactive with the package [DT](https://rstudio.github.io/DT/) and (4) R Quarto to output the table as an HTML page.
 
 ::: {.callout-note collapse=true}
 #### More information about this example 
@@ -95,7 +95,7 @@ list(
 # table
 datatable(
     shared_joined,
-    #filter = "top",
+    filter = "top",
     escape = FALSE,
     rownames = FALSE,
     width = "100%",

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.353">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -24,7 +24,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -84,7 +84,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -93,8 +99,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 <meta name="mermaid-theme" content="default">
@@ -109,9 +117,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
     <img src="../../assets/logos/Logo_AFFORD_col.svg" alt="" class="navbar-logo">
     </a>
@@ -126,50 +134,50 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../contents/ORD_index/index.html" rel="" target="">
- <span class="menu-text">Data Index</span></a>
+    <a class="nav-link" href="../../contents/ORD_index/index.html"> 
+<span class="menu-text">Data Index</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../../contents/tutorials/index.html" rel="" target="" aria-current="page">
- <span class="menu-text">Tutorials</span></a>
+    <a class="nav-link active" href="../../contents/tutorials/index.html" aria-current="page"> 
+<span class="menu-text">Tutorials</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../contents/templates/index.html" rel="" target="">
- <span class="menu-text">Templates</span></a>
+    <a class="nav-link" href="../../contents/templates/index.html"> 
+<span class="menu-text">Templates</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../contents/presentations/index.html" rel="" target="">
- <span class="menu-text">Presentations</span></a>
+    <a class="nav-link" href="../../contents/presentations/index.html"> 
+<span class="menu-text">Presentations</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../contents/glossary/index.html" rel="" target="">
- <span class="menu-text">Glossary</span></a>
+    <a class="nav-link" href="../../contents/glossary/index.html"> 
+<span class="menu-text">Glossary</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../contents/contact/index.html" rel="" target="">
- <span class="menu-text">Contact</span></a>
+    <a class="nav-link" href="../../contents/contact/index.html"> 
+<span class="menu-text">Contact</span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
-</div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../contents/tutorials/Tutorial_Web.html">🌍 <strong>Data Sharing and Repositories</strong></a></li><li class="breadcrumb-item"><a href="../../contents/tutorials/Tutorial_Gitlab_workflows.html">Gitlab workflows</a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../contents/tutorials/Tutorial_Web.html">🌍 <strong>Data Sharing and Repositories</strong></a></li><li class="breadcrumb-item"><a href="../../contents/tutorials/Tutorial_Gitlab_workflows.html">Gitlab workflows</a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
     </div>
   </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
@@ -250,7 +258,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -269,7 +277,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../contents/tutorials/Tutorial_Web.html">🌍 <strong>Data Sharing and Repositories</strong></a></li><li class="breadcrumb-item"><a href="../../contents/tutorials/Tutorial_Gitlab_workflows.html">Gitlab workflows</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Gitlab workflows</h1>
 <p class="subtitle lead">Showcasing different scenarios</p>
@@ -301,15 +309,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
   
 
+
 </header>
+
 
 <p>Here we present different scenarios in which researchers can use Git</p>
 <section id="an-overview-of-git" class="level1">
 <h1>An overview of Git</h1>
 <p>This diagram summarizes the basic steps for using Git. We can perform these steps using the command line or using a program with a Graphic User Interface.</p>
-<div class="cell">
+<div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
+<p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">%%{init: { 'theme': 'base', 'sequence': {'showSequenceNumbers': true}} }%%
 
@@ -349,6 +360,7 @@ sequenceDiagram
     
 </pre>
 </div>
+<p></p></figure><p></p>
 </div>
 </div>
 </div>
@@ -365,11 +377,11 @@ sequenceDiagram
 </ul>
 <section id="pros-cons-warnings" class="level4">
 <h4 class="anchored" data-anchor-id="pros-cons-warnings">Pros, Cons &amp; Warnings</h4>
-<p>✅ One can manage permissions and share only the scripts related to one analysis or user. The local clones can still be within the same project folder (see example 1 below)<br>
+<div class="line-block">✅ One can manage permissions and share only the scripts related to one analysis or user. The local clones can still be within the same project folder (see example 1 below)<br>
 ⚠️ The different repositories should be preferably under a common git group/user, namely , the lab’s Gitlab or Github.<br>
 ⚠️ Researchers may keep their local clones in their personal folders (outside project: see example 2). In this case their internal collaborators or principal investigator will only be able to see their scripts through the repository , so changes should be committed regularly.<br>
 🔻 If there are many users and analyses this can result in many repositories associated to a project<br>
-</p>
+</div>
 </section>
 <section id="folder-tree" class="level4">
 <h4 class="anchored" data-anchor-id="folder-tree">Folder tree</h4>
@@ -400,9 +412,10 @@ sequenceDiagram
 <p>Each researcher has completely independent repositories. Researchers may edit and create code directly in the main branch or creating development branches and then merging with the main.</p>
 <section id="repository-1" class="level5">
 <h5 class="anchored" data-anchor-id="repository-1">Repository 1</h5>
-<div class="cell">
+<div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
+<p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">%%{init: { 'theme': 'base', 'gitGraph': {'showBranches': true,'showCommitLabel': false}} }%%
 gitGraph
@@ -416,15 +429,17 @@ gitGraph
   commit
 </pre>
 </div>
+<p></p></figure><p></p>
 </div>
 </div>
 </div>
 </section>
 <section id="repository-2" class="level5">
 <h5 class="anchored" data-anchor-id="repository-2">Repository 2</h5>
-<div class="cell">
+<div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
+<p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">%%{init: { 'theme': 'base', 'gitGraph': {'showBranches': true,'showCommitLabel': false}} }%%
 gitGraph
@@ -438,6 +453,7 @@ gitGraph
   commit
 </pre>
 </div>
+<p></p></figure><p></p>
 </div>
 </div>
 </div>
@@ -453,12 +469,12 @@ gitGraph
 </ul>
 <section id="pros-cons-warnings-1" class="level4">
 <h4 class="anchored" data-anchor-id="pros-cons-warnings-1">Pros, Cons &amp; Warnings</h4>
-<p>✅ All scripts in one place<br>
+<div class="line-block">✅ All scripts in one place<br>
 🔻Risk of accidental interference with colleague’s changes<br>
 🔻You can’t share or manage access to only one researcher’s scripts<br>
 ⚠️ Researchers need to make sure they push and commit only their changes in their subfolders<br>
 ⚠️Note that naming script subfolders by author is not informative and can work for a project in development, but not for publishing (sharing with external collaborators)<br>
-</p>
+</div>
 </section>
 <section id="folder-tree-1" class="level4">
 <h4 class="anchored" data-anchor-id="folder-tree-1">Folder tree</h4>
@@ -478,9 +494,10 @@ gitGraph
 <section id="workflow-1" class="level4">
 <h4 class="anchored" data-anchor-id="workflow-1">Workflow</h4>
 <p>The different researchers access the project folder and work within their folder. When they are done they and push their changes and commit them to the main branch of the project’s repository</p>
-<div class="cell">
+<div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
+<p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">%%{init: { 'theme': 'base', 'gitGraph': {'showBranches': true,'showCommitLabel': false}} }%%
 gitGraph
@@ -500,6 +517,7 @@ gitGraph
 
 </pre>
 </div>
+<p></p></figure><p></p>
 </div>
 </div>
 </div>
@@ -589,10 +607,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -602,8 +619,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -616,6 +642,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -659,6 +804,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -684,6 +830,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -745,12 +917,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../contents/tutorials/Tutorial_Gitlab1_IntroGit.html" class="pagination-link">
+      <a href="../../contents/tutorials/Tutorial_Gitlab1_IntroGit.html" class="pagination-link  aria-label=" gitlab="" tutorial="" 1.="" step-by-step="" guide="" to="" git="" and="" gitlab"="">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Gitlab Tutorial 1. Step-by-Step Guide to Git and Gitlab</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../contents/tutorials/Tutorial_Gitlab2_DataHub.html" class="pagination-link">
+      <a href="../../contents/tutorials/Tutorial_Gitlab2_DataHub.html" class="pagination-link" aria-label="Gitlab Tutorial 2. Create and Update a Data Hub">
         <span class="nav-page-text">Gitlab Tutorial 2. Create and Update a Data Hub</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
@@ -758,11 +930,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left">Created by the <a href="https://www.crs.uzh.ch/en.html">Center for Reproducible Science</a> of the <a href="https://www.uzh.ch/de.html">University of Zurich</a>.</div>   
-    <div class="nav-footer-center"><a href="contents/about/index.html">About Us</a></div>
-    <div class="nav-footer-right">This is a free website under the <a href="https://creativecommons.org/licenses/by/4.0/">CC BY international license 4.0</a>.</div>
+    <div class="nav-footer-left">
+<p>Created by the <a href="https://www.crs.uzh.ch/en.html">Center for Reproducible Science</a> of the <a href="https://www.uzh.ch/de.html">University of Zurich</a>.</p>
+</div>   
+    <div class="nav-footer-center">
+<p><a href="contents/about/index.html">About Us</a></p>
+</div>
+    <div class="nav-footer-right">
+<p>This is a free website under the <a href="https://creativecommons.org/licenses/by/4.0/">CC BY international license 4.0</a>.</p>
+</div>
   </div>
 </footer>
+
 
 
 
