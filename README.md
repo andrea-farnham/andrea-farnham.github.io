@@ -1,5 +1,3 @@
-[[_TOC_]]
-
 # AFFORD: A Framework for Avoiding the Open Research Data Dump
 
 
