@@ -120,7 +120,7 @@ datatable(
                      'selectAll', 'selectNone', 'copy', 'csv'), 
       select = list(style = 'os', items = 'row'),
       scrollX = TRUE,
-      scrollY = "400px",
+      scrollY = "800px",
       scrollCollapse = TRUE,  
       autoWidth = TRUE,
       colReorder = TRUE,
