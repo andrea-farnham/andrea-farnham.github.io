@@ -46,7 +46,7 @@ files <- dir('Images') # Find all files in our images folder
 fname <- files[grepl(paste0('*.jpg$'),files)] #take only .jpg files
 
 tbl_files <- as.data.frame(fname) # make table with filenames
-tbl_files$subject <- sapply(strsplit(fname,'-'),'[[',1) #take 1st filename part
+tbl_files$subject <- sapply(strsplit(fname,'_'),'[[',1) #take 1st filename part
 ```
 
 ```{r jointables}
@@ -62,15 +62,23 @@ tbl_joined  <- full_join(x=tbl,
 ```{r addhtml}
 #| include: false
 # define image paths
-pic_fullpath <- file.path('https://gitlab.uzh.ch/crsuzh/afford_website/-/tree/master/Docs/contents/ORD_index/Images',tbl_joined$fname)
+pic_folder <- 'https://gitlab.uzh.ch/crsuzh/afford_website/-/tree/master/Docs/contents/ORD_index/Images'
+pic_fullpath <- file.path(pic_folder,tbl_joined$fname)
 pic_relpath <- file.path('..','..','Images',tbl_joined$fname)
 
 # add paths and HTML code 
 tbl_joined$pic <- paste0('<a href=\'', pic_fullpath,'\' target=\'_blank\'>', 
                        '<img src=\'',pic_relpath, '\' height=\'70\'></a>')
 
+# Add location 
+tbl_joined$location <- paste0('<a href=\'',pic_folder,'\' target=\'_blank\'>', 
+                       'Gitlab folder >>','</a>')
+
+
 # Move to first column
 tbl_joined <- tbl_joined %>% relocate("pic",.before = 1)
+tbl_joined <- tbl_joined %>% relocate("fname",.before = 2)
+tbl_joined <- tbl_joined %>% relocate("location",.before = 3)
  
 ```
 
@@ -95,22 +103,25 @@ list(
 # table
 datatable(
     shared_joined,
-    filter = "top",
+    #filter = "top",
     escape = FALSE,
     rownames = FALSE,
     width = "100%",
-    class = 'compact cell-border  hover', 
-    extensions = c('Buttons', 'Select','ColReorder', 'Scroller',  'KeyTable'),
+    class = 'cell-border  hover', 
+    extensions = c('Buttons', 'Select','ColReorder', 'Scroller', 'FixedHeader', 'KeyTable'),
     selection = 'none',
-    options = list(
-      pageLength = 10,
-      dom = 'Bfrtip',
-      #buttons = c('colvis','selectAll', 'selectNone', 'copy', 'csv', 'pdf'),  
+    options = list( 
+      fixedHeader = TRUE,
+      pageLength = 20,
+      paging = FALSE,
+      dom = 'Bftrip',
+      #buttons = c('colvis','selectAll', 'selectNone', 'copy', 'csv'),  
       buttons = list(list(extend = "colvis", text = "select Columns", background='yellow'),
-                     'selectAll', 'selectNone', 'copy', 'csv', 'pdf'), 
+                     'selectAll', 'selectNone', 'copy', 'csv'), 
       select = list(style = 'os', items = 'row'),
       scrollX = TRUE,
-      scrollCollapse = FALSE,  
+      scrollY = "400px",
+      scrollCollapse = TRUE,  
       autoWidth = TRUE,
       colReorder = TRUE,
       columnDefs = list(
@@ -120,9 +131,10 @@ datatable(
           targets=0
         )
       )
-      )
-  ) 
+     )
+  )
 )
+
 
 
 ```
@@ -134,8 +146,8 @@ datatable(
 ::: {.callout-tip collapse=false}
 # Instructions
 
-Use the **filter boxes** to select which data are displayed. Use **select Columns** to choose which columns are displayed or change the order of the column if you *click and drag* on the variable names. You can **select rows** (one or multiple) clicking on them or by using the select button. Click on a thumbnail to open the full-size image. 
-Click the button **Copy** to copy the filtered or selected rows to the clipboard. With the buttons **csv** or **pdf** you can save them to these two formats.
+Use the **filter boxes** to select which data are displayed. Use **select Columns** to choose which columns are displayed or change the order of the column if you *click and drag* on the variable names. You can **select rows** (one or multiple) clicking on them or by using the select button. **Click** on a thumbnail to open the full-size image. 
+Click the button **Copy** to copy the filtered or selected rows to the clipboard and click the button **csv** to save it in that format. 
 ::: 
 
 ```{r }
