@@ -3,6 +3,6 @@
 
 This is the main website of the project. The site can be accessed here: https://crsuzh.pages.uzh.ch/AFFORD_website/
 
-## Wiki
-Check the WIKI for a collection of interesting links and notes:
-https://gitlab.uzh.ch/crsuzh/AFFORD_website/-/wikis/Notes
+### Wiki
+Check the wiki of this repository for further information
+https://gitlab.uzh.ch/crsuzh/AFFORD_website/-/wikis/home
