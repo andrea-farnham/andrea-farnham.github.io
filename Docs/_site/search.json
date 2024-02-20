@@ -1,0 +1,387 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "AFFORD",
+    "section": "",
+    "text": "This site provides resources for Open Research Data management curated and developed by the Center of Reproducible Science of the University of Zurich for the Swissuniversities project AFFORD: A Framework for Avoiding Open Research Data Dump.\n\n\nLearn more about us &gt;&gt;\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "contents/tutorials/Tutorial_Gitlab_workflows.html",
+    "href": "contents/tutorials/Tutorial_Gitlab_workflows.html",
+    "title": "Gitlab workflows",
+    "section": "",
+    "text": "Here we present different scenarios in which researchers can use Git",
+    "crumbs": [
+      "Tutorials",
+      "🌍 **Data Sharing and Repositories**",
+      "Gitlab workflows"
+    ]
+  },
+  {
+    "objectID": "contents/tutorials/Tutorial_Gitlab_workflows.html#multiple-repositories",
+    "href": "contents/tutorials/Tutorial_Gitlab_workflows.html#multiple-repositories",
+    "title": "Gitlab workflows",
+    "section": "Multiple repositories",
+    "text": "Multiple repositories\n\nAll project-related\nThe scripts subfolder is a clone of a remote repository\nEach researcher manages a subfolder within the repository and pushes/commit changes within that folder\n\n\nPros, Cons & Warnings\n✅ One can manage permissions and share only the scripts related to one analysis or user. The local clones can still be within the same project folder (see example 1 below)\n⚠️ The different repositories should be preferably under a common git group/user, namely , the lab’s Gitlab or Github.\n⚠️ Researchers may keep their local clones in their personal folders (outside project: see example 2). In this case their internal collaborators or principal investigator will only be able to see their scripts through the repository , so changes should be committed regularly.\n🔻 If there are many users and analyses this can result in many repositories associated to a project\n\n\n\nFolder tree\nExample 1\nProject/              NAS folder accessible to all researchers       \n├─ data\n├─ outputs\n├─ scripts        \n│   ├─ researcher1*   [Cloned Git repository 1] 🌐\n│   └─ researcher2    [Cloned Git repository 2] 🌐  \n└─ ..\n\n*subfolders may be named by analysis, experiment or study within the project\nExample 2\nProject/              NAS folder accessible to all researchers       \n├─ data\n├─ outputs\n└─ ..\n\nresearcher1/         Location may differ from that of the project     \n└─ scripts            [Cloned Git repository 1] 🌐\n\nresearcher2/           \n└─ scripts            [Cloned Git repository 2] 🌐\n\n\nWorkflow\nEach researcher has completely independent repositories. Researchers may edit and create code directly in the main branch or creating development branches and then merging with the main.\n\nRepository 1\n\n\n\n\n\n%%{init: { 'theme': 'base', 'gitGraph': {'showBranches': true,'showCommitLabel': false}} }%%\ngitGraph\n  commit\n  commit\n  branch branch1\n  commit\n  commit\n  checkout main\n  merge branch1\n  commit\n\n\n\n\n\n\n\n\nRepository 2\n\n\n\n\n\n%%{init: { 'theme': 'base', 'gitGraph': {'showBranches': true,'showCommitLabel': false}} }%%\ngitGraph\n  commit\n  commit\n  branch branch1\n  commit\n  commit\n  checkout main\n  merge branch1\n  commit",
+    "crumbs": [
+      "Tutorials",
+      "🌍 **Data Sharing and Repositories**",
+      "Gitlab workflows"
+    ]
+  },
+  {
+    "objectID": "contents/tutorials/Tutorial_Gitlab_workflows.html#a-single-repository",
+    "href": "contents/tutorials/Tutorial_Gitlab_workflows.html#a-single-repository",
+    "title": "Gitlab workflows",
+    "section": "A single repository",
+    "text": "A single repository\n\nAll project-related files in one location accessible by all contributing researchers\nThe scripts project subfolder is a clone of a remote repository\nEach researcher manages a subfolder within the repository and pushes/commit changes within that folder\n\n\nPros, Cons & Warnings\n✅ All scripts in one place\n🔻Risk of accidental interference with colleague’s changes\n🔻You can’t share or manage access to only one researcher’s scripts\n⚠️ Researchers need to make sure they push and commit only their changes in their subfolders\n⚠️Note that naming script subfolders by author is not informative and can work for a project in development, but not for publishing (sharing with external collaborators)\n\n\n\nFolder tree\n#| code-overflow: wrap \n\nProject/              ~NAS folder accessible to all researchers~       \n├─ data\n├─ outputs\n├─ scripts*           [Cloned Git repository] 🌐\n│   ├─ researcher1 \n│   └─ researcher2     \n└─ ..\n\n\n*subfolders may be named by analysis, experiment or study within the project\n\n\nWorkflow\nThe different researchers access the project folder and work within their folder. When they are done they and push their changes and commit them to the main branch of the project’s repository\n\n\n\n\n\n%%{init: { 'theme': 'base', 'gitGraph': {'showBranches': true,'showCommitLabel': false}} }%%\ngitGraph\n  commit\n  commit\n  branch researcher1\n  commit\n  commit\n  checkout main\n  branch researcher2\n  commit\n  commit\n  checkout main\n  merge researcher1\n  merge researcher2\n  commit",
+    "crumbs": [
+      "Tutorials",
+      "🌍 **Data Sharing and Repositories**",
+      "Gitlab workflows"
+    ]
+  },
+  {
+    "objectID": "contents/tutorials/Tutorial_Gitlab2_DataHub.html",
+    "href": "contents/tutorials/Tutorial_Gitlab2_DataHub.html",
+    "title": "Gitlab Tutorial 2. Create and Update a Data Hub",
+    "section": "",
+    "text": "Back",
+    "crumbs": [
+      "Tutorials",
+      "🌍 **Data Sharing and Repositories**",
+      "Gitlab Tutorial 2. Create and Update a Data Hub"
+    ]
+  },
+  {
+    "objectID": "contents/tutorials/Tutorial_Gitlab2_DataHub.html#hub-content",
+    "href": "contents/tutorials/Tutorial_Gitlab2_DataHub.html#hub-content",
+    "title": "Gitlab Tutorial 2. Create and Update a Data Hub",
+    "section": "Hub content",
+    "text": "Hub content\nIn this workflow we propose that the owner of the data (e.g., a lab or a researcher) creates and maintains a main Gitlab repository containing:\n\nMetadata tables e.g., CSV or Excel tables\nData, if applicable, e.g., thumbnail images\nScripts to render an HTML landing site, i.e. the Data Hub, which provides access for collaborators. This can be done without web development skill using in R markdown or R Quarto markdown.\nDocumentation associated with those data is collected in the Wiki of the main repository. The advantage of using the Wiki is that it can be directly edited in the browser by anyone with permissions. If needed, the markdown files with the wiki pages could be downloaded (they are stored is a separate repository).\n\n\n\n\n\n\n\nNote on metadata table formats\n\n\n\nGitlab can display and allows editing of .csv tables from the browser. For excel tables, you will need to download it for editing or work locally and then push the changes to the repository. Note that this refers to editing source files in the repository and not to the website, where tables are visible (but not editable) irrespective of the source table format (R Quarto scripts will read any format and render them in html format for interoperability and interactivity)\n\n\nThe files will have three URL locations, which can all be accessed through the main landing site (Data Hub):\n\nThe landing page shows interactive tables to navigate data and metadata the documentation and has links to the main repository and the wiki.\nThe main repository to access the source metadata tables, data files and the code necessary to generate the Hub.\nThe Wiki to access all relevant documentation to understand how the data was collected and preprocessed, such as protocols and standard operating procedures (SOPs). It should also have information about filenames, folder structures and how metadata are organized. It is also accessible through the main repository.",
+    "crumbs": [
+      "Tutorials",
+      "🌍 **Data Sharing and Repositories**",
+      "Gitlab Tutorial 2. Create and Update a Data Hub"
+    ]
+  },
+  {
+    "objectID": "contents/tutorials/Tutorial_Gitlab2_DataHub.html#required-files",
+    "href": "contents/tutorials/Tutorial_Gitlab2_DataHub.html#required-files",
+    "title": "Gitlab Tutorial 2. Create and Update a Data Hub",
+    "section": "Required Files",
+    "text": "Required Files\nThe main input files are:\n\nmetadata table (preferrably in .csv format for interoperability). It should contain just the filename of the pictures that will be displayed\nimages files (Note: Gitlab is not meant for data storage. Images should be compressed to avoid exceeding volume allowed per repo ( usually 5 Gb in free versions, details here)\nR Quarto markdown scripts that has the code to render the tables as well as some text with instructions\nA .gitlab-ci.yml file is the Continuous integration file that makes it possible to run the Rmd file and render the html again from Gitlab\n\nThe outputs for the website\n\nThe html files that make up the website are\n\nNote: index.html and images folder ARE EXPECTED to be saved in the public folder. This does not mean they are publicly accessible (you need login to access this site)",
+    "crumbs": [
+      "Tutorials",
+      "🌍 **Data Sharing and Repositories**",
+      "Gitlab Tutorial 2. Create and Update a Data Hub"
+    ]
+  },
+  {
+    "objectID": "contents/tutorials/Tutorial_Gitlab2_DataHub.html#privacy",
+    "href": "contents/tutorials/Tutorial_Gitlab2_DataHub.html#privacy",
+    "title": "Gitlab Tutorial 2. Create and Update a Data Hub",
+    "section": "Privacy",
+    "text": "Privacy\nThis work flow can work in both a private or a public repository. If we want to keep access restricted we can set the repository as private. Then we need:\n\nAccounts. A SWITCH edu ID account is required to access the hub website and the repository with the code to generate it\nMembers. As owners of a repository we can set up different roles for the members that we allow access. Any member with the role of maintainer can add new members (Go to Manage/Members). They must also have maintainer role to be able to access the full-size images after clicking on the table thumbnail. Members enrolled as guests can only see the thumbnails but will not be able to access the full-size images.\n\nAfter having acquired permissions to access the repository, any user/collaborator can just go to the main website URL and access with the SWITCH-ID credentials\n\n\n\n\n\n\nNote on accessibility\n\n\n\nThe access to the website using SWITCH edu-id credentials works with Gitlab pages because it is supported by UZH ( Gitlab.uzh). If are using repositories at Gitlab.com, your collaborators will need a Gitlab account. If you use Github (with a free acount) instead of Gitlab you will not be able to make a private website, Github pages will only work with public repositories.",
+    "crumbs": [
+      "Tutorials",
+      "🌍 **Data Sharing and Repositories**",
+      "Gitlab Tutorial 2. Create and Update a Data Hub"
+    ]
+  },
+  {
+    "objectID": "contents/tutorials/Tutorial_Gitlab2_DataHub.html#action-edit-metadata",
+    "href": "contents/tutorials/Tutorial_Gitlab2_DataHub.html#action-edit-metadata",
+    "title": "Gitlab Tutorial 2. Create and Update a Data Hub",
+    "section": "1. ACTION: edit metadata",
+    "text": "1. ACTION: edit metadata\nThe owner can do this through:\n\nBrowser (RECOMMENDED FOR MINOR CHANGES) Making changes from Gitlab using the browser, e.g., upload or edit scripts.\nClone repository (RECOMMENDED FOR MAJOR UPDATES) Cloning this repo, working locally and committing and pushing the changes to Gitlab (e.g., using Github desktop). The local metadata file should be always in Sync with that one in the remote repository.\n\n\n\n\n\n\n\nNote on the source table\n\n\n\nThis workflow considers the Gitlab repository as the main source for retrieving your projects’ metadata. Thus, we recommend to edit and maintain the tables in this repository and to avoid creating copies of those tables to prevent losing control over their versions.",
+    "crumbs": [
+      "Tutorials",
+      "🌍 **Data Sharing and Repositories**",
+      "Gitlab Tutorial 2. Create and Update a Data Hub"
+    ]
+  },
+  {
+    "objectID": "contents/tutorials/Tutorial_Gitlab2_DataHub.html#auto-changes-in-the-repository-trigger-the-continuous-integration-pipeline",
+    "href": "contents/tutorials/Tutorial_Gitlab2_DataHub.html#auto-changes-in-the-repository-trigger-the-continuous-integration-pipeline",
+    "title": "Gitlab Tutorial 2. Create and Update a Data Hub",
+    "section": "2. AUTO: changes in the repository trigger the Continuous Integration pipeline",
+    "text": "2. AUTO: changes in the repository trigger the Continuous Integration pipeline\nIt may take around 5 minutes to update the page html. The member with at least maintainer status can click on Build/Pipelines or Jobs (sidebar in Gitlab) to see what pipeline or job (within pipeline) is running, and if there are any errors.",
+    "crumbs": [
+      "Tutorials",
+      "🌍 **Data Sharing and Repositories**",
+      "Gitlab Tutorial 2. Create and Update a Data Hub"
+    ]
+  },
+  {
+    "objectID": "contents/tutorials/Tutorial_Gitlab2_DataHub.html#auto-the-continuous-integration-pipeline-runs-the-script",
+    "href": "contents/tutorials/Tutorial_Gitlab2_DataHub.html#auto-the-continuous-integration-pipeline-runs-the-script",
+    "title": "Gitlab Tutorial 2. Create and Update a Data Hub",
+    "section": "3. AUTO: the continuous integration pipeline runs the script",
+    "text": "3. AUTO: the continuous integration pipeline runs the script\nThe .gitlab-ci.yml file defines this pipeline. It uses a Docker image with R, Gitlab pages to produce the website, and Gitlab runner to run the Docker where we have our Rmarkdown script (rendering the html from the table). The owner can edit the yml and the Rmarkdown to make if changes in this flow are to be done. No edit of Docker image is needed.\nSee our tutorial on customizing Gitlab Continuous Integration for more advanced details.",
+    "crumbs": [
+      "Tutorials",
+      "🌍 **Data Sharing and Repositories**",
+      "Gitlab Tutorial 2. Create and Update a Data Hub"
+    ]
+  },
+  {
+    "objectID": "contents/tutorials/Tutorial_Gitlab2_DataHub.html#auto-the-html-is-updated-and-collaborators-can-navigate-through-the-updated-data",
+    "href": "contents/tutorials/Tutorial_Gitlab2_DataHub.html#auto-the-html-is-updated-and-collaborators-can-navigate-through-the-updated-data",
+    "title": "Gitlab Tutorial 2. Create and Update a Data Hub",
+    "section": "4. AUTO: The HTML is updated and collaborators can navigate through the updated data",
+    "text": "4. AUTO: The HTML is updated and collaborators can navigate through the updated data\nA static site like the one you are seeing this tutorial can include interactive elements. In this example we propose an interactive table that can be used to navigate through metadata and even some data (e.g., displaying clickable image thumbnails). By static we mean that the user will just see whatever data is contained in the HTML of the site. Although it contains an interactive table, all users have access to the same data which they cannot modify (unlike in dynamic websites).\nThe website hosted using Gitlab pages is rendered with an [R Markdown](https://rmarkdown.rstudio.com/) script, that uses the R DT package). The script creates an interactive page in HTML. Gitlab CI is used to run the R Markdown script automatically at each update (push) and render the site from the browser so that users do not need to install R or other programs to update the site.",
+    "crumbs": [
+      "Tutorials",
+      "🌍 **Data Sharing and Repositories**",
+      "Gitlab Tutorial 2. Create and Update a Data Hub"
+    ]
+  },
+  {
+    "objectID": "contents/tutorials/index.html",
+    "href": "contents/tutorials/index.html",
+    "title": "Tutorials",
+    "section": "",
+    "text": "A series of practical tutorials for managing Open Research Data. Use the table below or the left side bar to navigate through all tutorials.",
+    "crumbs": [
+      "Tutorials"
+    ]
+  },
+  {
+    "objectID": "contents/templates/template_create_index.html",
+    "href": "contents/templates/template_create_index.html",
+    "title": "Data index",
+    "section": "",
+    "text": "Template 1 - Read Excel and Render Interactive\nYou can copy the following content into an empty .qmd file, fill in your file paths and names when necessary and click ‘render’ in R studio (latest version recommended for better Quarto support). This will automatically save it as an .HTML file in the same folder as the .qmd file. The libraries loaded with library() are additional R packages that first need to be installed with install.packages().\n--- \n#title: \"Page-title\"\nsubtitle: \"Page-subtitle\"\nauthor: \"author-name\"\naffiliation: \"affiliation-name\"\ndate: last-modified\nformat: html \n---\n\n# Read metadata table\n\n```{r readfiles}\n#| code-fold: true   \nlibrary(openxlsx)\n\n# Manual inputs\ninput_table_1 =  'table_filename.xlsx'  # specify fullpath if not in current dir\nsheet_name  =     'sheetname' # insert name of sheet in table\nmiss_val_spec =  c(\"\",\"N/A\")            # labels used to specify missing value\n\n# read data\ntbl &lt;- openxlsx::read.xlsx(xlsxFile = input_table_1,\n                           sheet = sheet_name,\n                           na.strings = c(\"\",\"N/A\"))\n``` \n&gt; This table has `r nrow(tbl)` rows and `r ncol(tbl)` columns\n\n# Render interactive table \n\n```{r , renderTable} \nlibrary(DT)             \n\ndatatable(\n    tbl,\n    filter = \"top\",\n    escape = FALSE,\n    rownames = FALSE,       \n    width = \"100%\",     \n    class = 'compact cell-border  hover',\n    extensions = c('Buttons', 'Select','ColReorder', 'Scroller',  'KeyTable'),\n    selection = 'none',\n    options = list(\n      pageLength = 10,       \n      dom = 'Bfrtip',\n      #buttons = c('colvis','selectAll', 'selectNone', 'copy', 'csv', 'pdf'),  \n      buttons = list(list(extend = \"colvis\", text = \"select Columns\"),'selectAll', 'selectNone', 'copy', 'csv', 'pdf'), \n      select = list(style = 'os', items = 'row'),\n      scrollX = TRUE,\n      scrollCollapse = FALSE,  \n      autoWidth = TRUE,\n      colReorder = TRUE,\n      columnDefs = list(\n        list(\n          keys = TRUE,\n          search = list(regex = TRUE),\n          targets=0\n        )\n      )\n      )\n  ) \n\n\n\n```\n\n\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Templates",
+      "Data index"
+    ]
+  },
+  {
+    "objectID": "contents/presentations/Presentations_2.html",
+    "href": "contents/presentations/Presentations_2.html",
+    "title": "Quick Notes on Integrating Version Control in Your Workflow using Repositories",
+    "section": "",
+    "text": "Back\n\nQuick Notes on Integrating Version Control in Your Workflow using Repositories\n\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "contents/presentations/index.html",
+    "href": "contents/presentations/index.html",
+    "title": "Presentations",
+    "section": "",
+    "text": "Presentations\nCollection of presentations related to AFFORD project\n\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nTitle\n\n\nDate\n\n\n\n\n\n\nAn overview of the AFFORD project\n\n\nNov 27, 2023\n\n\n\n\nQuick Notes on Integrating Version Control in Your Workflow using Repositories\n\n\nNov 27, 2023\n\n\n\n\n\nNo matching items\n\n Back to top"
+  },
+  {
+    "objectID": "contents/glossary/index.html",
+    "href": "contents/glossary/index.html",
+    "title": "Glossary",
+    "section": "",
+    "text": "Short descriptions and references for some technical terms and software used in our tutorials\n\n\n\n\nGit is a system to track changes in files, it is most often used to coordinate the work among several persons who access the files online on a server or sync them to their computer. The online use does not require any installation, local use is only possible after installing Git.\n\n\n\nA Git repository is a set of folders and files with complete history and full version-tracking abilities, locally or on a server.\n\n\n\nGithub.com is a commercial hosting service for version control with Git.\n\n\n\nGitlab.com is acommercial hosting services for version control with Git.\n\n\n\nThe UZH instance of the open source Gitlab at Gitlab.uzh.ch is hosted by the UZH on servers owned by SWITCH, a non-profit foundation that has been established by the Swiss Federal Government. Learn more &gt;&gt;.\n\n\n\nGitlab pages is a service from Gitlab that allows you to publish static websites directly from a repository in Gitlab.\n\n\n\nOn a static website the user will just see whatever data is contained in the HTML that composes the website. Anyone landing on that website will see the same content, no new content is generated based on the user’s input.\n\n\n\nCI/CD is a method of software development where building, testing and deploying applications is done continuously. A very simple use case example in the context of Gitlab pages is a CI/CD script that is triggered whenever there are changes in the repository, and that renders the website HTML. Thus, enabling maintainers to change and update the website content directly from the browser.\n\n\n\n\n\n\nSWITCH, a non-profit foundation that has been established by the Swiss Federal Government. It provides a cloud-based storage service for storing and sharing files online, with automatic sync of files across devices. University members get 100 Gb of storage. All personal data remains in Switzerland under the direct control of Switch and the universities and is covered by Swiss data protection provisions.\n\n\n\nThe universal login for lifelong learning (for all students of Swiss universities). Orchestrated by the Switch foundation.\n\n\n\n\n\n\nA powerful tool to improve reproducibility of results. These are reports that contain code, text and code outputs in a single document. The outputs can be figures, tables and can even have interactive elements (for HTML reports). They can be parameterized and they are updated automatically with additions, modifications or deletions from the source code. Learn more in our CRS primer Dynamic Reporting\n\n\n\nThe R language and programming environment was designed for statistical computing and graphics. It is free and open source, broadly used in research and it has a very active community of users.\n\n\n\nThe integrated development environment (IDE) R studio is free and open source. It is the recommended software to use for R and Quarto as the latest versions support editing and previewing Quarto documents. The desktop application R studio includes a console, syntax-highlighting editor as well as tools for plotting, history, debugging and workspace management.\n\n\n\nThe multi-language publishing system Quarto is an open-source scientific and technical publishing system. It is more advanced than R markdown with more options for output types and languages. It can generate dynamic reports in different formats (e.g., pdf, HTML, MS word, ePub) with content written in different languages (R, Python, Julia and Observable). When used in R, we have the Quarto Markdown files (.qmd) containing a YAML header, text written in Markdown and code chunks written in R.\n\n\n\nThese are simple languages used for formatting and/or for specifying settings in many of the software tools and workflows we describe. They require a very minimal learning from users, and there are plenty of templates and examples online. A good approach is usually to build on some of them and adapt it to our case.\n\n\nMarkdown, a lightweight markup language with simple syntax that will add formatting elements to plain text. This format is widely used for technical documentation online. Documents in this format can be rendered into formatted text in multiple formats (e.g., pdf, HTML). These documents can contain tables and images (or animations if intended for HTML). There are multiple visual markdown editors to facilitate editing of these documents. The constrained formatting options can benefit researchers by facilitating more consistent and clear documentation styles and its interoperability makes it possible to share in a website or to try out different output formats.\n\n\n\nOriginally meaning Yet Another Markup Language, now YAML Ain’t Markup Language YAML is a human-friendly data serialization language for all programming languages which is often used for configuration files. For example, in Quarto we have the _quarto.yml file with the project settings (e.g., specifying if it renders into a website, what should be in the navigation bar, etc). The header of the Quarto markdown files are also written in YAML syntax, same as the project file. In Gitlab continuous integration the CI/CD file (.gitlab-ci.yml) with instructions and settings is also a YAML file."
+  },
+  {
+    "objectID": "contents/glossary/index.html#version-control-and-repositories",
+    "href": "contents/glossary/index.html#version-control-and-repositories",
+    "title": "Glossary",
+    "section": "",
+    "text": "Git is a system to track changes in files, it is most often used to coordinate the work among several persons who access the files online on a server or sync them to their computer. The online use does not require any installation, local use is only possible after installing Git.\n\n\n\nA Git repository is a set of folders and files with complete history and full version-tracking abilities, locally or on a server.\n\n\n\nGithub.com is a commercial hosting service for version control with Git.\n\n\n\nGitlab.com is acommercial hosting services for version control with Git.\n\n\n\nThe UZH instance of the open source Gitlab at Gitlab.uzh.ch is hosted by the UZH on servers owned by SWITCH, a non-profit foundation that has been established by the Swiss Federal Government. Learn more &gt;&gt;.\n\n\n\nGitlab pages is a service from Gitlab that allows you to publish static websites directly from a repository in Gitlab.\n\n\n\nOn a static website the user will just see whatever data is contained in the HTML that composes the website. Anyone landing on that website will see the same content, no new content is generated based on the user’s input.\n\n\n\nCI/CD is a method of software development where building, testing and deploying applications is done continuously. A very simple use case example in the context of Gitlab pages is a CI/CD script that is triggered whenever there are changes in the repository, and that renders the website HTML. Thus, enabling maintainers to change and update the website content directly from the browser."
+  },
+  {
+    "objectID": "contents/glossary/index.html#data-storage-and-security",
+    "href": "contents/glossary/index.html#data-storage-and-security",
+    "title": "Glossary",
+    "section": "",
+    "text": "SWITCH, a non-profit foundation that has been established by the Swiss Federal Government. It provides a cloud-based storage service for storing and sharing files online, with automatic sync of files across devices. University members get 100 Gb of storage. All personal data remains in Switzerland under the direct control of Switch and the universities and is covered by Swiss data protection provisions.\n\n\n\nThe universal login for lifelong learning (for all students of Swiss universities). Orchestrated by the Switch foundation."
+  },
+  {
+    "objectID": "contents/glossary/index.html#software-and-reporting",
+    "href": "contents/glossary/index.html#software-and-reporting",
+    "title": "Glossary",
+    "section": "",
+    "text": "A powerful tool to improve reproducibility of results. These are reports that contain code, text and code outputs in a single document. The outputs can be figures, tables and can even have interactive elements (for HTML reports). They can be parameterized and they are updated automatically with additions, modifications or deletions from the source code. Learn more in our CRS primer Dynamic Reporting\n\n\n\nThe R language and programming environment was designed for statistical computing and graphics. It is free and open source, broadly used in research and it has a very active community of users.\n\n\n\nThe integrated development environment (IDE) R studio is free and open source. It is the recommended software to use for R and Quarto as the latest versions support editing and previewing Quarto documents. The desktop application R studio includes a console, syntax-highlighting editor as well as tools for plotting, history, debugging and workspace management.\n\n\n\nThe multi-language publishing system Quarto is an open-source scientific and technical publishing system. It is more advanced than R markdown with more options for output types and languages. It can generate dynamic reports in different formats (e.g., pdf, HTML, MS word, ePub) with content written in different languages (R, Python, Julia and Observable). When used in R, we have the Quarto Markdown files (.qmd) containing a YAML header, text written in Markdown and code chunks written in R.\n\n\n\nThese are simple languages used for formatting and/or for specifying settings in many of the software tools and workflows we describe. They require a very minimal learning from users, and there are plenty of templates and examples online. A good approach is usually to build on some of them and adapt it to our case.\n\n\nMarkdown, a lightweight markup language with simple syntax that will add formatting elements to plain text. This format is widely used for technical documentation online. Documents in this format can be rendered into formatted text in multiple formats (e.g., pdf, HTML). These documents can contain tables and images (or animations if intended for HTML). There are multiple visual markdown editors to facilitate editing of these documents. The constrained formatting options can benefit researchers by facilitating more consistent and clear documentation styles and its interoperability makes it possible to share in a website or to try out different output formats.\n\n\n\nOriginally meaning Yet Another Markup Language, now YAML Ain’t Markup Language YAML is a human-friendly data serialization language for all programming languages which is often used for configuration files. For example, in Quarto we have the _quarto.yml file with the project settings (e.g., specifying if it renders into a website, what should be in the navigation bar, etc). The header of the Quarto markdown files are also written in YAML syntax, same as the project file. In Gitlab continuous integration the CI/CD file (.gitlab-ci.yml) with instructions and settings is also a YAML file."
+  },
+  {
+    "objectID": "contents/about/index.html",
+    "href": "contents/about/index.html",
+    "title": "About",
+    "section": "",
+    "text": "A Framework for Avoiding the Open Research Data Dump.\n\n\n\n\nThe project AFFORD aims at designing a sustainable support framework to lower the barriers to publishing data and other research outputs in an accessible form by bundling know-how, workflows, and tools under the umbrella of one organizational entity. It is a collaboration between the InterfaceGroup and the Center for Reproducible Science of the University of Zurich. It uses the Sinergia project Fluid Dynamics of the central nervous system as a reference project and accompanies this project in the full cycle of Open Research Data (ORD) generation from experiment planning to publishing. This project-based, data-driven approach will help the framework reach a sufficient level of maturity before it is made available to all university researchers.\n\nCode library(collapsibleTree)\n\n # Read data \n AFFORD &lt;- read.csv('AFFORD_tree.csv')\n\n # Unique lenghts for coloring  \n # Plot dendrogram \n collapsibleTree(AFFORD, \n                root = 'AFFORD deliverables',\n                hierarchy = c(\"Topic\", 'Output','Description'),  \n                fill = c('forestgreen',\n                 rep(\"darkorange\", length(unique(AFFORD$Topic)[!is.na(unique(AFFORD$Topic))])), \n                 rep(\"gold\", length(unique(AFFORD$Output)[!is.na(unique(AFFORD$Output))])),\n                 rep(\"papayawhip\", length(unique(AFFORD$Description)[!is.na(unique(AFFORD$Description))]))\n                  ), \n                 collapsed = FALSE, zoomable = FALSE)\n\n\n\n\n\n\nThe reproducibility of scientific findings is crucial for the credibility of empirical research. The objective of the Center for Reproducible Science is to train the next generation of researchers in good research practices, to develop novel methodology related to reproducibility and replicability, and to improve the quality of scientific investigation using meta-science.\nThe CRS is a competence center supported by the Vice President Research and by the Faculties of Medicine (MeF, leading house), Science (MNF), Business, Economics and Informatics (WWF), Arts and Social Sciences (PhF), Law (RWF), and Vetsuisse Faculty (VSF)."
+  },
+  {
+    "objectID": "contents/about/index.html#the-afford-project",
+    "href": "contents/about/index.html#the-afford-project",
+    "title": "About",
+    "section": "",
+    "text": "A Framework for Avoiding the Open Research Data Dump.\n\n\n\n\nThe project AFFORD aims at designing a sustainable support framework to lower the barriers to publishing data and other research outputs in an accessible form by bundling know-how, workflows, and tools under the umbrella of one organizational entity. It is a collaboration between the InterfaceGroup and the Center for Reproducible Science of the University of Zurich. It uses the Sinergia project Fluid Dynamics of the central nervous system as a reference project and accompanies this project in the full cycle of Open Research Data (ORD) generation from experiment planning to publishing. This project-based, data-driven approach will help the framework reach a sufficient level of maturity before it is made available to all university researchers.\n\nCode library(collapsibleTree)\n\n # Read data \n AFFORD &lt;- read.csv('AFFORD_tree.csv')\n\n # Unique lenghts for coloring  \n # Plot dendrogram \n collapsibleTree(AFFORD, \n                root = 'AFFORD deliverables',\n                hierarchy = c(\"Topic\", 'Output','Description'),  \n                fill = c('forestgreen',\n                 rep(\"darkorange\", length(unique(AFFORD$Topic)[!is.na(unique(AFFORD$Topic))])), \n                 rep(\"gold\", length(unique(AFFORD$Output)[!is.na(unique(AFFORD$Output))])),\n                 rep(\"papayawhip\", length(unique(AFFORD$Description)[!is.na(unique(AFFORD$Description))]))\n                  ), \n                 collapsed = FALSE, zoomable = FALSE)"
+  },
+  {
+    "objectID": "contents/about/index.html#the-crs",
+    "href": "contents/about/index.html#the-crs",
+    "title": "About",
+    "section": "",
+    "text": "The reproducibility of scientific findings is crucial for the credibility of empirical research. The objective of the Center for Reproducible Science is to train the next generation of researchers in good research practices, to develop novel methodology related to reproducibility and replicability, and to improve the quality of scientific investigation using meta-science.\nThe CRS is a competence center supported by the Vice President Research and by the Faculties of Medicine (MeF, leading house), Science (MNF), Business, Economics and Informatics (WWF), Arts and Social Sciences (PhF), Law (RWF), and Vetsuisse Faculty (VSF)."
+  },
+  {
+    "objectID": "contents/contact/index.html",
+    "href": "contents/contact/index.html",
+    "title": "Contact us",
+    "section": "",
+    "text": "Contact us\n\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "contents/ORD_index/index.html",
+    "href": "contents/ORD_index/index.html",
+    "title": "Data Index",
+    "section": "",
+    "text": "This is a demo of a data index that allows to navigate through a table with metadata and thumbnail images. The idea is to facilitate finding and sharing your data. Visit our Tutorials page for more details on the workflow of producing such a data index. In short, for the index you need: (1) a source table of structured metadata (2) if you are to display thumbnails you need the picture files (3) some R code to render the table interactive with the package DT and (4) R Quarto to output the table as an HTML page.\n\n\n\n\n\n\nMore information about this example\n\n\n\n\n\nThis demo uses a dummy dataset, i.e., the source metadata table and images have no meaning. The example demonstrates three frequent operations that can be useful for creating a data index:\n\nReading filenames and extracting information into columns from filename parts\nJoining two metadata tables according to a key variable with shared values between them\nAdding some HTML code to a column value (in this case filenames) to render the images (the same approach would be done to render hyperlinks).\n\n\n\n\n\n\nNavigate data\nHow-to\n\n\n\n\n\n\n\n\n\n\nInstructions\n\n\n\n\n\nUse the filter boxes to select which data are displayed. Use select Columns to choose which columns are displayed or change the order of the column if you click and drag on the variable names. You can select rows (one or multiple) clicking on them or by using the select button. Click on a thumbnail to open the full-size image. Click the button Copy to copy the filtered or selected rows to the clipboard and click the button csv to save it in that format.\n\n\n\n\nCodelibrary(crosstalk) # for filter boxes\nlibrary(DT) # For html table\n\n# first we need an object that will be shared by filter panels and datatable \nshared_joined &lt;- SharedData$new(tbl_joined, key = ~subjID, group = \"shared_obj\")\n\n# to make two columns: one with filter panels and one with the table\nbscols(widths = c(2,10),\n     device = c(\"xs\", \"sm\", \"md\", \"lg\"),\n\n# filter panels. Other formats are sliders and checkboxes https://rstudio.github.io/crosstalk/using.html\nlist(\n filter_select( id = \"subjID\", label = \"subject\",sharedData = shared_joined, group = ~subjID),\n filter_checkbox(\"Sex\",\"Sex\",shared_joined, ~Sex, inline = FALSE)\n),\n\n# table\ndatatable(\n    shared_joined,\n    #filter = \"top\",\n    escape = FALSE,\n    rownames = FALSE,\n    width = \"100%\",\n    class = 'cell-border  hover', \n    extensions = c('Buttons', 'Select','ColReorder', 'Scroller', 'FixedHeader', 'KeyTable'),\n    selection = 'none',\n    options = list( \n      fixedHeader = TRUE,\n      pageLength = 20,\n      paging = FALSE,\n      dom = 'Bftrip',\n      #buttons = c('colvis','selectAll', 'selectNone', 'copy', 'csv'),  \n      buttons = list(list(extend = \"colvis\", text = \"select Columns\", background='yellow'),\n                     'selectAll', 'selectNone', 'copy', 'csv'), \n      select = list(style = 'os', items = 'row'),\n      scrollX = TRUE,\n      scrollY = \"400px\",\n      scrollCollapse = TRUE,  \n      autoWidth = TRUE,\n      colReorder = TRUE,\n      columnDefs = list(\n        list(\n          keys = TRUE,\n          search = list(regex = TRUE),\n          targets=0\n        )\n      )\n     )\n  )\n)\n\n\n\n\n\nsubject\n\n\n\n\n\nSex\n\n\n\nF\n\n\n\n\nM\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe following steps will vary depending on the index content. Steps 1 to 4 will change depending on the used metadata tables and if we want to render links, images, etc. Step 5 will vary depending on the many possible options we have to display the table and filters. For this example we did:\n1. Read metadata table\nWe first read a source metadata table with information about subjects and experiments (image recording).\n\nCodelibrary(dplyr)\ntbl &lt;-  readxl::read_excel('DummyData1_20241234_subjects.xlsx',na=c(\"\",\"N/A\"))\n\n# Minor adjustment of time format\ncolsWithTime &lt;- colnames(tbl)[grep('*time*',colnames(tbl))] # find variables with \ntbl &lt;- tbl %&gt;%  mutate(across(all_of(colsWithTime), ~ format(., format = \"%H:%M\")))\n\n\n2. Make a table with filenames\nWe read the names of files with the images we want to showcase. The files with subject images start with subject identifier separated by the rest by a hyphen ‘-’. We use this to create a new variable containing the subject identifier of each image file.\n\nCodefiles &lt;- dir('Images') # Find all files in our images folder\nfname &lt;- files[grepl(paste0('*.jpg$'),files)] #take only .jpg files\n\ntbl_files &lt;- as.data.frame(fname) # make table with filenames\ntbl_files$subject &lt;- sapply(strsplit(fname,'_'),'[[',1) #take 1st filename part\n\n\n3. Join the two tables\nNow we link the image filenames to the source metadata table.\n\nCodetbl_joined  &lt;- full_join(x=tbl,\n                         y = tbl_files,\n                         by=join_by(\"subjID\"==\"subject\"),\n                         keep=FALSE)\n\n\n4. Add HTML code to render the images\nSince we want to display images we will add some HTML including the address of the image files (the repository). The URL is added as href  so that we access the image when we click. The path relative to this script is added to src so that the table renders the image thumbnail. We use file.path() to write the directories to avoid having to specify the operating system separator ‘\\’ or ‘/’ (except for the URL address).\n\nCode# define image paths\npic_folder &lt;- 'https://gitlab.uzh.ch/crsuzh/afford_website/-/tree/master/Docs/contents/ORD_index/Images'\npic_fullpath &lt;- file.path(pic_folder,tbl_joined$fname)\npic_relpath &lt;- file.path('..','..','Images',tbl_joined$fname)\n\n# add paths and HTML code \ntbl_joined$pic &lt;- paste0('&lt;a href=\\'', pic_fullpath,'\\' target=\\'_blank\\'&gt;', \n                       '&lt;img src=\\'',pic_relpath, '\\' height=\\'70\\'&gt;&lt;/a&gt;')\n\n# Add location \ntbl_joined$location &lt;- paste0('&lt;a href=\\'',pic_folder,'\\' target=\\'_blank\\'&gt;', \n                       'Gitlab folder &gt;&gt;','&lt;/a&gt;')\n\n\n# Move to first column\ntbl_joined &lt;- tbl_joined %&gt;% relocate(\"pic\",.before = 1)\ntbl_joined &lt;- tbl_joined %&gt;% relocate(\"fname\",.before = 2)\ntbl_joined &lt;- tbl_joined %&gt;% relocate(\"location\",.before = 3)\n\n\n\n\n\n\n\n\nNote on relative paths and Gitlab pages for advanced users &gt;&gt;\n\n\n\n\n\nThe img src usually has the path to the images relative to the current path, e.g., “.” if they are in subfolder of the current working directory (in R you can find it with getwd()). The current path “../../Images” indicates they are in a folder named ‘Images’ two folders above the current folder. This is related to how the Continuous integration (CI/CD) pipeline is set. There are many other possible configurations. Attention: your local relative paths may not function the same if you use CI/CD and Gitlab pages. Find more information about CI/CD is in the Tutorial section.\n\n\n\n5. Render the HTML table with DT package\nFinally we render the table interactive and add some custom filter boxes. We need two packages (they were installed in advanced with install.packages() and then we load their libraries with the command library()). The main package is DT which allows to render the table interactive. The R package crosstalk is used to allow filter boxes to change what rows we see in the table. Its function bscols() allows to lay out the filters on a column next to the table.\n\nCodelibrary(crosstalk) # for filter boxes\nlibrary(DT) # For html table\n\n# first we need an object that will be shared by filter panels and datatable \nshared_joined &lt;- SharedData$new(tbl_joined, key = ~subjID, group = \"shared_obj\")\n\n# to make two columns: one with filter panels and one with the table\nbscols(widths = c(2,10),\n     device = c(\"xs\", \"sm\", \"md\", \"lg\"),\n\n# filter panels. Other formats are sliders and checkboxes https://rstudio.github.io/crosstalk/using.html\nlist(\n filter_select( id = \"subjID\", label = \"subject\",sharedData = shared_joined, group = ~subjID),\n filter_checkbox(\"Sex\",\"Sex\",shared_joined, ~Sex, inline = FALSE)\n),\n\n# table\ndatatable(\n    shared_joined,\n    #filter = \"top\",\n    escape = FALSE,\n    rownames = FALSE,\n    width = \"100%\",\n    class = 'cell-border  hover', \n    extensions = c('Buttons', 'Select','ColReorder', 'Scroller', 'FixedHeader', 'KeyTable'),\n    selection = 'none',\n    options = list( \n      fixedHeader = TRUE,\n      pageLength = 20,\n      paging = FALSE,\n      dom = 'Bftrip',\n      #buttons = c('colvis','selectAll', 'selectNone', 'copy', 'csv'),  \n      buttons = list(list(extend = \"colvis\", text = \"select Columns\", background='yellow'),\n                     'selectAll', 'selectNone', 'copy', 'csv'), \n      select = list(style = 'os', items = 'row'),\n      scrollX = TRUE,\n      scrollY = \"400px\",\n      scrollCollapse = TRUE,  \n      autoWidth = TRUE,\n      colReorder = TRUE,\n      columnDefs = list(\n        list(\n          keys = TRUE,\n          search = list(regex = TRUE),\n          targets=0\n        )\n      )\n     )\n  )\n)\n\n\n\n\n\nsubject\n\n\n\n\n\nSex\n\n\n\nF\n\n\n\n\nM\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "contents/presentations/Presentations_1.html",
+    "href": "contents/presentations/Presentations_1.html",
+    "title": "An overview of the AFFORD project",
+    "section": "",
+    "text": "Back\n\nAn overview of the AFFORD project\n\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "contents/templates/index.html",
+    "href": "contents/templates/index.html",
+    "title": "Templates",
+    "section": "",
+    "text": "Templates\nHere we present a series of useful starter-templates. These are templates for R Quarto, Markdown and Gitlab to help researchers to get started with some of the workflows proposed in AFFORD. They are not official templates and there is plenty of room for variations.\n\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nTitle\n\n\nSubtitle\n\n\nDate\n\n\n\n\n\n\nData index\n\n\nUse R Quarto Markdown files to render an interactive table\n\n\nFeb 14, 2024\n\n\n\n\nQuarto project files\n\n\nTemplates of Quarto _quarto.yml project configuration files\n\n\nFeb 14, 2024\n\n\n\n\n\nNo matching items\n\n Back to top",
+    "crumbs": [
+      "Templates"
+    ]
+  },
+  {
+    "objectID": "contents/templates/template_quarto-yml.html",
+    "href": "contents/templates/template_quarto-yml.html",
+    "title": "Quarto project files",
+    "section": "",
+    "text": "When working with more than one dynamic report it will be very convenient to use Quarto project files. Visit the Quarto official documentation site for more details on Quarto projects. In short, Quarto projects allow us to:\n\nRender all .qmd files in a directory\nHave common settings across files (share YAML configuration)\nRedirect outputs to another directory (output-dir)\nFreeze rendered output, do not re-execute documents unless they changed\n\nThe project settings are provided by a _quarto.yml file. If you have such file in a folder and do quarto::quarto_render() in R, it will detect render the files according the settings specified in the _quarto.yml.\n\nTemplate - Website with a navigation bar on top\nComments preceeded by # suggest alternatives in some fields. Specifying project type and format is required. Most other settings like logos text and content of navigation bar, themes, etc are optional and we encourage trying out different options.\nproject:\n  type: website\n  output-dir: your-output-directory # omit this line to use current dir\n  \nwebsite:\n    title: Home #or other website title\n    page-navigation: true\n    back-to-top-navigation: true\n    page-footer: \n        left: |\n          Created by the [YOURTEAM](URL to your team's website)\n        center: |\n            [About Us](contents/about/index.html)\n        right: |\n           This is a website under the [LICENSE NAME](URL to license web) \n          \n           \n    favicon:  path-to-your-logo/logo-filename.jpg # or .png, .svg\n    \n    navbar:        \n        logo:  path-to-your-logo/logo-filename.jpg \n                    \n        right: # or left                 \n          - text: \"Page 1-title\"            \n            href: path-to-page1-contents/index.qmd\n          - text: \"Page 2-title\"            \n            href: path-to-page2-contents/index.qmd\n          - text: \"Page 3-title\"            \n            href: path-to-page3-contents/index.qmd\n           \n\nformat:\n    html:         \n        grid:\n          sidebar-width: 350px\n        theme: #see how they look inhttps://bootswatch.com/       \n            light: cosmo    \n            dark:  darkly\n        self-contained: true\n\nfreeze: auto\n \n\n\nTemplate 2 - Website with top nav bar and a side bar\nThis website has a navigation bar and a sidebar only in one of the subpages Comments preceeded by # suggest alternatives in some fields. Specifying project type and format is required. Most other settings like logos text and content of navigation bar, themes, etc are optional and we encourage trying out different options.\nproject:\n  type: website\n  output-dir: your-output-directory # omit this line to use current dir\n  \nwebsite:\n    title: Home #or other website title\n    page-navigation: true\n    back-to-top-navigation: true\n    page-footer: \n        left: |\n          Created by the [YOURTEAM](URL to your team's website)\n        center: |\n            [About Us](contents/about/index.html)\n        right: |\n           This is a website under the [LICENSE NAME](URL to license web) \n          \n           \n    favicon:  path-to-your-logo/logo-filename.jpg # or .png, .svg\n    \n    navbar:        \n        logo:  path-to-your-logo/logo-filename.jpg \n                    \n        right: # or left                 \n          - text: \"Page 1-title\"            \n            href: path-to-page1-contents/index.qmd\n          - text: \"Page 2-title\"            \n            href: path-to-page2-contents/index.qmd\n          - text: \"Page 3-title\"            \n            href: path-to-page3-contents/index.qmd\n           \n    sidebar:          \n        - id: Page 1-title \n          title: \"Enter your page 1 sidebar title\"                  \n          style: \"docked\"       \n          contents:\n            - path-to-page1-contents/index.qmd\n            - section: \"Contents section 1\"              \n              contents: \n                - path-to-page1-contents/content1.qmd\n                - path-to-page1-contents/content2.qmd\n                - path-to-page1-contents/content3.qmd\n                \n                                \n            - section: \"Contents section 2\"    \n              contents: \n                - \"...coming soon...\"            \n                \n         \n        - id: \"\"  #This will leave all other pages without a sidebar\n          title: \"\"\n\nformat:\n    html:         \n        grid:\n          sidebar-width: 350px\n        theme: #see how they look inhttps://bootswatch.com/       \n            light: cosmo    \n            dark:  darkly\n        self-contained: true\n\nfreeze: auto\n \n:::\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Templates",
+      "Quarto project files"
+    ]
+  },
+  {
+    "objectID": "contents/tutorials/Tutorial_Gitlab1_IntroGit.html",
+    "href": "contents/tutorials/Tutorial_Gitlab1_IntroGit.html",
+    "title": "Gitlab Tutorial 1. Step-by-Step Guide to Git and Gitlab",
+    "section": "",
+    "text": "Back",
+    "crumbs": [
+      "Tutorials",
+      "🌍 **Data Sharing and Repositories**",
+      "Gitlab Tutorial 1. Step-by-Step Guide to Git and Gitlab"
+    ]
+  },
+  {
+    "objectID": "contents/tutorials/Tutorial_Gitlab1_IntroGit.html#create-and-use-a-repository-in-browser",
+    "href": "contents/tutorials/Tutorial_Gitlab1_IntroGit.html#create-and-use-a-repository-in-browser",
+    "title": "Gitlab Tutorial 1. Step-by-Step Guide to Git and Gitlab",
+    "section": "1. Create and use a repository (in browser)",
+    "text": "1. Create and use a repository (in browser)\n\nFor project owners\nFor someone that wants to share data or metadata (e.g., a data hub)\n\nLogin to Gitlab.uzh.ch with your SWITCH edu-ID.\nCreate a new project repository, give it an informative, easy name (e.g., _pages, project x)\nIn Settings/General/Visibility mark it as private\nIn Manage/Members/Invite members add new members to the team, with different levels of permissions\nAdd your files and code (works through the browser but is easier with the Gitlab workflow below)\n\n\n\nFor collaborators\nFor someone who just wants to navigate through the data of a lab, when this is not made fully public:\n\nAsk the owner of the data to be invited as a member of the project repository\nGo to the project repository on Gitlab.uzh.ch or Pages URL e.g., https://crsuzh.pages.uzh.ch/afford_website/ and login with your SWITCH edu-ID (if required).",
+    "crumbs": [
+      "Tutorials",
+      "🌍 **Data Sharing and Repositories**",
+      "Gitlab Tutorial 1. Step-by-Step Guide to Git and Gitlab"
+    ]
+  },
+  {
+    "objectID": "contents/tutorials/Tutorial_Gitlab1_IntroGit.html#cloning-a-repository-to-local-computer",
+    "href": "contents/tutorials/Tutorial_Gitlab1_IntroGit.html#cloning-a-repository-to-local-computer",
+    "title": "Gitlab Tutorial 1. Step-by-Step Guide to Git and Gitlab",
+    "section": "2. Cloning a repository to local computer",
+    "text": "2. Cloning a repository to local computer\n\nFor project owners\nOur remote Gitlab repository, which we access via the browser is now our main location of metadata, code and (some) data. But sometimes it is convenient to make our edits locally. Specially if we are data owners and want to edit and share a large number of files or code, we cannot do this easily in the browser. Recall that you need to install Git for this.\nIn Git, you can clone a repository to create a copy on your computer, that will be synchronized with your remote repository. Once cloned we can pull changes done in the remote repository (in the browser). If we have local changes and want to ‘send’ them to the remote we do: 1) commit and 2) push the local changes to remote. (??? what about add?)\nNOTE: if we fork a repository instead of cloning it, this will create a completely independent copy of the Git repository. Here, we need cloning so that our local changes can be synchronized and we don’t create duplicates of the repository.\n\n\nPersonal access token\nTo clone a repository to your machine you will most likely need a personal access token (due to the security of SWITCH login). In your project repository on Gitlab.uzh.ch go to Settings/Access tokens. In the Access Tokens menu you will be able to give the token a name, choose an expiration date (or leave it blank), choose permissions (choose at least developer for making edits) and scope (select API). See also the picture below.\n\n\n\nimage\n\n\nAfter this you will see a long alphanumeric string, the token, that you should save somewhere so you can use it as your password later on when using Github-desktop, Git or any other platform to manage local copies of the repositories.",
+    "crumbs": [
+      "Tutorials",
+      "🌍 **Data Sharing and Repositories**",
+      "Gitlab Tutorial 1. Step-by-Step Guide to Git and Gitlab"
+    ]
+  },
+  {
+    "objectID": "contents/tutorials/Tutorial_Gitlab1_IntroGit.html#cloning-with-github-desktop-user-friendly",
+    "href": "contents/tutorials/Tutorial_Gitlab1_IntroGit.html#cloning-with-github-desktop-user-friendly",
+    "title": "Gitlab Tutorial 1. Step-by-Step Guide to Git and Gitlab",
+    "section": "2.1 Cloning with Github-desktop (user-friendly)",
+    "text": "2.1 Cloning with Github-desktop (user-friendly)\nThe open source tool Github-desktop with a graphical user interface will simplify pull, commit, push operations for both advanced as well as new users. !Note: official support seems to be only for Windows and Mac. See further documentation on integration with Gitlab\n\nSetup of Github-desktop for Gitlab\n\nDownload and install Github desktop\nIn your Gitlab project, get your personal access token (see above) and save it somewhere\nOn Github desktop go to File/Clone repository. Then enter the URL of your Gitlab repository (see the clone button) and a local directory name. For example:\n\n\n\nimage.png\n\n\nThen you will be asked for username and password. Your username is your Gitlab username (e.g., the name in your email address) and the password is the Token that you just created.\n\nNow your Local folder is linked to your Gitlab remote repository. You can check below how to pull, commit and push changes.\n\n\nEditing repository\nPull,commit and Push changes in the content of the repository. The workflow can get quite complex. Here we will ignore elements like branches to oversimplify it into the main steps:\n\nWork on your local repository, for example, create or edit code, update your metadata table, add new files [^1]\nOpen Github desktop. If you have several repositories, make sure you select the one you are currently working on or the one you want to update. It should detect the local changes done. If there are changes done remotely, but not locally, it willl prompt you to pull those changes (but here, beware there may be conflicts, which you shold be able to solve with Github but may complicate things).\nClick Commit ( you will need to write a brief description, e.g., ‘updated figures’). This will prepare your changes to be sent to the remote repository (‘origin’). If you edited multiple scripts, you can commit all changes at once or select specific scripts\nClick push to origin so that the changes are uploaded.\n\n[^1]: Gitlab is not intended as a large data storage. For the pages in this example we need to have the pictures we want to render in the repository. But sometimes we have many files in our local repository that we do not want to push to the online repository. For that we can use a plain text file in that directory and call it .gitignore. In that file we can have statements like ‘*.jpg’. Then Git will ignore all jpg files in the folder when pushing.",
+    "crumbs": [
+      "Tutorials",
+      "🌍 **Data Sharing and Repositories**",
+      "Gitlab Tutorial 1. Step-by-Step Guide to Git and Gitlab"
+    ]
+  },
+  {
+    "objectID": "contents/tutorials/Tutorial_Gitlab1_IntroGit.html#cloning-with-git-using-command-line",
+    "href": "contents/tutorials/Tutorial_Gitlab1_IntroGit.html#cloning-with-git-using-command-line",
+    "title": "Gitlab Tutorial 1. Step-by-Step Guide to Git and Gitlab",
+    "section": "2.2 Cloning with Git (using command line)",
+    "text": "2.2 Cloning with Git (using command line)\nGit refers to this version control system used in Gitlab, but you can also manage the repositories locally downloading the program Git SCM, a free and open source distributed version control system. It is light and works across operating systems, and also has a very basic graphical interface. But it is mostly designed for working through a terminal. As in Github-desktop you use this to do the main Git actions of pulling, committing and pushing changes between local and remote repositories.",
+    "crumbs": [
+      "Tutorials",
+      "🌍 **Data Sharing and Repositories**",
+      "Gitlab Tutorial 1. Step-by-Step Guide to Git and Gitlab"
+    ]
+  },
+  {
+    "objectID": "contents/tutorials/Tutorial_Gitlab3_CI.html",
+    "href": "contents/tutorials/Tutorial_Gitlab3_CI.html",
+    "title": "Gitlab Tutorial 3. Continuous Integration (CI)",
+    "section": "",
+    "text": "Back\n\nWhy is this useful?\n\nWe can make use of the continuous integration (CI) feature in systems like Gitlab to improved interoperability and reproducibility. CI allows to use our Gitlab repository to run scripts directly in the web browser, without the need to download any software. For example, it allows to automatically update our website or data hub whenever a change in the repository is detected. Thus, different users can edit and conduct analysis in the same software environment and from the web-browser. This tutorial presents a simple use case of this feature.\n\n\n\nOverview\nContinuous integration (CI) refers to the process of automating the integration of changes made by different developers working in the code. In the context of using Gitlab pages as a data hub, the CI will integrating changes in the metadata table and/or images into the resulting HTML. That is, it will update our website so that it shows the last version of our metadata and include any change we want in its content. The advantage is that users do not require to install any software dependencies (like R) and changes can be implemented using the browser, from any computer.\nSimplifying this There are 2 main elements we need to set up for Gitlab CI:\n\n1. Gitlab Runner\nThis is the service that will execute whatever operation you want to do in your CI pipeline. In this case we will use a shared-runner that is supported by the UZH. We only have this if we have our gitlab repository as part of the UZH Gitlab. We can also use our own runners but that is more complicated and beyond the scope of this tutorial (see Gitlab official documentation)\nYou can enable the shared-runner in your repository Settings&gt; CI/CD &gt; Runners. If you are using the UZH Gitlab there should be an available runner listed on the Shared runners section\n\n\n\n2. The .gitlab-ci.yml file\nThis file defines a pipeline which will run every time we make a change in the repository. A pipeline can have one or multiple jobs defined by a script (see complete documentation here ). In the following example the pipeline has one job: rendering the website using R Quarto markdown files (see our tutorial on making a website with R quarto from scratch).\nThere are examples and Continous Integration templates of this file online. They all need an image of a software environment, some jobs defined by a script and some artifacts that are output files from the jobs. The example below uses an image from and it is nased on a template taken from Rocker, which is a project offering docker containers for R environments. Broadly speaking, we can think of a docker container as a light-weight virtual machine and of a docker image as a snapshot of a virtual machine, what defines its software contents.\nBelow we show and describe the following example:\nimage: rocker/verse:4.3\n\npages:\n  stage: deploy\n  before_script:\n   - R -e \"install.packages('quarto')\" \n   - R -e \"install.packages('kableExtra')\" \n   - R -e \"install.packages('DT')\"  \n   - mkdir -p public/SPring/Images\n   - cp _data/SPring/Images/* public/SPring/Images/   \n  \n  script:   \n   - cd _scripts\n   - R -e \"baseDir &lt;- getwd(); quarto::quarto_render('*.qmd')\"\n   - mv ./_site/* ../public/ \n  \n  artifacts:    \n    paths:\n    - public    \n     \n  only:\n  - master\n  interruptible: true\n\nImage\n\nThe first part loads a docker container image, similar to a snapshot of a virtual machine, which will define a software environment.\n\n\n\nPages\n\nWe define different stages (deploy is the main, but some tests stages are usually included as well).\nBecause our image did not include some R packages that we need, we install them in the before the script section. The following lines after installing packages are to create a new folder with copies of the pictures that will be rendered in the website, in the ‘public’ folder (see below, this is the folder where the website html needs to be stored).\nThen the script to actually do the job. First for convenience here we set the _scripts folder as our current directory. Then we run the R code using the R quarto package to build a website by using the command quarto_render indicating all .qmd files in the folder. In our case the .qmd contain text and code to read tables with metadata (see our tutorial on how to make a website with Quarto). The quarto_render() command will automatically create a _site folder with the website. If we change a table or the text in one of those files, this will run again and generate the site again.\nWe then move the content of the website to the public folder. This is necessary as Gitlab pages will only display the content of that folder\n\n\n\n\n\n\n\nNote\n\n\n\nAlthough it is called ‘public’ it does not mean that the page will be publicly available. Gitlab allows pages in private repository so that only people with access can see the content.\n\n\n\nThe job artifacts are the outputs of the job. In this example, the website HTMLs rendered by quarto. We define the path where we want those outputs as the ‘public’ folder for it to work with Gitlab pages\n\n\n\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Tutorials",
+      "🌍 **Data Sharing and Repositories**",
+      "Gitlab Tutorial 3. Continuous Integration (CI)"
+    ]
+  },
+  {
+    "objectID": "contents/tutorials/Tutorial_Web.html",
+    "href": "contents/tutorials/Tutorial_Web.html",
+    "title": "Website Tutorial using R, Quarto and Gitlab Pages",
+    "section": "",
+    "text": "Sharing documents, code, data and outputs with collaborators or to a broader audience is an essential step towards a good scientific practice. A website that can be managed by researchers themselves seems the ideal platform for efficient sharing. If this depends on IT support for maintenance it will not be practical for routine use, but learning web-development imposes an unnecessary and unacceptable burden to a scientist’s already heavy workload.\nHere we describe an approach that uses free, open-source tools which are also widely-used for analytic purposes (e.g., data handling, statistics and visualizations). Thus, the requirements for learning web-specific tools is minimal. Importantly, this approach can be integrated in a research group’s routines to compile dynamic reports with documentation, code, analysis and outputs in a single-document. This makes each step easier to understand, facilitates troubleshooting and improves computational reproducibility see CRS primer",
+    "crumbs": [
+      "Tutorials",
+      "🌍 **Data Sharing and Repositories**",
+      "Website Tutorial using R, Quarto and Gitlab Pages"
+    ]
+  },
+  {
+    "objectID": "contents/tutorials/Tutorial_Web.html#make-a-website-from-scratch-in-5-minutes",
+    "href": "contents/tutorials/Tutorial_Web.html#make-a-website-from-scratch-in-5-minutes",
+    "title": "Website Tutorial using R, Quarto and Gitlab Pages",
+    "section": "1. Make a website from scratch in 5 minutes",
+    "text": "1. Make a website from scratch in 5 minutes\nThis 5 minutes video shows how easy it is to create the basic skeleton of the website.\n\nStep 1. Make a new folder for your website\nInside the folder you will have the _quarto.yml file at the top level, then you can organize the quarto markdown files with the content in subfolders if you want.\n\n\nStep 2. Create a _quarto.yml file with some settings\nThey are given in plain text. Indentation counts. There are many examples online which would require minimal adjustments. A very simple example:\nproject:\n    type: website\n    \nwebsite:\n    navbar:\n        title: Home\n        \nformat: \n    html:\n        author: Center for Reproducible Science\n“navbar” indicates a navigation bar on top of the website, but you can also define a “sidebar”. In there you can refer to the different pages that will make up your site. In this example we just make an skeleton with the home page.\n\n\nStep 3. Create a quarto file and open it in R studio\nWe recommend creating an R project file in Rstudio to point at your web’s folder and open your quarto files with that project open in Rstudio to avoid having future problems finding the path to your files.\nYou can write plain text with markdown syntax on it and use a yml header delimited by --- symbols to add metadata or settings\n\n\nStep 4. Click ‘render’ or type quarto::quarto_render() in Rstudio\nThat’s it. A new subfolder named _site will be created with a file index.html which is your website",
+    "crumbs": [
+      "Tutorials",
+      "🌍 **Data Sharing and Repositories**",
+      "Website Tutorial using R, Quarto and Gitlab Pages"
+    ]
+  },
+  {
+    "objectID": "contents/tutorials/Tutorial_Web.html#add-pages-to-your-website",
+    "href": "contents/tutorials/Tutorial_Web.html#add-pages-to-your-website",
+    "title": "Website Tutorial using R, Quarto and Gitlab Pages",
+    "section": "2. Add pages to your website",
+    "text": "2. Add pages to your website\nNow we can just populate the pages by:\n\nAdding .qmd files with content. A recommended organization is a page per folder. If a page will contain many subpages, you can set up a main file in that folder (e.g., index.qmd) with a yml header (delimited by ---) using the listing option. This will automatically include all .qmd files without having the need to specifying the _quarto.yml file.\nAdapting the _quarto.yml file to indicate which pages and where you want to show them (e.g., in a navigation bar on top, right or left or in a sidebar)\nClick ‘render’ or type quarto::quarto_render() in Rstudio\n\nAn example of a folder structure of the website before rendering:\nwebsite\n│\n├── index.qmd               # (REQUIRED) Contents of home page \n├── _quarto.yml             # (REQUIRED) Quarto project configurations \n│\n├── Project.Rproj           # Recommended when working with R studio \n│\n└── contents                # (suggested name) Contents of each page\n   ├── Page1                # Each page has a folder  \n   |   └──  index.qmd       # A page can be just one qmd\n   └── Page2                 \n       ├──  index.qmd       # We can set a page to list all other .qmds in folder     \n       └──  section1.qmd      \nThe following 5.5 minutes video shows a quick example. Read the subtitles for details.",
+    "crumbs": [
+      "Tutorials",
+      "🌍 **Data Sharing and Repositories**",
+      "Website Tutorial using R, Quarto and Gitlab Pages"
+    ]
+  },
+  {
+    "objectID": "contents/tutorials/Tutorial_Web.html#host-it-for-free-using-gitlab-pages",
+    "href": "contents/tutorials/Tutorial_Web.html#host-it-for-free-using-gitlab-pages",
+    "title": "Website Tutorial using R, Quarto and Gitlab Pages",
+    "section": "3. Host it for free using Gitlab pages",
+    "text": "3. Host it for free using Gitlab pages\n(…) First activate gitlab pages, then move the content to ‘public’ folder (…)",
+    "crumbs": [
+      "Tutorials",
+      "🌍 **Data Sharing and Repositories**",
+      "Website Tutorial using R, Quarto and Gitlab Pages"
+    ]
+  }
+]
