@@ -5,4 +5,4 @@ This is the main website of the project. The site can be accessed here: https://
 
 ## Wiki
 Check the WIKI for a collection of interesting links and notes:
-https://gitlab.uzh.ch/crsuzh/AFFORD_website/-/wikis/Notes
+https://gitlab.uzh.ch/crsuzh/AFFORD_website
