@@ -3,11 +3,15 @@ author: G.Fraga Gonzalez
 date: last-modified
 ---
 
-[Back](index.qmd) 
+
  
 # Quick Notes on Integrating Version Control in Your Workflow using Repositories {.unnumbered}
+
+Presented on  24-11-2023, at an online meeting of the Data Stewards Network (UZH)
+
 
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRdd7izb8a4mwi9eD1DX2-Kt6X_PmTyJT9BUOdFqrTWm5v2Gfk_Xw39Zjq3JIzKUw/embed?start=false&loop=false&delayms=3000" frameborder="0" width="800" height="600" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe> 
   
 
+[<< Back](index.qmd) 
   
