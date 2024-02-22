@@ -3,11 +3,11 @@ image: rocker/verse:latest
 pages:
   stage: deploy
   before_script:
-  - R -e "install.packages('quarto')" 
-  - R -e "install.packages('collapsibleTree')"   
-  - R -e "install.packages('pak')" 
-  - R -e "install.packages('crosstalk')" 
-  - R -e "install.packages('DT')" 
+  - R -e "install.packages('quarto', repos='http://cran.us.r-project.org', dependencies=TRUE)" 
+  - R -e "install.packages('collapsibleTree', repos='http://cran.us.r-project.org', dependencies=TRUE)"   
+  - R -e "install.packages('pak', repos='http://cran.us.r-project.org', dependencies=TRUE)" 
+  - R -e "install.packages('crosstalk', repos='http://cran.us.r-project.org', dependencies=TRUE)" 
+  - R -e "install.packages('DT', repos='http://cran.us.r-project.org', dependencies=TRUE)" 
   - R -e "getwd()"
   - mkdir -p public/
   - cp -r ./Docs/contents/ORD_index/Images* public/
