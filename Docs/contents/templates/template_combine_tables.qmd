@@ -14,21 +14,16 @@ format:
 ---
 
 # Template 1 - Combine two Excels by a shared key variable
-::: {.callout-note collapse="false"}
-# Note 
-The code in this template is deliberately explicit for the sake of clarity, but it could be made more compact. 
-
-:::
 
 This template is based on the following use case. We have one table with **subject information**  with one row per subject and a table with  **scan lists** which has many more rows as subjects have multiple scans. Both tables have a variable identifying the subjects. The subject IDs are common to both tables. We want to combine them and have the list of scans with the subject information in the same table, this means the rows with the subject information will appear multiple times, one for each scan of a given subject. For this we use the function `dplyr::full_join()` 
 *(Note: the libraries loaded with `library()` are additional R packages that need to be installed with `install.packages()` before first use)*
 
-
+> Note. The code in this template is deliberately explicit for the sake of clarity, but it could be made more compact. 
 
 :::{.callout-warning }
 
 # Always check the resulting output table! 
-
+ 
 :::
  
 ```{r combine_tables}
