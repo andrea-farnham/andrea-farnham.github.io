@@ -1,6 +1,6 @@
 ---
-title: "Make JSON metadata file" 
-subtitle: "Read fields from a table and apply to data files in a loop"
+title: "Make JSON metadata files" 
+subtitle: "Read fields from a table and apply to data files in a loop, reading file-specific information"
 author:
   - name: "G.Fraga Gonzalez"
     orcid: '0000-0002-1857-8607'
@@ -16,6 +16,18 @@ editor: visual
 **Create a JSON file with metadata from tables and data files**
 
 In this example we create simple human and machine-readable metadata files in JavaScript Object Notation [(JSON)](https://www.json.org/json-en.html). They consists of fields of key-value pairs. These are *sidecar* metadata files, that is, they accompany a separate source data file (for this example we use dummy images as data files). In this use case, researchers can edit a table specifying the fields in the JSON file. This script creates a JSON with these fields. Some of the values in the JSON fields are filled for each of the data files based on the filename and an additional table with metadata (subject information).
+
+
+:::{.callout-important collapse='false'}
+There are good editors with a graphical interface available online to read and write JSON. We recommend the following website:
+[https://jsoneditoronline.org/](https://jsoneditoronline.org/)
+
+In general, we recommend creating JSON files with a script and not manually, to prevent user entry errors. JSON metadata files are part of essential machine-readable metadata, and additional to structured metadata (tables) which may contain human-only readable columns (e.g., 'comment' variables wtih free text notes). JSON file can have more details than the metadata tables. 
+
+::: 
+
+
+
 
 ![](images/banner_json-01.png){width="659"}
 
@@ -84,6 +96,13 @@ tbl_files$subject <- sapply(strsplit(fname,'_'),'[[',1)
 
 ::: panel-tabset
 ## JSON fields
+
+In this table we created the column **Data.name** that indicates the *key* and the column **Permissible.values** which will indicate the *value* in the JSON file. The other columns are not necessary for this example, but can help the users when specifying the content of their JSON files. The entries in Permissible.values will be filled with file-specific information.
+
+:::{.callout-important }
+The names of these columns are arbitrary and you can define any other name. It is important to note the format of the values (e.g., numeric, alphanumeric or strings). The values can also be arrays `[1,2,3]`. A JSON file can have a more hierarchical structure with keys and subkeys. In this example we use a simple structure. 
+
+:::
 
 ```{r showJSONTab}
 # check 

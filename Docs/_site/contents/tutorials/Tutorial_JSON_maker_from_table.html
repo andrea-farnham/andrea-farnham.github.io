@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="G.Fraga Gonzalez">
 <meta name="dcterms.date" content="2024-03-12">
-<title>Home - Make JSON metadata file</title>
+<title>Home - Make JSON metadata files</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -153,8 +153,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title">Make JSON metadata file</h1>
-<p class="subtitle lead">Read fields from a table and apply to data files in a loop</p>
+<h1 class="title">Make JSON metadata files</h1>
+<p class="subtitle lead">Read fields from a table and apply to data files in a loop, reading file-specific information</p>
 </div>
 
 
@@ -189,6 +189,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header><p><strong>Create a JSON file with metadata from tables and data files</strong></p>
 <p>In this example we create simple human and machine-readable metadata files in JavaScript Object Notation <a href="https://www.json.org/json-en.html">(JSON)</a>. They consists of fields of key-value pairs. These are <em>sidecar</em> metadata files, that is, they accompany a separate source data file (for this example we use dummy images as data files). In this use case, researchers can edit a table specifying the fields in the JSON file. This script creates a JSON with these fields. Some of the values in the JSON fields are filled for each of the data files based on the filename and an additional table with metadata (subject information).</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>There are good editors with a graphical interface available online to read and write JSON. We recommend the following website: <a href="https://jsoneditoronline.org/">https://jsoneditoronline.org/</a></p>
+<p>In general, we recommend creating JSON files with a script and not manually, to prevent user entry errors. JSON metadata files are part of essential machine-readable metadata, and additional to structured metadata (tables) which may contain human-only readable columns (e.g., ‘comment’ variables wtih free text notes). JSON file can have more details than the metadata tables.</p>
+</div>
+</div>
+</div>
 <p><img src="images/banner_json-01.png" class="img-fluid" width="659"></p>
 <p>This use case is based on:</p>
 <section id="inputs" class="level4"><h4 class="anchored" data-anchor-id="inputs">inputs</h4>
@@ -201,7 +218,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section><section id="outputs" class="level4"><h4 class="anchored">outputs</h4>
 <p>A JSON file per data file with the fields from the table is created for each file with the same filename and the subject ID added in the corresponding json field. In this case the data files are images from mice.</p>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -210,7 +227,7 @@ Note on this example
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div id="callout-2" class="callout-2-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <p>This demo uses a dummy data set, i.e., the JSON fields and metadata have no real-life meaning. We use tables in different formats (csv and Excel) as this can happen in actual projects (csv format is preferred over Excel, for interoperability).</p>
 </div>
@@ -263,6 +280,20 @@ Note on this example
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>In this table we created the column <strong>Data.name</strong> that indicates the <em>key</em> and the column <strong>Permissible.values</strong> which will indicate the <em>value</em> in the JSON file. The other columns are not necessary for this example, but can help the users when specifying the content of their JSON files. The entries in Permissible.values will be filled with file-specific information.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The names of these columns are arbitrary and you can define any other name. It is important to note the format of the values (e.g., numeric, alphanumeric or strings). The values can also be arrays <code>[1,2,3]</code>. A JSON file can have a more hierarchical structure with keys and subkeys. In this example we use a simple structure.</p>
+</div>
+</div>
 <div class="cell">
 <details open="" class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># check </span></span>
 <span><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="va">jsonFields</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
