@@ -1,0 +1,199 @@
+---
+title: "Make JSON metadata file" 
+subtitle: "Read fields from a table and apply to data files in a loop"
+author:
+  - name: "G.Fraga Gonzalez"
+    orcid: '0000-0002-1857-8607'
+    affiliation: "Center for Reproducible Science, UZH"
+
+date: last-modified
+format: 
+  html:
+    code-fold: show
+editor: visual
+---
+
+**Create a JSON file with metadata from tables and data files**
+
+In this example we create simple human and machine-readable metadata files in JavaScript Object Notation [(JSON)](https://www.json.org/json-en.html). They consists of fields of key-value pairs. These are *sidecar* metadata files, that is, they accompany a separate source data file (for this example we use dummy images as data files). In this use case, researchers can edit a table specifying the fields in the JSON file. This script creates a JSON with these fields. Some of the values in the JSON fields are filled for each of the data files based on the filename and an additional table with metadata (subject information).
+
+![](images/banner_json-01.png){width="659"}
+
+This use case is based on:
+
+#### inputs
+
+-   A csv table specifying the JSON *keys* (e.g., "SynchrotronName","SpeciesName" ) and their *values* (e.g., "mouse") when they apply to all files. If a value is blank it will be filled by information in the filename or table with subject information (see below)
+
+-   A collection of data files encoding subject ID in their name.
+
+-   An Excel table with subjects information (e.g.,sex, body weight) that has to be added to the JSON file
+
+We will use the R package [jsonlite](https://cran.r-project.org/web/packages/jsonlite/index.html) to write the JSON string
+
+#### outputs
+
+A JSON file per data file with the fields from the table is created for each file with the same filename and the subject ID added in the corresponding json field. In this case the data files are images from mice.
+
+::: {.callout-note collapse="false"}
+# Note on this example
+
+This demo uses a dummy data set, i.e., the JSON fields and metadata have no real-life meaning. We use tables in different formats (csv and Excel) as this can happen in actual projects (csv format is preferred over Excel, for interoperability).
+:::
+
+::: panel-tabset
+# How-to
+
+### Read table with JSON fields and table with subjects information
+
+```{r readinputs}
+#| warning: false 
+library(knitr)
+library(dplyr)
+library(kableExtra)
+
+# Enter input directories 
+dirinput <- 'dummy_data'
+diroutput <- '../../_data/'
+
+# Read table with JSON fields 
+jsonFields <- read.csv(file.path(dirinput,'Dummy_JSON_fields.csv'))
+
+# Read table with subject information
+subj_info <- openxlsx::read.xlsx(file.path(dirinput,'DummyData1_20241234_subjects.xlsx'), sheet = 'subject_info')
+```
+
+### Read data filenames and separate subject ID
+
+Here we read some .jpg pictures with dummy images. The first filename part contains the subject ID.
+
+```{r readDataFiles }
+
+# Create table filenames 
+files <- dir(file.path(dirinput,'Images')) # Find all files in our images folder
+
+# Use pattern to take only subject images
+fname <- files[grepl(paste0('^DS.*.jpg$'),files)] 
+tbl_files <- as.data.frame(fname) 
+
+# First filename part contains subject ID
+tbl_files$subject <- sapply(strsplit(fname,'_'),'[[',1) 
+```
+
+### Check input tables
+
+::: panel-tabset
+## JSON fields
+
+```{r showJSONTab}
+# check 
+knitr::kable(jsonFields) %>%
+  scroll_box(height= "300px")
+
+```
+
+## Subject information
+
+```{r showSubjectInf}
+# check 
+knitr::kable(subj_info) %>%
+  scroll_box(height= "300px")
+
+```
+
+## Filenames
+
+```{r showFilenames}
+# check 
+knitr::kable(tbl_files) %>%
+  scroll_box(height= "300px")
+
+```
+:::
+
+### Create the JSON files
+
+#### Prepare table
+
+Prepare the human-readable table specifying the JSON fields into a suitable format to read with `jsonlite::toJSON()`
+
+```{r prepareFieldTable}
+#| warning: false 
+#| code-fold: show
+
+# Preserve the sorting of the field names as in the table
+sorted_fieldnames <- factor(jsonFields$Data.name, levels = jsonFields$Data.name) 
+
+# Transform table into a list. Each element is a fieldname with its values
+json_data <- lapply(split(jsonFields$Permissible.values,sorted_fieldnames),as.character)
+
+```
+
+#### Add file-specific information
+
+Loop through the image files and fill the file-specific values in the JSON file with information from the table with subject info.
+
+```{r createJson}
+#| warning: false 
+
+library(jsonlite)
+
+# Join tables with filenames and subject information by subjID
+metadat <- dplyr::full_join(x=tbl_files, y=subj_info, by=join_by('subject'=='subjID'),keep=FALSE)  
+
+# write JSON files 
+saveoutput <- 0
+for (i in 1:nrow(tbl_files)) {
+  
+  # Complete Fields with info From table 
+  json_data$IntendedFor = metadat$fname[i]
+  json_data$SubjectID = metadat$subject[i]
+  json_data$Sex = metadat$Sex[i]
+  json_data$BodyWeight_gr = metadat$`Body.weight.(g)`[i]
+  
+  
+  # Convert the list to a JSON string
+  json_string <- toJSON(json_data, pretty = TRUE, auto_unbox = TRUE)
+  
+  # Save the JSON string to a file
+  if (saveoutput == 1) {
+    ouputfilename <- gsub('.jpg','.json',tbl_files$fname[i]) # rename input file
+    write(json_string, file.path(diroutput, ouputfilename))  
+    print(paste0("Wrote ", file.path(diroutput, ouputfilename)))
+  }
+  
+  # clean json 
+  rm (json_string)
+}
+
+
+```
+
+#### Output Examples
+
+The r package `jsonlite` offers several formatting options. Depending on your needs you may have some preferences.
+
+::: panel-tabset
+### JSON with auto_unbox = TRUE
+
+```{r}
+print(toJSON(json_data, pretty = TRUE, auto_unbox = TRUE))
+```
+
+### JSON with auto_unbox = FALSE
+
+```{r}
+print(toJSON(json_data, pretty = TRUE, auto_unbox = FALSE))
+```
+:::
+
+# Code
+
+```{r }
+#| code-fold: show
+<<readinputs>>
+<<readDataFiles>>
+<<prepareFieldTable>>
+<<createJson>>
+```
+:::
