@@ -59,9 +59,10 @@ website:
               contents: 
                 - "coming soon..."            
             - section: "🏷 **Metadata**"    
-              contents: 
-                - "coming soon..."               
+              contents:                 
+                - contents/tutorials/Tutorial_JSON_maker_from_table.qmd
                 
+                 
         - id: "" # leave other sections without sidebar
           title: ""
           
