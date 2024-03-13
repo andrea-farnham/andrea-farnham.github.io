@@ -2,6 +2,7 @@
   {
     "listing": "/contents/tutorials/index.html",
     "items": [
+      "/contents/tutorials/Tutorial_Filenames.html",
       "/contents/tutorials/Tutorial_Gitlab1_IntroGit.html",
       "/contents/tutorials/Tutorial_Gitlab2_DataIndex.html",
       "/contents/tutorials/Tutorial_Gitlab3_CI.html",

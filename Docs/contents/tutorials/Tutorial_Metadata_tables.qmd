@@ -5,7 +5,9 @@ author:
   - name: "G.Fraga Gonzalez"
     orcid: '0000-0002-1857-8607'
     affiliation: "Center for Reproducible Science, UZH"
-
+categories:
+  - Basic
+  - Tips
 date: last-modified
 format: 
   html:
@@ -39,6 +41,9 @@ Plan ahead what data formats and transformations you may need, and what variable
 *Consulting your collaborators* will increase the chancesof having a table that useful to other researchers. 
 
 
+### Table operations 
+
+Researchers have to manipulate tabular metadata and this is better done by code so that any operation on the raw data can be reproduced. Visit our [Templates](../templates/index.qmd) section for some code snippets and templates showing frequent use cases of these operations. 
 
 
 #### References

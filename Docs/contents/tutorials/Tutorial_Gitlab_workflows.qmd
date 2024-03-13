@@ -60,7 +60,7 @@ sequenceDiagram
  
  
 
-# A single project or data source
+# Workflows in a single project
 
 Here we describe several scenarios in which there are **several** **researchers** working on separate analyses or features within the same project. They use the same source data but their scripts are **independent**. We assume that each researcher is the **main** contributor to a set of scripts for a given analysis, study or experiment within the main project.
 

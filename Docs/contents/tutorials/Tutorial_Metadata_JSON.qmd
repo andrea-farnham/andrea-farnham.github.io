@@ -1,6 +1,10 @@
 ---
 title: "Metadata: making JSON files" 
 subtitle: "In this use case we read the JSON fields from a table and create JSON files with generic and file-specific information"
+categories:
+  - Code
+  - R 
+  - Intermediate
 author:
   - name: "G.Fraga Gonzalez"
     orcid: '0000-0002-1857-8607'
