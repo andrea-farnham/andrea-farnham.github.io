@@ -1,6 +1,6 @@
 ---
-title: Gitlab Tutorial 2. Create and Update a Data Hub
-subtitle: A workflow to use Gitlab pages as an open data hub
+title: Gitlab Tutorial 2. Create and Update a Data Index
+subtitle: A workflow to use Gitlab pages as an open data Index
 author: G.Fraga Gonzalez & E. Furrer
 date: last-modified
 categories:
@@ -13,7 +13,7 @@ categories:
 # Why is this useful? 
 >Researchers need to be able to **find** and **share** their data and to *showcase* it to internal and external collaborations. Creating copies or transferring files can be cumbersome and lead to propagating errors or sharing of outdated file versions. 
 >
-With Gitlab and R Quarto we can easily integrate all metadata and documentation stored and maintained in our repository, and render it into a website. This website, which can have a **private or public access**, becomes a safe 'data hub' or central platform from which researchers and collaborators can **navigate through research outputs**, find the location of data files in specialized repositories or preview thumbnails of some of the data. 
+With Gitlab and R Quarto we can easily integrate all metadata and documentation stored and maintained in our repository, and render it into a website. This website, which can have a **private or public access**, becomes a safe 'data index' or central platform from which researchers and collaborators can **navigate through research outputs**, find the location of data files in specialized repositories or preview thumbnails of some of the data. 
 
 
 # Overview
@@ -36,7 +36,7 @@ The main **requirements** for this workflow are:
 flowchart TD
     A1[data, metadata, code] <.-> |sync| B[Gitlab Repository]
     B0[Documentation] <.->|edit Wiki| B
-    B --> | Render Gitlab Page| C[Hub]
+    B --> | Render Gitlab Page| C[Index]
     
  
 ```
@@ -46,7 +46,7 @@ In this workflow we propose that the `owner` of the data (e.g., a lab or a resea
  
 1.  **Metadata tables** e.g., CSV or Excel tables 
 2.  **Data**, if applicable, e.g., thumbnail images
-3.  **Scripts to render** an HTML landing site, i.e. the Data Hub, which provides access for collaborators. This can be done without web development skill using in R markdown or R Quarto markdown.
+3.  **Scripts to render** an HTML landing site, i.e. the Data Index, which provides access for collaborators. This can be done without web development skill using in R markdown or R Quarto markdown.
 4.  **Documentation** associated with those data is collected in the **Wiki** of the main repository. The advantage of using the Wiki is that it can be directly edited in the browser by anyone with permissions. If needed, the markdown files with the wiki pages could be downloaded (they are stored is a separate repository).
 
 ::: callout-note
@@ -54,7 +54,7 @@ In this workflow we propose that the `owner` of the data (e.g., a lab or a resea
 Gitlab can display and allows editing of .csv tables from the browser. For excel tables, you will need to download it for editing or work locally and then push the changes to the repository. Note that this refers to editing source files in the repository and not to the website, where tables are visible (but not editable) irrespective of the source table format (R Quarto scripts will read any format and render them in html format for interoperability and interactivity)
 :::
 
-The files will have three **URL locations**, which can all be accessed through the main landing site (Data Hub):
+The files will have three **URL locations**, which can all be accessed through the main landing site (Data Index):
 
 1.  The **landing page** shows interactive tables to navigate data and metadata the documentation and has links to the main repository and the wiki.
 2.  The **main repository** to access the source metadata tables, data files and the code necessary to generate the Hub.

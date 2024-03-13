@@ -1,9 +1,14 @@
 [
   {
-    "listing": "/contents/presentations/index.html",
+    "listing": "/contents/tutorials/index.html",
     "items": [
-      "/contents/presentations/Presentations_1.html",
-      "/contents/presentations/Presentations_2.html"
+      "/contents/tutorials/Tutorial_Gitlab1_IntroGit.html",
+      "/contents/tutorials/Tutorial_Gitlab2_DataIndex.html",
+      "/contents/tutorials/Tutorial_Gitlab3_CI.html",
+      "/contents/tutorials/Tutorial_Gitlab_workflows.html",
+      "/contents/tutorials/Tutorial_Metadata_JSON.html",
+      "/contents/tutorials/Tutorial_Metadata_tables.html",
+      "/contents/tutorials/Tutorial_Web.html"
     ]
   },
   {
@@ -15,14 +20,10 @@
     ]
   },
   {
-    "listing": "/contents/tutorials/index.html",
+    "listing": "/contents/presentations/index.html",
     "items": [
-      "/contents/tutorials/Tutorial_Gitlab1_IntroGit.html",
-      "/contents/tutorials/Tutorial_Gitlab2_DataHub.html",
-      "/contents/tutorials/Tutorial_Gitlab3_CI.html",
-      "/contents/tutorials/Tutorial_Gitlab_workflows.html",
-      "/contents/tutorials/Tutorial_JSON_maker_from_table.html",
-      "/contents/tutorials/Tutorial_Web.html"
+      "/contents/presentations/Presentations_1.html",
+      "/contents/presentations/Presentations_2.html"
     ]
   }
 ]

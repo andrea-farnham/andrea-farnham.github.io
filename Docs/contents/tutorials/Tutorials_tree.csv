@@ -1,0 +1,11 @@
+﻿Topic,Output,Description,,Size
+NA,NA,NA,,
+Documentation and Metadata,Human Readable,File and folder naming,,1
+Documentation and Metadata,Human Readable,Procedures,,1
+Documentation and Metadata,Human Readable,README,,1
+Documentation and Metadata,Structured,Tables,,2
+Documentation and Metadata,Structured,JSON (sidecar files),,2
+Sharing and publishing,Version Control,Git (Gitlab),,3
+Sharing and publishing,Data indexing,A workflow with Gitlab and R DT,,3
+Sharing and publishing,Persistent identifiers,,,3
+Sharing and publishing,Persistent identifiers,,,3

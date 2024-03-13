@@ -46,22 +46,21 @@ website:
           style: "docked"       
           #href:  contents/tutorials/index.qmd      
           contents:
-            - contents/tutorials/index.qmd
-            - section: "🌍 **Data Sharing and Repositories**"              
-              contents: 
-                - contents/tutorials/Tutorial_Web.qmd
-                - contents/tutorials/Tutorial_Gitlab1_IntroGit.qmd
-                - contents/tutorials/Tutorial_Gitlab_workflows.qmd
-                - contents/tutorials/Tutorial_Gitlab2_DataHub.qmd
-                - contents/tutorials/Tutorial_Gitlab3_CI.qmd
-                                
-            - section: "📂 **Filenames and folder structures**"    
-              contents: 
-                - "coming soon..."            
-            - section: "🏷 **Metadata**"    
+            - contents/tutorials/index.qmd            
+            - section: "🏷**Documentation & Metadata**"    
               contents:                 
-                - contents/tutorials/Tutorial_JSON_maker_from_table.qmd
+                - contents/tutorials/Tutorial_Metadata_JSON.qmd                            
+                - contents/tutorials/Tutorial_Metadata_tables.qmd                                           
                 
+            - section: "🔭**Finding, Sharing and Publishing**"      
+              contents:
+                - contents/tutorials/Tutorial_Gitlab_workflows.qmd
+                - contents/tutorials/Tutorial_Gitlab1_IntroGit.qmd                              
+                - contents/tutorials/Tutorial_Gitlab3_CI.qmd
+                - contents/tutorials/Tutorial_Gitlab2_DataIndex.qmd                   
+                - contents/tutorials/Tutorial_Web.qmd                    
+                
+           
                  
         - id: "" # leave other sections without sidebar
           title: ""
@@ -81,6 +80,7 @@ format:
         highlight-style: a11y
         code-link: true
         toc: true
+        toc-expand: 4
         code-copy: true              
         mermaid: 
           theme: default

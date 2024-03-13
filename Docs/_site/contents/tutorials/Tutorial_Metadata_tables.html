@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="G.Fraga Gonzalez &amp; E. Furrer">
-<meta name="dcterms.date" content="2024-02-13">
+<meta name="author" content="G.Fraga Gonzalez">
+<meta name="dcterms.date" content="2024-03-13">
 
-<title>Home - Gitlab Tutorial 2. Create and Update a Data Hub</title>
+<title>Home - Metadata: tables</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,7 +22,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -32,8 +52,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../contents/tutorials/Tutorial_Gitlab3_CI.html" rel="next">
-<link href="../../contents/tutorials/Tutorial_Gitlab_workflows.html" rel="prev">
+<link href="../../contents/tutorials/Tutorial_Gitlab_workflows.html" rel="next">
+<link href="../../contents/tutorials/Tutorial_Metadata_JSON.html" rel="prev">
 <link href="../../assets/logos/Logo_CRS_col.svg" rel="icon" type="image/svg+xml">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -71,10 +91,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<meta name="mermaid-theme" content="default">
-<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 </head>
@@ -134,7 +150,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../contents/tutorials/Tutorial_Web.html">🌍 <strong>Data Sharing and Repositories</strong></a></li><li class="breadcrumb-item"><a href="../../contents/tutorials/Tutorial_Gitlab2_DataHub.html">Gitlab Tutorial 2. Create and Update a Data Hub</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../contents/tutorials/Tutorial_Metadata_JSON.html">🏷**Documentation &amp; Metadata**</a></li><li class="breadcrumb-item"><a href="../../contents/tutorials/Tutorial_Metadata_tables.html">Metadata: tables</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -155,7 +171,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
- <span class="menu-text">🌍 <strong>Data Sharing and Repositories</strong></span></a>
+ <span class="menu-text">🏷<strong>Documentation &amp; Metadata</strong></span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -163,8 +179,31 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../contents/tutorials/Tutorial_Web.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Website Tutorial using R, Quarto and Gitlab Pages</span></a>
+  <a href="../../contents/tutorials/Tutorial_Metadata_JSON.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Metadata: making JSON files</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../contents/tutorials/Tutorial_Metadata_tables.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Metadata: tables</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">🔭<strong>Finding, Sharing and Publishing</strong></span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../contents/tutorials/Tutorial_Gitlab_workflows.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gitlab workflows</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -175,50 +214,22 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../contents/tutorials/Tutorial_Gitlab_workflows.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Gitlab workflows</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../contents/tutorials/Tutorial_Gitlab2_DataHub.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Gitlab Tutorial 2. Create and Update a Data Hub</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../../contents/tutorials/Tutorial_Gitlab3_CI.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Gitlab Tutorial 3. Continuous Integration (CI)</span></a>
   </div>
 </li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
- <span class="menu-text">📂 <strong>Filenames and folder structures</strong></span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
- <span class="menu-text">coming soon...</span>
-  </li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
- <span class="menu-text">🏷 <strong>Metadata</strong></span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+  <div class="sidebar-item-container"> 
+  <a href="../../contents/tutorials/Tutorial_Gitlab2_DataIndex.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gitlab Tutorial 2. Create and Update a Data Index</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">coming soon...</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../contents/tutorials/Tutorial_Web.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Website Tutorial using R, Quarto and Gitlab Pages</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -227,56 +238,45 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="4">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#why-is-this-useful" id="toc-why-is-this-useful" class="nav-link active" data-scroll-target="#why-is-this-useful">Why is this useful?</a></li>
-  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a>
-  <ul class="collapse">
-  <li><a href="#basic-workflow" id="toc-basic-workflow" class="nav-link" data-scroll-target="#basic-workflow">Basic workflow</a></li>
-  <li><a href="#hub-content" id="toc-hub-content" class="nav-link" data-scroll-target="#hub-content">Hub content</a></li>
-  <li><a href="#required-files" id="toc-required-files" class="nav-link" data-scroll-target="#required-files">Required Files</a></li>
-  <li><a href="#privacy" id="toc-privacy" class="nav-link" data-scroll-target="#privacy">Privacy</a></li>
-  </ul></li>
-  <li><a href="#required-actions-for-data-owners" id="toc-required-actions-for-data-owners" class="nav-link" data-scroll-target="#required-actions-for-data-owners">Required actions (for data owners)</a>
-  <ul class="collapse">
-  <li><a href="#action-edit-metadata" id="toc-action-edit-metadata" class="nav-link" data-scroll-target="#action-edit-metadata">1. ACTION: edit <strong>metadata</strong></a></li>
-  <li><a href="#auto-changes-in-the-repository-trigger-the-continuous-integration-pipeline" id="toc-auto-changes-in-the-repository-trigger-the-continuous-integration-pipeline" class="nav-link" data-scroll-target="#auto-changes-in-the-repository-trigger-the-continuous-integration-pipeline">2. AUTO: changes in the repository <strong>trigger the Continuous Integration pipeline</strong></a></li>
-  <li><a href="#auto-the-continuous-integration-pipeline-runs-the-script" id="toc-auto-the-continuous-integration-pipeline-runs-the-script" class="nav-link" data-scroll-target="#auto-the-continuous-integration-pipeline-runs-the-script">3. AUTO: the continuous integration pipeline <strong>runs the script</strong></a></li>
-  <li><a href="#auto-the-html-is-updated-and-collaborators-can-navigate-through-the-updated-data" id="toc-auto-the-html-is-updated-and-collaborators-can-navigate-through-the-updated-data" class="nav-link" data-scroll-target="#auto-the-html-is-updated-and-collaborators-can-navigate-through-the-updated-data">4. AUTO: The HTML is updated and collaborators can navigate through the updated data</a></li>
-  </ul></li>
+  <li><a href="#publication-review-six-tips-for-better-spreadsheets" id="toc-publication-review-six-tips-for-better-spreadsheets" class="nav-link active" data-scroll-target="#publication-review-six-tips-for-better-spreadsheets">Publication review: six tips for better spreadsheets</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../contents/tutorials/Tutorial_Web.html">🌍 <strong>Data Sharing and Repositories</strong></a></li><li class="breadcrumb-item"><a href="../../contents/tutorials/Tutorial_Gitlab2_DataHub.html">Gitlab Tutorial 2. Create and Update a Data Hub</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../contents/tutorials/Tutorial_Metadata_JSON.html">🏷**Documentation &amp; Metadata**</a></li><li class="breadcrumb-item"><a href="../../contents/tutorials/Tutorial_Metadata_tables.html">Metadata: tables</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Gitlab Tutorial 2. Create and Update a Data Hub</h1>
-<p class="subtitle lead">A workflow to use Gitlab pages as an open data hub</p>
-  <div class="quarto-categories">
-    <div class="quarto-category">Gitlab</div>
-    <div class="quarto-category">Basic</div>
-  </div>
-  </div>
+<h1 class="title">Metadata: tables</h1>
+<p class="subtitle lead">General tips on making better human and machine-readable tabular metadata</p>
+</div>
 
 
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Author</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">G.Fraga Gonzalez <a href="https://orcid.org/0000-0002-1857-8607" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Center for Reproducible Science, UZH
+          </p>
+      </div>
+  </div>
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>G.Fraga Gonzalez &amp; E. Furrer </p>
-          </div>
-  </div>
-    
+      
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">February 13, 2024</p>
+      <p class="date">March 13, 2024</p>
     </div>
   </div>
   
@@ -288,209 +288,47 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><a href="../../contents/tutorials/index.html">Back</a></p>
-<section id="why-is-this-useful" class="level1">
-<h1>Why is this useful?</h1>
-<blockquote class="blockquote">
-<p>Researchers need to be able to <strong>find</strong> and <strong>share</strong> their data and to <em>showcase</em> it to internal and external collaborations. Creating copies or transferring files can be cumbersome and lead to propagating errors or sharing of outdated file versions.</p>
-<p>With Gitlab and R Quarto we can easily integrate all metadata and documentation stored and maintained in our repository, and render it into a website. This website, which can have a <strong>private or public access</strong>, becomes a safe ‘data hub’ or central platform from which researchers and collaborators can <strong>navigate through research outputs</strong>, find the location of data files in specialized repositories or preview thumbnails of some of the data.</p>
-</blockquote>
+<p>Tables are a form of <strong>structured metadata</strong> with essential information to interpret the data. A common scenario in research is to have a table describing records, cases or subjects, with one row per record and columns describing different features. Then, there are often multiple larger tables with data associated with each record or subject (e.g., physiological measurements, images, test results, etc). These tables may content entries that are automatically generated and others that have to be manually entered by researchers. The tables can be in different <strong>formats</strong>, although .csv or .tsv are recommended for the sake of interoperability. Spreadsheet software formats like Microsoft Excel or Google Sheets are powerful and widely used by many researchers, as they have more human-friendly features.</p>
+<section id="publication-review-six-tips-for-better-spreadsheets" class="level3">
+<h3 class="anchored" data-anchor-id="publication-review-six-tips-for-better-spreadsheets">Publication review: six tips for better spreadsheets</h3>
+<p>We distill here the main points of the highly recommendable two-pager from the technology editor at Nature <span class="citation" data-cites="perkel2022">(<a href="#ref-perkel2022" role="doc-biblioref">Perkel 2022</a>)</span>:</p>
+<section id="keep-raw-data-raw" class="level4">
+<h4 class="anchored" data-anchor-id="keep-raw-data-raw">1. Keep raw data raw</h4>
+<p>Recommendation: make the original spreadsheet a read-only document and work on copies. Beware of the dangers of <em>autoformatting</em> functions of your spreadsheet software, and on how easy it is to loose track of the user-friendly manipulations done to the file.</p>
 </section>
-<section id="overview" class="level1">
-<h1>Overview</h1>
-<p>Here we propose to use <a href="https://docs.gitlab.com/ee/user/project/pages/">Gitlab pages</a> to host an easy-to-build website where we can share documentation, metadata and some data (e.g., preview images) of our projects. The website can be either public or private, requiring users to log in. We propose that this approach can be useful to improve the research workflow in many labs and projects, irrespective of whether they have a strong programming focus.</p>
-<p>The different processes required for this workflow are explained in the tutorials in this website. They include step-by-step guides, templates, video demos and links intended for non-coders, as well as other tutorials for more advanced users.</p>
-<p>The main <strong>requirements</strong> for this workflow are:</p>
-<ul>
-<li>(Required) A Gitlab repository and basic familiarity with it</li>
-<li>(Required) A way of creating HTML pages: we provide R Quarto markdown templates</li>
-<li>(Recommended) A Gitlab continuous integration script to allow updating the directly from the browser without having to clone the repo/push changes. We provide examples and templates.</li>
-</ul>
-<section id="basic-workflow" class="level3">
-<h3 class="anchored" data-anchor-id="basic-workflow">Basic workflow</h3>
-<p>(dashed line = manual or semi-manual; solid line = automatic process)</p>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart TD
-    A1[data, metadata, code] &lt;.-&gt; |sync| B[Gitlab Repository]
-    B0[Documentation] &lt;.-&gt;|edit Wiki| B
-    B --&gt; | Render Gitlab Page| C[Hub]
-    
- 
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
+<section id="make-data-machine-readable" class="level4">
+<h4 class="anchored" data-anchor-id="make-data-machine-readable">2. Make data machine-readable</h4>
+<p>Do not encode any information with <em>formatting</em> (e.g., in color-coding schemes), create additional columns that can be used as filter if necessary. Formatting can be easily lost during routine table maintenance. Researchers may also struggle to remember what the formatting represents. When read from a machine, the information encoded by formatting may be lost.</p>
 </section>
-<section id="hub-content" class="level2">
-<h2 class="anchored" data-anchor-id="hub-content">Hub content</h2>
-<p>In this workflow we propose that the <code>owner</code> of the data (e.g., a lab or a researcher) creates and maintains a <strong>main Gitlab repository</strong> containing:</p>
-<ol type="1">
-<li><strong>Metadata tables</strong> e.g., CSV or Excel tables</li>
-<li><strong>Data</strong>, if applicable, e.g., thumbnail images</li>
-<li><strong>Scripts to render</strong> an HTML landing site, i.e.&nbsp;the Data Hub, which provides access for collaborators. This can be done without web development skill using in R markdown or R Quarto markdown.</li>
-<li><strong>Documentation</strong> associated with those data is collected in the <strong>Wiki</strong> of the main repository. The advantage of using the Wiki is that it can be directly edited in the browser by anyone with permissions. If needed, the markdown files with the wiki pages could be downloaded (they are stored is a separate repository).</li>
-</ol>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note on metadata table formats
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Gitlab can display and allows editing of .csv tables from the browser. For excel tables, you will need to download it for editing or work locally and then push the changes to the repository. Note that this refers to editing source files in the repository and not to the website, where tables are visible (but not editable) irrespective of the source table format (R Quarto scripts will read any format and render them in html format for interoperability and interactivity)</p>
-</div>
-</div>
-<p>The files will have three <strong>URL locations</strong>, which can all be accessed through the main landing site (Data Hub):</p>
-<ol type="1">
-<li>The <strong>landing page</strong> shows interactive tables to navigate data and metadata the documentation and has links to the main repository and the wiki.</li>
-<li>The <strong>main repository</strong> to access the source metadata tables, data files and the code necessary to generate the Hub.</li>
-<li>The <strong>Wiki</strong> to access all relevant documentation to understand how the data was collected and preprocessed, such as protocols and standard operating procedures (SOPs). It should also have information about filenames, folder structures and how metadata are organized. It is also accessible through the main repository.</li>
-</ol>
+<section id="be-consistent" class="level4">
+<h4 class="anchored" data-anchor-id="be-consistent">3. Be consistent</h4>
+<p>Data-analysis tools expect one specific format: one row of column titles. No merged cells and one table per page. Ideally all files are filled (blank cells may contain hidden characters) and contain one piece of data (e.g.&nbsp;a cell with ‘3 red beetles’, better use two columns: one for count and one for insect type). Do not use to subdivided a table into different groups.</p>
 </section>
-<section id="required-files" class="level2">
-<h2 class="anchored" data-anchor-id="required-files">Required Files</h2>
-<p>The main <strong>input files</strong> are:</p>
-<ul>
-<li><code>metadata table</code> (preferrably in .csv format for interoperability). It should contain just the filename of the pictures that will be displayed</li>
-<li><code>images</code> files (<strong>Note</strong>: Gitlab is not meant for data storage. Images should be compressed to avoid exceeding volume allowed per repo ( usually 5 Gb in free versions, <a href="https://about.gitlab.com/pricing/faq-paid-storage-transfer/">details here</a>)</li>
-<li><code>R Quarto markdown</code> scripts that has the code to render the tables as well as some text with instructions</li>
-<li>A <code>.gitlab-ci.yml</code> file is the Continuous integration file that makes it possible to run the Rmd file and render the html again from Gitlab</li>
-</ul>
-<p>The <strong>outputs</strong> for the website</p>
-<ul>
-<li>The <code>html</code> files that make up the website are</li>
-</ul>
-<p><strong>Note</strong>: <em>index.html</em> and <em>images folder</em> ARE EXPECTED to be saved in the <code>public</code> folder. This does not mean they are publicly accessible (you need login to access this site)</p>
+<section id="document-your-work" class="level4">
+<h4 class="anchored" data-anchor-id="document-your-work">4. Document your work</h4>
+<p>Create a sheet (or tab) with a <em>codebook</em> that documents abbreviations, units of measurement, missing values, etc.</p>
 </section>
-<section id="privacy" class="level2">
-<h2 class="anchored" data-anchor-id="privacy">Privacy</h2>
-<p>This work flow can work in both a <code>private</code> or a <code>public</code> repository. If we want to keep access restricted we can set the repository as private. Then we need:</p>
-<ul>
-<li><strong>Accounts</strong>. A <a href="https://www.switch.ch/en/edu-id">SWITCH edu ID</a> account is required to access the hub website and the repository with the code to generate it</li>
-<li><strong>Members</strong>. As owners of a repository we can set up different roles for the members that we allow access. Any member with the role of <code>maintainer</code> can add new members (Go to Manage/Members). They must also have maintainer role to be able to access the full-size images after clicking on the table thumbnail. Members enrolled as <code>guests</code> can only see the thumbnails but will not be able to access the full-size images.</li>
-</ul>
-<p>After having acquired permissions to access the repository, any <code>user/collaborator</code> can just go to the main website URL and access with the SWITCH-ID credentials</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note on accessibility
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The access to the website using SWITCH edu-id credentials works with Gitlab pages because it is supported by UZH ( <a href="https://www.zi.uzh.ch/en/teaching-and-research/software-elearning/webplatforms/gitlab.html">Gitlab.uzh</a>). If are using repositories at Gitlab.com, your collaborators will need a Gitlab account. If you use Github (with a free acount) instead of Gitlab you will not be able to make a private website, Github pages will only work with public repositories.</p>
-</div>
-</div>
+<section id="cross-check-your-data" class="level4">
+<h4 class="anchored" data-anchor-id="cross-check-your-data">5. Cross-check your data</h4>
+<p>If possible, <em>protect</em> parts of the spreadsheet to prevent undesired manipulations, apply <em>data validation</em> checks to prevent data entry errors. Finally, <em>double-check</em> your work and analysis workflow.</p>
 </section>
+<section id="think-ahead" class="level4">
+<h4 class="anchored" data-anchor-id="think-ahead">6. Think ahead</h4>
+<p>Plan ahead what data formats and transformations you may need, and what variables and covariates you may use. <em>Consulting your collaborators</em> will increase the chancesof having a table that useful to other researchers.</p>
 </section>
-<section id="required-actions-for-data-owners" class="level1">
-<h1>Required actions (for data owners)</h1>
-<p>Once the Continuous Integration (CI) file and R Quarto scripts are set, the only action required by the owner will be to edit the metadata tables and/or some of the content of the R Quarto files in the repository. Any change in the repository will trigger the CI pipeline and the website will be rendered again.</p>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">%%{
-  init: {'theme':' ',
-          'themeVariables': {
-          'titleColor':'#F54E90',
-          'mainBkg':'#4ef5b3',
-          'clusterBkg':'#f2fcf8',
-          'lineColor':'#F54E90',
-          'edgeLabelBackground':'#F54E90',
-          'nodeBorder': '',
-          'clusterBorder': ''
-          
-      }
-  }
-}%%
+<section id="references" class="level4">
 
-flowchart LR
-    subgraph 1. ACTION: Edit metadata
-    Owner .-&gt; |local edits| B[Cloned copy]
-    B .-&gt; |push| C[Metadata Table]    
-    end
-    Owner .-&gt; |edit in browser| C
-    subgraph 2. AUTO: Trigger CI Pipeline
-      direction TB
-      C --&gt; |trigger| D[.gitlab-ci.yml]
-    end
-    subgraph 3. AUTO: run scripts
-    D --&gt; |run| E[R Quarto script]
-    end
-    subgraph 4. AUTO:update website
-    E --&gt; |render| F[Gitlab pages updated]
-    end
 
-    
-    
-    start1[ ] .-&gt;|manual|stop1[ ]
-    start2[ ] --&gt;|automatic| stop2[ ]
-      style start1 height:0px;
-      style start2 height:0px;
-      style stop1 height:0px;
-      style stop2 height:0px;
-    
- 
- 
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-<section id="action-edit-metadata" class="level2">
-<h2 class="anchored" data-anchor-id="action-edit-metadata">1. ACTION: edit <strong>metadata</strong></h2>
-<p>The <code>owner</code> can do this through:</p>
-<ol type="1">
-<li><strong>Browser</strong> (<em>RECOMMENDED FOR MINOR CHANGES</em>) Making changes from Gitlab using the browser, e.g., upload or edit scripts.</li>
-<li><strong>Clone repository</strong> (<em>RECOMMENDED FOR MAJOR UPDATES</em>) Cloning this repo, working locally and <em>committing</em> and <em>pushing</em> the changes to Gitlab (e.g., using <a href="https://desktop.github.com/">Github desktop</a>). The local metadata file should be always in Sync with that one in the remote repository.</li>
-</ol>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note on the source table
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This workflow considers the Gitlab repository as the <em>main source</em> for retrieving your projects’ metadata. Thus, we recommend to edit and maintain the tables in this repository and to avoid creating copies of those tables to prevent losing control over their versions.</p>
-</div>
-</div>
-</section>
-<section id="auto-changes-in-the-repository-trigger-the-continuous-integration-pipeline" class="level2">
-<h2 class="anchored" data-anchor-id="auto-changes-in-the-repository-trigger-the-continuous-integration-pipeline">2. AUTO: changes in the repository <strong>trigger the Continuous Integration pipeline</strong></h2>
-<p>It may take around 5 minutes to update the page html. The member with at least <code>maintainer</code> status can click on Build/Pipelines or Jobs (sidebar in Gitlab) to see what pipeline or job (within pipeline) is running, and if there are any errors.</p>
-</section>
-<section id="auto-the-continuous-integration-pipeline-runs-the-script" class="level2">
-<h2 class="anchored" data-anchor-id="auto-the-continuous-integration-pipeline-runs-the-script">3. AUTO: the continuous integration pipeline <strong>runs the script</strong></h2>
-<p>The <em>.gitlab-ci.yml</em> file defines this pipeline. It uses a Docker image with R, Gitlab pages to produce the website, and Gitlab runner to run the Docker where we have our Rmarkdown script (rendering the html from the table). The owner can edit the yml and the Rmarkdown to make if changes in this flow are to be done. No edit of Docker image is needed.</p>
-<p>See our tutorial on customizing Gitlab Continuous Integration for more advanced details.</p>
-</section>
-<section id="auto-the-html-is-updated-and-collaborators-can-navigate-through-the-updated-data" class="level2">
-<h2 class="anchored" data-anchor-id="auto-the-html-is-updated-and-collaborators-can-navigate-through-the-updated-data">4. AUTO: The HTML is updated and collaborators can navigate through the updated data</h2>
-<p>A <em>static site</em> like the one you are seeing this tutorial can include interactive elements. In this example we propose an <em>interactive table</em> that can be used to navigate through metadata and even some data (e.g., displaying clickable image thumbnails). By <em>static</em> we mean that the user will just see whatever data is contained in the HTML of the site. Although it contains an interactive table, all users have access to the same data which they cannot modify (unlike in <em>dynamic websites</em>).</p>
-<p>The website hosted using <a href="https://docs.gitlab.com/ee/user/project/pages/">Gitlab pages</a> is rendered with an [R Markdown](https://rmarkdown.rstudio.com/) script, that uses the R <a href="https://rstudio.github.io/DT/">DT package</a>). The script creates an interactive page in HTML. <a href="https://docs.gitlab.com/ee/ci/">Gitlab CI</a> is used to run the R Markdown script automatically at each update (push) and render the site from the browser so that users do not need to install R or other programs to update the site.</p>
 
 
 </section>
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-perkel2022" class="csl-entry" role="listitem">
+Perkel, Jeffrey M. 2022. <span>“Six Tips for Better Spreadsheets.”</span> <em>Nature</em> 608 (7921): 229–30. <a href="https://doi.org/10.1038/d41586-022-02076-1">https://doi.org/10.1038/d41586-022-02076-1</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -880,13 +718,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../contents/tutorials/Tutorial_Gitlab_workflows.html" class="pagination-link  aria-label=" gitlab="" workflows"="">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Gitlab workflows</span>
+      <a href="../../contents/tutorials/Tutorial_Metadata_JSON.html" class="pagination-link  aria-label=" metadata:="" making="" json="" files"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Metadata: making JSON files</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../contents/tutorials/Tutorial_Gitlab3_CI.html" class="pagination-link" aria-label="Gitlab Tutorial 3. Continuous Integration (CI)">
-        <span class="nav-page-text">Gitlab Tutorial 3. Continuous Integration (CI)</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../contents/tutorials/Tutorial_Gitlab_workflows.html" class="pagination-link" aria-label="Gitlab workflows">
+        <span class="nav-page-text">Gitlab workflows</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
