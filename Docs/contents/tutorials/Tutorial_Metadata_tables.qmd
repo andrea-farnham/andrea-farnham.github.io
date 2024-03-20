@@ -19,32 +19,35 @@ bibliography: references.bib
 Tables are a form of **structured metadata** with essential information to interpret the data. A common scenario in research is to have a table describing records, cases or subjects, with one row per record and columns describing different features. Then, there are often multiple larger tables with data associated with each record or subject (e.g., physiological measurements, images, test results, etc). These tables may content entries that are automatically generated and others that have to be manually entered by researchers. The tables can be in different **formats**, although .csv or .tsv are recommended for the sake of interoperability. Spreadsheet software formats like Microsoft Excel or Google Sheets are powerful and widely used by many researchers, as they have more human-friendly features.
 
 ### Publication review: six tips for better spreadsheets
-We distill here the main points of the highly recommendable two-pager from the technology editor at Nature  [@perkel2022]: 
+
+We distill here the main points of the highly recommendable two-pager from the technology editor at Nature [@perkel2022]:
 
 #### 1. Keep raw data raw
-Recommendation: make the original spreadsheet a read-only document and work on copies. Beware of the dangers of *autoformatting* functions of your spreadsheet software, and on how easy it is to loose track of the user-friendly manipulations done to the file. 
+
+Recommendation: make the original spreadsheet a read-only document and work on copies. Beware of the dangers of *autoformatting* functions of your spreadsheet software, and on how easy it is to loose track of the user-friendly manipulations done to the file.
 
 #### 2. Make data machine-readable
-Do not encode any information with *formatting* (e.g., in color-coding schemes), create additional columns that can be used as filter if necessary. Formatting can be easily lost during routine table maintenance. Researchers may also struggle to remember what the formatting represents. When read from a machine, the information encoded by formatting may be lost. 
+
+Do not encode any information with *formatting* (e.g., in color-coding schemes), create additional columns that can be used as filter if necessary. Formatting can be easily lost during routine table maintenance. Researchers may also struggle to remember what the formatting represents. When read from a machine, the information encoded by formatting may be lost.
 
 #### 3. Be consistent
-Data-analysis tools expect one specific format: one row of column titles. No merged cells and one table per page. Ideally all files are filled (blank cells may contain hidden characters) and contain one piece of data (e.g. a cell with '3 red beetles', better use two columns: one for count and one for insect type). Do not use to subdivided a table into different groups. 
+
+Data-analysis tools expect one specific format: one row of column titles. No merged cells and one table per page. Ideally all cells are **filled** (blank cells may contain hidden characters) and contain one piece of data (e.g. a cell with '3 red beetles', better use two columns: one for count and one for insect type). Do not use to subdivided a table into different groups.
 
 #### 4. Document your work
-Create a sheet (or tab) with a *codebook* that documents abbreviations, units of measurement, missing values, etc. 
+
+Create a sheet (or tab) with a ***codebook*** that documents abbreviations, units of measurement, missing values, etc.
 
 #### 5. Cross-check your data
-If possible, *protect* parts of the spreadsheet to prevent undesired manipulations, apply *data validation* checks to prevent data entry errors. Finally, *double-check* your work and analysis workflow. 
+
+If possible, *protect* parts of the spreadsheet to prevent undesired manipulations, apply *data validation* checks to prevent data entry errors. Finally, *double-check* your work and analysis workflow.
 
 #### 6. Think ahead
-Plan ahead what data formats and transformations you may need, and what variables and covariates you may use. 
-*Consulting your collaborators* will increase the chancesof having a table that useful to other researchers. 
 
+Plan ahead what data formats and transformations you may need, and what variables and covariates you may use. *Consulting your **collaborators*** will increase the chances of having a table that useful to other researchers.
 
-### Table operations 
+### Table operations
 
-Researchers have to manipulate tabular metadata and this is better done by code so that any operation on the raw data can be reproduced. Visit our [Templates](../templates/index.qmd) section for some code snippets and templates showing frequent use cases of these operations. 
-
+Researchers have to manipulate tabular metadata and this is better done by code so that any operation on the raw data can be reproduced. Visit our [Templates](../templates/index.qmd) section for some code snippets and templates showing frequent use cases of these operations.
 
 #### References
- 
