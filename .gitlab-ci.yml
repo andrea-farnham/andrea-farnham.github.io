@@ -3,13 +3,13 @@ image: rocker/verse:4.3
 pages:
   stage: deploy
   before_script:
-  - R -e "install.packages('quarto', repos='https://stat.ethz.ch/CRAN/')" 
-  - R -e "install.packages('collapsibleTree', repos='https://stat.ethz.ch/CRAN/')"   
-  - R -e "install.packages('kableExtra', repos='https://stat.ethz.ch/CRAN/')" 
-  - R -e "install.packages('openxlsx', repos='https://stat.ethz.ch/CRAN/')" 
-  - R -e "install.packages('crosstalk', repos='https://stat.ethz.ch/CRAN/')" 
-  - R -e "install.packages('DT', repos='https://stat.ethz.ch/CRAN/')" 
-  - R -e "getwd()"
+  - R -e "install.packages('remotes')" 
+  - R -e "remotes::install_version('quarto',version = '1.4')" 
+  - R -e "remotes::install_version('collapsibleTree',version = '0.1.8')"   
+  - R -e "remotes::install_version('kableExtra', version = '1.4.0')" 
+  - R -e "remotes::install_version('openxlsx',version = '4.2.5.2')" 
+  - R -e "remotes::install_version('crosstalk', version = '1.2.1')" 
+  - R -e "remotes::install_version('DT', version = '4.3.0')"   
   - mkdir -p public/
   - cp -r ./Docs/contents/ORD_index/Images* public/
     
