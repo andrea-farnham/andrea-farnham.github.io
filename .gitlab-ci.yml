@@ -9,7 +9,7 @@ pages:
   - R -e "remotes::install_version('kableExtra', version = '1.4.0')" 
   - R -e "remotes::install_version('openxlsx',version = '4.2.5.2')" 
   - R -e "remotes::install_version('crosstalk', version = '1.2.1')" 
-  - R -e "remotes::install_version('DT', version = '4.3.0')"   
+  - R -e "remotes::install_version('DT', version = '0.32')"   
   - mkdir -p public/
   - cp -r ./Docs/contents/ORD_index/Images* public/
     
