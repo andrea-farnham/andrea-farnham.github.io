@@ -6,6 +6,7 @@ pages:
   - R -e "install.packages('quarto', repos='https://stat.ethz.ch/CRAN/')" 
   - R -e "install.packages('collapsibleTree', repos='https://stat.ethz.ch/CRAN/')"   
   - R -e "install.packages('kableExtra', repos='https://stat.ethz.ch/CRAN/')" 
+  - R -e "install.packages('openxlsx', repos='https://stat.ethz.ch/CRAN/')" 
   - R -e "install.packages('crosstalk', repos='https://stat.ethz.ch/CRAN/')" 
   - R -e "install.packages('DT', repos='https://stat.ethz.ch/CRAN/')" 
   - R -e "getwd()"
