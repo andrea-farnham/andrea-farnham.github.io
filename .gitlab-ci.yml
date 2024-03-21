@@ -1,4 +1,4 @@
-image: rocker/verse:latest
+image: rocker/verse:4.3
 
 pages:
   stage: deploy
