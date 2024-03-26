@@ -27,6 +27,9 @@ This demo uses a dummy dataset, i.e., the source metadata table and images have 
 -   Adding some HTML code to a column value (in this case filenames) to render the images (the same approach would be done to render hyperlinks).
 :::
 
+::: {.callout-important collapse=false}
+You will find the documentation of the dummy data in the repository [Wiki](https://gitlab.uzh.ch/crsuzh/AFFORD_website/-/wikis/home) 
+:::
 
 ```{r readtable}
 #| include: false
