@@ -3,7 +3,7 @@ listing:
   categories: true
   type: table
   id: main-listing
-  fields: [title, subtitle, date]
+  fields: [title, subtitle]
   sort-ui: true
   filter-ui: true
   contents: Tutorial*.qmd
