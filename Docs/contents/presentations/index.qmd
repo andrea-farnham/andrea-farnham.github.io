@@ -6,5 +6,4 @@ listing:
 ---
 
 # Presentations {.unnumbered}
-
 Collection of presentations related to AFFORD project
