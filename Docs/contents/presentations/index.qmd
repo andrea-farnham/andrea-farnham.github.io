@@ -1,4 +1,5 @@
 ---
+toc: false
 listing:
   type: table
   fields: [title, description]
