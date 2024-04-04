@@ -2,7 +2,7 @@
 toc: false
 listing:
   type: table
-  fields: [title, description, author]
+  fields: [title, description]
 ---
 
 # Presentations {.unnumbered}
