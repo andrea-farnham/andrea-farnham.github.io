@@ -7,7 +7,7 @@ date: last-modified
 
 # An overview of the AFFORD project {.unnumbered}
 
-Presented on 17-11-2023 at our CRS retreat (Greuterhof, Islikon), on 24-11-2023 at an online meeting of the Data Stewards Network (UZH) and on 04-04-2024 at the EBPI, UZH lunch seminar
+Presented on 17-11-2023 at our CRS retreat (Greuterhof, Islikon)
 
 
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTn6WHH_58YTQKZ0ChOoKLtZGwEHuE6fY72QvS-pIoCv0vHdIUzPmMvU0MYvWYDyw/embed?start=false&loop=false&delayms=3000" frameborder="0" width="800" height="600"  allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe> 
