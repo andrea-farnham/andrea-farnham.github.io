@@ -55,9 +55,9 @@ website:
             - section: "🔭**Finding, Sharing and Publishing**"      
               contents:
                 - contents/tutorials/Tutorial_Gitlab_workflows.qmd
-                - contents/tutorials/Tutorial_Gitlab1_IntroGit.qmd                              
-                - contents/tutorials/Tutorial_Gitlab3_CI.qmd
+                - contents/tutorials/Tutorial_Gitlab1_IntroGit.qmd                                              
                 - contents/tutorials/Tutorial_Gitlab2_DataIndex.qmd                   
+                - contents/tutorials/Tutorial_Gitlab3_CI.qmd
                 - contents/tutorials/Tutorial_Web.qmd                    
                 
            
