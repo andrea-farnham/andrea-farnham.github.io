@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://crsuzh.pages.uzh.ch/AFFORD_website/contents/presentations/Presentations_1.html</loc>
-    <lastmod>2024-04-04T12:44:39.990Z</lastmod>
+    <lastmod>2024-04-22T15:48:22.201Z</lastmod>
   </url>
   <url>
     <loc>https://crsuzh.pages.uzh.ch/AFFORD_website/contents/tutorials/index.html</loc>
@@ -19,5 +19,13 @@
   <url>
     <loc>https://crsuzh.pages.uzh.ch/AFFORD_website/contents/tutorials/Tutorial_Web.html</loc>
     <lastmod>2023-11-30T16:18:19.595Z</lastmod>
+  </url>
+  <url>
+    <loc>https://crsuzh.pages.uzh.ch/AFFORD_website/contents/templates/template_gitlab-ci.html</loc>
+    <lastmod>2024-04-22T15:54:52.283Z</lastmod>
+  </url>
+  <url>
+    <loc>https://crsuzh.pages.uzh.ch/AFFORD_website/index.html</loc>
+    <lastmod>2024-04-04T12:37:52.754Z</lastmod>
   </url>
 </urlset>

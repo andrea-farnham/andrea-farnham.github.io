@@ -4,7 +4,7 @@
     "href": "contents/presentations/Presentations_1.html",
     "title": "An overview of the AFFORD project",
     "section": "",
-    "text": "An overview of the AFFORD project\nPresented on 17-11-2023 at our CRS retreat (Greuterhof, Islikon), on 24-11-2023 at an online meeting of the Data Stewards Network (UZH) and on 04-04-2024 at the EBPI, UZH lunch seminar\n\n\n&lt;&lt; Back\n\n\n\n\n Back to top"
+    "text": "An overview of the AFFORD project\nPresented on: 17-11-2023 (CRS retreat, Greuterhof, Islikon), 24-11-2023 (UZH Data Stewards Network online meeting), 04-04-2024 (EBPI lunch seminar at UZH)\n\n\n&lt;&lt; Back\n\n\n\n\n Back to top"
   },
   {
     "objectID": "contents/tutorials/index.html",
@@ -87,5 +87,23 @@
       "🔭**Finding, Sharing and Publishing**",
       "Website Tutorial using R, Quarto and Gitlab Pages"
     ]
+  },
+  {
+    "objectID": "contents/templates/template_gitlab-ci.html",
+    "href": "contents/templates/template_gitlab-ci.html",
+    "title": "Gitlab Continuous Integration",
+    "section": "",
+    "text": "Template - Install Quarto and some R packages specifying version\nIn this example the actions before the script were to install some R packages controlling which version was installed (for that we use remotes package). The actions of the script aftewards were to render a Quarto website, moving the content into the ‘public’ folder so that it is shown in our Gitlab pages\nimage: rocker/verse:4.3\n\npages:\n  stage: deploy\n  before_script:\n  - R -e \"install.packages('remotes')\" \n  - R -e \"remotes::install_version('quarto',version = '1.4')\" \n  - R -e \"remotes::install_version('collapsibleTree',version = '0.1.8')\"   \n  - R -e \"remotes::install_version('kableExtra', version = '1.4.0')\" \n  - R -e \"remotes::install_version('openxlsx',version = '4.2.5.2')\" \n  - R -e \"remotes::install_version('crosstalk', version = '1.2.1')\" \n  - R -e \"remotes::install_version('DT', version = '0.32')\"   \n  - mkdir -p public/\n  - cp -r ./Docs/contents/ORD_index/Images* public/\n    \n  script: \n  - cd Docs\n  - R -e \"quarto::quarto_render(); sessionInfo()\"       \n  - mv ./_site/* ../public/  \n  \n\n  artifacts:    \n    paths:\n    - public\n    \n    \n  only:\n  - master\n  interruptible: true\n \n\n\n\n\n Back to top",
+    "crumbs": [
+      "Templates",
+      "Gitlab Continuous Integration"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "AFFORD",
+    "section": "",
+    "text": "This site provides resources for Open Research Data management curated and developed by the Center of Reproducible Science of the University of Zurich for the Swissuniversities project AFFORD: A Framework for Avoiding the Open Research Data Dump .\n\n\nLearn more about us &gt;&gt;\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n Back to top"
   }
 ]

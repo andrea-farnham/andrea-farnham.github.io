@@ -1,0 +1,47 @@
+---
+title: Gitlab Continuous Integration 
+subtitle:  Example of Gitlab continuous integration .gitlab-ci.yml files
+author: G.Fraga Gonzalez & E. Furrer
+date: last-modified
+categories:
+  - Gitlab CI
+  - YAML
+format: html 
+---
+
+ 
+# Template - Install Quarto and some R packages specifying version
+In this example the actions before the script were to install some R packages controlling which version was installed (for that we use `remotes` package). The actions of the script aftewards were to render a Quarto website, moving the content into the 'public' folder so that it is shown in our Gitlab pages
+
+``` yaml
+image: rocker/verse:4.3
+
+pages:
+  stage: deploy
+  before_script:
+  - R -e "install.packages('remotes')" 
+  - R -e "remotes::install_version('quarto',version = '1.4')" 
+  - R -e "remotes::install_version('collapsibleTree',version = '0.1.8')"   
+  - R -e "remotes::install_version('kableExtra', version = '1.4.0')" 
+  - R -e "remotes::install_version('openxlsx',version = '4.2.5.2')" 
+  - R -e "remotes::install_version('crosstalk', version = '1.2.1')" 
+  - R -e "remotes::install_version('DT', version = '0.32')"   
+  - mkdir -p public/
+  - cp -r ./Docs/contents/ORD_index/Images* public/
+    
+  script: 
+  - cd Docs
+  - R -e "quarto::quarto_render(); sessionInfo()"       
+  - mv ./_site/* ../public/  
+  
+
+  artifacts:    
+    paths:
+    - public
+    
+    
+  only:
+  - master
+  interruptible: true
+ 
+```
