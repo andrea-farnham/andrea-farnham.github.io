@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="G.Fraga Gonzalez">
-<meta name="dcterms.date" content="2024-03-20">
+<meta name="dcterms.date" content="2024-03-13">
 
-<title>Home - Metadata: tables</title>
+<title>Home - Documentations: Filenames and organization</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,27 +22,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -52,8 +32,6 @@ div.csl-indent {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../contents/tutorials/Tutorial_Gitlab_workflows.html" rel="next">
-<link href="../../contents/tutorials/Tutorial_Metadata_JSON.html" rel="prev">
 <link href="../../assets/logos/Logo_CRS_col.svg" rel="icon" type="image/svg+xml">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -95,7 +73,7 @@ div.csl-indent {
 
 </head>
 
-<body class="nav-sidebar docked nav-fixed">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -120,7 +98,7 @@ div.csl-indent {
 <span class="menu-text">Data Index</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../../contents/tutorials/index.html" aria-current="page"> 
+    <a class="nav-link" href="../../contents/tutorials/index.html"> 
 <span class="menu-text">Tutorials</span></a>
   </li>  
   <li class="nav-item">
@@ -145,120 +123,22 @@ div.csl-indent {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../contents/tutorials/Tutorial_Metadata_JSON.html">🏷**Documentation &amp; Metadata**</a></li><li class="breadcrumb-item"><a href="../../contents/tutorials/Tutorial_Metadata_tables.html">Metadata: tables</a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-    </div>
-  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../contents/tutorials/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Tutorials</span></a>
-  </div>
-</li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
- <span class="menu-text">🏷<strong>Documentation &amp; Metadata</strong></span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../contents/tutorials/Tutorial_Metadata_JSON.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Metadata: making JSON files</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../contents/tutorials/Tutorial_Metadata_tables.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Metadata: tables</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
- <span class="menu-text">🔭<strong>Finding, Sharing and Publishing</strong></span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../contents/tutorials/Tutorial_Gitlab_workflows.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Gitlab workflows</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../contents/tutorials/Tutorial_Gitlab1_IntroGit.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Gitlab Tutorial 1. Step-by-Step Guide to Git and Gitlab</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../contents/tutorials/Tutorial_Gitlab3_CI.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Gitlab Tutorial 3. Continuous Integration (CI)</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../contents/tutorials/Tutorial_Gitlab2_DataIndex.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Gitlab Tutorial 2. Create and Update a Data Index</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../contents/tutorials/Tutorial_Web.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Website Tutorial using R, Quarto and Gitlab Pages</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="4">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#publication-review-six-tips-for-better-spreadsheets" id="toc-publication-review-six-tips-for-better-spreadsheets" class="nav-link active" data-scroll-target="#publication-review-six-tips-for-better-spreadsheets">Publication review: six tips for better spreadsheets</a></li>
-  <li><a href="#table-operations" id="toc-table-operations" class="nav-link" data-scroll-target="#table-operations">Table operations</a></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../contents/tutorials/Tutorial_Metadata_JSON.html">🏷**Documentation &amp; Metadata**</a></li><li class="breadcrumb-item"><a href="../../contents/tutorials/Tutorial_Metadata_tables.html">Metadata: tables</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Metadata: tables</h1>
-<p class="subtitle lead">General tips on making better human and machine-readable tabular metadata</p>
-  <div class="quarto-categories">
-    <div class="quarto-category">Basic</div>
-    <div class="quarto-category">Tips</div>
-  </div>
-  </div>
+<h1 class="title">Documentations: Filenames and organization</h1>
+<p class="subtitle lead">Tips and examples for documenting file and folder naming convention</p>
+</div>
 
 
 <div class="quarto-title-meta-author">
@@ -281,7 +161,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 20, 2024</p>
+      <p class="date">March 13, 2024</p>
     </div>
   </div>
   
@@ -293,51 +173,11 @@ div.csl-indent {
 </header>
 
 
-<p>Tables are a form of <strong>structured metadata</strong> with essential information to interpret the data. A common scenario in research is to have a table describing records, cases or subjects, with one row per record and columns describing different features. Then, there are often multiple larger tables with data associated with each record or subject (e.g., physiological measurements, images, test results, etc). These tables may content entries that are automatically generated and others that have to be manually entered by researchers. The tables can be in different <strong>formats</strong>, although .csv or .tsv are recommended for the sake of interoperability. Spreadsheet software formats like Microsoft Excel or Google Sheets are powerful and widely used by many researchers, as they have more human-friendly features.</p>
-<section id="publication-review-six-tips-for-better-spreadsheets" class="level3">
-<h3 class="anchored" data-anchor-id="publication-review-six-tips-for-better-spreadsheets">Publication review: six tips for better spreadsheets</h3>
-<p>We distill here the main points of the highly recommendable two-pager from the technology editor at Nature <span class="citation" data-cites="perkel2022">(<a href="#ref-perkel2022" role="doc-biblioref">Perkel 2022</a>)</span>:</p>
-<section id="keep-raw-data-raw" class="level4">
-<h4 class="anchored" data-anchor-id="keep-raw-data-raw">1. Keep raw data raw</h4>
-<p>Recommendation: make the original spreadsheet a read-only document and work on copies. Beware of the dangers of <em>autoformatting</em> functions of your spreadsheet software, and on how easy it is to loose track of the user-friendly manipulations done to the file.</p>
-</section>
-<section id="make-data-machine-readable" class="level4">
-<h4 class="anchored" data-anchor-id="make-data-machine-readable">2. Make data machine-readable</h4>
-<p>Do not encode any information with <em>formatting</em> (e.g., in color-coding schemes), create additional columns that can be used as filter if necessary. Formatting can be easily lost during routine table maintenance. Researchers may also struggle to remember what the formatting represents. When read from a machine, the information encoded by formatting may be lost.</p>
-</section>
-<section id="be-consistent" class="level4">
-<h4 class="anchored" data-anchor-id="be-consistent">3. Be consistent</h4>
-<p>Data-analysis tools expect one specific format: one row of column titles. No merged cells and one table per page. Ideally all cells are <strong>filled</strong> (blank cells may contain hidden characters) and contain one piece of data (e.g.&nbsp;a cell with ‘3 red beetles’, better use two columns: one for count and one for insect type). Do not use to subdivided a table into different groups.</p>
-</section>
-<section id="document-your-work" class="level4">
-<h4 class="anchored" data-anchor-id="document-your-work">4. Document your work</h4>
-<p>Create a sheet (or tab) with a <strong><em>codebook</em></strong> that documents abbreviations, units of measurement, missing values, etc.</p>
-</section>
-<section id="cross-check-your-data" class="level4">
-<h4 class="anchored" data-anchor-id="cross-check-your-data">5. Cross-check your data</h4>
-<p>If possible, <em>protect</em> parts of the spreadsheet to prevent undesired manipulations, apply <em>data validation</em> checks to prevent data entry errors. Finally, <em>double-check</em> your work and analysis workflow.</p>
-</section>
-<section id="think-ahead" class="level4">
-<h4 class="anchored" data-anchor-id="think-ahead">6. Think ahead</h4>
-<p>Plan ahead what data formats and transformations you may need, and what variables and covariates you may use. <em>Consulting your <strong>collaborators</strong></em> will increase the chances of having a table that useful to other researchers.</p>
-</section>
-</section>
-<section id="table-operations" class="level3">
-<h3 class="anchored" data-anchor-id="table-operations">Table operations</h3>
-<p>Researchers have to manipulate tabular metadata and this is better done by code so that any operation on the raw data can be reproduced. Visit our <a href="../../contents/templates/index.html">Templates</a> section for some code snippets and templates showing frequent use cases of these operations.</p>
-<section id="references" class="level4">
+<p>sd</p>
 
 
 
-
-</section>
-</section>
-
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-perkel2022" class="csl-entry" role="listitem">
-Perkel, Jeffrey M. 2022. <span>“Six Tips for Better Spreadsheets.”</span> <em>Nature</em> 608 (7921): 229–30. <a href="https://doi.org/10.1038/d41586-022-02076-1">https://doi.org/10.1038/d41586-022-02076-1</a>.
-</div>
-</div></section></div></main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -725,18 +565,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../../contents/tutorials/Tutorial_Metadata_JSON.html" class="pagination-link  aria-label=" metadata:="" making="" json="" files"="">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Metadata: making JSON files</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../../contents/tutorials/Tutorial_Gitlab_workflows.html" class="pagination-link" aria-label="Gitlab workflows">
-        <span class="nav-page-text">Gitlab workflows</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

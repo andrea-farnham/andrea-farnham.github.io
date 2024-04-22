@@ -11,20 +11,5 @@
       "/contents/tutorials/Tutorial_Metadata_tables.html",
       "/contents/tutorials/Tutorial_Web.html"
     ]
-  },
-  {
-    "listing": "/contents/templates/index.html",
-    "items": [
-      "/contents/templates/template_create_index.html",
-      "/contents/templates/template_quarto-yml.html",
-      "/contents/templates/template_combine_tables.html"
-    ]
-  },
-  {
-    "listing": "/contents/presentations/index.html",
-    "items": [
-      "/contents/presentations/Presentations_1.html",
-      "/contents/presentations/Presentations_2.html"
-    ]
   }
 ]

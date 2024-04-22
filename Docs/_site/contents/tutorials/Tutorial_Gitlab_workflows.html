@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="G.Fraga Gonzalez &amp; E. Furrer">
-<meta name="dcterms.date" content="2024-02-13">
+<meta name="dcterms.date" content="2024-03-13">
 
 <title>Home - Gitlab workflows</title>
 <style>
@@ -66,8 +66,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../contents/tutorials/Tutorial_Gitlab3_CI.html" rel="next">
-<link href="../../contents/tutorials/Tutorial_Gitlab1_IntroGit.html" rel="prev">
+<link href="../../contents/tutorials/Tutorial_Gitlab1_IntroGit.html" rel="next">
+<link href="../../contents/tutorials/Tutorial_Metadata_tables.html" rel="prev">
 <link href="../../assets/logos/Logo_CRS_col.svg" rel="icon" type="image/svg+xml">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -168,7 +168,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../contents/tutorials/Tutorial_Gitlab1_IntroGit.html">🔭<strong>Finding, Sharing and Publishing</strong></a></li><li class="breadcrumb-item"><a href="../../contents/tutorials/Tutorial_Gitlab_workflows.html">Gitlab workflows</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../contents/tutorials/Tutorial_Gitlab_workflows.html">🔭<strong>Finding, Sharing and Publishing</strong></a></li><li class="breadcrumb-item"><a href="../../contents/tutorials/Tutorial_Gitlab_workflows.html">Gitlab workflows</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -196,14 +196,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
- <span class="menu-text">contents/tutorials/Tutorial_JSON_maker_from_table.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../contents/tutorials/Tutorial_Metadata_JSON.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Metadata: making JSON files</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">(coming soon) Filenames and data organization</span>
-  </li>
-          <li class="sidebar-item">
- <span class="menu-text">(coming soon) Tabular metadata</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../contents/tutorials/Tutorial_Metadata_tables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Metadata: tables</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -217,14 +220,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../contents/tutorials/Tutorial_Gitlab1_IntroGit.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Gitlab Tutorial 1. Step-by-Step Guide to Git and Gitlab</span></a>
+  <a href="../../contents/tutorials/Tutorial_Gitlab_workflows.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Gitlab workflows</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../contents/tutorials/Tutorial_Gitlab_workflows.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Gitlab workflows</span></a>
+  <a href="../../contents/tutorials/Tutorial_Gitlab1_IntroGit.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gitlab Tutorial 1. Step-by-Step Guide to Git and Gitlab</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -258,7 +261,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#an-overview-of-git" id="toc-an-overview-of-git" class="nav-link active" data-scroll-target="#an-overview-of-git">An overview of Git</a></li>
-  <li><a href="#a-single-project-or-data-source" id="toc-a-single-project-or-data-source" class="nav-link" data-scroll-target="#a-single-project-or-data-source">A single project or data source</a>
+  <li><a href="#workflows-in-a-single-project" id="toc-workflows-in-a-single-project" class="nav-link" data-scroll-target="#workflows-in-a-single-project">Workflows in a single project</a>
   <ul class="collapse">
   <li><a href="#multiple-repositories" id="toc-multiple-repositories" class="nav-link" data-scroll-target="#multiple-repositories">Multiple repositories</a></li>
   <li><a href="#a-single-repository" id="toc-a-single-repository" class="nav-link" data-scroll-target="#a-single-repository">A single repository</a></li>
@@ -269,7 +272,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../contents/tutorials/Tutorial_Gitlab1_IntroGit.html">🔭<strong>Finding, Sharing and Publishing</strong></a></li><li class="breadcrumb-item"><a href="../../contents/tutorials/Tutorial_Gitlab_workflows.html">Gitlab workflows</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../contents/tutorials/Tutorial_Gitlab_workflows.html">🔭<strong>Finding, Sharing and Publishing</strong></a></li><li class="breadcrumb-item"><a href="../../contents/tutorials/Tutorial_Gitlab_workflows.html">Gitlab workflows</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Gitlab workflows</h1>
 <p class="subtitle lead">Showcasing different scenarios</p>
@@ -293,7 +296,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">February 13, 2024</p>
+      <p class="date">March 13, 2024</p>
     </div>
   </div>
   
@@ -357,8 +360,8 @@ sequenceDiagram
 </div>
 </div>
 </section>
-<section id="a-single-project-or-data-source" class="level1">
-<h1>A single project or data source</h1>
+<section id="workflows-in-a-single-project" class="level1">
+<h1>Workflows in a single project</h1>
 <p>Here we describe several scenarios in which there are <strong>several</strong> <strong>researchers</strong> working on separate analyses or features within the same project. They use the same source data but their scripts are <strong>independent</strong>. We assume that each researcher is the <strong>main</strong> contributor to a set of scripts for a given analysis, study or experiment within the main project.</p>
 <section id="multiple-repositories" class="level2">
 <h2 class="anchored" data-anchor-id="multiple-repositories">Multiple repositories</h2>
@@ -909,13 +912,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../contents/tutorials/Tutorial_Gitlab1_IntroGit.html" class="pagination-link  aria-label=" gitlab="" tutorial="" 1.="" step-by-step="" guide="" to="" git="" and="" gitlab"="">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Gitlab Tutorial 1. Step-by-Step Guide to Git and Gitlab</span>
+      <a href="../../contents/tutorials/Tutorial_Metadata_tables.html" class="pagination-link  aria-label=" metadata:="" tables"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Metadata: tables</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../contents/tutorials/Tutorial_Gitlab3_CI.html" class="pagination-link" aria-label="Gitlab Tutorial 3. Continuous Integration (CI)">
-        <span class="nav-page-text">Gitlab Tutorial 3. Continuous Integration (CI)</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../contents/tutorials/Tutorial_Gitlab1_IntroGit.html" class="pagination-link" aria-label="Gitlab Tutorial 1. Step-by-Step Guide to Git and Gitlab">
+        <span class="nav-page-text">Gitlab Tutorial 1. Step-by-Step Guide to Git and Gitlab</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
