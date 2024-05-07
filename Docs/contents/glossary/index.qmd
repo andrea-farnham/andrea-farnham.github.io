@@ -7,7 +7,7 @@ format:
 
 # Glossary {.unnumbered}
 
-Short descriptions and references for some technical terms and software used in our tutorials
+This glossary compiles short descriptions and references for some technical terms and software used in our tutorials
 
 ## Version control and repositories
 
