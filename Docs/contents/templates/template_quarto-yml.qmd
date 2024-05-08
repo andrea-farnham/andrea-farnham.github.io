@@ -133,7 +133,7 @@ format:
         theme: #see how they look inhttps://bootswatch.com/       
             light: cosmo    
             dark:  darkly
-        self-contained: true
+        embed-resources: true
 
 freeze: auto
  
