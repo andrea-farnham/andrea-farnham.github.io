@@ -7,7 +7,7 @@ website:
     back-to-top-navigation: true
     page-footer:
         left: |
-          Created by the [Center for Reproducible Science](https://www.crs.uzh.ch/en.html) of the [University of Zurich](https://www.uzh.ch/de.html).
+          Created by the [Center for Reproducible Science](https://www.crs.uzh.ch/en.html) of the [University of Zurich](https://www.uzh.ch/de.html). Go to [Gitlab repo](https://gitlab.uzh.ch/crsuzh/AFFORD_website)
         center: |
             [About Us](contents/about/index.html)
         right: |
