@@ -1,0 +1,28 @@
+---
+title: "AFFORDing FAIR data: An Open Research Data Index with R and Git"
+description: | 
+  Poster presented at the Swiss Reproducibility Conference, 10-11 June 2024
+   
+categories:
+  - workflows
+  - projects
+  - open data
+author:
+  - name: Gorka Fraga Gonzalez
+date: "2024-06-18"
+draft: false
+image: "images/Screenshot 2024-06-18 095004.png"
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+We describe a use-case for using **R** package **Data Tables** to render
+an HTML table with metadata and use **Quarto** to publish it into a
+website hosted in **Gitlab pages.** This enables researchers to share
+metadata and navigate through metadata. The back-end encourages
+researchers to use *version control* repositories for their metadata.
+This is a fully flexible workflow, with minimal coding requirements or
+additional dependencies. 
+
+![](images/Poster_FragaG.jpg){width="671"}

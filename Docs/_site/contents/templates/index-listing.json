@@ -1,8 +1,0 @@
-{
-  "listing": "/contents/templates/index.html",
-  "items": [
-    "/contents/templates/template_create_index.html",
-    "/contents/templates/template_quarto-yml.html",
-    "/contents/templates/template_combine_tables.html"
-  ]
-}
