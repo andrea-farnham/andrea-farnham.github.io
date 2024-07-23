@@ -264,7 +264,7 @@
     "href": "contents/presentations/2024-06-18-AFFORD_index_workflow/index.html",
     "title": "AFFORDing FAIR data: An Open Research Data Index with R and Git",
     "section": "",
-    "text": "This workflow is part of the project AFFORD: A Framework for Avoiding the Open Research Data Dump.\nWe describe a use-case for using R package Data Tables to render an HTML table with metadata and use Quarto to publish it into a website hosted in Gitlab pages. This enables researchers to share metadata and navigate through metadata. The back-end encourages researchers to use version control repositories for their metadata. This is a fully flexible workflow, with minimal coding requirements or additional dependencies. Tutorials and templates are provided in our regularly updated AFFORD tutorials website.\n\n\n\n\n Back to top"
+    "text": "We describe a use-case for using R package Data Tables to render an HTML table with metadata and use Quarto to publish it into a website hosted in Gitlab pages. This enables researchers to share metadata and navigate through metadata. The back-end encourages researchers to use version control repositories for their metadata. This is a fully flexible workflow, with minimal coding requirements or additional dependencies.\n\n\n\n\n Back to top"
   },
   {
     "objectID": "contents/presentations/Presentations_1.html",
