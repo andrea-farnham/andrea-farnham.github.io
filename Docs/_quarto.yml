@@ -7,11 +7,14 @@ website:
     back-to-top-navigation: true
     page-footer:
         left: |
-          Created by the [Center for Reproducible Science](https://www.crs.uzh.ch/en.html) of the [University of Zurich](https://www.uzh.ch/de.html). Go to [Gitlab repo](https://gitlab.uzh.ch/crsuzh/AFFORD_website)
+          Created by G.Fraga-Gonzalez ([Center for Reproducible Science](https://www.crs.uzh.ch/en.html) of the [University of Zurich](https://www.uzh.ch/de.html)).          
+
         center: |
             [About Us](contents/about/index.html)
         right: |
            This is a free website under the [CC BY international license 4.0 ](https://creativecommons.org/licenses/by/4.0/). 
+           Source code on
+          [![](https://images.ctfassets.net/xz1dnu24egyd/1hnQd13UBU7n5V0RsJcbP3/769692e40a6d528e334b84f079c1f577/gitlab-logo-100.png){fig-alt="Git" width=65px}](https://gitlab.uzh.ch/crsuzh/AFFORD_website) 
            
            
     favicon:  assets/logos/Logo_CRS_col.svg
