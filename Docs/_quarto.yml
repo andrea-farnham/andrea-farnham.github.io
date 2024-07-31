@@ -11,7 +11,7 @@ website:
           Made with [![](https://quarto.org/quarto.png){fig-alt="Quarto" width=65px}](https://quarto.org/) \
           by [Gorka Fraga González](https://gorka.science/) at the [Center for Reproducible Science](https://www.crs.uzh.ch/en.html), University of Zurich                  
         center: |
-            [![](Docs/assets/logos/Logo_AFFORD_col.svg){fig-alt="AFFORD" width=35px}](contents/about/index.html) \
+            [![](assets/logos/Logo_AFFORD_col.svg){fig-alt="AFFORD" width=35px}](contents/about/index.html) \
             
         right: |
            Free under the [CC BY international license 4.0 ](https://creativecommons.org/licenses/by/4.0/). \
