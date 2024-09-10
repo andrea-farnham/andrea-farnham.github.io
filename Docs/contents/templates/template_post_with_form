@@ -1,4 +1,16 @@
 ---
+title: Simple blog post with an embedded form
+subtitle: 
+author: G.Fraga Gonzalez & E. Furrer
+date: last-modified
+categories:
+  - Quarto
+  - YAML
+format: html 
+---
+
+````
+---
 author: "FirstName LastName"
 title: "Title of this page"
 date: "YYYY-MM-DD"
@@ -30,3 +42,5 @@ A list with bullets
 
 
 <iframe width="640px" height="480px" src="URL-to-your-form"> </iframe> 
+
+````
