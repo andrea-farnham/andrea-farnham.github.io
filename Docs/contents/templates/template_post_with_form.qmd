@@ -1,7 +1,6 @@
 ---
-title: Simple blog post
-subtitle: This entry uses iframe for embedding e.g., a form
-author: G.Fraga Gonzalez & E. Furrer
+title: "Simple blog post"
+subtitle: "This entry uses iframe for embedding e.g., a form"
 date: last-modified
 categories:
   - Quarto
@@ -12,12 +11,13 @@ format:
     code-copy: true
 ---
 
+
 The following is an example of a simple .qmd file with some embedded form that can be used as a blog post or a contact page 
 
 
-````
+``` yaml
 
----
+--- 
 author: "FirstName LastName"
 title: "Title of this page"
 date: "YYYY-MM-DD"
@@ -43,12 +43,11 @@ A list with bullets
  
  - Bullet point 2 
 
-
-
 [A link title](https://yourlinkurl.org)
-
 
 <iframe width="640px" height="480px" src="URL-to-your-form"> </iframe> 
 
-````
+
+```
+
 
