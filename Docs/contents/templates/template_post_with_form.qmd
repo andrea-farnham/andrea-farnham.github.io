@@ -12,7 +12,11 @@ format:
     code-copy: true
 ---
 
+The following is an example of a simple .qmd file with some embedded form that can be used as a blog post or a contact page 
+
+
 ````
+
 ---
 author: "FirstName LastName"
 title: "Title of this page"
@@ -47,3 +51,4 @@ A list with bullets
 <iframe width="640px" height="480px" src="URL-to-your-form"> </iframe> 
 
 ````
+
