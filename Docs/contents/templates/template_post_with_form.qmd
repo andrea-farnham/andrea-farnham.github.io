@@ -6,7 +6,10 @@ date: last-modified
 categories:
   - Quarto
   - YAML
-format: html 
+format:
+  html:
+    code-tools: true
+    code-copy: true
 ---
 
 ````
