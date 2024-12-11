@@ -18,7 +18,7 @@ pages:
   
     
   script: 
-  - mkdir -p public/
+  - mkdir public
   - cp -r ./ORD_index/Images* public/
   - R -e "quarto::quarto_render(); sessionInfo()"       
   - mkdir public
