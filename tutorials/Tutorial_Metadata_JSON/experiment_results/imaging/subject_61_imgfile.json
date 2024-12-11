@@ -1,0 +1,15 @@
+{
+  "lab_name": "labA",
+  "plant_species": "Populus trichocarpa",
+  "tissue_type": "Shoot apical meristem",
+  "microscope_model": "brandX ABCmicro",
+  "magnification": "30",
+  "filter": "filterA123",
+  "binning": "FALSE",
+  "masking": "methodX",
+  "counting": "algoY",
+  "subjectID": "subject_61",
+  "sex": "male",
+  "condition": "A",
+  "treatment": "treat_2"
+}

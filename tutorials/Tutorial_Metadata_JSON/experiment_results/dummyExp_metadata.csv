@@ -1,0 +1,11 @@
+id,img_location,sex,condition,treatment
+subject_26,./Tutorial_Metadata_JSON/experiment_results/imaging/subject_26_imgfile.tiff,male,A,treat_3
+subject_83,./Tutorial_Metadata_JSON/experiment_results/imaging/subject_83_imgfile.tiff,male,A,treat_2
+subject_4,./Tutorial_Metadata_JSON/experiment_results/imaging/subject_4_imgfile.tiff,female,B,treat_2
+subject_2,./Tutorial_Metadata_JSON/experiment_results/imaging/subject_2_imgfile.tiff,male,A,treat_3
+subject_1,./Tutorial_Metadata_JSON/experiment_results/imaging/subject_1_imgfile.tiff,female,B,treat_2
+subject_34,./Tutorial_Metadata_JSON/experiment_results/imaging/subject_34_imgfile.tiff,male,B,treat_1
+subject_32,./Tutorial_Metadata_JSON/experiment_results/imaging/subject_32_imgfile.tiff,male,A,treat_2
+subject_6,./Tutorial_Metadata_JSON/experiment_results/imaging/subject_6_imgfile.tiff,male,B,control
+subject_20,./Tutorial_Metadata_JSON/experiment_results/imaging/subject_20_imgfile.tiff,female,B,control
+subject_86,./Tutorial_Metadata_JSON/experiment_results/imaging/subject_86_imgfile.tiff,male,A,treat_3
