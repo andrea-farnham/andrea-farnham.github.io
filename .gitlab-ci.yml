@@ -19,7 +19,7 @@ pages:
     
   script: 
   - mkdir -p public/
-  - cp -r ./contents/ORD_index/Images* public/
+  - cp -r ./ORD_index/Images* public/
   - R -e "quarto::quarto_render(); sessionInfo()"       
   - mkdir public
   - mv ./_site/* ./public/  

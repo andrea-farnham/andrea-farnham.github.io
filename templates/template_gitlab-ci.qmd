@@ -27,10 +27,9 @@ pages:
   - R -e "remotes::install_version('crosstalk', version = '1.2.1')" 
   - R -e "remotes::install_version('DT', version = '0.32')"   
   - mkdir -p public/
-  - cp -r ./Docs/contents/ORD_index/Images* public/
+  - cp -r ./contents/ORD_index/Images* public/
     
-  script: 
-  - cd Docs
+  script:   
   - R -e "quarto::quarto_render(); sessionInfo()"       
   - mv ./_site/* ../public/  
   

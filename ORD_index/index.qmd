@@ -14,7 +14,7 @@ format:
 
 ---
 
-This is a demo of a data index that allows to navigate through a table with metadata and thumbnail images. The idea is to facilitate finding and sharing your data. Visit our [Tutorials page](https://crsuzh.pages.uzh.ch/AFFORD_website/contents/tutorials/) for more details on the workflow of producing such a data index. In short, for the index you need: (1) a source table of structured metadata (2) if you are to display thumbnails you need the picture files (3) some R code to render the table interactive with the package [DT](https://rstudio.github.io/DT/) and (4) R Quarto to output the table as an HTML page.
+This is a demo of a data index that allows to navigate through a table with metadata and thumbnail images. The idea is to facilitate finding and sharing your data. Visit our [Tutorials page](https://crsuzh.pages.uzh.ch/AFFORD_website/tutorials/) for more details on the workflow of producing such a data index. In short, for the index you need: (1) a source table of structured metadata (2) if you are to display thumbnails you need the picture files (3) some R code to render the table interactive with the package [DT](https://rstudio.github.io/DT/) and (4) R Quarto to output the table as an HTML page.
 
 ::: {.callout-note collapse=true}
 #### More information about this example 
@@ -27,10 +27,7 @@ This demo uses a dummy dataset, i.e., the source metadata table and images have 
 -   Adding some HTML code to a column value (in this case filenames) to render the images (the same approach would be done to render hyperlinks).
 :::
 
-::: {.callout-important collapse=false}
-You will find the documentation of the dummy data in the repository [Wiki](https://gitlab.uzh.ch/crsuzh/AFFORD_website/-/wikis/home) 
-:::
-
+  
 ```{r readtable}
 #| include: false
 library(dplyr)
@@ -65,7 +62,7 @@ tbl_joined  <- full_join(x=tbl,
 ```{r addhtml}
 #| include: false
 # define image paths
-pic_folder <- 'https://gitlab.uzh.ch/crsuzh/afford_website/-/tree/master/Docs/contents/ORD_index/Images'
+pic_folder <- 'https://gitlab.uzh.ch/crsuzh/afford_website/-/tree/master/Docs/ORD_index/Images'
 pic_fullpath <- file.path(pic_folder,tbl_joined$fname)
 pic_relpath <- file.path('..','..','Images',tbl_joined$fname)
 

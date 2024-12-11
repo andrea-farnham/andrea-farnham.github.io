@@ -38,7 +38,7 @@ website:
         left: |
           Created by the [YOURTEAM](URL to your team's website)
         center: |
-            [About Us](contents/about/index.html)
+            [About Us](about/index.html)
         right: |
            This is a website under the [LICENSE NAME](URL to license web) 
           
@@ -87,7 +87,7 @@ website:
         left: |
           Created by the [YOURTEAM](URL to your team's website)
         center: |
-            [About Us](contents/about/index.html)
+            [About Us](about/index.html)
         right: |
            This is a website under the [LICENSE NAME](URL to license web) 
           

@@ -59,7 +59,7 @@ page-layout: article
 ::: {#main-listing}
 :::
 
-[Learn more about us](contents/about/index.html)
+[Learn more about us](/about/index.html)
 
 
 ::: {.callout-note appearance="minimal" collapse="true"}
