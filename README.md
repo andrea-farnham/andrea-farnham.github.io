@@ -30,4 +30,3 @@ This is the main website of the project. The site can be accessed here: https://
 ```
 
 Fraga Gonzalez, G., Garassino, F., van de Wiel, H., Kuo, W., de Zelicourt, D., Furrer, E., Kurtcuoglu, V., & Held, L. (2024). A Framework for Avoiding the Open Research Data Dump (AFFORD) (Version v1). Zenodo. https://doi.org/10.5281/zenodo.14356004` 
-``` 
