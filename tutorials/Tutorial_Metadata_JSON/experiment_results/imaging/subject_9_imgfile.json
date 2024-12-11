@@ -9,7 +9,7 @@
   "masking": "methodX",
   "counting": "algoY",
   "subjectID": "subject_9",
-  "sex": "female",
+  "sex": "male",
   "condition": "B",
-  "treatment": "control"
+  "treatment": "treat_1"
 }

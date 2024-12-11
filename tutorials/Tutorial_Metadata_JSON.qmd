@@ -12,7 +12,6 @@ author:
   - name: "G.Fraga Gonzalez"
     orcid: '0000-0002-1857-8607'
     affiliation: "Center for Reproducible Science, UZH"
-
 date: last-modified
 format: 
   html:
