@@ -28,6 +28,34 @@ resources:
 
 ::: {style="text-align: justify; max-width: 500px; margin: auto;"}
 This site provides resources for Open Research Data management curated and developed by the [Center for Reproducible Science](https://www.crs.uzh.ch/en.html) of the University of Zurich for the Swissuniversities project *AFFORD: A Framework for Avoiding the Open Research Data Dump* .
+
+# Citation 
+Fraga Gonzalez, G., Garassino, F., van de Wiel, H., Kuo, W., de Zelicourt, D., Furrer, E., Kurtcuoglu, V., & Held, L. (2024). A Framework for Avoiding the Open Research Data Dump (AFFORD) (Version v1). Zenodo. https://doi.org/10.5281/zenodo.14356004` 
+
+ ```
+@misc{fraga_gonzalez_2024_14356004,
+  author       = {Fraga Gonzalez, Gorka and
+                  Garassino, Francesco and
+                  van de Wiel, Hester and
+                  Kuo, Willy and
+                  de Zelicourt, Diane and
+                  Furrer, Eva and
+                  Kurtcuoglu, Vartan and
+                  Held, Leonhard},
+  title        = {A Framework for Avoiding the Open Research Data
+                   Dump (AFFORD)
+                  },
+  month        = dec,
+  year         = 2024,
+  publisher    = {Zenodo},
+  version      = {v1},
+  doi          = {10.5281/zenodo.14356004},
+  url          = {https://doi.org/10.5281/zenodo.14356004}
+}
+
+```
+
+
 :::
 
 ::: {style="text-align: left;"}
