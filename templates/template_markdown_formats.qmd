@@ -1,0 +1,97 @@
+---
+title: 'Markdown formats' 
+subtitle: 'A demo page'
+description: |
+  Find out more in the official [Quarto documentation site ](https://quarto.org/docs/authoring/markdown-basics.html). Click on '</> code' to see how the page looks in plain text with Markdown formatting marks. 
+#title-block-banner: true
+#title-block-style:  default 
+toc: true
+code-tools: true
+---
+
+# Header 1
+
+## Header 2
+
+### Header 3
+
+#### Header 4
+
+## Text Formats
+
+-   **Bold Text**
+
+-   *Italic Text*
+
+-   ***Bold and Italics***
+
+-   ~~Strikethrough~~
+
+-   ^superscript^ / ~subscript~
+
+-   `verbatim code`
+
+-   [Hyperlinks](https://quarto.org)
+
+-   
+
+    > Blockquotes for quoting external sources or highlighting ideas.
+
+-   Math formulas: $E = mc^2$
+
+## Figures
+
+A figure with a hyperlink and a caption
+
+[![Click on the image to go to source](https://upload.wikimedia.org/wikipedia/commons/3/36/Carmina_Cantabrigiensia_Manuscr-C-fol436v.jpg "An elephant"){width="178"}](https://upload.wikimedia.org/wikipedia/commons/3/36/Carmina_Cantabrigiensia_Manuscr-C-fol436v.jpg)
+
+## Tables
+
+| Right | Left | Default | Center |
+|------:|:-----|---------|:------:|
+|    12 | 12   | 12      |   12   |
+|   123 | 123  | 123     |  123   |
+|     1 | 1    | 1       |   1    |
+
+## Lists
+
+### Unordered List
+
+-   Item 1
+-   Item 2
+    -   Sub-item 1
+    -   Sub-item 2
+
+### Ordered List
+
+1.  First item
+2.  Second item
+    1.  Sub-item
+    2.  Sub-item
+
+### Check Lists
+
+-   [ ] First item
+-   [x] Second item
+    -   [ ] Sub-item
+    -   [ ] Sub-item
+
+## Callouts
+
+::: {.callout-note collapse="TRUE"}
+Note that there are five types of callouts, including: `note`, `tip`, `warning`, `caution`, and `important`.
+:::
+
+## Tab Sets
+
+::: panel-tabset
+### Tab 1
+
+{{< lipsum 1 >}}
+
+### Tab 2
+
+{{< lipsum 2 >}}
+:::
+
+:::{.tab-set}

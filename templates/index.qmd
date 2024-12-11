@@ -1,0 +1,19 @@
+---
+title: Templates
+subtitle: Starter-templates for R, Quarto, Markdown and Gitlab among others. 
+listing:
+  categories: true
+  type: table
+  fields: [title, subtitle, date]
+  sort-ui: true
+  filter-ui: true
+
+--- 
+
+Here we present a series of useful starter-templates. These are templates for R Quarto, Markdown and Gitlab to help researchers to get started with some of the workflows proposed in AFFORD. They are not official templates and there is plenty of room for variations. 
+
+
+
+
+
+

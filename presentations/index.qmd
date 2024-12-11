@@ -1,0 +1,8 @@
+---
+title: Presentations
+subtitle: Collection of presentations related to AFFORD project
+toc: false
+listing:
+  type: table
+  fields: [title, description]
+---

@@ -1,0 +1,100 @@
+---
+title:  A Framework for Avoiding the Open Research Data Dump (AFFORD)
+subtitle: Tools and workflows for Open Research Data 
+description: | 
+  This site provides resources for Open Research Data management curated and developed by the [Center for Reproducible 
+  Science](https://www.crs.uzh.ch/en.html) of the University of Zurich for
+  the Swissuniversities-funded project:  A Framework for Avoiding the Open
+  Research Data Dump (AFFORD).
+sidebar: false
+theme: litera
+listing:
+  #categories: true
+  type: grid
+  id: main-listing
+  fields: [title, subtitle]
+  #image-height: 200px
+  grid-item-align: left
+  grid-columns: 3
+  #grid-item-align: center
+  #sort-ui: true
+  #filter-ui: true
+  sort: false  
+  contents:
+    - ./ORD_index/index.qmd 
+    - ./tutorials/index.qmd
+    - ./templates/index.qmd
+    - ./presentations/index.qmd
+    - ./glossary/index.qmd
+    - ./about/index.qmd
+    
+    
+
+#about:
+  #template: jolla
+  #image: "assets/logos/Logo_AFFORD_col.svg"
+  #image-width: 12em
+  #image-shape: rectangle
+  #links:
+   # - text: CRS
+   #   href: "https://www.crs.uzh.ch/en.html"
+  #  - icon:  git
+  #    aria-label: CRS Gitlab
+  #    href: "https://gitlab.uzh.ch/crsuzh/AFFORD_tutorials"
+  #  - icon: linkedin
+  #    aria-label: "LinkedIn"
+  #    href: "https://www.linkedin.com/company/center-for-reproducible-science/"  
+toc: false
+page-layout: article
+#header-includes: >
+  #<link rel="stylesheet" href="assets/index.css">
+#resources:
+  #- assets/index.css
+---
+
+
+![](assets/picture_OpenScience.png)
+
+::: {#main-listing}
+:::
+
+[Learn more about us](contents/about/index.html)
+
+
+::: {.callout-note appearance="minimal" collapse="true"}
+### APA citation
+
+Fraga Gonzalez, G., Garassino, F., van de Wiel, H., Kuo, W., de Zelicourt, D., Furrer, E., Kurtcuoglu, V., & Held, L. (2024). A Framework for Avoiding the Open Research Data Dump (AFFORD) (Version v1). Zenodo. <https://doi.org/10.5281/zenodo.14356004>
+:::
+
+::: {.callout-note appearance="minimal" collapse="true"}
+### BibTeX citation
+
+``` markdown
+@misc{fraga_gonzalez_2024_14356004,
+  author       = {Fraga Gonzalez, Gorka and
+                  Garassino, Francesco and
+                  van de Wiel, Hester and
+                  Kuo, Willy and
+                  de Zelicourt, Diane and
+                  Furrer, Eva and
+                  Kurtcuoglu, Vartan and
+                  Held, Leonhard},
+  title        = {A Framework for Avoiding the Open Research Data
+                   Dump (AFFORD)
+                  },
+  month        = dec,
+  year         = 2024,
+  publisher    = {Zenodo},
+  version      = {v1},
+  doi          = {10.5281/zenodo.14356004},
+  url          = {https://doi.org/10.5281/zenodo.14356004}
+}
+```
+:::
+
+::: {layout="[15,70,15]" layout-valign="bottom"}
+![](assets/logos/uzh_logo_e_pos.png){width="140px" style="opacity: 1"}
+
+![](assets/logos/Logo_CRS_trans.png){width="50px" style="opacity: 1 "}
+:::

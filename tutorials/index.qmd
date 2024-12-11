@@ -1,0 +1,83 @@
+---
+title: Tutorials
+subtitle: Step-by-step guidelines, examples and code to facilitate FAIRer data curation
+listing:
+  categories: true
+  type: table
+  id: main-listing
+  fields: [title, subtitle]
+  sort-ui: true
+  filter-ui: true
+  contents: Tutorial*.qmd
+format:
+  html:
+    toc-depth: 4
+---
+
+ A series of practical tutorials for managing Open Research Data and adhere as much as possible to the [FAIR principles](https://www.go-fair.org/fair-principles/). Our tutorials provide guidelines, step-by-step instructions, examples and code to facilitate the following components of **data curation**.
+
+
+### Explore All Tutorials
+The dendrogram below shows a content summary. Use the left side bar to go to the different tutorials or scroll down and use the table below. 
+
+```{r}
+#| warning: false
+#| code-fold: true
+#| echo: false
+
+
+library(collapsibleTree)
+
+ # Read data 
+ AFFORD <- read.csv('Tutorials_tree.csv')
+
+  # Plot dendrogram 
+ collapsibleTree(AFFORD, 
+                root = 'Tutorials',
+                hierarchy = c("Topic", 'Output','Description'),  
+              maxPercent = 50,
+                fill = c('black',
+                 rep("forestgreen", 1), 
+                 rep("darkmagenta", 1), 
+                 rep("lightgreen", 2),
+                 rep("plum", 3),
+                 rep("floralwhite", 7)
+                  ), 
+                 collapsed = FALSE, zoomable = FALSE, fontSize = 13, width='90%')
+```
+
+
+::: {#main-listing}
+:::
+
+
+
+<!-- #### Documentation - Human Readable Information -->
+
+<!-- |                                       |                                                                                                                                                                                                                                      | -->
+<!-- |-------------------------------|-----------------------------------------| -->
+<!-- | File and folder names | What convention is followed in the names of your files and folders. Include a description of what the filename parts and a schematic of the folder structure when relevant.                                                          | -->
+<!-- | Procedures                        | How data were acquired (e.g., lab protocol ) and preprocessed (e.g., an image reconstruction procedure). Provide corresponding code when applicable.                                                                                 | -->
+<!-- | README files                      | Include these files in the data folders, when relevant, to facilitate navigation and log exceptions, errors, etc. *As concise as possible and as detailed as necessary* (for extensive text the Procedures documents is recommended) | -->
+
+<!-- : {.light .striped .hover  tbl-colwidths="\[25,75\]"} -->
+
+
+<!-- #### Metadata - Structured information for humans and machines -->
+
+<!-- |                                     |                                                                                                                                                                                                                                                                                               | -->
+<!-- |-------------------------------|-----------------------------------------| -->
+<!-- | Tabular metadata                | Tables providing information like demographics, experimental parameters, test results and any other variable required for analysis and interpretation. It can contain information encoded in the file and folder names. It can also point at location where the actual data files are stored. | -->
+<!-- | 'Sidecar' metadata files (JSON) | Files adjacent to the main source data files containing additional information (e.g., acquisition hardware, location, parameters, etc). Some information may overlap and extend that provided in the tabular metadata. These files are important for machine-readability of the data.         | -->
+
+<!-- : {.light .striped .hover  tbl-colwidths="\[25,75\]"} -->
+
+
+<!-- #### Finding, Sharing and Publishing -->
+<!-- |                                         |                                                                                                                                                                  | -->
+<!-- |-------------------------------|-----------------------------------------| -->
+<!-- | Version Control | Using Git to store and share metadata, documentation (Gitlab Wiki) and preview data                                                          | -->
+<!-- | Data Indexing                       | Create your own data index to navigate through metadata and find your data sources                                                                               | -->
+<!-- | Persistent Identifiers | Several open science platforms like Zenodo or Open Science framework can be used to publish citable versions of your metadata, data and documentation with a DOI | -->
+
+<!-- : {.light .striped .hover  tbl-colwidths="\[25,75\]"} -->
