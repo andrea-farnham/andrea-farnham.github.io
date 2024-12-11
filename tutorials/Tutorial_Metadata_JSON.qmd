@@ -18,10 +18,10 @@ format:
   html:
     toc: true
     code-fold: show
+    embed-resources: true
 editor: visual
 ---
 
- 
 ![](images/banner_json-01.png){width="659"}
 
 # 1. Creating JSON files from a metadata table
@@ -93,9 +93,10 @@ For further information on readability of spreadsheets, see the [Six tips for be
 #| warning: false
 # these packages are required for correct functioning of the tutorial
 
-easypackages::packages("dplyr", # data operations
-                       "kableExtra", # for rendering of tables in HTML or PDF
-                       "knitr") # rendering of the report
+library("dplyr") # data operations
+library("kableExtra") # for rendering of tables in HTML or PDF
+library("knitr") # rendering of the report
+
 ```
 
 First of all, let's create a simple dummy (or toy) metadata table:
@@ -108,7 +109,7 @@ n_rows = 30 # defining how many rows (in this case, how many study "subjects") w
 
 metadata <- tibble(id = paste("subject", sprintf("%02d", 1:n_rows), sep = "_"), 
                    # this simply creates "subject_n" entries with n from 1 to n_rows
-                   img_location = paste("experiment_results/imaging/subject_", 1:n_rows, "/subject_", 1:n_rows, "_imgfile.tiff", sep = ""),
+                   img_location = paste("experiment_results/imaging/subject_",sprintf("%02d", 1:n_rows), "/subject_", sprintf("%02d", 1:n_rows), "_imgfile.tiff", sep = ""),
                    sex = replicate(n_rows, sample(c("male", "female"), size=1), simplify = T),
                    # this and following lines will randomly fill a column with attributes chosen between a set of options (in this case, "male" or "female")
                    condition = replicate(n_rows, sample(c("A", "B"), size=1), simplify = T),
@@ -260,12 +261,11 @@ Let's start by creating the dummy experimental dataset:
 #| echo: false
 # these packages are required for correct functioning
 
-easypackages::packages(
-  "dplyr", # data operations
-  "jsonlite", # creation of JSON files
-  "kableExtra", # for rendering of tables in HTML or PDF
-  "knitr", # rendering of the report
-  "readr")  #I/O
+library("dplyr") # data operations
+library("jsonlite") # creation of JSON files
+library("kableExtra") # for rendering of tables in HTML or PDF
+library("knitr") # rendering of the report
+library("readr")  #I/O
 ```
 
 ```{r make-dummy-data}
