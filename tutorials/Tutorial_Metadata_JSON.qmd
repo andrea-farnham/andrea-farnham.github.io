@@ -280,7 +280,7 @@ if (!dir.exists(dataset_dir)) {
 n_subjects = 10 
 
 # just to make things more interesting, let's come up with random subject IDs
-subj_nrs <- sample(c(1:100), n_subjects, replace = FALSE)
+subj_nrs <- sample(sprintf("%02d",c(1:100)), n_subjects, replace = FALSE)
 
 # according to the dataset structure we defined above, we need to create an "imaging" folder
 imaging_dir <- file.path(paste0(dataset_dir, "/imaging")) 
