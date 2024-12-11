@@ -4,8 +4,9 @@ subtitle: Tools and workflows for Open Research Data
 description: | 
   This site provides resources for Open Research Data management curated and developed by the [Center for Reproducible 
   Science](https://www.crs.uzh.ch/en.html) of the University of Zurich for
-  the Swissuniversities-funded project:  A Framework for Avoiding the Open
-  Research Data Dump (AFFORD).
+  the Swissuniversities-funded project: AFFORD - A Framework for Avoiding the Open
+  Research Data Dump(DOI <https://doi.org/10.5281/zenodo.14356004>).
+
 sidebar: false
 theme: litera
 listing:
