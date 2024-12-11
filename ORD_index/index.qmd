@@ -64,7 +64,7 @@ tbl_joined  <- full_join(x=tbl,
 # define image paths
 pic_folder <- 'https://gitlab.uzh.ch/crsuzh/afford_website/-/tree/master/ORD_index/Images'
 pic_fullpath <- file.path(pic_folder,tbl_joined$fname)
-pic_relpath <- file.path('..','..','Images',tbl_joined$fname)
+pic_relpath <- file.path('..','Images',tbl_joined$fname)
 
 # add paths and HTML code 
 tbl_joined$pic <- paste0('<a href=\'', pic_fullpath,'\' target=\'_blank\'>', 
