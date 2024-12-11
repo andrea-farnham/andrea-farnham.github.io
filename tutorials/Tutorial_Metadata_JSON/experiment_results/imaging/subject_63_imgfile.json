@@ -8,8 +8,8 @@
   "binning": "FALSE",
   "masking": "methodX",
   "counting": "algoY",
-  "subjectID": "subject_71",
+  "subjectID": "subject_63",
   "sex": "male",
   "condition": "B",
-  "treatment": "treat_1"
+  "treatment": "control"
 }
