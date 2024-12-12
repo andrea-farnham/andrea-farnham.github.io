@@ -65,32 +65,27 @@ page-layout: article
 ::: {.callout-note appearance="minimal" collapse="true"}
 ### APA citation
 
-Fraga Gonzalez, G., Garassino, F., van de Wiel, H., Kuo, W., de Zelicourt, D., Furrer, E., Kurtcuoglu, V., & Held, L. (2024). A Framework for Avoiding the Open Research Data Dump (AFFORD) (Version v1). Zenodo. <https://doi.org/10.5281/zenodo.14356004>
+Center for Reproducible Science, & The Interface Group. (2024). A Framework for Avoiding the Open Research Data Dump (AFFORD) (Version v1). Zenodo. https://doi.org/10.5281/zenodo.14356004
 :::
 
 ::: {.callout-note appearance="minimal" collapse="true"}
 ### BibTeX citation
 
 ``` markdown
-@misc{fraga_gonzalez_2024_14356004,
-  author       = {Fraga Gonzalez, Gorka and
-                  Garassino, Francesco and
-                  van de Wiel, Hester and
-                  Kuo, Willy and
-                  de Zelicourt, Diane and
-                  Furrer, Eva and
-                  Kurtcuoglu, Vartan and
-                  Held, Leonhard},
-  title        = {A Framework for Avoiding the Open Research Data
-                   Dump (AFFORD)
-                  },
-  month        = dec,
-  year         = 2024,
-  publisher    = {Zenodo},
-  version      = {v1},
-  doi          = {10.5281/zenodo.14356004},
-  url          = {https://doi.org/10.5281/zenodo.14356004}
+@misc{center_for_reproducible_science_framework_2024,
+   title = {A {Framework} for {Avoiding} the {Open} {Research} {Data} {Dump} ({AFFORD})},
+   copyright = {Creative Commons Attribution 4.0 International},
+   url = {https://zenodo.org/doi/10.5281/zenodo.14356004},
+   doi = {10.5281/ZENODO.14356004},
+   language = {en},
+   urldate = {2024-12-12},
+   publisher = {Zenodo},
+   author = {{Center for Reproducible Science} and {The Interface Group}},
+   month = dec,
+   year = {2024},
+   note = {Version Number: v1},
 }
+
 ```
 :::
 
