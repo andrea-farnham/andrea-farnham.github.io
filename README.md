@@ -2,7 +2,7 @@
 
 Welcome to our site 
 
-- Website URL <https://andrea.farnham.pages.uzh.ch/climah/>
+- Website URL https://andrea.farnham.pages.uzh.ch/climah/
 
 
 

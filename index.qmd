@@ -6,7 +6,7 @@ description: |
  Aenean turpis mauris, tristique a ligula ac, venenatis maximus metus. 
  Vestibulum et felis quis velit volutpat aliquam. Suspendisse hendrerit magna vitae accumsan accumsan. 
  Cras ut metus id ligula lacinia facilisis ac id lacus. Duis diam eros, ultrices sed libero vel, interdum scelerisque sem.
-doi: <https://doi.org/10.5281/zenodo.14356004>
+doi: https://doi.org/10.5281/zenodo.14356004
 
 sidebar: false
 listing:
