@@ -27,7 +27,7 @@ listing:
 ---
 
 
-![](assets/picture_OpenScience.png)
+![](assets/banner.png)
 
 ::: {#main-listing}
 :::
