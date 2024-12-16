@@ -1,5 +1,0 @@
-
-# Adjust last value for opacity
-rgba(27, 183, 117, 1) # the CRS green
-rgba(19, 168, 158, 1) # the CRS blue
-rgba(237, 212, 117, 1) # some yellowish

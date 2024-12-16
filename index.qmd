@@ -29,28 +29,6 @@ listing:
     - ./glossary/index.qmd
     - ./about/index.qmd
     
-    
-
-#about:
-  #template: jolla
-  #image: "assets/logos/Logo_AFFORD_col.svg"
-  #image-width: 12em
-  #image-shape: rectangle
-  #links:
-   # - text: CRS
-   #   href: "https://www.crs.uzh.ch/en.html"
-  #  - icon:  git
-  #    aria-label: CRS Gitlab
-  #    href: "https://gitlab.uzh.ch/crsuzh/AFFORD_tutorials"
-  #  - icon: linkedin
-  #    aria-label: "LinkedIn"
-  #    href: "https://www.linkedin.com/company/center-for-reproducible-science/"  
-toc: false
-page-layout: article
-#header-includes: >
-  #<link rel="stylesheet" href="assets/index.css">
-#resources:
-  #- assets/index.css
 ---
 
 
@@ -89,8 +67,10 @@ Center for Reproducible Science, & The Interface Group. (2024). A Framework for 
 ```
 :::
 
-::: {layout="[15,70,15]" layout-valign="bottom"}
-![](assets/logos/uzh_logo_e_pos.png){width="140px" style="opacity: 1"}
 
-![](assets/logos/Logo_CRS_trans.png){width="50px" style="opacity: 1 "}
+## Institutions and Organisations
+
+::: institutions
+<a href="https://www.uzh.ch/en.html" target="_blank"> <img src="assets/logos/uzh_logo.png" alt="University of Zurich" style="width: 12%; margin-right: 1.5%;"/> </a> <a href="https://www.crs.uzh.ch/en.html" target="_blank"> <img src="assets/logos/CRS_logo.png" alt="Center for Reproducible Science, UZH" style="width: 12%; margin-right: 1.5%;"/>
 :::
+
