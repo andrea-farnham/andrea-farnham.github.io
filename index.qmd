@@ -8,6 +8,7 @@ description: |
  Cras ut metus id ligula lacinia facilisis ac id lacus. Duis diam eros, ultrices sed libero vel, interdum scelerisque sem.
 doi: https://doi.org/10.5281/zenodo.14356004
 
+toc: false 
 sidebar: false
 listing:
   type: grid
