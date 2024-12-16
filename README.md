@@ -9,7 +9,8 @@ Welcome to our site
 ## About this site
 Information for mantainers: 
 
-- **.gitlab-ci.yml**: this file defines the Continous Integration pipeline. It has the script that pulls the docker container, installs additional packages and runs the main action `quarto render` to update the website. Any change in this repository triggers this pipeline (it takes 2-3 minutes to run). 
+- **.gitlab-ci.yml**: this file defines the Continous Integration pipeline. It has the script that pulls the docker container, installs additional packages and runs the main action `quarto render` to update the website. Any change in this repository triggers this pipeline (it takes 2-3 minutes to run). The result of the pipeline (the website and all HTML files that compose it) will not be visible in the repository, but as an `artifact`. Thus, the HTMLs with the website can be found in the Gitlab menu: `Build>Artifacts`
+
 - **_quarto.yml**: this is the Quarto project file with the page layout and some settings. Some of the settings can be defined as well in the YAML section (the header) of the individual .qmd files. 
 
 - **assets/**: this folder contains misc images and logos used in the site (landing page, navigation bar, footer, etc)
