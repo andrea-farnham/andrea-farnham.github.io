@@ -1,25 +1,20 @@
 ---
-title:  A Framework for Avoiding the Open Research Data Dump (AFFORD)
-subtitle: Tools and workflows for Open Research Data 
+title:  Global Mobility and Health
+subtitle: Lab website 
 description: | 
-  This site provides resources for Open Research Data management curated and developed by the [Center for Reproducible 
-  Science](https://www.crs.uzh.ch/en.html) of the University of Zurich for
-  the Swissuniversities-funded project: AFFORD - A Framework for Avoiding the Open
-  Research Data Dump(DOI <https://doi.org/10.5281/zenodo.14356004>).
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+ Aenean turpis mauris, tristique a ligula ac, venenatis maximus metus. 
+ Vestibulum et felis quis velit volutpat aliquam. Suspendisse hendrerit magna vitae accumsan accumsan. 
+ Cras ut metus id ligula lacinia facilisis ac id lacus. Duis diam eros, ultrices sed libero vel, interdum scelerisque sem.
+doi: <https://doi.org/10.5281/zenodo.14356004>
 
 sidebar: false
-theme: litera
 listing:
-  #categories: true
   type: grid
   id: main-listing
   fields: [title, subtitle]
-  #image-height: 200px
   grid-item-align: left
-  grid-columns: 3
-  #grid-item-align: center
-  #sort-ui: true
-  #filter-ui: true
+  grid-columns: 3  
   sort: false  
   contents:
     - ./ORD_index/index.qmd 
