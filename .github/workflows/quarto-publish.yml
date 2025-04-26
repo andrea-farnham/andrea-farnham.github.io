@@ -32,7 +32,8 @@ jobs:
               "downlit",
               "crosstalk",
               "DT",
-              "openxlsx"),
+              "openxlsx",
+              "collapsibleTree"),
             repos = "https://cloud.r-project.org"
           )'
     
