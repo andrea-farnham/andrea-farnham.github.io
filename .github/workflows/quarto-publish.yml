@@ -29,7 +29,10 @@ jobs:
               "readr",
               "ggplot2",
               "xml2",
-              "downlit"),
+              "downlit",
+              "crosstalk",
+              "DT",
+              "openxlsx"),
             repos = "https://cloud.r-project.org"
           )'
     
