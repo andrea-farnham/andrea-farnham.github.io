@@ -1,12 +1,8 @@
 ---
-title:  Global Mobility and Health
-subtitle: Lab website 
+title:  Andrea Farnham
+subtitle: Mapping health where people, animals & environment meet. 
 description: | 
- Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
- Aenean turpis mauris, tristique a ligula ac, venenatis maximus metus. 
- Vestibulum et felis quis velit volutpat aliquam. Suspendisse hendrerit magna vitae accumsan accumsan. 
- Cras ut metus id ligula lacinia facilisis ac id lacus. Duis diam eros, ultrices sed libero vel, interdum scelerisque sem.
-doi: https://doi.org/10.5281/zenodo.14356004
+I investigate how human mobility, climate change and health weave together—and how digital data can help us see those threads in real time. By pulling signals from smartphones, satellites and on-the-ground stories, I map both the risks and the often-overlooked benefits that movement brings to people and places. My goal is to turn these multidimensional insights into practical guidance for clinicians, planners and communities: evidence that accounts for gender, equity and our changing planet, and that supports smarter, more humane decisions about travel, migration and global health.
 
 toc: false 
 sidebar: false
