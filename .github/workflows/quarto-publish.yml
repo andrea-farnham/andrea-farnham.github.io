@@ -33,7 +33,8 @@ jobs:
               "crosstalk",
               "DT",
               "openxlsx",
-              "collapsibleTree"),
+              "collapsibleTree",
+              "readxl"),
             repos = "https://cloud.r-project.org"
           )'
     
