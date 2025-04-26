@@ -22,7 +22,7 @@ jobs:
       # 2) **install required R packages**
       - name: Install R packages
         run: |
-          Rscript -e 'install.packages(c("rmarkdown","knitr"), repos="https://cloud.r-project.org")'
+          Rscript -e 'install.packages(c("rmarkdown","knitr","collapsibleTree"), repos="https://cloud.r-project.org")'
 
       # 3) install Quarto CLI
       - uses: quarto-dev/quarto-actions/setup@v2
