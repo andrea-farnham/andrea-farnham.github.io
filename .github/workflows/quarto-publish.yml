@@ -3,7 +3,7 @@ name: Deploy Quarto site to GitHub Pages
 on:
   push:
     branches:
-      - main  # Only build on pushes to main
+      - main
 
 jobs:
   build:
@@ -30,18 +30,25 @@ jobs:
           Rscript -e "install.packages('remotes')"
           Rscript -e "remotes::install_version('kableExtra', version = '1.4.0')"
           Rscript -e "remotes::install_version('crosstalk', version = '1.2.1')"
+          Rscript -e "remotes::install_version('DT', version = '0.33')"
+          Rscript -e "remotes::install_version('fs', version = '1.6.4')"
+          Rscript -e "remotes::install_version('RCurl', version = '1.98.1.16')"
+          Rscript -e "remotes::install_version('rvest', version = '1.0.4')"
+          Rscript -e "remotes::install_version('httr', version = '1.4.7')"
+
+      - name: Install TinyTeX via Quarto
+        run: |
+          quarto install tinytex
 
       - name: Render Quarto site
         run: |
           cd contents
           quarto render
-          mkdir -p ../public
-          cp -r _book/* ../public/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: public
+          path: contents/_book  # Upload directly from _book/
 
   deploy:
     needs: build
