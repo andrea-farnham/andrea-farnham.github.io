@@ -1,101 +1,69 @@
 project:
   type: website
 
-# ── Skip folders you don’t want rendered ───────────────────────────────────────
 render:
   - "!templates/**"
   - "!tutorials/**"
-#  └── the “!” means “exclude everything that matches this glob pattern”
-#      use /** to exclude the folder and everything inside it
-# ───────────────────────────────────────────────────────────────────────────────
 
 website:
-    title: Home
-    page-navigation: true
-    back-to-top-navigation: true
-    page-footer:
-        background: "#e8faf6"
-        left: |
-          Made with [![](https://quarto.org/quarto.png){fig-alt="Quarto" width=65px}](https://quarto.org/) \
-          by [Gorka Fraga González](https://gorka.science/) at the [Center for Reproducible Science](https://www.crs.uzh.ch/en.html), University of Zurich                  
-        center: |
-            [![](https://crsuzh.pages.uzh.ch/AFFORD_website/assets/logos/Logo_AFFORD_col.svg){fig-alt="AFFORD" width=35px}](https://crsuzh.pages.uzh.ch/AFFORD_website/about/) \
-            
-        right: |
-           Free under the [CC BY international license 4.0 ](https://creativecommons.org/licenses/by/4.0/). \
-           \ Source code on [![](https://images.ctfassets.net/xz1dnu24egyd/1hnQd13UBU7n5V0RsJcbP3/769692e40a6d528e334b84f079c1f577/gitlab-logo-100.png){fig-alt="Git" width=65px}](https://gitlab.uzh.ch/crsuzh/AFFORD_website) 
-           
-           
-    favicon:  assets/logos/Logo_CRS_col.svg
-    
-    site-url: https://crsuzh.pages.uzh.ch/AFFORD_website/
-    repo-url: https://gitlab.uzh.ch/crsuzh/AFFORD_website 
-       
-    
-    navbar:        
-        logo:  assets/logos/Logo_AFFORD_col.svg    
-        background: '#1e5e50'  #light
-        collapse-below: lg
-                    
-        right:                  
-          - text: "Data Index"            
-            href: ORD_index/index.qmd
-          - text: "Tutorials"            
-            href: tutorials/index.qmd
-          - text: "Templates"            
-            href: templates/index.qmd
-          - text: "Presentations"            
-            href: presentations/index.qmd
-          - text: "Glossary"            
-            href: glossary/index.qmd     
-          - text: "Contact"
-            href: contact/index.qmd                  
-    
-    sidebar:          
-        - id: Tutorials
-          title: "Tutorials"                  
-          background:  '#e8faf6'
-          style: "docked"       
-          #href:  tutorials/index.qmd      
-          contents:
-            - tutorials/index.qmd            
-            - section: "🏷**Documentation & Metadata**"    
-              contents:                 
-                - tutorials/Tutorial_Metadata_JSON.qmd                            
-                - tutorials/Tutorial_Metadata_tables.qmd                                           
-                
-            - section: "🔭**Finding, Sharing and Publishing**"      
-              contents:
-                - tutorials/Tutorial_Gitlab_workflows.qmd
-                - tutorials/Tutorial_Gitlab1_IntroGit.qmd                                              
-                - tutorials/Tutorial_Gitlab2_DataIndex.qmd                   
-                - tutorials/Tutorial_Gitlab3_CI.qmd
-                - tutorials/Tutorial_Web.qmd                    
-                
-           
-                 
-        - id: "" # leave other sections without sidebar
-          title: ""
-          
-        - id: Templates
-          title: "Templates"     
-          contents:
-                - templates/index.qmd
-                - auto: "templates/*.qmd"
+  title: Home
+  page-navigation: true
+  back-to-top-navigation: true
+
+  page-footer:
+    background: "#e8faf6"
+    left: |
+      Made with …                 
+    center: |
+      …                       
+    right: |
+      …
+
+  favicon: assets/logos/Logo_CRS_col.svg
+  site-url: https://crsuzh.pages.uzh.ch/AFFORD_website/
+  repo-url: https://gitlab.uzh.ch/crsuzh/AFFORD_website
+
+  navbar:
+    logo: assets/logos/Logo_AFFORD_col.svg
+    background: '#1e5e50'
+    collapse-below: lg
+    right:
+      - text: "Data Index"
+        href: ORD_index/index.qmd
+      - text: "Tutorials"
+        href: tutorials/index.qmd
+      # …
+
+  sidebar:
+    - id: Tutorials
+      title: "Tutorials"
+      background: '#e8faf6'
+      style: "docked"
+      contents:
+        - tutorials/index.qmd
+        # …
+    - id: ""
+      title: ""
+    - id: Templates
+      title: "Templates"
+      contents:
+        - templates/index.qmd
+        - auto: "templates/*.qmd"
 
 format:
-    html:         
-        grid:
-          sidebar-width: 350px
-        theme:
-            light: cosmo            
-        highlight-style: a11y
-        code-link: true
-        toc: true
-        toc-expand: 4
-        code-copy: true              
-        mermaid: 
-          theme: default
+  html:
+    grid:
+      sidebar-width: 350px
+    theme:
+      light: cosmo
+    highlight-style: a11y
+    code-link: true
+    toc: true
+    toc-expand: 4
+    code-copy: true
+    mermaid:
+      theme: default
 
 freeze: auto
+
 
