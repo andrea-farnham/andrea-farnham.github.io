@@ -1,10 +1,6 @@
 project:
   type: website
-
-render:
-  - "!templates/**"
-  - "!tutorials/**"
-
+ 
 website:
   title: Home
   page-navigation: true
@@ -13,56 +9,36 @@ website:
   page-footer:
     background: "#e8faf6"
     left: |
-      Made with …                 
-    center: |
-      …                       
+      Made with Love…                     
     right: |
       …
 
   favicon: assets/logos/Logo_CRS_col.svg
-  site-url: https://crsuzh.pages.uzh.ch/AFFORD_website/
-  repo-url: https://gitlab.uzh.ch/crsuzh/AFFORD_website
+  site-url: https://andrea-farnham.github.io/
+  repo-url: https://github.com/andrea-farnham/andrea-farnham.github.io
 
   navbar:
-    logo: assets/logos/Logo_AFFORD_col.svg
+    #logo: assets/logos/Logo_AFFORD_col.svg
     background: '#1e5e50'
     collapse-below: lg
     right:
-      - text: "Data Index"
-        href: ORD_index/index.qmd
-      - text: "Tutorials"
-        href: tutorials/index.qmd
+      - text: "About"
+        href: About/index.qmd
+      - text: "Research"
+        href: Research/index.qmd
       # …
-
-  sidebar:
-    - id: Tutorials
-      title: "Tutorials"
-      background: '#e8faf6'
-      style: "docked"
-      contents:
-        - tutorials/index.qmd
-        # …
-    - id: ""
-      title: ""
-    - id: Templates
-      title: "Templates"
-      contents:
-        - templates/index.qmd
-        - auto: "templates/*.qmd"
+ 
 
 format:
-  html:
-    grid:
-      sidebar-width: 350px
+  html:    
     theme:
       light: cosmo
+      dark: darkly
     highlight-style: a11y
     code-link: true
     toc: true
     toc-expand: 4
-    code-copy: true
-    mermaid:
-      theme: default
+    code-copy: true    
 
 freeze: auto
 

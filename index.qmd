@@ -10,59 +10,17 @@ listing:
   type: grid
   id: main-listing
   fields: [title, subtitle]
-  grid-item-align: left
-  grid-columns: 3  
-  sort: false  
-  contents:
-    - ./ORD_index/index.qmd 
-    - ./tutorials/index.qmd
-    - ./templates/index.qmd
-    - ./presentations/index.qmd
-    - ./glossary/index.qmd
-    - ./about/index.qmd
-    
+  #image-height: 210px
+  grid-columns: 4
+  #grid-item-align: center
+  #sort-ui: true
+  #filter-ui: true
+  sort: false    
 ---
 
-
-![](assets/banner.png)
-
+ 
 ::: {#main-listing}
 :::
+ 
 
-[Learn more about us](/about/index.html)
-
-
-::: {.callout-note appearance="minimal" collapse="true"}
-### APA citation
-
-Center for Reproducible Science, & The Interface Group. (2024). A Framework for Avoiding the Open Research Data Dump (AFFORD) (Version v1). Zenodo. https://doi.org/10.5281/zenodo.14356004
-:::
-
-::: {.callout-note appearance="minimal" collapse="true"}
-### BibTeX citation
-
-``` markdown
-@misc{center_for_reproducible_science_framework_2024,
-   title = {A {Framework} for {Avoiding} the {Open} {Research} {Data} {Dump} ({AFFORD})},
-   copyright = {Creative Commons Attribution 4.0 International},
-   url = {https://zenodo.org/doi/10.5281/zenodo.14356004},
-   doi = {10.5281/ZENODO.14356004},
-   language = {en},
-   urldate = {2024-12-12},
-   publisher = {Zenodo},
-   author = {{Center for Reproducible Science} and {The Interface Group}},
-   month = dec,
-   year = {2024},
-   note = {Version Number: v1},
-}
-
-```
-:::
-
-
-## Institutions and Organisations
-
-::: institutions
-<a href="https://www.uzh.ch/en.html" target="_blank"> <img src="assets/logos/uzh_logo.png" alt="University of Zurich" style="width: 12%; margin-right: 1.5%;"/> </a> <a href="https://www.crs.uzh.ch/en.html" target="_blank"> <img src="assets/logos/CRS_logo.png" alt="Center for Reproducible Science, UZH" style="width: 12%; margin-right: 1.5%;"/>
-:::
-
+ 
