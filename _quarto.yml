@@ -1,6 +1,14 @@
 project:
   type: website
-            
+
+# ── Skip folders you don’t want rendered ───────────────────────────────────────
+render:
+  - "!templates/**"
+  - "!tutorials/**"
+#  └── the “!” means “exclude everything that matches this glob pattern”
+#      use /** to exclude the folder and everything inside it
+# ───────────────────────────────────────────────────────────────────────────────
+
 website:
     title: Home
     page-navigation: true
